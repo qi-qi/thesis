@@ -1,0 +1,335 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- coding: utf-8; mode: latex -*- %%
+%
+%    NOTA IMPORTANTE: este ficheiro destina-se a ser formatado para
+%    visualização interactiva, utilizando um programa do tipo ``netscape''
+%    e foi concebido tendo em vista a seu processamento para obtenção de
+%    uma especificação HTML.
+%
+%    ESTE ERA O COMENTÁRIO ANTES DE REUTILIZAÇÃO DO FORMATO EM LaTeX2e...
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% $Id: 0000-preliminar.tex,v 1.2 2009/06/14 20:11:06 david Exp $
+% $Log: 0000-preliminar.tex,v $
+% Revision 1.2  2009/06/14 20:11:06  david
+% PDF version. Color index.
+%
+% Revision 1.1  2007/11/23 09:52:39  david
+% *** empty log message ***
+%
+%
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                  TÍTULO E DATA OFICIAL DA TESE
+ %%%
+  %
+
+\def\date{May 2007}
+\def\titulo{Lorem Ipsum Dolor sit Amet, sed do Eiusmod Tempor Incididunt ut Labore et Dolore Magna Aliqua}
+
+% hypernavigation in PDF docs
+\hypersetup{colorlinks,
+   debug=false,
+   linkcolor=blue,  %%% cor do tableofcontents, \ref, \footnote, etc
+   citecolor=red,  %%% cor do \cite
+   urlcolor=blue,   %%% cor do \url e \href
+   bookmarksopen=true,
+   pdftitle={\titulo},
+   pdfauthor={Author's Name},
+   pdfsubject={Labore et Dolore},
+   pdfkeywords={Labore, Dolore}
+}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                          CAPA DA TESE
+ %%%
+  %
+
+\thispagestyle{empty}
+
+\begin{singlespace}
+\vbox to\textheight{%
+%--------------------------------------------------
+\vskip-1.3in%---------- LOGO E NOME IST/UTL -------
+%--------------------------------------------------
+\hskip-17mm\vbox to50mm{
+\vfil
+\begin{tabular}{l}
+\includegraphics[width=9cm]{figs/preliminar/Logo_IST_web.pdf}
+\end{tabular}
+\vfil
+\vfil
+}%
+%--------------------------------------------------
+\vskip18mm%---------- FIGURAS DA CAPA -------------
+%--------------------------------------------------
+\vbox to25mm{\LARGE\sl
+\vfil
+%\centerline{\psfig{file=figs/preliminar/tarantula.eps,height=25mm}}
+\vfil
+}%
+%--------------------------------------------------
+\vskip6mm%---------- TÍTULO -----------------------
+%--------------------------------------------------
+\vbox to25mm{\LARGE\bf
+\vfil
+\begin{center}
+\titulo
+\end{center}
+\vfil
+}%
+%--------------------------------------------------
+\vskip10mm%---------- NOME E GRAU ACTUAL -----------
+%--------------------------------------------------
+\vbox to25mm{\large
+\vfil
+\begin{center}
+{\Large\bf Author's Name}\\   % author's name
+\end{center}
+\vfil
+}%
+%--------------------------------------------------
+\vskip8mm%---------- GRAU A OBTER -----------------
+%--------------------------------------------------
+\vbox to8mm{\large
+\vfil
+\centerline{Dissertação para obtenção do Grau de Mestre em}
+%\vskip6mm
+\centerline{Engenharia Informática e de Computadores}
+\vfil
+}%
+%--------------------------------------------------
+\vskip10mm%---------- ORIENTADOR -------------------
+%--------------------------------------------------
+%\vbox to8mm{\large
+%\vfil
+%\begin{center}
+%\begin{tabular}{p{0.2\textwidth}l}
+%\end{tabular}
+%\end{center}
+%\vfil
+%}%
+%%--------------------------------------------------
+%\vfil
+% %--------------------------------------------------
+% \vskip5mm%---------- JÚRI -------------------------
+% %--------------------------------------------------
+\vbox to7mm{\Large\bf
+\vfil
+\begin{center}
+{\Large\bf Júri}\\
+\end{center}
+\vfil
+}%
+
+\vbox to28mm{\large
+\vfil
+\begin{center}
+\begin{tabular}{p{0.2\textwidth}l}
+Presidente: & Doutor escolher\\
+Orientador: & Doutor Orientador\\
+Vogais: & Doutor Um\\
+        & Doutor Dois\\
+        & Doutor Três\\
+        & Doutor Quatro\\
+\end{tabular}
+\end{center}
+\vfil
+}%
+%--------------------------------------------------
+\vskip28mm%---------- DATA -------------------------
+%--------------------------------------------------
+\vbox to4mm{\Large\bf
+\vfil
+\begin{center}
+\date
+\end{center}
+\vfil
+}%
+%--------------------------------------------------
+}%vbox
+\end{singlespace}
+\newpage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                             AGRADECIMENTOS
+ %%%
+  %
+
+\chapter*{Agradecimentos}
+%\chapter*{Acknowledgements}
+\thispagestyle{empty}
+
+% AGRADECER!
+
+Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+
+Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+
+Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?
+
+At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+
+Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae.
+
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+
+\vfill
+\begin{flushright}
+  \begin{minipage}{8cm}
+    \begin{center}
+      Lisboa, \today
+
+      Author's Name
+    \end{center}
+  \end{minipage}
+\end{flushright}
+
+\cleardoublepage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                            DEDICATÓRIAS
+ %%%
+  %
+
+\chapter*{}
+\thispagestyle{empty}
+
+% DEDICAR!
+\vfill
+\mbox{}
+\vfill\Large
+\begin{flushright}
+  \begin{minipage}{8cm}
+    \begin{center}
+
+Quo usque tandem abutere, Catilina, patientia nostra? Quam diu etiam furor iste tuus nos eludet?
+
+    \end{center}
+  \end{minipage}
+\end{flushright}
+\normalsize\vfill
+
+\cleardoublepage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                                RESUMO
+ %%%
+  %
+
+\chapter*{Resumo}
+\thispagestyle{empty}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\newpage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                            ABSTRACT
+ %%%
+  %
+
+\chapter*{Abstract}
+\thispagestyle{empty}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\newpage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                 FICHA BIBLIOGRAFICA -- PALAVRAS CHAVE
+ %%%
+  %
+
+\chapter*{Palavras Chave \\ Keywords}
+\thispagestyle{empty}
+
+\section*{Palavras Chave}
+{\large % EM PORTUGUÊS
+
+\noindent Lorem ipsum
+
+\noindent Facere Possimus
+
+\noindent Omnis Iste Natus
+
+\noindent Nihil Molestiae
+
+\noindent Omnis Voluptas
+
+\noindent Magna Aliqua
+
+}
+
+\section*{Keywords}
+
+{\large % EM INGLÊS
+
+\noindent Lorem ipsum
+
+\noindent Facere Possimus
+
+\noindent Omnis Iste Natus
+
+\noindent Nihil Molestiae
+
+\noindent Omnis Voluptas
+
+\noindent Magna Aliqua
+
+}
+
+\vfill
+%LATEX2HTML}
+
+\cleardoublepage
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                         MUDANÇA DE NUMERAÇÃO
+ %%%
+  %
+
+\pagestyle{plain}
+\pagenumbering{roman}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                             INDICES
+ %%%
+  %
+
+% ``Table of contents'' (índice).
+
+\def\contentsname{Índice}
+\tableofcontents
+\newpage
+
+% Lista de figuras.
+\listoffigures
+\newpage
+
+% Lista de tabelas.
+\listoftables
+
+% Does it always work? I expect so...
+\cleardoublepage
+
+  %
+ %%%
+%%%%%                          F          I          M      
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Local Variables: 
+% mode: latex
+% TeX-master: "tese"
+% End: 

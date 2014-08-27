@@ -1,6 +1,6 @@
-Optimistic Concurrency Control in a Distributed NameNode Architecture for Hadoop Distributed File System
+MSc Thesis Report
 ==========================================================
-Msc Thesis Report
+Optimistic Concurrency Control in a Distributed NameNode Architecture for Hadoop Distributed File System
 
 Author
 ==========================================================

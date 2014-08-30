@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  28 AUG 2014 21:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  30 AUG 2014 19:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -725,7 +725,7 @@ LaTeX Info: Redefining \nameref on input line 44.
 \@outlinefile=\write6
 \openout6 = `document.out'.
 
- (./0000-preliminar.tex
+ (./chapters/Preliminary.tex
 
 Package hyperref Warning: Option `colorlinks' has already been used,
 (hyperref)                setting the option has no effect on input line 42.
@@ -750,6 +750,10 @@ Package pdftex.def Info: figs/preliminar/Logo_IST_web.pdf used on input line 60
 (pdftex.def)             Requested size: 256.0748pt x 99.0461pt.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 76.
+
+Overfull \vbox (7.88pt too high) detected at line 82
+ []
+
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 89.
 
@@ -761,15 +765,11 @@ Overfull \vbox (11.23721pt too high) detected at line 125
  []
 
 
-Overfull \vbox (22.33229pt too high) detected at line 140
+Overfull \vbox (20.68036pt too high) detected at line 148
  []
 
 
-Overfull \vbox (20.32745pt too high) detected at line 150
- []
-
-
-Underfull \vbox (badness 10000) detected at line 152
+Underfull \vbox (badness 10000) detected at line 150
  []
 
 [1
@@ -960,10 +960,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 190.
  ) 
 Here is how much of TeX's memory you used:
- 7544 strings out of 493304
- 105627 string characters out of 6139871
+ 7546 strings out of 493304
+ 105651 string characters out of 6139871
  199122 words of memory out of 5000000
- 10702 multiletter control sequences out of 15000+600000
+ 10703 multiletter control sequences out of 15000+600000
  25449 words of font info for 75 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  39i,13n,28p,1824b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -975,7 +975,7 @@ type1/public/hfbright/hfbrsl8.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/u
 plr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (54 pages, 152585 bytes).
+Output written on document.pdf (54 pages, 154011 bytes).
 PDF statistics:
  587 PDF objects out of 1000 (max. 8388607)
  516 compressed objects within 6 object streams

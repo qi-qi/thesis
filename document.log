@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.26)  1 SEP 2014 23:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  2 SEP 2014 16:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -741,7 +741,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 59.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<figs/preliminar/Logo_IST_web.pdf, id=229, 500.87125pt x 193.72375pt>
+<figs/preliminar/Logo_IST_web.pdf, id=236, 500.87125pt x 193.72375pt>
 File: figs/preliminar/Logo_IST_web.pdf Graphic file (type pdf)
 
 <use figs/preliminar/Logo_IST_web.pdf>
@@ -939,20 +939,33 @@ Chapter 7.
 Chapter 8.
 [31
 
-]) (./document.bbl [32])
-No file document.ind.
-[33
+]) (./document.bbl [32]) [33
 
 ] [34
 
+] [35] [36] (./9100-commodo-consequat.texpdfTeX warning (ext4): destination wit
+h the same identifier (name{chapter.1}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.20 \chapter{Commodo Consequat}
+                                
+Appendix A.
+)
+No file document.nls.
+[37
+
+] [38
+
 ]
+No file document.ind.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 190.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 190.
- (./document.aux)
+(./document.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 190.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 190.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: C4C28E09192774B05635A46BD395BA00;3728.
+(rerunfilecheck)             Checksum: 05C7B8D8A3B42E968F84827F10B1EB54;3831.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -960,10 +973,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 190.
  ) 
 Here is how much of TeX's memory you used:
- 7546 strings out of 493304
- 105651 string characters out of 6139871
- 199122 words of memory out of 5000000
- 10703 multiletter control sequences out of 15000+600000
+ 7560 strings out of 493304
+ 105824 string characters out of 6139871
+ 199221 words of memory out of 5000000
+ 10707 multiletter control sequences out of 15000+600000
  25449 words of font info for 75 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  39i,13n,28p,1824b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -975,10 +988,10 @@ type1/public/hfbright/hfbrsl8.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/u
 plr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (54 pages, 154601 bytes).
+Output written on document.pdf (58 pages, 156425 bytes).
 PDF statistics:
- 587 PDF objects out of 1000 (max. 8388607)
- 516 compressed objects within 6 object streams
- 115 named destinations out of 1000 (max. 500000)
- 454 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 617 PDF objects out of 1000 (max. 8388607)
+ 542 compressed objects within 6 object streams
+ 121 named destinations out of 1000 (max. 500000)
+ 470 words of extra memory for PDF output out of 10000 (max. 10000000)
 

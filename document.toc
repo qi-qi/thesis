@@ -54,3 +54,5 @@
 \contentsline {subsection}{\numberline {8.2.2}Et harum quidem rerum facilis}{32}{subsection.8.2.2}
 \contentsline {section}{\numberline {8.3}Ut Enim ad Minima Veniam}{32}{section.8.3}
 \contentsline {section}{\numberline {8.4}Et harum quidem rerum facilis}{32}{section.8.4}
+\contentsline {part}{V\hspace {1em}Appendices}{35}{part.5}
+\contentsline {chapter}{\numberline {A}Commodo Consequat}{37}{chapter.1}

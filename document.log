@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  2 SEP 2014 16:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  2 SEP 2014 16:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -725,7 +725,7 @@ LaTeX Info: Redefining \nameref on input line 44.
 \@outlinefile=\write6
 \openout6 = `document.out'.
 
- (./chapters/Preliminary.tex
+ (./chapters/0000-preliminary.tex
 
 Package hyperref Warning: Option `colorlinks' has already been used,
 (hyperref)                setting the option has no effect on input line 42.
@@ -974,7 +974,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 190.
  ) 
 Here is how much of TeX's memory you used:
  7560 strings out of 493304
- 105824 string characters out of 6139871
+ 105839 string characters out of 6139871
  199221 words of memory out of 5000000
  10707 multiletter control sequences out of 15000+600000
  25449 words of font info for 75 fonts, out of 8000000 for 9000

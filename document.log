@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  3 SEP 2014 15:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  4 SEP 2014 14:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -725,7 +725,7 @@ LaTeX Info: Redefining \nameref on input line 44.
 \@outlinefile=\write6
 \openout6 = `document.out'.
 
- (./chapters/0000-preliminary.tex
+ (./chapters/00-Preliminary.tex
 
 Package hyperref Warning: Option `colorlinks' has already been used,
 (hyperref)                setting the option has no effect on input line 42.
@@ -781,9 +781,22 @@ figs/preliminar/Logo_IST_web.pdf>] [2
 
 ] [3] [4
 
-] [5
+]
+LaTeX Font Info:    Try loading font information for T1+LobsterTwo-LF on input 
+line 219.
 
-] [6
+(/usr/share/texlive/texmf-dist/tex/latex/lobster2/T1LobsterTwo-LF.fd
+File: T1LobsterTwo-LF.fd 2014/01/08 (autoinst) Font definitions for T1/LobsterT
+wo-LF.
+)
+LaTeX Font Info:    Font shape `T1/LobsterTwo-LF/bx/it' in size <14.4> not avai
+lable
+(Font)              Font shape `T1/LobsterTwo-LF/b/it' tried instead on input l
+ine 219.
+ [5
+
+]
+[6
 
 ] [7
 
@@ -791,8 +804,7 @@ figs/preliminar/Logo_IST_web.pdf>] [2
 
 ] [9] [10
 
-]
-[11] [12
+] [11] [12
 
 ] (./document.toc
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
@@ -813,8 +825,7 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
 
  [5] [6
 
-]
-(./document.lot)
+] (./document.lot)
 \tf@lot=\write9
 \openout9 = `document.lot'.
 
@@ -824,34 +835,24 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.67 \part{Introduction}
-                         [1
+l.67 \part{Introduction and Background}
+                                        [1
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.67 \part{Introduction}
-                         [2]pdfTeX warning (ext4): destination with the same id
-entifier (name{page.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.77 \newpage
-              [3] (./1020-lorem-ipsum.texpdfTeX warning (ext4): destination wit
-h the same identifier (name{page.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.23 \chapter
-             {Lorem Ipsum} [4
-
-]
+l.67 \part{Introduction and Background}
+                                        [2] (./chapters/11-Introduction.tex
 Chapter 1.
-pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.55 
-      [5]
+      [3
+
+]
 LaTeX Font Info:    Try loading font information for OMS+ppl on input line 65.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
@@ -860,88 +861,92 @@ LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 65.
 
 
-LaTeX Warning: Citation `isotc37sc4:dcr' on page 6 undefined on input line 78.
+LaTeX Warning: Citation `isotc37sc4:dcr' on page 4 undefined on input line 78.
 
-) (./1120-facere-possimus.texpdfTeX warning (ext4): destination with the same i
-dentifier (name{page.6}) has been already used, duplicate ignored
+) (./chapters/12-Background.texpdfTeX warning (ext4): destination with the same
+ identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.20 \chapter
-             {Facere Possimus} [6]
+             {Background} [4]
 Chapter 2.
-pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.53 
-      [7
+      [5
 
-])pdfTeX warning (ext4): destination with the same identifier (name{page.8}) ha
+])pdfTeX warning (ext4): destination with the same identifier (name{page.6}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.89 \part
-          {Assessment in HOP-HDFS} [8]pdfTeX warning (ext4): destination with t
-he same identifier (name{page.9}) has been already used, duplicate ignored
+l.86 \part
+          {Assessment in HOP-HDFS} [6]pdfTeX warning (ext4): destination with t
+he same identifier (name{page.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.89 \part{Assessment in HOP-HDFS}
-                                   [9
+l.86 \part{Assessment in HOP-HDFS}
+                                   [7
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.10}) ha
-s been already used, duplicate ignored
+]pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.89 \part{Assessment in HOP-HDFS}
-                                   [10]pdfTeX warning (ext4): destination with 
-the same identifier (name{page.11}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.99 \newpage
-              [11
-
-] (./2200-irure-dolor.texpdfTeX warning (ext4): destination with the same ident
-ifier (name{page.12}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.20 \chapter
-             {Irure Dolor} [12
-
-]
+l.86 \part{Assessment in HOP-HDFS}
+                                   [8] (./chapters/21-SCinHOP-HDFS.tex
 Chapter 3.
-[13]) (./2300-omnis-iste-natus.tex [14]
+pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.55 
+      [9
+
+]) (./chapters/22-AssessmentHOP-HDFS.texpdfTeX warning (ext4): destination with
+ the same identifier (name{page.10}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.23 \chapter
+             {Systematic Assessment of HOP-HDFS Operation Performance} [10]
 Chapter 4.
+pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.58 
+      [11
+
+])pdfTeX warning (ext4): destination with the same identifier (name{page.12}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.105 \part
+           {Solution} [12] [13
+
+] [14] (./chapters/31-Design.tex
+Chapter 5.
 [15
 
-]) [16] [17
-
-] [18] [19
-
-] (./3100-nihil-molestiae.tex [20
-
-]
-Chapter 5.
-[21]) (./3200-adipisci-velit.tex [22]
+]) (./chapters/32-Implementation.tex [16]
 Chapter 6.
+[17
+
+]) [18] [19
+
+] [20] (./chapters/41-Evaluation.tex
+Chapter 7.
+[21
+
+]) (./chapters/42-Conclusion.tex [22]
+Chapter 8.
 [23
 
-]) [24] [25
+]) (./document.bbl [24]) [25
 
-] [26] [27
+] [26
 
-] (./5100-omnis-voluptas.tex [28
-
-]
-Chapter 7.
-[29]) (./7200-magna-aliqua.tex [30]
-Chapter 8.
-[31
-
-]) (./document.bbl [32]) [33
-
-] [34
-
-] [35] [36] (./9100-commodo-consequat.texpdfTeX warning (ext4): destination wit
+] [27] [28] (./9100-commodo-consequat.texpdfTeX warning (ext4): destination wit
 h the same identifier (name{chapter.1}) has been already used, duplicate ignore
 d
 <to be read again> 
@@ -951,45 +956,47 @@ l.20 \chapter{Commodo Consequat}
 Appendix A.
 )
 No file document.nls.
-[37
+[29
 
-] [38
+] [30
 
 ]
 No file document.ind.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 190.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 190.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 179.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
 (./document.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 190.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 190.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 179.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 179.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: BB433B5C38BFF4979B92FDB8F267E381;3810.
+(rerunfilecheck)             Checksum: 349BB7BC966D2F1EFB91190631B1F66D;3901.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 190.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 179.
  ) 
 Here is how much of TeX's memory you used:
- 7557 strings out of 493304
- 105812 string characters out of 6139871
- 199221 words of memory out of 5000000
- 10705 multiletter control sequences out of 15000+600000
- 25449 words of font info for 75 fonts, out of 8000000 for 9000
+ 7576 strings out of 493304
+ 106581 string characters out of 6139871
+ 199236 words of memory out of 5000000
+ 10728 multiletter control sequences out of 15000+600000
+ 32860 words of font info for 77 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 39i,13n,28p,1824b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/hfbright/hfbr8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/hfbright/hfbrsl8.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/u
-plr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (58 pages, 157157 bytes).
+ 39i,13n,28p,1779b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texliv
+e/texmf-dist/fonts/enc/dvips/lobster2/lbst2_2vl4dw.enc}</usr/share/texlive/texm
+f-dist/fonts/type1/impallari/lobster2/LobsterTwo-BoldItalic.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/hfbright/hfbr8.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/hfbright/hfbrsl8.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
+o/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on document.pdf (50 pages, 168616 bytes).
 PDF statistics:
- 615 PDF objects out of 1000 (max. 8388607)
- 540 compressed objects within 6 object streams
- 120 named destinations out of 1000 (max. 500000)
+ 583 PDF objects out of 1000 (max. 8388607)
+ 515 compressed objects within 6 object streams
+ 109 named destinations out of 1000 (max. 500000)
  470 words of extra memory for PDF output out of 10000 (max. 10000000)
 

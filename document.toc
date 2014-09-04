@@ -17,7 +17,7 @@
 \contentsline {subsection}{\numberline {3.2.2}Et harum quidem rerum facilis}{10}{subsection.3.2.2}
 \contentsline {section}{\numberline {3.3}Ut Enim ad Minima Veniam}{10}{section.3.3}
 \contentsline {section}{\numberline {3.4}Et harum quidem rerum facilis}{10}{section.3.4}
-\contentsline {chapter}{\numberline {4}Systematic Assessment of HOP-HDFS Operation Performance}{11}{chapter.4}
+\contentsline {chapter}{\numberline {4}Systematic Assessment of Operation Performance in HOP-HDFS}{11}{chapter.4}
 \contentsline {section}{\numberline {4.1}Lorem ipsum}{11}{section.4.1}
 \contentsline {section}{\numberline {4.2}Sed ut perspiciatis}{11}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Ut enim ad minima veniam}{11}{subsection.4.2.1}
@@ -40,14 +40,14 @@
 \contentsline {section}{\numberline {6.3}Ut Enim ad Minima Veniam}{18}{section.6.3}
 \contentsline {section}{\numberline {6.4}Et harum quidem rerum facilis}{18}{section.6.4}
 \contentsline {part}{IV\hspace {1em}Evaluation and Conclusion}{19}{part.4}
-\contentsline {chapter}{\numberline {7}Omnis Voluptas}{21}{chapter.7}
+\contentsline {chapter}{\numberline {7}Evaluation}{21}{chapter.7}
 \contentsline {section}{\numberline {7.1}Lorem ipsum}{21}{section.7.1}
 \contentsline {section}{\numberline {7.2}Sed ut perspiciatis}{21}{section.7.2}
 \contentsline {subsection}{\numberline {7.2.1}Ut enim ad minima veniam}{21}{subsection.7.2.1}
 \contentsline {subsection}{\numberline {7.2.2}Et harum quidem rerum facilis}{22}{subsection.7.2.2}
 \contentsline {section}{\numberline {7.3}Ut Enim ad Minima Veniam}{22}{section.7.3}
 \contentsline {section}{\numberline {7.4}Et harum quidem rerum facilis}{22}{section.7.4}
-\contentsline {chapter}{\numberline {8}Magna Aliqua}{23}{chapter.8}
+\contentsline {chapter}{\numberline {8}Conclusion}{23}{chapter.8}
 \contentsline {section}{\numberline {8.1}Lorem ipsum}{23}{section.8.1}
 \contentsline {section}{\numberline {8.2}Sed ut perspiciatis}{23}{section.8.2}
 \contentsline {subsection}{\numberline {8.2.1}Ut enim ad minima veniam}{23}{subsection.8.2.1}

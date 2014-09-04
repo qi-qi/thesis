@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  4 SEP 2014 14:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  4 SEP 2014 14:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -655,11 +655,7 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfig@top=\skip57
 \subfig@bottom=\skip58
 )
-(./document.aux
-
-LaTeX Warning: Label `ch:omnis' multiply defined.
-
-)
+(./document.aux)
 \openout1 = `document.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
@@ -676,7 +672,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
- (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -894,7 +891,7 @@ l.86 \part{Assessment in HOP-HDFS}
 <to be read again> 
                    \relax 
 l.86 \part{Assessment in HOP-HDFS}
-                                   [8] (./chapters/21-SCinHOP-HDFS.tex
+                                   [8] (./chapters/21-Consistency.tex
 Chapter 3.
 pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
 been already used, duplicate ignored
@@ -903,12 +900,13 @@ been already used, duplicate ignored
 l.55 
       [9
 
-]) (./chapters/22-AssessmentHOP-HDFS.texpdfTeX warning (ext4): destination with
- the same identifier (name{page.10}) has been already used, duplicate ignored
+]) (./chapters/22-Assessment.texpdfTeX warning (ext4): destination with the sam
+e identifier (name{page.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.23 \chapter
-             {Systematic Assessment of HOP-HDFS Operation Performance} [10]
+             {Systematic Assessment of Operation Performance in HOP-HDFS}
+[10]
 Chapter 4.
 pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
  been already used, duplicate ignored
@@ -917,8 +915,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
 l.58 
       [11
 
-])pdfTeX warning (ext4): destination with the same identifier (name{page.12}) h
-as been already used, duplicate ignored
+])
+Overfull \hbox (10.94467pt too wide) has occurred while \output is active
+\OT1/ppl/m/n/10.95 12 \OT1/ppl/m/sl/10.95 CHAPTER 4.  SYSTEMATIC ASSESSMENT OF 
+OPERATION PERFORMANCE IN HOP-HDFS
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.105 \part
@@ -968,18 +972,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 179.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 179.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 349BB7BC966D2F1EFB91190631B1F66D;3901.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
+(rerunfilecheck)             Checksum: 5A793ADF5431430A27608ADD143C9C16;3898.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 179.
  ) 
 Here is how much of TeX's memory you used:
- 7576 strings out of 493304
- 106581 string characters out of 6139871
- 199236 words of memory out of 5000000
- 10728 multiletter control sequences out of 15000+600000
+ 7577 strings out of 493304
+ 106619 string characters out of 6139871
+ 199273 words of memory out of 5000000
+ 10729 multiletter control sequences out of 15000+600000
  32860 words of font info for 77 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  39i,13n,28p,1779b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -993,7 +993,7 @@ ts/type1/public/hfbright/hfbrsl8.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
 o/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (50 pages, 168616 bytes).
+Output written on document.pdf (50 pages, 167838 bytes).
 PDF statistics:
  583 PDF objects out of 1000 (max. 8388607)
  515 compressed objects within 6 object streams

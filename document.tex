@@ -33,8 +33,6 @@
 %\usepackage[encapsulated]{CJK}
 %\usepackage[overlap, CJK]{ruby}
 
-\usepackage[doublespace,final]{thesis}
-
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
 %%%%%              M A T E R I A L     I N T R O D U T Ó R I O
@@ -44,7 +42,7 @@
 \begin{document}
 %\initfloatingfigs
 
-\input{chapters/00-Preliminary}       % Páginas iniciais exigidas no formato da tese.
+\input{chapters/Preliminary}       % Páginas iniciais exigidas no formato da tese.
 
 \pagenumbering{arabic}
 \pagestyle{headings}
@@ -74,8 +72,8 @@
 \newpage
 \thispagestyle{empty}
 
-\input{chapters/11-Introduction}
-\input{chapters/12-Background}     
+\input{chapters/Introduction}
+\input{chapters/Background}     
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
@@ -93,8 +91,8 @@
 \newpage
 \thispagestyle{empty}
 
-\input{chapters/21-Consistency}
-\input{chapters/22-Assessment}
+\input{chapters/Consistency}
+\input{chapters/Assessment}
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
@@ -112,8 +110,8 @@
 \newpage
 \thispagestyle{empty}
 
-\input{chapters/31-Design}
-\input{chapters/32-Implementation}
+\input{chapters/Design}
+\input{chapters/Implementation}
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
@@ -131,8 +129,8 @@
 \newpage
 \thispagestyle{empty}
 
-\input{chapters/41-Evaluation}                 
-\input{chapters/42-Conclusion}            
+\input{chapters/Evaluation}                 
+\input{chapters/Conclusion}            
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
@@ -156,12 +154,12 @@
 
 \part{Appendices}
 \appendix
+%
+\input{chapters/Testing}         % commodo consequat
 
-\input{9100-commodo-consequat}         % commodo consequat
-
-\begin{singlespace}
-\printnomenclature\cleardoublepage               % Glossary
-\end{singlespace}
+%\begin{singlespace}
+%\printnomenclature\cleardoublepage               % Glossary
+%\end{singlespace}
 
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

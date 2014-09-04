@@ -1,58 +1,58 @@
 \BOOKMARK [-1][]{part.1}{I Introduction and Background}{}% 1
 \BOOKMARK [0][]{chapter.1}{Introduction}{part.1}% 2
-\BOOKMARK [1][]{section.1.1}{Lorem ipsum}{chapter.1}% 3
-\BOOKMARK [1][]{section.1.2}{Sed ut perspiciatis}{chapter.1}% 4
-\BOOKMARK [1][]{section.1.3}{Ut Enim ad Minima Veniam}{chapter.1}% 5
-\BOOKMARK [1][]{section.1.4}{Et harum quidem rerum facilis}{chapter.1}% 6
+\BOOKMARK [1][]{section.1.1}{A}{chapter.1}% 3
+\BOOKMARK [1][]{section.1.2}{B}{chapter.1}% 4
+\BOOKMARK [1][]{section.1.3}{C}{chapter.1}% 5
+\BOOKMARK [1][]{section.1.4}{D}{chapter.1}% 6
 \BOOKMARK [0][]{chapter.2}{Background}{part.1}% 7
-\BOOKMARK [1][]{section.2.1}{Lorem ipsum}{chapter.2}% 8
-\BOOKMARK [1][]{section.2.2}{Sed ut perspiciatis}{chapter.2}% 9
-\BOOKMARK [1][]{section.2.3}{Ut Enim ad Minima Veniam}{chapter.2}% 10
-\BOOKMARK [1][]{section.2.4}{Et harum quidem rerum facilis}{chapter.2}% 11
+\BOOKMARK [1][]{section.2.1}{A}{chapter.2}% 8
+\BOOKMARK [1][]{section.2.2}{B}{chapter.2}% 9
+\BOOKMARK [1][]{section.2.3}{C}{chapter.2}% 10
+\BOOKMARK [1][]{section.2.4}{D}{chapter.2}% 11
 \BOOKMARK [-1][]{part.2}{II Assessment in HOP-HDFS}{}% 12
 \BOOKMARK [0][]{chapter.3}{Strong Consistency Semantics in HOP-HDFS}{part.2}% 13
-\BOOKMARK [1][]{section.3.1}{Lorem ipsum}{chapter.3}% 14
-\BOOKMARK [1][]{section.3.2}{Sed ut perspiciatis}{chapter.3}% 15
-\BOOKMARK [2][]{subsection.3.2.1}{Ut enim ad minima veniam}{section.3.2}% 16
-\BOOKMARK [2][]{subsection.3.2.2}{Et harum quidem rerum facilis}{section.3.2}% 17
-\BOOKMARK [1][]{section.3.3}{Ut Enim ad Minima Veniam}{chapter.3}% 18
-\BOOKMARK [1][]{section.3.4}{Et harum quidem rerum facilis}{chapter.3}% 19
+\BOOKMARK [1][]{section.3.1}{A}{chapter.3}% 14
+\BOOKMARK [1][]{section.3.2}{B}{chapter.3}% 15
+\BOOKMARK [2][]{subsection.3.2.1}{B1}{section.3.2}% 16
+\BOOKMARK [2][]{subsection.3.2.2}{B2}{section.3.2}% 17
+\BOOKMARK [1][]{section.3.3}{C}{chapter.3}% 18
+\BOOKMARK [1][]{section.3.4}{D}{chapter.3}% 19
 \BOOKMARK [0][]{chapter.4}{Systematic Assessment of Operation Performance in HOP-HDFS}{part.2}% 20
-\BOOKMARK [1][]{section.4.1}{Lorem ipsum}{chapter.4}% 21
-\BOOKMARK [1][]{section.4.2}{Sed ut perspiciatis}{chapter.4}% 22
-\BOOKMARK [2][]{subsection.4.2.1}{Ut enim ad minima veniam}{section.4.2}% 23
-\BOOKMARK [2][]{subsection.4.2.2}{Et harum quidem rerum facilis}{section.4.2}% 24
-\BOOKMARK [1][]{section.4.3}{Ut Enim ad Minima Veniam}{chapter.4}% 25
-\BOOKMARK [1][]{section.4.4}{Et harum quidem rerum facilis}{chapter.4}% 26
+\BOOKMARK [1][]{section.4.1}{A}{chapter.4}% 21
+\BOOKMARK [1][]{section.4.2}{B}{chapter.4}% 22
+\BOOKMARK [2][]{subsection.4.2.1}{B1}{section.4.2}% 23
+\BOOKMARK [2][]{subsection.4.2.2}{B2}{section.4.2}% 24
+\BOOKMARK [1][]{section.4.3}{C}{chapter.4}% 25
+\BOOKMARK [1][]{section.4.4}{D}{chapter.4}% 26
 \BOOKMARK [-1][]{part.3}{III Solution}{}% 27
 \BOOKMARK [0][]{chapter.5}{Design}{part.3}% 28
-\BOOKMARK [1][]{section.5.1}{Lorem ipsum}{chapter.5}% 29
-\BOOKMARK [1][]{section.5.2}{Sed ut perspiciatis}{chapter.5}% 30
-\BOOKMARK [2][]{subsection.5.2.1}{Ut enim ad minima veniam}{section.5.2}% 31
-\BOOKMARK [2][]{subsection.5.2.2}{Et harum quidem rerum facilis}{section.5.2}% 32
-\BOOKMARK [1][]{section.5.3}{Ut Enim ad Minima Veniam}{chapter.5}% 33
-\BOOKMARK [1][]{section.5.4}{Et harum quidem rerum facilis}{chapter.5}% 34
+\BOOKMARK [1][]{section.5.1}{A}{chapter.5}% 29
+\BOOKMARK [1][]{section.5.2}{B}{chapter.5}% 30
+\BOOKMARK [2][]{subsection.5.2.1}{B1}{section.5.2}% 31
+\BOOKMARK [2][]{subsection.5.2.2}{B2}{section.5.2}% 32
+\BOOKMARK [1][]{section.5.3}{C}{chapter.5}% 33
+\BOOKMARK [1][]{section.5.4}{D}{chapter.5}% 34
 \BOOKMARK [0][]{chapter.6}{Implementation}{part.3}% 35
-\BOOKMARK [1][]{section.6.1}{Lorem ipsum}{chapter.6}% 36
-\BOOKMARK [1][]{section.6.2}{Sed ut perspiciatis}{chapter.6}% 37
-\BOOKMARK [2][]{subsection.6.2.1}{Ut enim ad minima veniam}{section.6.2}% 38
-\BOOKMARK [2][]{subsection.6.2.2}{Et harum quidem rerum facilis}{section.6.2}% 39
-\BOOKMARK [1][]{section.6.3}{Ut Enim ad Minima Veniam}{chapter.6}% 40
-\BOOKMARK [1][]{section.6.4}{Et harum quidem rerum facilis}{chapter.6}% 41
+\BOOKMARK [1][]{section.6.1}{A}{chapter.6}% 36
+\BOOKMARK [1][]{section.6.2}{B}{chapter.6}% 37
+\BOOKMARK [2][]{subsection.6.2.1}{B1}{section.6.2}% 38
+\BOOKMARK [2][]{subsection.6.2.2}{B2}{section.6.2}% 39
+\BOOKMARK [1][]{section.6.3}{C}{chapter.6}% 40
+\BOOKMARK [1][]{section.6.4}{D}{chapter.6}% 41
 \BOOKMARK [-1][]{part.4}{IV Evaluation and Conclusion}{}% 42
 \BOOKMARK [0][]{chapter.7}{Evaluation}{part.4}% 43
-\BOOKMARK [1][]{section.7.1}{Lorem ipsum}{chapter.7}% 44
-\BOOKMARK [1][]{section.7.2}{Sed ut perspiciatis}{chapter.7}% 45
-\BOOKMARK [2][]{subsection.7.2.1}{Ut enim ad minima veniam}{section.7.2}% 46
-\BOOKMARK [2][]{subsection.7.2.2}{Et harum quidem rerum facilis}{section.7.2}% 47
-\BOOKMARK [1][]{section.7.3}{Ut Enim ad Minima Veniam}{chapter.7}% 48
-\BOOKMARK [1][]{section.7.4}{Et harum quidem rerum facilis}{chapter.7}% 49
+\BOOKMARK [1][]{section.7.1}{A}{chapter.7}% 44
+\BOOKMARK [1][]{section.7.2}{B}{chapter.7}% 45
+\BOOKMARK [2][]{subsection.7.2.1}{B1}{section.7.2}% 46
+\BOOKMARK [2][]{subsection.7.2.2}{B2}{section.7.2}% 47
+\BOOKMARK [1][]{section.7.3}{C}{chapter.7}% 48
+\BOOKMARK [1][]{section.7.4}{D}{chapter.7}% 49
 \BOOKMARK [0][]{chapter.8}{Conclusion}{part.4}% 50
-\BOOKMARK [1][]{section.8.1}{Lorem ipsum}{chapter.8}% 51
-\BOOKMARK [1][]{section.8.2}{Sed ut perspiciatis}{chapter.8}% 52
-\BOOKMARK [2][]{subsection.8.2.1}{Ut enim ad minima veniam}{section.8.2}% 53
-\BOOKMARK [2][]{subsection.8.2.2}{Et harum quidem rerum facilis}{section.8.2}% 54
-\BOOKMARK [1][]{section.8.3}{Ut Enim ad Minima Veniam}{chapter.8}% 55
-\BOOKMARK [1][]{section.8.4}{Et harum quidem rerum facilis}{chapter.8}% 56
+\BOOKMARK [1][]{section.8.1}{A}{chapter.8}% 51
+\BOOKMARK [1][]{section.8.2}{B}{chapter.8}% 52
+\BOOKMARK [2][]{subsection.8.2.1}{B1}{section.8.2}% 53
+\BOOKMARK [2][]{subsection.8.2.2}{B2}{section.8.2}% 54
+\BOOKMARK [1][]{section.8.3}{C}{chapter.8}% 55
+\BOOKMARK [1][]{section.8.4}{D}{chapter.8}% 56
 \BOOKMARK [-1][]{part.5}{V Appendices}{}% 57
-\BOOKMARK [0][]{chapter.1}{Commodo Consequat}{part.5}% 58
+\BOOKMARK [0][]{chapter.1}{Apache Unit Testing}{part.5}% 58

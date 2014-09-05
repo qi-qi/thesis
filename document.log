@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  5 SEP 2014 15:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  5 SEP 2014 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -936,7 +936,7 @@ Chapter 8.
 same identifier (name{chapter.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.20 ...ter{Apache HDFS Unit Testing Passing List}
+l.20 \chapter{Apache HDFS Unit Tests Passing List}
                                                   
 Appendix A.
 )
@@ -952,17 +952,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 177.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 177.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 177.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 1737ED5F7E31A778CA979F6568397E83;2982.
+(rerunfilecheck)             Checksum: 996213BCCC7877DF3316F395BC20D0D4;2980.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 177.
  ) 
 Here is how much of TeX's memory you used:
  7555 strings out of 493304
  106141 string characters out of 6139871
- 199225 words of memory out of 5000000
+ 199223 words of memory out of 5000000
  10712 multiletter control sequences out of 15000+600000
  32860 words of font info for 77 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 39i,13n,28p,764b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,13n,28p,790b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texliv
 e/texmf-dist/fonts/enc/dvips/lobster2/lbst2_2vl4dw.enc}</usr/share/texlive/texm
 f-dist/fonts/type1/impallari/lobster2/LobsterTwo-BoldItalic.pfb></usr/share/tex
@@ -972,7 +972,7 @@ st/fonts/type1/public/hfbright/hfbrsl8.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/p
 alatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr
 8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (50 pages, 144543 bytes).
+Output written on document.pdf (50 pages, 144600 bytes).
 PDF statistics:
  573 PDF objects out of 1000 (max. 8388607)
  506 compressed objects within 6 object streams

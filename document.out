@@ -10,14 +10,14 @@
 \BOOKMARK [1][]{section.2.3}{C}{chapter.2}% 10
 \BOOKMARK [1][]{section.2.4}{D}{chapter.2}% 11
 \BOOKMARK [-1][]{part.2}{II Assessment in Hop-HDFS}{}% 12
-\BOOKMARK [0][]{chapter.3}{Strong Consistency Semantics in Hop-HDFS}{part.2}% 13
+\BOOKMARK [0][]{chapter.3}{Limitation on Pessimistic Locking Mechanism}{part.2}% 13
 \BOOKMARK [1][]{section.3.1}{A}{chapter.3}% 14
 \BOOKMARK [1][]{section.3.2}{B}{chapter.3}% 15
 \BOOKMARK [2][]{subsection.3.2.1}{B1}{section.3.2}% 16
 \BOOKMARK [2][]{subsection.3.2.2}{B2}{section.3.2}% 17
 \BOOKMARK [1][]{section.3.3}{C}{chapter.3}% 18
 \BOOKMARK [1][]{section.3.4}{D}{chapter.3}% 19
-\BOOKMARK [0][]{chapter.4}{Systematic Assessment of Operation Performance in Hop-HDFS}{part.2}% 20
+\BOOKMARK [0][]{chapter.4}{Systematic Assessment of Hop-HDFS Performance}{part.2}% 20
 \BOOKMARK [1][]{section.4.1}{A}{chapter.4}% 21
 \BOOKMARK [1][]{section.4.2}{B}{chapter.4}% 22
 \BOOKMARK [2][]{subsection.4.2.1}{B1}{section.4.2}% 23
@@ -55,4 +55,4 @@
 \BOOKMARK [1][]{section.8.3}{C}{chapter.8}% 55
 \BOOKMARK [1][]{section.8.4}{D}{chapter.8}% 56
 \BOOKMARK [-1][]{part.5}{V Appendices}{}% 57
-\BOOKMARK [0][]{chapter.1}{Apache Unit Testing}{part.5}% 58
+\BOOKMARK [0][]{chapter.1}{Apache HDFS Unit Testing Passing List}{part.5}% 58

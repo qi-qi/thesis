@@ -255,7 +255,7 @@ modifications.
 
 \noindent Precedent thesis works have contributed for a transaction model for Hop-HDFS. From system-level coarse grained locking to row-level fine grained locking, the strong consistency semantics have been ensured in Hop-HDFS, but the overall performance is restricted compared to the original HDFS.
 
-\noindent In this thesis, we first analyze the limitation of HDFS NameNode  implementation and provide an overview of Hop-HDFS illustrating how we overcome those problems. Then we give a systematic assessment on precedent works for Hop-HDFS comparing to HDFS, and also analyze the restriction when using pessimistic locking mechanisms to ensure the strong consistency semantics. Finally, as a proof of concept, we demonstrate how to improve the performance by designing a new model based on optimistic concurrency control with snapshot isolation. The evaluation shows the significant improvement of this new model. The correctness has been validated by 300+ unit tests passing of Apache HDFS.
+\noindent In this thesis, we first analyze the limitation of HDFS NameNode  implementation and provide an overview of Hop-HDFS illustrating how we overcome those problems. Then we give a systematic assessment on precedent works for Hop-HDFS comparing to HDFS, and also analyze the restriction when using pessimistic locking mechanisms to ensure the strong consistency semantics. Finally, as a proof of concept, we demonstrate how to improve the performance by designing a new model based on optimistic concurrency control with snapshot isolation. The evaluation shows the significant improvement of this new model. The correctness of our implementation has been validated by 300+ Apache HDFS unit tests passing.
 
 \newpage
 

@@ -1,8 +1,20 @@
 \begin{thebibliography}{}
 
-\bibitem[\protect\citeauthoryear{Shvachko}{Shvachko}{2010}]{shvachko2010hdfs}
-Shvachko, K.~V. (2010).
-\newblock Hdfs scalability: The limits to growth.
-\newblock {\em login\/}~{\em 35\/}(2), 6--16.
+\bibitem[\protect\citeauthoryear{Apache}{Apache}{}]{apachehadoop}
+Apache.
+\newblock What is apache hadoop?
+\newblock \url{http://hadoop.apache.org}.
+
+\bibitem[\protect\citeauthoryear{Borthakur}{Borthakur}{2008}]{borthakur2008hdfs}
+Borthakur, D. (2008).
+\newblock Hdfs architecture guide.
+\newblock {\em HADOOP APACHE PROJECT http://hadoop. apache.
+  org/common/docs/current/hdfs design. pdf\/}.
+
+\bibitem[\protect\citeauthoryear{Cloudera}{Cloudera}{}]{cloudera}
+Cloudera.
+\newblock Hadoop and big data.
+\newblock
+  \url{http://www.cloudera.com/content/cloudera/en/about/hadoop-and-big-data.html}.
 
 \end{thebibliography}

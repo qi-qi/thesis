@@ -2,45 +2,54 @@ This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: document.aux
 The style file: chicago.bst
-Database file #1: document.bib
-You've used 1 entry,
+Database file #1: reference.bib
+Warning--entry type for "apachehadoop" isn't style-file defined
+--line 1 of file reference.bib
+Warning--entry type for "cloudera" isn't style-file defined
+--line 7 of file reference.bib
+Warning--empty year in apachehadoop
+Warning--no number and no volume in borthakur2008hdfs
+Warning--page numbers missing in borthakur2008hdfs
+Warning--empty year in cloudera
+You've used 3 entries,
             2861 wiz_defined-function locations,
-            618 strings with 4944 characters,
-and the built_in function-call counts, 570 in all, are:
-= -- 49
-> -- 26
+            625 strings with 5192 characters,
+and the built_in function-call counts, 1445 in all, are:
+= -- 123
+> -- 78
 < -- 0
-+ -- 6
-- -- 10
-* -- 44
-:= -- 110
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 6
-chr.to.int$ -- 1
-cite$ -- 1
-duplicate$ -- 18
-empty$ -- 42
-format.name$ -- 10
-if$ -- 100
++ -- 18
+- -- 30
+* -- 86
+:= -- 292
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 18
+chr.to.int$ -- 3
+cite$ -- 7
+duplicate$ -- 46
+empty$ -- 95
+format.name$ -- 30
+if$ -- 249
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 1
-newline$ -- 8
-num.names$ -- 10
-pop$ -- 3
+newline$ -- 18
+num.names$ -- 30
+pop$ -- 27
 preamble$ -- 1
-purify$ -- 12
+purify$ -- 36
 quote$ -- 0
-skip$ -- 18
+skip$ -- 36
 stack$ -- 0
-substring$ -- 36
-swap$ -- 6
+substring$ -- 60
+swap$ -- 15
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 20
-warning$ -- 0
-while$ -- 12
+type$ -- 60
+warning$ -- 4
+while$ -- 30
 width$ -- 0
-write$ -- 15
+write$ -- 39
+(There were 6 warnings)

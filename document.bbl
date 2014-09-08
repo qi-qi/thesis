@@ -5,6 +5,12 @@ Apache.
 \newblock What is apache hadoop?
 \newblock \url{http://hadoop.apache.org}.
 
+\bibitem[\protect\citeauthoryear{Berenson, Bernstein, Gray, Melton, O'Neil, \&
+  O'Neil}{Berenson et~al.}{1995}]{berenson1995critique}
+Berenson, H., P.~Bernstein, J.~Gray, J.~Melton, E.~O'Neil, \& P.~O'Neil (1995).
+\newblock A critique of ansi sql isolation levels.
+\newblock In {\em ACM SIGMOD Record}, Volume~24, pp.\  1--10. ACM.
+
 \bibitem[\protect\citeauthoryear{Borthakur}{Borthakur}{2008}]{borthakur2008hdfs}
 Borthakur, D. (2008).
 \newblock Hdfs architecture guide.
@@ -32,6 +38,14 @@ Ghemawat, S., H.~Gobioff, \& S.-T. Leung (2003).
 \newblock In {\em ACM SIGOPS Operating Systems Review}, Volume~37, pp.\
   29--43. ACM.
 
+\bibitem[\protect\citeauthoryear{Gray, Lorie, Putzolu, \& Traiger}{Gray
+  et~al.}{1976}]{gray1976granularity}
+Gray, J.~N., R.~A. Lorie, G.~R. Putzolu, \& I.~L. Traiger (1976).
+\newblock Granularity of locks and degrees of consistency in a shared data
+  base.
+\newblock In {\em IFIP Working Conference on Modelling in Data Base Management
+  Systems}, pp.\  365--394.
+
 \bibitem[\protect\citeauthoryear{Hakimzadeh, Sajjad, \& Dowling}{Hakimzadeh
   et~al.}{2014}]{hakimzadeh2014scaling}
 Hakimzadeh, K., H.~P. Sajjad, \& J.~Dowling (2014).
@@ -39,6 +53,10 @@ Hakimzadeh, K., H.~P. Sajjad, \& J.~Dowling (2014).
   metadata.
 \newblock In {\em Distributed Applications and Interoperable Systems}, pp.\
   38--51. Springer.
+
+\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{2014}]{ndblimits}
+MySQL (2014).
+\newblock Limits relating to transaction handling in mysql cluster.
 
 \bibitem[\protect\citeauthoryear{Peiro~Sajjad \&
   Hakimzadeh~Harirbaf}{Peiro~Sajjad \&

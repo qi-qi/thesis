@@ -86,9 +86,13 @@ modifications.
 % TODO?
 \section{Problem Statement}
 
-In HDFS, the NameNode's operations are categorized into \textit{read} or \textit{write} operations. To protect the metadata among parallel running threads, a global read/write lock is used to maintain the atomicity of the namespace. We call it \textit{system-level lock}. Concurrent threads to access shared object for read operations are allowed, but it restricts a single thread to access object for write operations. This \textit{single-writer-multiple-readers} concurrency model will not reduce the throughput much since the metadata is kept optimized data structures in-memory~\cite{hakimzadeh2014scaling}.
+In HDFS, the NameNode's operations are categorized into \textit{read} or \textit{write} operations. To protect the metadata among parallel running threads, a global read/write lock is used to maintain the atomicity of the namespace. We call it \textit{system-level lock}. Concurrent threads to access shared object for read operations are allowed, but it restricts a single thread to access object for write operations. Therefore, all concurrent readers get the same view of the mutated data reflected by completed writes. We call it \textit{Strong Consistency Semantics} in HDFS. This \textit{single-writer-multiple-readers} concurrency model will not reduce the throughput much since the metadata is kept optimized data structures in-memory~\cite{hakimzadeh2014scaling}.
 
-\noindent The first version of Hop-HDFS, called the KTHFS~\cite{wasif2012distributed}, adopts the system-level locking mechanism to serialize transactions. All concurrent readers get the same view of the mutated data reflected by completed writes. We call it \textit{Strong Consistency}.
+\noindent The first version of Hop-HDFS, called the KTHFS~\cite{wasif2012distributed}, adopts the system-level locking mechanism to serialize transactions. The strong consistency semantics is maintained, but due to the network latency from the external database architecture, each operation takes a long time lock on the filesystem. The performance is heavily degraded.
+
+\noindent The second version of Hop-HDFS adopts a fine-grained row-level locking mechanism to improve the throughput~\cite{hakimzadeh2014scaling}~\cite{peiro2013maintaining} while maintaining the strong consistency semantics. Based on a hierarchical concurrency model, it builds a \textit{directed acyclic graph} (DAG) for the namespace. Metadata operation that mutates the DAG either commit or abort (for partial failures) in a single transaction. \textit{Implicit locking}~\cite{gray1976granularity} is used to take an explicit lock on the data row of the root of a subtree in a transaction, which implicitly acquires locks on all the descendants. However, this approach lowers the concurrency when multiple transactions try to mutate different descendants within the same subtree.
+
+\noindent Besides the concurrency issue, there are challenges when implementing each HDFS operation as a single transaction. The storage engine, \textit{NDB}, of MySQL Cluster supports only the \textit{READ COMMITTED} transaction isolation level~\cite{ndblimits}, the write results in transactions will be exposed to read in different concurrent transactions. Without proper implementation, anomalies like \textit{Lost Update, Fuzzy Read, Phantom, Read Skew and Write Skew}~\cite{berenson1995critique} will generate incorrect results.
 
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -98,7 +102,13 @@ In HDFS, the NameNode's operations are categorized into \textit{read} or \textit
   %
 \section{Contribution}
 
-CCC
+In this thesis, we contribute to the following three ways:
+
+\begin{itemize}
+	\item First, we give an overview of HDFS architecture, and analyzes the limitation of the NameNode implementation.
+	\item Second, we provide a systematic performance assessment of the distributed NameNode architecture in Hop-HDFS comparing to original HDFS while maintaining the strong consistency semantics.
+	\item Third, we demonstrate how to improve the performance by designing a new model based on optimistic concurrency control with snapshot isolation as a proof of concept. The evaluation shows the significant improvement of this new model, and the correctness of our implementation has been validated by 300+ Apache HDFS unit tests passing.
+\end{itemize}
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
@@ -108,7 +118,7 @@ CCC
 
 \section{Document Structure}
 
-[To be Added]
+\textbf{[To be added after finishing the whole document.]}
 
   %
  %%%

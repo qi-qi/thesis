@@ -14,7 +14,15 @@ I was expecting a `,' or a `}'---line 54 of file reference.bib
  :  howpublished = {\url{https://www.sics.se/sites/default/files/pub/jimdowlingsics-cloudday-13-hops-paas.pdf}}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--entry type for "ndblimits" isn't style-file defined
+--line 112 of file reference.bib
+I was expecting a `,' or a `}'---line 116 of file reference.bib
+ :  
+ :  howpublished = {\url{http://dev.mysql.com/doc/mysql-cluster-excerpt/5.1/en/mysql-cluster-limitations-transactions.html}}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--empty year in apachehadoop
+Warning--can't use both volume and number fields in berenson1995critique
 Warning--no number and no volume in borthakur2008hdfs
 Warning--page numbers missing in borthakur2008hdfs
 Warning--empty year in cloudera
@@ -28,45 +36,45 @@ Warning--page numbers missing in peiro2013maintaining
 Warning--no journal in wasif2012distributed
 Warning--no number and no volume in wasif2012distributed
 Warning--page numbers missing in wasif2012distributed
-You've used 12 entries,
+You've used 15 entries,
             2861 wiz_defined-function locations,
-            674 strings with 6364 characters,
-and the built_in function-call counts, 7257 in all, are:
-= -- 621
-> -- 460
-< -- 4
-+ -- 130
-- -- 160
-* -- 556
-:= -- 1345
-add.period$ -- 35
-call.type$ -- 12
-change.case$ -- 80
-chr.to.int$ -- 12
-cite$ -- 26
-duplicate$ -- 229
-empty$ -- 466
-format.name$ -- 176
-if$ -- 1343
+            689 strings with 6869 characters,
+and the built_in function-call counts, 9789 in all, are:
+= -- 823
+> -- 676
+< -- 7
++ -- 198
+- -- 230
+* -- 786
+:= -- 1794
+add.period$ -- 44
+call.type$ -- 15
+change.case$ -- 106
+chr.to.int$ -- 15
+cite$ -- 30
+duplicate$ -- 304
+empty$ -- 606
+format.name$ -- 254
+if$ -- 1832
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 9
-newline$ -- 59
-num.names$ -- 120
-pop$ -- 80
+missing$ -- 11
+newline$ -- 73
+num.names$ -- 150
+pop$ -- 108
 preamble$ -- 1
-purify$ -- 152
+purify$ -- 196
 quote$ -- 0
-skip$ -- 222
+skip$ -- 294
 stack$ -- 0
-substring$ -- 345
-swap$ -- 79
-text.length$ -- 4
+substring$ -- 458
+swap$ -- 110
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 240
-warning$ -- 14
-while$ -- 121
+type$ -- 300
+warning$ -- 15
+while$ -- 149
 width$ -- 0
-write$ -- 155
-(There was 1 error message)
+write$ -- 196
+(There were 2 error messages)

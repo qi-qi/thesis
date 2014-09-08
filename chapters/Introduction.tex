@@ -41,9 +41,31 @@
 
 \section{Motivation}
 
-The \textit{Apache Hadoop}~\cite{apachehadoop} ecosystem has become the de facto industrial standard to store, process and analyze large data sets in the big data era~\cite{cloudera}. The \textit{Hadoop Distributed File System} (HDFS) is the storage layer for Apache Hadoop, which enables petabytes of data to be persisted on clusters of commodity hardware at relatively low cost~\cite{borthakur2008hdfs}. Inspired by the \textit{Google File System} (GFS)~\cite{ghemawat2003google}, the metadata is decoupled and stored in-memory on a single server, called the \textit{NameNode}, while the file data are stored as a sequence of blocks and replicated across potentially thousands of machines for fault tolerance.
+\subsection{The De Facto Industrial Standard in Big Data Era}
 
+The \textit{Apache Hadoop}~\cite{apachehadoop} ecosystem has become the de facto industrial standard to store, process and analyze large data sets in the big data era~\cite{cloudera}. It is widely used as a computational platform for a variety of areas including search engines, data warehousing, behavioral analysis, natural language processing, genomic analysis, image processing, etc~\cite{shvachko2011apache}. 
 
+\noindent The \textit{Hadoop Distributed File System} (HDFS) is the storage layer for Apache Hadoop, which enables petabytes of data to be persisted on clusters of commodity hardware at relatively low cost~\cite{borthakur2008hdfs}. Inspired by the \textit{Google File System} (GFS)~\cite{ghemawat2003google}, the namespace, \textit{metadata}, is decoupled from data and stored in-memory on a single server, called the \textit{NameNode}. The file datasets are stored as sequences of blocks and replicated across potentially thousands of machines for fault tolerance.
+
+\subsection{Limitation in HDFS}
+
+Built upon the single namespace server, \textit{the NameNode}, architecture, one well-known limitation of HDFS is the limitation to growth~\cite{shvachko2010hdfs}. Since the metadata is kept in-memory for fast operation in NameNode, the number of file objects in the filesystem is limited by the amount of memory of the NameNode. 
+
+\noindent Approximately, the size of the metadata for a single file object having two blocks (replicated three times by default) is 600 bytes. As a rule of thumb, for one petabyte physical storage, it requires one gigabyte metadata in memory~\cite{shvachko2010hdfs}. Table~\ref{table:memoryRequirement} gives an estimation of the memory requirement and its related physical storage capacity for different number of files.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Number of Files} & \textbf{Memory Requirement} & \textbf{Physical Storage} \\ \hline
+		1 million       & 0.6 GB             & 0.6 PB           \\ \hline
+		100 million     & 60 GB              & 60 PB            \\ \hline
+		1 billion       & 600 GB             & 600 PB           \\ \hline
+		2 billion       & 1200 GB            & 1200 PB          \\ \hline
+	\end{tabular}
+	\caption{Memory Requirement for Related Storage Capacity in HDFS}
+	\label{table:memoryRequirement}
+\end{table}
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %

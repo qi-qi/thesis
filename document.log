@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  8 SEP 2014 15:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  8 SEP 2014 17:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -856,10 +856,9 @@ l.71
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.95 \section
-             {Contribution} [4]) (./chapters/Background.texpdfTeX warning (ext4
-): destination with the same identifier (name{page.5}) has been already used, d
-uplicate ignored
+l.90 
+      [4]) (./chapters/Background.texpdfTeX warning (ext4): destination with th
+e same identifier (name{page.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.20 \chapter
@@ -989,10 +988,10 @@ st/fonts/type1/public/hfbright/hfbrsl8.pfb></usr/share/texlive/texmf-dist/fonts
 latino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8
 a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (52 pages, 168063 bytes).
+Output written on document.pdf (52 pages, 169389 bytes).
 PDF statistics:
- 639 PDF objects out of 1000 (max. 8388607)
- 569 compressed objects within 6 object streams
+ 640 PDF objects out of 1000 (max. 8388607)
+ 570 compressed objects within 6 object streams
  125 named destinations out of 1000 (max. 500000)
  494 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -76,16 +76,20 @@ modifications.
 
 \noindent Precedent thesis works have contributed for a transaction model~\cite{wasif2012distributed} ~\cite{peiro2013maintaining} as well as a high availability multi-NameNode architecture~\cite{d2013kthfs} for Hop-HDFS. It can store up to 4.1 billion files with 3TB MySQL Cluster support for metadata~\cite{hakimzadeh2014scaling}. 
 
-\noindent However, in HDFS, the correctness and consistency of the namespace is ensured by atomic metadata mutation~\cite{shvachko2010hadoop}. In order to maintain the same level of strong consistency semantics, system-level coarse grained locking~\cite{wasif2012distributed} and row-level fine grained locking~\cite{peiro2013maintaining} are adopted in precedent projects of Hop-HDFS, but the overall performance is heavily restricted compared to the original HDFS. Therefore, efficient locking mechanisms needed to be investigated to achieve better concurrency control.
+\noindent However, in HDFS, the correctness and consistency of the namespace is ensured by atomic metadata mutation~\cite{shvachko2010hadoop}. In order to maintain the same level of strong consistency semantics, system-level coarse grained locking and row-level fine grained locking are adopted in precedent projects of Hop-HDFS, but the overall performance is heavily restricted compared to the original HDFS. Therefore, investigation for better concurrency control to improve the performance of Hop-HDFS is the main motivation.
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
 %%%%%                      SECOND SECTION
  %%%
   %
 
+% TODO?
 \section{Problem Statement}
 
-BBB
+In HDFS, the NameNode's operations are categorized into \textit{read} or \textit{write} operations. To protect the metadata among parallel running threads, a global read/write lock is used to maintain the atomicity of the namespace. We call it \textit{system-level lock}. Concurrent threads to access shared object for read operations are allowed, but it restricts a single thread to access object for write operations. This \textit{single-writer-multiple-readers} concurrency model will not reduce the throughput much since the metadata is kept optimized data structures in-memory~\cite{hakimzadeh2014scaling}.
+
+\noindent The first version of Hop-HDFS, called the KTHFS~\cite{wasif2012distributed}, adopts the system-level locking mechanism to serialize transactions. All concurrent readers get the same view of the mutated data reflected by completed writes. We call it \textit{Strong Consistency}.
+
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %

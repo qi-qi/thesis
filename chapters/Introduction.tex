@@ -41,7 +41,9 @@
 
 \section{Motivation}
 
-The \textit{Apache Hadoop}~\cite{apachehadoop} ecosystem has become the de facto industrial standard to store, process and analyze large data sets in the big data era~\cite{cloudera}. The \textit{Hadoop Distributed File System} (HDFS) is the storage layer for Apache Hadoop, which enables petabytes of data to be stored and replicated on clusters of commodity hardware at relatively low cost~\cite{borthakur2008hdfs}.
+The \textit{Apache Hadoop}~\cite{apachehadoop} ecosystem has become the de facto industrial standard to store, process and analyze large data sets in the big data era~\cite{cloudera}. The \textit{Hadoop Distributed File System} (HDFS) is the storage layer for Apache Hadoop, which enables petabytes of data to be persisted on clusters of commodity hardware at relatively low cost~\cite{borthakur2008hdfs}. Inspired by the \textit{Google File System} (GFS)~\cite{ghemawat2003google}, the metadata is decoupled and stored in-memory on a single server, called the \textit{NameNode}, while the file data are stored as a sequence of blocks and replicated across potentially thousands of machines for fault tolerance.
+
+
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %

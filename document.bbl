@@ -17,4 +17,11 @@ Cloudera.
 \newblock
   \url{http://www.cloudera.com/content/cloudera/en/about/hadoop-and-big-data.html}.
 
+\bibitem[\protect\citeauthoryear{Ghemawat, Gobioff, \& Leung}{Ghemawat
+  et~al.}{2003}]{ghemawat2003google}
+Ghemawat, S., H.~Gobioff, \& S.-T. Leung (2003).
+\newblock The google file system.
+\newblock In {\em ACM SIGOPS Operating Systems Review}, Volume~37, pp.\
+  29--43. ACM.
+
 \end{thebibliography}

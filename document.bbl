@@ -17,12 +17,42 @@ Cloudera.
 \newblock
   \url{http://www.cloudera.com/content/cloudera/en/about/hadoop-and-big-data.html}.
 
+\bibitem[\protect\citeauthoryear{Dowling}{Dowling}{2013}]{hop}
+Dowling, J. (2013).
+\newblock Hop: Hadoop open platform-as-a-service.
+
+\bibitem[\protect\citeauthoryear{D'Souza}{D'Souza}{2013}]{d2013kthfs}
+D'Souza, J.~C. (2013).
+\newblock Kthfs--a highly available andscalable file system.
+
 \bibitem[\protect\citeauthoryear{Ghemawat, Gobioff, \& Leung}{Ghemawat
   et~al.}{2003}]{ghemawat2003google}
 Ghemawat, S., H.~Gobioff, \& S.-T. Leung (2003).
 \newblock The google file system.
 \newblock In {\em ACM SIGOPS Operating Systems Review}, Volume~37, pp.\
   29--43. ACM.
+
+\bibitem[\protect\citeauthoryear{Hakimzadeh, Sajjad, \& Dowling}{Hakimzadeh
+  et~al.}{2014}]{hakimzadeh2014scaling}
+Hakimzadeh, K., H.~P. Sajjad, \& J.~Dowling (2014).
+\newblock Scaling hdfs with a strongly consistent relational model for
+  metadata.
+\newblock In {\em Distributed Applications and Interoperable Systems}, pp.\
+  38--51. Springer.
+
+\bibitem[\protect\citeauthoryear{Peiro~Sajjad \&
+  Hakimzadeh~Harirbaf}{Peiro~Sajjad \&
+  Hakimzadeh~Harirbaf}{2013}]{peiro2013maintaining}
+Peiro~Sajjad, H. \& M.~Hakimzadeh~Harirbaf (2013).
+\newblock Maintaining strong consistency semantics in a horizontally scalable
+  and highly available implementation of hdfs.
+
+\bibitem[\protect\citeauthoryear{Shvachko, Kuang, Radia, \& Chansler}{Shvachko
+  et~al.}{2010}]{shvachko2010hadoop}
+Shvachko, K., H.~Kuang, S.~Radia, \& R.~Chansler (2010).
+\newblock The hadoop distributed file system.
+\newblock In {\em Mass Storage Systems and Technologies (MSST), 2010 IEEE 26th
+  Symposium on}, pp.\  1--10. IEEE.
 
 \bibitem[\protect\citeauthoryear{Shvachko}{Shvachko}{2010}]{shvachko2010hdfs}
 Shvachko, K.~V. (2010).
@@ -33,5 +63,9 @@ Shvachko, K.~V. (2010).
 Shvachko, K.~V. (2011).
 \newblock Apache hadoop: The scalability update.
 \newblock {\em login: The Magazine of USENIX\/}~{\em 36}, 7--13.
+
+\bibitem[\protect\citeauthoryear{Wasif}{Wasif}{2012}]{wasif2012distributed}
+Wasif, M. (2012).
+\newblock A distributed namespace for a distributed file system.
 
 \end{thebibliography}

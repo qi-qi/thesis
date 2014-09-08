@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  8 SEP 2014 13:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  8 SEP 2014 15:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -738,7 +738,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 59.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<figs/preliminar/Logo_IST_web.pdf, id=244, 500.87125pt x 193.72375pt>
+<figs/preliminar/Logo_IST_web.pdf, id=248, 500.87125pt x 193.72375pt>
 File: figs/preliminar/Logo_IST_web.pdf Graphic file (type pdf)
 
 <use figs/preliminar/Logo_IST_web.pdf>
@@ -849,89 +849,91 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.85 \section
-             {Contribution} [3
+l.71 
+      [3
 
-]) (./chapters/Background.texpdfTeX warning (ext4): destination with the same i
-dentifier (name{page.4}) has been already used, duplicate ignored
+]pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.95 \section
+             {Contribution} [4]) (./chapters/Background.texpdfTeX warning (ext4
+): destination with the same identifier (name{page.5}) has been already used, d
+uplicate ignored
 <to be read again> 
                    \relax 
 l.20 \chapter
-             {Background and Related Work} [4]
+             {Background and Related Work} [5]pdfTeX warning (ext4): destinatio
+n with the same identifier (name{page.6}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.20 \chapter
+             {Background and Related Work} [6
+
+]
 Chapter 2.
-)pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has
+)pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.84 \part
-          {Assessment in Hop-HDFS} [5
-
-]pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.84 \part
-          {Assessment in Hop-HDFS} [6
-
-]pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.84 \part{Assessment in Hop-HDFS}
-                                   [7]pdfTeX warning (ext4): destination with t
+          {Assessment in Hop-HDFS} [7]pdfTeX warning (ext4): destination with t
 he same identifier (name{page.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
+l.84 \part
+          {Assessment in Hop-HDFS} [8
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
 l.84 \part{Assessment in Hop-HDFS}
-                                   [8] (./chapters/Consistency.tex
+                                   [9]pdfTeX warning (ext4): destination with t
+he same identifier (name{page.10}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.84 \part{Assessment in Hop-HDFS}
+                                   [10] (./chapters/Consistency.tex
 Chapter 3.
 ) (./chapters/Assessment.texpdfTeX warning (ext4): destination with the same id
-entifier (name{page.9}) has been already used, duplicate ignored
+entifier (name{page.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.23 \chapter
-             {Systematic Assessment of Hop-HDFS Performance} [9
+             {Systematic Assessment of Hop-HDFS Performance} [11
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.10}) ha
+]pdfTeX warning (ext4): destination with the same identifier (name{page.12}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.23 \chapter
-             {Systematic Assessment of Hop-HDFS Performance} [10
+             {Systematic Assessment of Hop-HDFS Performance} [12
 
 ]
 Chapter 4.
-)pdfTeX warning (ext4): destination with the same identifier (name{page.11}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.103 \part
-           {Solution} [11]pdfTeX warning (ext4): destination with the same iden
-tifier (name{page.12}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.103 \part
-           {Solution} [12
+) [13] [14
 
-] [13] [14] (./chapters/Design.tex
+] [15] [16] (./chapters/Design.tex
 Chapter 5.
-) (./chapters/Implementation.tex [15
+) (./chapters/Implementation.tex [17
 
-] [16
+] [18
 
 ]
 Chapter 6.
-) [17] [18
+) [19] [20
 
-] [19] [20] (./chapters/Evaluation.tex
+] [21] [22] (./chapters/Evaluation.tex
 Chapter 7.
-) (./chapters/Conclusion.tex [21
+) (./chapters/Conclusion.tex [23
 
-] [22
+] [24
 
 ]
 Chapter 8.
-) (./document.bbl [23] [24
+) (./document.bbl [25] [26
 
 ]
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 6.
@@ -944,9 +946,9 @@ Underfull \hbox (badness 1117) in paragraph at lines 15--19
 ttp : / / www . cloudera . com / content /
  []
 
-) [25] [26
+) [27] [28
 
-] [27] [28] (./chapters/Testing.texpdfTeX warning (ext4): destination with the 
+] [29] [30] (./chapters/Testing.texpdfTeX warning (ext4): destination with the 
 same identifier (name{chapter.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -955,9 +957,9 @@ l.20 \chapter{Apache HDFS Unit Tests Passing List}
 Appendix A.
 )
 No file document.ind.
-[29
+[31
 
-] [30
+] [32
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 177.
@@ -966,14 +968,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 177.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 177.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 177.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: AB50314E6C094BB68C92153D4AF8D280;3222.
+(rerunfilecheck)             Checksum: D34C30A62AFCB2B2847CB97E46CAC62D;3308.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 177.
  ) 
 Here is how much of TeX's memory you used:
- 7607 strings out of 493304
- 106937 string characters out of 6139871
- 199650 words of memory out of 5000000
- 10751 multiletter control sequences out of 15000+600000
+ 7623 strings out of 493304
+ 107211 string characters out of 6139871
+ 200148 words of memory out of 5000000
+ 10758 multiletter control sequences out of 15000+600000
  33375 words of font info for 79 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  39i,13n,28p,862b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -987,10 +989,10 @@ st/fonts/type1/public/hfbright/hfbrsl8.pfb></usr/share/texlive/texmf-dist/fonts
 latino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8
 a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (50 pages, 163580 bytes).
+Output written on document.pdf (52 pages, 168063 bytes).
 PDF statistics:
- 609 PDF objects out of 1000 (max. 8388607)
- 541 compressed objects within 6 object streams
- 116 named destinations out of 1000 (max. 500000)
- 486 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 639 PDF objects out of 1000 (max. 8388607)
+ 569 compressed objects within 6 object streams
+ 125 named destinations out of 1000 (max. 500000)
+ 494 words of extra memory for PDF output out of 10000 (max. 10000000)
 

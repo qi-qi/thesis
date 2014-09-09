@@ -37,17 +37,29 @@
  %%%
   %
 
-\section{A}
+\section{Distributed File Systems}
 
-AAA
+Distributed File systems is the fundamental in big data era. They provide a high available storage service with fault tolerance for data corruption, which enable petabytes of data to be persisted across multiple low cost commodity machines reliably.
 
+\subsection{The Google File System}
+\textit{The Google File System} (GFS) is a scalable distributed file system developed and widely used in \textit{Google Incorporation} for large distributed data-intensive applications. With fault tolerance, it runs on clusters of inexpensive commodity hardware, which provides a storage layer for a large number of applications with high aggregate performance~\cite{ghemawat2003google}. There are some design assumptions for the implementation of GFS:
+
+\begin{itemize}
+	\item The system runs on top on inexpensive commodity hardware so component may often fails.
+	\item Files stored on the system are fairly huge than the transitional standards, which means that Gigabyte files are common.
+	\item There are three kinds of workloads in the system: large streaming reads, small random reads and large sequential writes which append data to files.
+	\item Efficiently well-defined semantics for concurrent appends to the same file is needed.
+	\item Data processing in bulk with high sustained bandwidth is more important than individual read or write with low latency.
+\end{itemize}
+
+\noindent The architecture of a GFS cluster consists of a single \textit{master}, multiple \textit{chunkservers}, and is accessed by multiple \textit{clients}.
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
 %%%%%                      SECOND SECTION
  %%%
   %
 
-\section{B}
+\section{Concurrency Control in Transactional Systems}
 
 BBB
 
@@ -56,7 +68,7 @@ BBB
 %%%%%                         ANOTHER SECTION
  %%%
   %
-\section{C}
+\section{Isolation Level in Transactional Systems}
 
 CCC
 
@@ -66,7 +78,7 @@ CCC
  %%%
   %
 
-\section{D}
+\section{MySQL Cluster}
 
 DDD
 

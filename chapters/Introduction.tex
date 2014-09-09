@@ -107,7 +107,7 @@ In HDFS, the NameNode's operations are categorized into \textit{read} or \textit
 In this thesis, we contribute to the following three ways:
 
 \begin{itemize}
-	\item First, we give an overview of HDFS architecture, and analyzes the limitation of the NameNode implementation.
+	\item First, we analyzes the limitation of HDFS's NameNode implementation, with focus on the namespace locking compared to the master's namespace locking mechanism in Google File System.
 	\item Second, we provide a systematic performance assessment of the distributed NameNode architecture in Hop-HDFS comparing to original HDFS while maintaining the strong consistency semantics.
 	\item Third, we demonstrate how to improve the performance by designing a new model based on optimistic concurrency control with snapshot isolation as a proof of concept. The evaluation shows the significant improvement of this new model, and the correctness of our implementation has been validated by 300+ Apache HDFS unit tests passing.
 \end{itemize}

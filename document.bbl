@@ -54,9 +54,17 @@ Hakimzadeh, K., H.~P. Sajjad, \& J.~Dowling (2014).
 \newblock In {\em Distributed Applications and Interoperable Systems}, pp.\
   38--51. Springer.
 
-\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{2014}]{ndblimits}
-MySQL (2014).
+\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{}]{ndblimits}
+MySQL.
 \newblock Limits relating to transaction handling in mysql cluster.
+\newblock
+  \url{http://dev.mysql.com/doc/mysql-cluster-excerpt/5.1/en/mysql-cluster-limitations-transactions.html}.
+
+\bibitem[\protect\citeauthoryear{Oracle}{Oracle}{}]{reentrantReadWriteLock}
+Oracle.
+\newblock Java api documentation: Class reentrantreadwritelock.
+\newblock
+  \url{http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/ReentrantReadWriteLock.html}.
 
 \bibitem[\protect\citeauthoryear{Peiro~Sajjad \&
   Hakimzadeh~Harirbaf}{Peiro~Sajjad \&

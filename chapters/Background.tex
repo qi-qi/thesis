@@ -52,7 +52,16 @@ Distributed File systems is the fundamental in big data era. They provide a high
 	\item Data processing in bulk with high sustained bandwidth is more important than individual read or write with low latency.
 \end{itemize}
 
-\noindent The architecture of a GFS cluster consists of a single \textit{master}, multiple \textit{chunkservers}, and is accessed by multiple \textit{clients}.
+\noindent The architecture of a GFS cluster consists of a single \textit{master}, multiple \textit{chunkservers}, and is accessed by multiple \textit{clients} as shown in Figure~\ref{fig:gfs}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\linewidth]{figs/GFSArchitecture.pdf}
+	\caption{The Architecture of GFS}
+	\label{fig:gfs}
+\end{figure}
+
+
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
 %%%%%                      SECOND SECTION

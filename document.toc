@@ -11,9 +11,9 @@
 \contentsline {section}{\numberline {2.1}Distributed File Systems}{7}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}The Google File System}{7}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}The Hadoop Distributed File System}{8}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Concurrency Control in Transactional Systems}{8}{section.2.2}
-\contentsline {section}{\numberline {2.3}Isolation Level in Transactional Systems}{8}{section.2.3}
-\contentsline {section}{\numberline {2.4}MySQL Cluster}{9}{section.2.4}
+\contentsline {section}{\numberline {2.2}Concurrency Control in Transactional Systems}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}Isolation Level in Transactional Systems}{10}{section.2.3}
+\contentsline {section}{\numberline {2.4}MySQL Cluster}{10}{section.2.4}
 \contentsline {part}{II\hspace {1em}Assessment in Hop-HDFS}{11}{part.2}
 \contentsline {chapter}{\numberline {3}Namespace Locking}{13}{chapter.3}
 \contentsline {subsection}{\numberline {3.0.1}The Namespace Locking in GFS}{13}{subsection.3.0.1}

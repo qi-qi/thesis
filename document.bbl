@@ -1,10 +1,5 @@
 \begin{thebibliography}{}
 
-\bibitem[\protect\citeauthoryear{Apache}{Apache}{}]{apachehadoop}
-Apache.
-\newblock What is apache hadoop?
-\newblock \url{http://hadoop.apache.org}.
-
 \bibitem[\protect\citeauthoryear{Berenson, Bernstein, Gray, Melton, O'Neil, \&
   O'Neil}{Berenson et~al.}{1995}]{berenson1995critique}
 Berenson, H., P.~Bernstein, J.~Gray, J.~Melton, E.~O'Neil, \& P.~O'Neil (1995).
@@ -46,6 +41,11 @@ Gray, J.~N., R.~A. Lorie, G.~R. Putzolu, \& I.~L. Traiger (1976).
 \newblock In {\em IFIP Working Conference on Modelling in Data Base Management
   Systems}, pp.\  365--394.
 
+\bibitem[\protect\citeauthoryear{Hadoop}{Hadoop}{}]{apachehadoop}
+Hadoop, A.
+\newblock What is apache hadoop?
+\newblock \url{http://hadoop.apache.org}.
+
 \bibitem[\protect\citeauthoryear{Hakimzadeh, Sajjad, \& Dowling}{Hakimzadeh
   et~al.}{2014}]{hakimzadeh2014scaling}
 Hakimzadeh, K., H.~P. Sajjad, \& J.~Dowling (2014).
@@ -53,6 +53,16 @@ Hakimzadeh, K., H.~P. Sajjad, \& J.~Dowling (2014).
   metadata.
 \newblock In {\em Distributed Applications and Interoperable Systems}, pp.\
   38--51. Springer.
+
+\bibitem[\protect\citeauthoryear{HBase}{HBase}{}]{apachehbase}
+HBase, A.
+\newblock Welcome to apache hbase.
+\newblock \url{http://hbase.apache.org/}.
+
+\bibitem[\protect\citeauthoryear{Mahout}{Mahout}{}]{apachemahout}
+Mahout, A.
+\newblock What is apache mahout?
+\newblock \url{http://mahout.apache.org/}.
 
 \bibitem[\protect\citeauthoryear{MySQL}{MySQL}{}]{ndblimits}
 MySQL.
@@ -73,6 +83,11 @@ Peiro~Sajjad, H. \& M.~Hakimzadeh~Harirbaf (2013).
 \newblock Maintaining strong consistency semantics in a horizontally scalable
   and highly available implementation of hdfs.
 
+\bibitem[\protect\citeauthoryear{Pig}{Pig}{}]{apachepig}
+Pig, A.
+\newblock Welcome to apache pig.
+\newblock \url{http://pig.apache.org/}.
+
 \bibitem[\protect\citeauthoryear{Shvachko, Kuang, Radia, \& Chansler}{Shvachko
   et~al.}{2010}]{shvachko2010hadoop}
 Shvachko, K., H.~Kuang, S.~Radia, \& R.~Chansler (2010).
@@ -90,8 +105,18 @@ Shvachko, K.~V. (2011).
 \newblock Apache hadoop: The scalability update.
 \newblock {\em login: The Magazine of USENIX\/}~{\em 36}, 7--13.
 
+\bibitem[\protect\citeauthoryear{Spark}{Spark}{}]{apachespark}
+Spark, A.
+\newblock Apache spark welcome page.
+\newblock \url{http://spark.apache.org/}.
+
 \bibitem[\protect\citeauthoryear{Wasif}{Wasif}{2012}]{wasif2012distributed}
 Wasif, M. (2012).
 \newblock A distributed namespace for a distributed file system.
+
+\bibitem[\protect\citeauthoryear{White}{White}{2012}]{white2012hadoop}
+White, T. (2012).
+\newblock {\em Hadoop: The definitive guide}.
+\newblock " O'Reilly Media, Inc.".
 
 \end{thebibliography}

@@ -58,7 +58,7 @@ Distributed File systems is the fundamental in big data era. They provide a high
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\linewidth]{figs/GFSArchitecture.pdf}
-	\caption{The Architecture of GFS}
+	\caption{The Architecture of GFS \protect \cite{ghemawat2003google}}
 	\label{fig:gfs}
 \end{figure}
 
@@ -70,6 +70,20 @@ Distributed File systems is the fundamental in big data era. They provide a high
 
 \subsection{The Hadoop Distributed File System}
 
+The \textit{Hadoop Distributed File System} (HDFS) is inspired by the Google File System. Initially, HDFS is built for Hadoop Map-Reduce computational framework. With the development of Hadoop ecosystem including HBase~\cite{apachehbase}, Pig~\cite{apachepig}, Mahout~\cite{apachemahout}, Spark~\cite{apachespark}, etc, HDFS becomes the storage layer for other big data applications. Enabling petabytes of data to be persisted on clusters of commodity hardware at relatively low cost, HDFS aims to stream these large data sets at high bandwidth to user applications. Therefore, like GFS, HDFS is optimized for delivering a high throughput of data at the expense of latency~\cite{white2012hadoop}.
+
+\noindent Similar to GFS, HDFS stores metadata and file data separately. The architecture of a HDFS cluster consists of a single \textit{NameNode}, multiple \textit{DataNodes}, and is accessed by multiple \textit{clients} as shown in Figure~\ref{fig:hdfsv1}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.4]{figs/hdfsarchitecturev1.png}
+	\caption{The Architecture of HDFS \protect \cite{borthakur2008hdfs}}
+	\label{fig:hdfsv1}
+\end{figure}
+
+\noindent Files in HDFS are split into smaller blocks stored in \textit{DataNodes}. For fault tolerance, each block is replicated across multiple \textit{DataNodes}.
+
+\noindent The \textit{NameNode} is a single dedicated metadata server maintaining the namespace, access control information, and file blocks mappings to DataNodes. The entire namespace is kept in-memory, called the \textit{image}, of the \textit{NameNode}. Its related persistent record, called the \textit{checkpoint} is stored in the local physical file system. The modification of the \textit{image}, called the \textit{journal}, is also persisted in the local physical file system. Copies of the \textit{checkpoints} and the \textit{journals} can made at other servers for durability. Therefore, the \textit{NameNode} restores the namespace by loading the checkpoint and replaying the journal during its restart.
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
 %%%%%                      SECOND SECTION

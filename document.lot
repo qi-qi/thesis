@@ -2,8 +2,8 @@
 \contentsline {table}{\numberline {1.1}{\ignorespaces Memory Requirement for Related Storage Capacity in HDFS}}{4}{table.1.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Concurrent Mutations within for different files/directories and Related Read-Write Lock Sets}}{14}{table.3.1}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Serialized Concurrent Mutations and Conflict Locks}}{14}{table.3.2}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Concurrent Mutations within for different files/directories and Related Read-Write Lock Sets}}{16}{table.3.1}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Serialized Concurrent Mutations and Conflict Locks}}{16}{table.3.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -71,8 +71,7 @@ Built upon the single namespace server, \textit{the NameNode}, architecture, one
 
 \subsection{Hop-HDFS and Its Limitation}
 
-The \textit{Hadoop Open Platform-as-a-service} (Hop) ~\cite{hop} is an open platform-as-a-Service (PaaS) support of the Hadoop ecosystem on existing cloud platforms including Amazon Web Service and OpenStack. The storage layer of Hop, called the Hop-HDFS, is a highly available implementation of HDFS, based on storing the metadata in a distributed, in-memory, replicated database, called the \textit{MySQL Cluster}. It aims to overcome the NameNode's limitation while maintaining the strong consistency semantics of HDFS so that applications written for HDFS can run on Hop-HDFS without 
-modifications. 
+The \textit{Hadoop Open Platform-as-a-service} (Hop) ~\cite{hop} is an open platform-as-a-Service (PaaS) support of the Hadoop ecosystem on existing cloud platforms including Amazon Web Service and OpenStack. The storage layer of Hop, called the Hop-HDFS, is a highly available implementation of HDFS, based on storing the metadata in a distributed, in-memory, replicated database, called the \textit{MySQL Cluster}. It aims to overcome the NameNode's limitation while maintaining the strong consistency semantics of HDFS so that applications written for HDFS can run on Hop-HDFS without modifications. 
 
 \noindent Precedent thesis works have contributed for a transaction model~\cite{wasif2012distributed} ~\cite{peiro2013maintaining} as well as a high availability multi-NameNode architecture~\cite{d2013kthfs} for Hop-HDFS. It can store up to 4.1 billion files with 3TB MySQL Cluster support for metadata~\cite{hakimzadeh2014scaling}. 
 

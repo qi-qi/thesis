@@ -84,42 +84,32 @@ The \textit{Hadoop Distributed File System} (HDFS) is inspired by the Google Fil
 \noindent Files in HDFS are split into smaller blocks stored in \textit{DataNodes}. For fault tolerance, each block is replicated across multiple \textit{DataNodes}.
 
 \noindent The \textit{NameNode} is a single dedicated metadata server maintaining the namespace, access control information, and file blocks mappings to DataNodes. The entire namespace is kept in-memory, called the \textit{image}, of the \textit{NameNode}. Its related persistent record, called the \textit{checkpoint} is stored in the local physical file system. The modification, \textit{editlogs}, of the \textit{image}, called the \textit{journal}, is also persisted in the local physical file system. Copies of the \textit{checkpoints} and the \textit{journals} can made at other servers for durability. Therefore, the \textit{NameNode} restores the namespace by loading the checkpoint and replaying the journal during its restart.
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  %
-%%%%%                      SECOND SECTION
- %%%
-  %
 
-\section{Concurrency Control in Transactional Systems}
-
-BBB
-
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  %
-%%%%%                         ANOTHER SECTION
- %%%
-  %
-\section{Isolation Level in Transactional Systems}
-
-CCC
-
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  %
-%%%%%                          LAST SECTION
- %%%
-  %
+\section{Concurrency Control and Isolation Level in Transactional Systems}
 
 \section{MySQL Cluster}
 
-DDD
+\section{Hadoop Open Platform-as-a-service and Hop-HDFS}
 
-  %
- %%%
-%%%%%                            THE END
-  %
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The \textit{Hadoop Open Platform-as-a-service} (Hop) ~\cite{hop} is an open platform-as-a-Service (PaaS) support of the Hadoop ecosystem on existing cloud platforms including Amazon Web Service and OpenStack. The storage layer of Hop, called the Hop-HDFS, aims to overcome the major limitations of HDFS:
 
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-master: "tese"
-%%% End: 
+\begin{itemize}[noitemsep]
+	\item \textbf{The scalability of the namespace}: the memory size restricts the storage capacity in the system.
+	\item \textbf{The throughput problem}: the throughput of the metadata operations is bounded by the ability of the single machine (NameNode)
+	\item \textbf{The failure recovery}: it takes a long time for the NameNode to restart since it needs to load the checkpoint and replay the edit logs into the memory
+\end{itemize}
+
+\noindent The architecture of Hop-HDFS consists of multiple \textit{NameNodes}, multiple \textit{DataNodes}, a \textit{MySQL cluster} and is accessed by multiple \textit{clients} as shown in Figure~\ref{fig:hophdfsarchitecture}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\linewidth]{figs/HopHDFSArchitecture.pdf}
+	\caption{The Architecture of Hop-HDFS}
+	\label{fig:hophdfsarchitecture}
+\end{figure}
+
+\noindent The design purpose for Hop-HDFS is to migrate the metadata from NameNode to an external distributed, in-memory, replicated database \textit{MySQL Cluster}. Therefore, the size of the metadata is not limited by a single NameNode's heap size and the scalability problem is solved. We can now have multiple stateless NameNodes architecture so that multiple-writers-multiple-readers are allowed to operate on the namespace to improve the throughput. Moreover, the fault tolerance of the metadata is handled by MySQL Cluster, which grantees high availability of 99.999\%. The \textit{checkpoint} and the \textit{journal} for namespace is not needed, which save time from writing edit logs as well as restarting new NameNodes. Note that we have a leader election in this distributed NameNode architecture. The leader, \textit{master}, will be responsible for block reporting and statistics functions.
+
+\noindent As we discuss earlier, the size of the metadata for a single file object having two blocks (replicated three times by default) is 600 bytes. It requires 60 GB of RAM to store 100 million files in HDFS, 100 million files is also the maximum storage capacity for HDFS in practice. For MySQL Cluster, it supports up to 48 datanodes~\cite{mysql48nodes}, which means that it can scale up to 12 TB in size with 256 GB RAM for each node in size. But conservatively, we assume that Cluster can support up to 3.072 TB for metadata with a replication of 2, which means that Hop-HDFS can store up to 4.1 billion files. A factor of 40 times increase~\cite{hakimzadeh2014scaling}. 
+
+

@@ -11,9 +11,9 @@
 \BOOKMARK [1][]{section.2.1}{Distributed File Systems}{chapter.2}% 11
 \BOOKMARK [2][]{subsection.2.1.1}{The Google File System}{section.2.1}% 12
 \BOOKMARK [2][]{subsection.2.1.2}{The Hadoop Distributed File System}{section.2.1}% 13
-\BOOKMARK [1][]{section.2.2}{Concurrency Control in Transactional Systems}{chapter.2}% 14
-\BOOKMARK [1][]{section.2.3}{Isolation Level in Transactional Systems}{chapter.2}% 15
-\BOOKMARK [1][]{section.2.4}{MySQL Cluster}{chapter.2}% 16
+\BOOKMARK [1][]{section.2.2}{Concurrency Control and Isolation Level in Transactional Systems}{chapter.2}% 14
+\BOOKMARK [1][]{section.2.3}{MySQL Cluster}{chapter.2}% 15
+\BOOKMARK [1][]{section.2.4}{Hadoop Open Platform-as-a-service and Hop-HDFS}{chapter.2}% 16
 \BOOKMARK [-1][]{part.2}{II Concurrency Control in Namespace}{}% 17
 \BOOKMARK [0][]{chapter.3}{Namespace Locking}{part.2}% 18
 \BOOKMARK [1][]{section.3.1}{Namespace Management and Locking in GFS}{chapter.3}% 19

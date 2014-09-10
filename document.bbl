@@ -64,7 +64,13 @@ Mahout, A.
 \newblock What is apache mahout?
 \newblock \url{http://mahout.apache.org/}.
 
-\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{}]{ndblimits}
+\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{a}]{mysql48nodes}
+MySQL.
+\newblock Defining mysql cluster data nodes.
+\newblock
+  \url{http://dev.mysql.com/doc/refman/5.6/en/mysql-cluster-ndbd-definition.html}.
+
+\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{b}]{ndblimits}
 MySQL.
 \newblock Limits relating to transaction handling in mysql cluster.
 \newblock

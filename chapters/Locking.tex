@@ -92,14 +92,29 @@ Unlike traditional file systems, GFS doesn't have a per-directory data structure
 
 \section{Namespace Management and Locking in HDFS}
 
-Unlike GFS, the interface to HDFS is patterned after UNIX, which means that it provides POSIX like commands to the common file system.The namespace of HDFS is structured as a hierarchy of files and directories. Files and directories are represented on the NameNode by \textit{INodes}. Each file is represented by an \textit{INodeFile} object, each directory is represented by an \textit{INodeDirectory}, and each symbolic link is represented by an \textit{INodeSymlink object}. Figure~\ref{fig:inodeuml} shows the Namespace INode Data Structure in UML diagram with major attributes.
+Unlike GFS, the interface to HDFS is patterned after UNIX, and it support POSIX like commands (e.g, \textit{ls, mkdir, rm, cp, chown}) to the common file system. The namespace of HDFS is structured as a hierarchy of files and directories. Files and directories are represented on the NameNode by \textit{INodes} with attributes like permissions, modification and access times, namespace and disk space quotas~\cite{borthakur2008hdfs}. Each file is represented by an \textit{INodeFile} object, each directory is represented by an \textit{INodeDirectory}, and each symbolic link is represented by an \textit{INodeSymlink object}. Figure~\ref{fig:inodeuml} shows the Namespace INode Structure in UML diagram with major attributes.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\linewidth]{figs/INodeUML.pdf}
-	\caption{The Namespace INode Data Structure in HDFS}
+	\caption{The Namespace INode Structure in HDFS}
 	\label{fig:inodeuml}
 \end{figure}
+
+\noindent However, this hierarchical INode structure makes it impossible to adopt the namespace locking of GFS. In order to support POSIX like operations (list files, set quotas, create symbolic links), INodeFiles, INodeDirectories and INodeSymlink are semantically related to each other, rather than just logical representation.
+
+\noindent For example, suppose that HDFS adopts the namespace locking scheme in GFS. An INodeDirectory \textit{D3} with quota \textit{1} which only allows 1 more INode to be created inside it. Concurrently, there are four operations try to create an INodeFile inside \textit{D3}. All of them put a read lock on \textit{D3} first. Finding that the quota is 1, they then put a write lock on the file and create it under the directory. Finally four files are created under \textit{D3} but it violates the quota. See Figure~\ref{fig:hdfsquota}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.6]{figs/hdfsquota.pdf}
+	\caption{Violation in Quota Semantic}
+	\label{fig:hdfsquota}
+\end{figure}
+
+\noindent One way to solve this consistency problem is to synchronize all the related attributes among different threads under proper semantic group. However, it complicates the namespace design and is not realistic. Therefore, to protect the namespace among parallel running threads, a global read/write lock (fsLock in \textit{FSNamesystem} - \textit{ReentrantReadWriteLock} in java language) is used to maintain the atomicity of the namespace. We call it \textit{system-level lock}.
+
+\noindent HDFS categorizes the metadata operations into \textit{read operations} and \textit{write operations}. Concurrent threads to access the namespace for read operations are allowed, but it restricts a single thread to namespace for write operations. Therefore, all concurrent readers get the same view of the mutated data reflected by completed writes. We call it \textit{Strong Consistency Semantics} in HDFS. (But it is still weaker than the standard POSIX consistency model since it trades some POSIX requirements for performance~\cite{white2012hadoop})
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
 %%%%%                      SECOND SECTION

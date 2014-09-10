@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  10 SEP 2014 10:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  10 SEP 2014 12:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -879,7 +879,7 @@ Chapter 2.
 
 pdfTeX warning: pdflatex (file ./figs/GFSArchitecture.pdf): PDF inclusion: foun
 d PDF version <1.6>, but at most version <1.5> allowed
-<figs/GFSArchitecture.pdf, id=502, 409.22083pt x 157.46529pt>
+<figs/GFSArchitecture.pdf, id=504, 409.22083pt x 157.46529pt>
 File: figs/GFSArchitecture.pdf Graphic file (type pdf)
 
 <use figs/GFSArchitecture.pdf>
@@ -899,7 +899,7 @@ l.67 \noindent
                    \relax 
 l.76 
       [8 <./figs/GFSArchitecture.pdf>]
-<figs/hdfsarchitecturev1.png, id=547, 877.2775pt x 606.265pt>
+<figs/hdfsarchitecturev1.png, id=549, 877.2775pt x 606.265pt>
 File: figs/hdfsarchitecturev1.png Graphic file (type png)
 
 <use figs/hdfsarchitecturev1.png>
@@ -931,7 +931,7 @@ s been already used, duplicate ignored
 l.84 \part{Concurrency Control in Namespace}
                                              [12] (./chapters/Locking.tex
 Chapter 3.
-<figs/gfstree.pdf, id=564, 518.06837pt x 323.75955pt>
+<figs/gfstree.pdf, id=566, 518.06837pt x 323.75955pt>
 File: figs/gfstree.pdf Graphic file (type pdf)
  <use figs/gfstree.pdf>
 Package pdftex.def Info: figs/gfstree.pdf used on input line 39.
@@ -943,36 +943,45 @@ Package pdftex.def Info: figs/gfstree.pdf used on input line 39.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <10.95> not available
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 50.
  [14]
-<figs/INodeUML.pdf, id=586, 611.64447pt x 394.30353pt>
+<figs/INodeUML.pdf, id=589, 611.64447pt x 394.30353pt>
 File: figs/INodeUML.pdf Graphic file (type pdf)
  <use figs/INodeUML.pdf>
 Package pdftex.def Info: figs/INodeUML.pdf used on input line 99.
 (pdftex.def)             Requested size: 455.24408pt x 293.48273pt.
-) (./chapters/Assessment.tex [15 <./figs/INodeUML.pdf>] [16]
+
+[15 <./figs/INodeUML.pdf>]
+<figs/hdfsquota.pdf, id=608, 440.9303pt x 548.21751pt>
+File: figs/hdfsquota.pdf Graphic file (type pdf)
+
+<use figs/hdfsquota.pdf>
+Package pdftex.def Info: figs/hdfsquota.pdf used on input line 110.
+(pdftex.def)             Requested size: 264.56021pt x 328.93304pt.
+ [16 <./figs/hdfsquota.pdf>])
+(./chapters/Assessment.tex [17] [18
+
+]
 Chapter 4.
-) [17
+) [19] [20
 
-] [18
-
-] [19] [20] (./chapters/Design.tex
+] [21] [22] (./chapters/Design.tex
 Chapter 5.
-) (./chapters/Implementation.tex [21
+) (./chapters/Implementation.tex [23
 
-] [22
+] [24
 
 ]
 Chapter 6.
-) [23] [24
+) [25] [26
 
-] [25] [26] (./chapters/Evaluation.tex
+] [27] [28] (./chapters/Evaluation.tex
 Chapter 7.
-) (./chapters/Conclusion.tex [27
+) (./chapters/Conclusion.tex [29
 
-] [28
+] [30
 
 ]
 Chapter 8.
-) (./document.bbl [29] [30
+) (./document.bbl [31] [32
 
 ]
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 19.
@@ -1009,9 +1018,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--78
 til / concurrent / locks /
  []
 
-[31]) [32] [33
+[33]) [34] [35
 
-] [34] (./chapters/Testing.texpdfTeX warning (ext4): destination with the same 
+] [36] (./chapters/Testing.texpdfTeX warning (ext4): destination with the same 
 identifier (name{chapter.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1020,9 +1029,9 @@ l.20 \chapter{Apache HDFS Unit Tests Passing List}
 Appendix A.
 )
 No file document.ind.
-[35
+[37
 
-] [36
+] [38
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 177.
@@ -1035,10 +1044,10 @@ Package rerunfilecheck Info: File `document.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 177.
  ) 
 Here is how much of TeX's memory you used:
- 7699 strings out of 493304
- 108499 string characters out of 6139871
- 206186 words of memory out of 5000000
- 10804 multiletter control sequences out of 15000+600000
+ 7708 strings out of 493304
+ 108642 string characters out of 6139871
+ 206235 words of memory out of 5000000
+ 10809 multiletter control sequences out of 15000+600000
  32986 words of font info for 78 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  39i,13n,29p,860b,398s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1057,10 +1066,10 @@ e/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/palatino/uplri8a.pfb>
-Output written on document.pdf (56 pages, 567674 bytes).
+Output written on document.pdf (58 pages, 836059 bytes).
 PDF statistics:
- 784 PDF objects out of 1000 (max. 8388607)
- 691 compressed objects within 7 object streams
- 145 named destinations out of 1000 (max. 500000)
- 522 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 815 PDF objects out of 1000 (max. 8388607)
+ 715 compressed objects within 8 object streams
+ 148 named destinations out of 1000 (max. 500000)
+ 527 words of extra memory for PDF output out of 10000 (max. 10000000)
 

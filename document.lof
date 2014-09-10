@@ -6,6 +6,7 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces A Graphical Tree Representation for the Namespace in GFS}}{13}{figure.3.1}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces The Namespace INode Structure in HDFS}}{15}{figure.3.2}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Violation in Quota Semantic}}{16}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces RPC for Namespace Operations between Clients and NameNode}}{18}{figure.3.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

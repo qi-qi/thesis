@@ -45,7 +45,7 @@ Distributed File systems is the fundamental in big data era. They provide a high
 
 \textit{The Google File System} (GFS) is a scalable distributed file system developed and widely used in \textit{Google Incorporation} for large distributed data-intensive applications. With fault tolerance, it runs on clusters of inexpensive commodity hardware, which provides a storage layer for a large number of applications with high aggregate performance~\cite{ghemawat2003google}. There are some design assumptions for the implementation of GFS:
 
-\begin{itemize}
+\begin{itemize}[noitemsep]
 	\item The system runs on top on inexpensive commodity hardware so component may often fails.
 	\item Files stored on the system are fairly huge than the transitional standards, which means that Gigabyte files are common.
 	\item There are three kinds of workloads in the system: large streaming reads, small random reads and large sequential writes which append data to files.

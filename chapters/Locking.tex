@@ -107,7 +107,7 @@ Unlike GFS, the interface to HDFS is patterned after UNIX, and it support POSIX 
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.6]{figs/hdfsquota.pdf}
+	\includegraphics[scale=0.8]{figs/hdfsquota.pdf}
 	\caption{Violation in Quota Semantic}
 	\label{fig:hdfsquota}
 \end{figure}
@@ -115,6 +115,32 @@ Unlike GFS, the interface to HDFS is patterned after UNIX, and it support POSIX 
 \noindent One way to solve this consistency problem is to synchronize all the related attributes among different threads under proper semantic group. However, it complicates the namespace design and is not realistic. Therefore, to protect the namespace among parallel running threads, a global read/write lock (fsLock in \textit{FSNamesystem} - \textit{ReentrantReadWriteLock} in java language) is used to maintain the atomicity of the namespace. We call it \textit{system-level lock}.
 
 \noindent HDFS categorizes the metadata operations into \textit{read operations} and \textit{write operations}. Concurrent threads to access the namespace for read operations are allowed, but it restricts a single thread to namespace for write operations. Therefore, all concurrent readers get the same view of the mutated data reflected by completed writes. We call it \textit{Strong Consistency Semantics} in HDFS. (But it is still weaker than the standard POSIX consistency model since it trades some POSIX requirements for performance~\cite{white2012hadoop})
+
+\noindent Although the namespace is kept in-memory for fast operations, the system-level lock is still the bottleneck in NameNode under high workload pressure. Here we analyze the Remote Procedure Call (RPC) for namespace operations between clients and NameNode. See Figure~\ref{fig:nnRPC} for the process:
+
+
+
+\begin{enumerate}[noitemsep]
+	\item Client makes an RPC request to NameNode RPC server, like \textit{mkdir}.
+	\item The listener thread in NameNode RPC server accepts this request.
+	\item The Reader, child thread of Listener, processes the request and makes it as a Call object stored in the Call Queue, waiting for the handling.
+	\item One of the handlers gets a Call object (\textit{mkdir}) from the queue. As \textit{mkdir} belongs to write operation, the handler takes a write lock on the namespace.
+	\item After taking the write lock, a new directory will be created in the namespace within NameNode.
+	\item The modification record needs to be synchronized to the editlogs.
+	\item Release the write lock.
+	\item The callback is returned to the Responder thread.
+	\item The client get the result for this operation (either success or fail).
+\end{enumerate}
+
+\noindent As we can see, any of the steps above may become the bottle. But in step 6, while the entire namespace is protected by the system-level lock, the modification record needs to be saved into the editlogs. Since the editlogs are written into the physical hard drives sequentially, the more syn edit to be handled, the slower it will be for the responder to return the callback. The system-level lock won't be released during this process, so the throughput will be decreased greatly during heavy workload.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.8]{figs/nnRPC.pdf}
+	\caption{RPC for Namespace Operations between Clients and NameNode}
+	\label{fig:nnRPC}
+\end{figure}
+
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
 %%%%%                      SECOND SECTION

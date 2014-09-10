@@ -28,7 +28,7 @@
 %{\small\it -- Cerico}
 %\end{quotation}
 
-\subsection{The Namespace Locking in GFS}
+\section{Namespace Management and Locking in GFS}
 
 Unlike traditional file systems, GFS doesn't have a per-directory data structure, which means that it doesn't support listing all files in a directory (i.e, \textit{ls} in POSIX), nor aliasing for the same file or directory (i.e, hard or symbolic links). Instead, with prefix compression, GFS represents the namespace as a lookup table mapping full pathnames to metadata logically. Therefore, each node in the namespace tree will be associated a \textit{read-write} lock. To prevent deadlock, locks are acquired in a \textit{consistent total order}: first ordered by level, then ordered lexicographically within the same level~\cite{ghemawat2003google}.
 
@@ -83,17 +83,23 @@ Unlike traditional file systems, GFS doesn't have a per-directory data structure
 
 \noindent For example, if there are another two concurrent operations. \textit{Operation 1} wants to snapshot directory \textit{d8} to be under directory \textit{d3}, but \textit{Operation 2} wants to create a new file \textit{Qi.txt} under directory \textit{d8}. Table~\ref{table:gfsLock2} shows how conflict locks prevent the new file \textit{Qi.txt} being created when directory \textit{d8} is being snapshotting.
 
+\noindent In sum, GFS trades off common file system requirements for this namespace locking scheme with nice concurrency control properties.
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
 %%%%%                        FIRST SECTION
  %%%
   %
 
-\section{A}
+\section{Namespace Management and Locking in HDFS}
 
+Unlike GFS, the interface to HDFS is patterned after UNIX, which means that it provides POSIX like commands to the common file system.The namespace of HDFS is structured as a hierarchy of files and directories. Files and directories are represented on the NameNode by \textit{INodes}. Each file is represented by an \textit{INodeFile} object, each directory is represented by an \textit{INodeDirectory}, and each symbolic link is represented by an \textit{INodeSymlink object}. Figure~\ref{fig:inodeuml} shows the Namespace INode Data Structure in UML diagram with major attributes.
 
-
-
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\linewidth]{figs/INodeUML.pdf}
+	\caption{The Namespace INode Data Structure in HDFS}
+	\label{fig:inodeuml}
+\end{figure}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
 %%%%%                      SECOND SECTION

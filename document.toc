@@ -21,8 +21,9 @@
 \contentsline {subsection}{\numberline {2.3.2}The Architecture of MySQL Cluster}{10}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}The Benchmark of MySQL Cluster}{11}{subsection.2.3.3}
 \contentsline {section}{\numberline {2.4}Hadoop Open Platform-as-a-service and Hop-HDFS}{13}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Overcoming Limitations in HDFS NameNode Architecture}{13}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}The Architecture of Hop-HDFS}{14}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.1}Hadoop Open Platform-as-a-service Design Purpose}{13}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Overcoming Limitations in HDFS NameNode Architecture}{13}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}The Architecture of Hop-HDFS}{14}{subsection.2.4.3}
 \contentsline {part}{II\hspace {1em}Concurrency Control in Namespace}{17}{part.2}
 \contentsline {chapter}{\numberline {3}Namespace Locking}{19}{chapter.3}
 \contentsline {section}{\numberline {3.1}Namespace Management and Locking in GFS}{19}{section.3.1}

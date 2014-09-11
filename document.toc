@@ -19,52 +19,53 @@
 \contentsline {section}{\numberline {2.3}MySQL Cluster}{10}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Design Principle}{10}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}The Architecture of MySQL Cluster}{10}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Hadoop Open Platform-as-a-service and Hop-HDFS}{10}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Overcome Limitations of HDFS NameNode Architecture}{10}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}The Architecture of Hop-HDFS}{11}{subsection.2.4.2}
-\contentsline {part}{II\hspace {1em}Concurrency Control in Namespace}{13}{part.2}
-\contentsline {chapter}{\numberline {3}Namespace Locking}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}Namespace Management and Locking in GFS}{15}{section.3.1}
-\contentsline {section}{\numberline {3.2}Namespace Management and Locking in HDFS}{17}{section.3.2}
-\contentsline {section}{\numberline {3.3}B}{20}{section.3.3}
-\contentsline {section}{\numberline {3.4}C}{20}{section.3.4}
-\contentsline {section}{\numberline {3.5}D}{20}{section.3.5}
-\contentsline {chapter}{\numberline {4}Systematic Assessment of Hop-HDFS Performance}{21}{chapter.4}
-\contentsline {section}{\numberline {4.1}A}{21}{section.4.1}
-\contentsline {section}{\numberline {4.2}B}{21}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}B1}{21}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}B2}{21}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}C}{21}{section.4.3}
-\contentsline {section}{\numberline {4.4}D}{21}{section.4.4}
-\contentsline {part}{III\hspace {1em}Solution}{23}{part.3}
-\contentsline {chapter}{\numberline {5}Design}{25}{chapter.5}
-\contentsline {section}{\numberline {5.1}A}{25}{section.5.1}
-\contentsline {section}{\numberline {5.2}B}{25}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}B1}{25}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}B2}{25}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}C}{25}{section.5.3}
-\contentsline {section}{\numberline {5.4}D}{25}{section.5.4}
-\contentsline {chapter}{\numberline {6}Implementation}{27}{chapter.6}
-\contentsline {section}{\numberline {6.1}A}{27}{section.6.1}
-\contentsline {section}{\numberline {6.2}B}{27}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}B1}{27}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}B2}{27}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}C}{27}{section.6.3}
-\contentsline {section}{\numberline {6.4}D}{27}{section.6.4}
-\contentsline {part}{IV\hspace {1em}Evaluation and Conclusion}{29}{part.4}
-\contentsline {chapter}{\numberline {7}Evaluation}{31}{chapter.7}
-\contentsline {section}{\numberline {7.1}A}{31}{section.7.1}
-\contentsline {section}{\numberline {7.2}B}{31}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}B1}{31}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}B2}{31}{subsection.7.2.2}
-\contentsline {section}{\numberline {7.3}C}{31}{section.7.3}
-\contentsline {section}{\numberline {7.4}D}{31}{section.7.4}
-\contentsline {chapter}{\numberline {8}Conclusion}{33}{chapter.8}
-\contentsline {section}{\numberline {8.1}A}{33}{section.8.1}
-\contentsline {section}{\numberline {8.2}B}{33}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}B1}{33}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}B2}{33}{subsection.8.2.2}
-\contentsline {section}{\numberline {8.3}C}{33}{section.8.3}
-\contentsline {section}{\numberline {8.4}D}{33}{section.8.4}
-\contentsline {part}{V\hspace {1em}Appendices}{37}{part.5}
-\contentsline {chapter}{\numberline {A}Apache HDFS Unit Tests Passing List}{39}{chapter.1}
+\contentsline {subsection}{\numberline {2.3.3}The Benchmark of MySQL Cluster}{11}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Hadoop Open Platform-as-a-service and Hop-HDFS}{11}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Overcome Limitations of HDFS NameNode Architecture}{11}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}The Architecture of Hop-HDFS}{12}{subsection.2.4.2}
+\contentsline {part}{II\hspace {1em}Concurrency Control in Namespace}{15}{part.2}
+\contentsline {chapter}{\numberline {3}Namespace Locking}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Namespace Management and Locking in GFS}{17}{section.3.1}
+\contentsline {section}{\numberline {3.2}Namespace Management and Locking in HDFS}{19}{section.3.2}
+\contentsline {section}{\numberline {3.3}B}{22}{section.3.3}
+\contentsline {section}{\numberline {3.4}C}{22}{section.3.4}
+\contentsline {section}{\numberline {3.5}D}{22}{section.3.5}
+\contentsline {chapter}{\numberline {4}Systematic Assessment of Hop-HDFS Performance}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}A}{23}{section.4.1}
+\contentsline {section}{\numberline {4.2}B}{23}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}B1}{23}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}B2}{23}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}C}{23}{section.4.3}
+\contentsline {section}{\numberline {4.4}D}{23}{section.4.4}
+\contentsline {part}{III\hspace {1em}Solution}{25}{part.3}
+\contentsline {chapter}{\numberline {5}Design}{27}{chapter.5}
+\contentsline {section}{\numberline {5.1}A}{27}{section.5.1}
+\contentsline {section}{\numberline {5.2}B}{27}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}B1}{27}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}B2}{27}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}C}{27}{section.5.3}
+\contentsline {section}{\numberline {5.4}D}{27}{section.5.4}
+\contentsline {chapter}{\numberline {6}Implementation}{29}{chapter.6}
+\contentsline {section}{\numberline {6.1}A}{29}{section.6.1}
+\contentsline {section}{\numberline {6.2}B}{29}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}B1}{29}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}B2}{29}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}C}{29}{section.6.3}
+\contentsline {section}{\numberline {6.4}D}{29}{section.6.4}
+\contentsline {part}{IV\hspace {1em}Evaluation and Conclusion}{31}{part.4}
+\contentsline {chapter}{\numberline {7}Evaluation}{33}{chapter.7}
+\contentsline {section}{\numberline {7.1}A}{33}{section.7.1}
+\contentsline {section}{\numberline {7.2}B}{33}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}B1}{33}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}B2}{33}{subsection.7.2.2}
+\contentsline {section}{\numberline {7.3}C}{33}{section.7.3}
+\contentsline {section}{\numberline {7.4}D}{33}{section.7.4}
+\contentsline {chapter}{\numberline {8}Conclusion}{35}{chapter.8}
+\contentsline {section}{\numberline {8.1}A}{35}{section.8.1}
+\contentsline {section}{\numberline {8.2}B}{35}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}B1}{35}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}B2}{35}{subsection.8.2.2}
+\contentsline {section}{\numberline {8.3}C}{35}{section.8.3}
+\contentsline {section}{\numberline {8.4}D}{35}{section.8.4}
+\contentsline {part}{V\hspace {1em}Appendices}{39}{part.5}
+\contentsline {chapter}{\numberline {A}Apache HDFS Unit Tests Passing List}{41}{chapter.1}

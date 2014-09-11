@@ -81,6 +81,12 @@ MySQL.
 \newblock
   \url{http://dev.mysql.com/doc/mysql-cluster-excerpt/5.1/en/mysql-cluster-limitations-transactions.html}.
 
+\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{d}]{mysqlclusterng}
+MySQL.
+\newblock Mysql cluster nodes, node groups, replicas, and partitions.
+\newblock
+  \url{http://dev.mysql.com/doc/refman/5.6/en/mysql-cluster-nodes-groups.html}.
+
 \bibitem[\protect\citeauthoryear{Oracle}{Oracle}{}]{reentrantReadWriteLock}
 Oracle.
 \newblock Java api documentation: Class reentrantreadwritelock.

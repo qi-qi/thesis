@@ -99,12 +99,32 @@ The \textit{Hadoop Distributed File System} (HDFS) is inspired by the Google Fil
 \subsection{The Architecture of MySQL Cluster}
 \noindent A MySQL Cluster consists of different processes, called the \textit{nodes}. The communication between the nodes can be seen from Figure~\ref{fig:mysqlclusterarchitecture}. \textit{MySQL Servers} (mysqld, for query processing and NDB data accessing) are the main nodes. \textit{Data Nodes} (ndbd) serve as storage nodes. Besides, there will be one or more \textit{NDB Management Servers} (ndb\_mgmd).
 
-\begin{figure}[ht]
+\begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.5]{figs/mysqlcluster.png}
+	\includegraphics[scale=0.4]{figs/mysqlcluster.png}
 	\caption{The Architecture of MySQL Cluster \protect \cite{mysqlcluster}}
 	\label{fig:mysqlclusterarchitecture}
 \end{figure}
+
+\noindent For fault tolerance, data in MySQL Cluster is replicated across multiple ndbds. Ndbds are divided into \textit{node groups}. Each unit of data is called a \textit{partition} stored by ndbd. The partitions of data are replicated within the same \textit{node group}. The number of \textit{node groups} is calculated as:
+
+\begin{center}
+	$Number of Node Groups = \frac{Number of Data Nodes}{Number of Replicas}$
+\end{center}
+
+\noindent For example, suppose that we have a cluster consisted with 4 data nodes with replication factor of 2, so there are 2 node groups as shown in Figure~\ref{fig:mysqlclusterng}.
+
+\begin{figure}[h]
+	\centering     %%% not \center
+	\subfigure[Node Groups in MySQL Cluster]{\label{fig:NGa}\includegraphics[width=60mm]{figs/replicas-groups-1-1}}
+	\subfigure[Fault Tolerance in Node Groups]{\label{fig:NGb}\includegraphics[width=60mm]{figs/replicas-groups-1-2}}
+	\caption{Node Groups in MySQL Cluster and Fault Tolerance \protect  \cite{mysqlclusterng}}
+	\label{fig:mysqlclusterng}
+\end{figure}
+
+\noindent As we can see from Figure~\ref{fig:NGa}, the data stored in the cluster is divided into four partitions: \textit{0, 1, 2, 3}. Each partition is stored within the same group with multiple replicas. So as long as each participating node group has at least one operating node, the cluster will have a complete copy of the data as shown in Figure~\ref{fig:NGb}.
+
+\subsection{The Benchmark of MySQL Cluster}
 
 \section{Hadoop Open Platform-as-a-service and Hop-HDFS}
 
@@ -121,7 +141,7 @@ The \textit{Hadoop Open Platform-as-a-service} (Hop) ~\cite{hop} is an open plat
 
 \noindent The architecture of Hop-HDFS consists of multiple \textit{NameNodes}, multiple \textit{DataNodes}, a \textit{MySQL cluster} and is accessed by multiple \textit{clients} as shown in Figure~\ref{fig:hophdfsarchitecture}.
 
-\begin{figure}[ht]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=\linewidth]{figs/HopHDFSArchitecture.pdf}
 	\caption{The Architecture of Hop-HDFS}

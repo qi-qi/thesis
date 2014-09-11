@@ -3,12 +3,15 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces The Architecture of GFS \cite {ghemawat2003google}}}{8}{figure.2.1}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces The Architecture of HDFS \cite {borthakur2008hdfs}}}{9}{figure.2.2}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces The Architecture of MySQL Cluster \cite {mysqlcluster}}}{11}{figure.2.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces The Architecture of Hop-HDFS}}{12}{figure.2.4}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Node Groups in MySQL Cluster and Fault Tolerance \cite {mysqlclusterng}}}{12}{figure.2.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Node Groups in MySQL Cluster}}}{12}{figure.2.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Fault Tolerance in Node Groups}}}{12}{figure.2.4}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces The Architecture of Hop-HDFS}}{13}{figure.2.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces A Graphical Tree Representation for the Namespace in GFS}}{15}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces The Namespace INode Structure in HDFS}}{17}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Violation in Quota Semantic}}{18}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces RPC for Namespace Operations between Clients and NameNode}}{20}{figure.3.4}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A Graphical Tree Representation for the Namespace in GFS}}{17}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces The Namespace INode Structure in HDFS}}{19}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Violation in Quota Semantic}}{20}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces RPC for Namespace Operations between Clients and NameNode}}{22}{figure.3.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

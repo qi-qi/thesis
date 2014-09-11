@@ -56,8 +56,8 @@ Unlike traditional file systems, GFS doesn't have a per-directory data structure
     	/d1/d4/d6/\textbf{\color{red}f1} & Write1     & ~          & ~          & ~          & ~          \\ \hline
     	/d1/d4/d6/\textbf{\color{red}f2} & ~          & Write2     & ~          & ~          & ~          \\ \hline
     	/d1/d4/d6/\textbf{\color{red}f3} & ~          & ~          & Write3     & ~          & ~          \\ \hline
-    	/d1/d4/d7/\textbf{\color{red}d9} & ~          & ~          & ~          & Write4     & Write5     \\ \hline
-    	/d1/d4/d7/\textbf{\color{red}f4} & ~          & ~          & ~          & ~          & ~          \\ \hline
+    	/d1/d4/d7/\textbf{\color{red}d9} & ~          & ~          & ~          & Write4     & ~     \\ \hline
+    	/d1/d4/d7/\textbf{\color{red}f4} & ~          & ~          & ~          & ~          & Write5          \\ \hline
     \end{tabular}
 	\caption{Concurrent Mutations within for different files/directories and Related Read-Write Lock Sets}
 	\label{table:gfsLock1}

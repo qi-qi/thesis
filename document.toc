@@ -10,10 +10,18 @@
 \contentsline {chapter}{\numberline {2}Background and Related Work}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}Distributed File Systems}{7}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}The Google File System}{7}{subsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.1}Design Principle}{7}{subsubsection.2.1.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.2}The Architecture of GFS}{8}{subsubsection.2.1.1.2}
 \contentsline {subsection}{\numberline {2.1.2}The Hadoop Distributed File System}{8}{subsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.2.1}Design Principle}{8}{subsubsection.2.1.2.1}
+\contentsline {subsubsection}{\numberline {2.1.2.2}The Architecture of HDFS}{9}{subsubsection.2.1.2.2}
 \contentsline {section}{\numberline {2.2}Concurrency Control and Isolation Level in Transactional Systems}{10}{section.2.2}
 \contentsline {section}{\numberline {2.3}MySQL Cluster}{10}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Design Principle}{10}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}The Architecture of MySQL Cluster}{10}{subsection.2.3.2}
 \contentsline {section}{\numberline {2.4}Hadoop Open Platform-as-a-service and Hop-HDFS}{10}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Overcome Limitations of HDFS NameNode Architecture}{10}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}The Architecture of Hop-HDFS}{11}{subsection.2.4.2}
 \contentsline {part}{II\hspace {1em}Concurrency Control in Namespace}{13}{part.2}
 \contentsline {chapter}{\numberline {3}Namespace Locking}{15}{chapter.3}
 \contentsline {section}{\numberline {3.1}Namespace Management and Locking in GFS}{15}{section.3.1}

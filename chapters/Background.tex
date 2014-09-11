@@ -43,6 +43,7 @@ Distributed File systems is the fundamental in big data era. They provide a high
 
 \subsection{The Google File System}
 
+\subsubsection{Design Principle}
 \textit{The Google File System} (GFS) is a scalable distributed file system developed and widely used in \textit{Google Incorporation} for large distributed data-intensive applications. With fault tolerance, it runs on clusters of inexpensive commodity hardware, which provides a storage layer for a large number of applications with high aggregate performance~\cite{ghemawat2003google}. There are some design assumptions for the implementation of GFS:
 
 \begin{itemize}[noitemsep]
@@ -53,6 +54,7 @@ Distributed File systems is the fundamental in big data era. They provide a high
 	\item Data processing in bulk with high sustained bandwidth is more important than individual read or write with low latency.
 \end{itemize}
 
+\subsubsection{The Architecture of GFS}
 \noindent The architecture of a GFS cluster consists of a single \textit{master}, multiple \textit{chunkservers}, and is accessed by multiple \textit{clients} as shown in Figure~\ref{fig:gfs}.
 
 \begin{figure}[ht]
@@ -70,8 +72,10 @@ Distributed File systems is the fundamental in big data era. They provide a high
 
 \subsection{The Hadoop Distributed File System}
 
+\subsubsection{Design Principle}
 The \textit{Hadoop Distributed File System} (HDFS) is inspired by the Google File System. Initially, HDFS is built for Hadoop Map-Reduce computational framework. With the development of Hadoop ecosystem including HBase~\cite{apachehbase}, Pig~\cite{apachepig}, Mahout~\cite{apachemahout}, Spark~\cite{apachespark}, etc, HDFS becomes the storage layer for other big data applications. Enabling petabytes of data to be persisted on clusters of commodity hardware at relatively low cost, HDFS aims to stream these large data sets at high bandwidth to user applications. Therefore, like GFS, HDFS is optimized for delivering a high throughput of data at the expense of latency~\cite{white2012hadoop}.
 
+\subsubsection{The Architecture of HDFS}
 \noindent Similar to GFS, HDFS stores metadata and file data separately. The architecture of a HDFS cluster consists of a single \textit{NameNode}, multiple \textit{DataNodes}, and is accessed by multiple \textit{clients} as shown in Figure~\ref{fig:hdfsv1}.
 
 \begin{figure}[ht]
@@ -89,15 +93,31 @@ The \textit{Hadoop Distributed File System} (HDFS) is inspired by the Google Fil
 
 \section{MySQL Cluster}
 
+\subsection{Design Principle}
+\textit{MySQL Cluster} is a highly available version of MySQL, an open source database management system, with high-redundancy adapted for the distributed computing environment. It integrates the standard MySQL server with an in-memory clustered storage engine called \textit{NDB} (which stands for “Network DataBase”). MySQL Cluster is designed not to have any single point of failure a shared-nothing system running on inexpensive hardware~\cite{mysqlcluster}.
+
+\subsection{The Architecture of MySQL Cluster}
+\noindent A MySQL Cluster consists of different processes, called the \textit{nodes}. The communication between the nodes can be seen from Figure~\ref{fig:mysqlclusterarchitecture}. \textit{MySQL Servers} (mysqld, for query processing and NDB data accessing) are the main nodes. \textit{Data Nodes} (ndbd) serve as storage nodes. Besides, there will be one or more \textit{NDB Management Servers} (ndb\_mgmd).
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{figs/mysqlcluster.png}
+	\caption{The Architecture of MySQL Cluster \protect \cite{mysqlcluster}}
+	\label{fig:mysqlclusterarchitecture}
+\end{figure}
+
 \section{Hadoop Open Platform-as-a-service and Hop-HDFS}
 
-The \textit{Hadoop Open Platform-as-a-service} (Hop) ~\cite{hop} is an open platform-as-a-Service (PaaS) support of the Hadoop ecosystem on existing cloud platforms including Amazon Web Service and OpenStack. The storage layer of Hop, called the Hop-HDFS, aims to overcome the major limitations of HDFS:
+\subsection{Overcome Limitations of HDFS NameNode Architecture}
+The \textit{Hadoop Open Platform-as-a-service} (Hop) ~\cite{hop} is an open platform-as-a-Service (PaaS) support of the Hadoop ecosystem on existing cloud platforms including Amazon Web Service and OpenStack. The storage layer of Hop, called the Hop-HDFS, aims to overcome the major limitations of HDFS NameNode architecture:
 
 \begin{itemize}[noitemsep]
 	\item \textbf{The scalability of the namespace}: the memory size restricts the storage capacity in the system.
 	\item \textbf{The throughput problem}: the throughput of the metadata operations is bounded by the ability of the single machine (NameNode)
 	\item \textbf{The failure recovery}: it takes a long time for the NameNode to restart since it needs to load the checkpoint and replay the edit logs into the memory
 \end{itemize}
+
+\subsection{The Architecture of Hop-HDFS}
 
 \noindent The architecture of Hop-HDFS consists of multiple \textit{NameNodes}, multiple \textit{DataNodes}, a \textit{MySQL cluster} and is accessed by multiple \textit{clients} as shown in Figure~\ref{fig:hophdfsarchitecture}.
 

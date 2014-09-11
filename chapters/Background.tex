@@ -89,6 +89,12 @@ The \textit{Hadoop Distributed File System} (HDFS) is inspired by the Google Fil
 
 \noindent The \textit{NameNode} is a single dedicated metadata server maintaining the namespace, access control information, and file blocks mappings to DataNodes. The entire namespace is kept in-memory, called the \textit{image}, of the \textit{NameNode}. Its related persistent record, called the \textit{checkpoint} is stored in the local physical file system. The modification, \textit{editlogs}, of the \textit{image}, called the \textit{journal}, is also persisted in the local physical file system. Copies of the \textit{checkpoints} and the \textit{journals} can made at other servers for durability. Therefore, the \textit{NameNode} restores the namespace by loading the checkpoint and replaying the journal during its restart.
 
+\subsubsection{Single-Writer, Multiple-reader Model}
+Once a file is created, written with data and closed by the client application, the bytes written can not be modified. The file can only be reopened for append.
+
+\noindent HDFS implements a \textit{single-Writer, multiple-reader} model using lease management. A HDFS client opens a file for writing is granted a lease for the file and no other client can write to that file at the same time. The writing client needs to renew the lease periodically with the NameNode so that it can keep writing to the file. Otherwise, once the \textit{soft limit} expires, other clients can preempt the lease. If the \textit{hard limit} (one hour) expires and the client didn't renew the lease, HDFS will close the file on behalf of the writer and recover the lease.
+
+\noindent HDFS allows a client to read a file which is open for writing, which means that the lease does not prevent other clients' reading. A file can have multiple concurrent readers.
 \section{Concurrency Control and Isolation Level in Transactional Systems}
 
 \section{MySQL Cluster}

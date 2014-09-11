@@ -15,58 +15,59 @@
 \BOOKMARK [2][]{subsection.2.1.2}{The Hadoop Distributed File System}{section.2.1}% 15
 \BOOKMARK [3][]{subsubsection.2.1.2.1}{Design Principle}{subsection.2.1.2}% 16
 \BOOKMARK [3][]{subsubsection.2.1.2.2}{The Architecture of HDFS}{subsection.2.1.2}% 17
-\BOOKMARK [1][]{section.2.2}{Concurrency Control and Isolation Level in Transactional Systems}{chapter.2}% 18
-\BOOKMARK [1][]{section.2.3}{MySQL Cluster}{chapter.2}% 19
-\BOOKMARK [2][]{subsection.2.3.1}{Design Principle}{section.2.3}% 20
-\BOOKMARK [2][]{subsection.2.3.2}{The Architecture of MySQL Cluster}{section.2.3}% 21
-\BOOKMARK [2][]{subsection.2.3.3}{The Benchmark of MySQL Cluster}{section.2.3}% 22
-\BOOKMARK [1][]{section.2.4}{Hadoop Open Platform-as-a-service and Hop-HDFS}{chapter.2}% 23
-\BOOKMARK [2][]{subsection.2.4.1}{Hadoop Open Platform-as-a-service Design Purpose}{section.2.4}% 24
-\BOOKMARK [2][]{subsection.2.4.2}{Overcoming Limitations in HDFS NameNode Architecture}{section.2.4}% 25
-\BOOKMARK [2][]{subsection.2.4.3}{The Architecture of Hop-HDFS}{section.2.4}% 26
-\BOOKMARK [-1][]{part.2}{II Concurrency Control in Namespace}{}% 27
-\BOOKMARK [0][]{chapter.3}{Namespace Locking}{part.2}% 28
-\BOOKMARK [1][]{section.3.1}{Namespace Management and Locking in GFS}{chapter.3}% 29
-\BOOKMARK [1][]{section.3.2}{Namespace Management and Locking in HDFS}{chapter.3}% 30
-\BOOKMARK [1][]{section.3.3}{B}{chapter.3}% 31
-\BOOKMARK [1][]{section.3.4}{C}{chapter.3}% 32
-\BOOKMARK [1][]{section.3.5}{D}{chapter.3}% 33
-\BOOKMARK [0][]{chapter.4}{Systematic Assessment of Hop-HDFS Performance}{part.2}% 34
-\BOOKMARK [1][]{section.4.1}{A}{chapter.4}% 35
-\BOOKMARK [1][]{section.4.2}{B}{chapter.4}% 36
-\BOOKMARK [2][]{subsection.4.2.1}{B1}{section.4.2}% 37
-\BOOKMARK [2][]{subsection.4.2.2}{B2}{section.4.2}% 38
-\BOOKMARK [1][]{section.4.3}{C}{chapter.4}% 39
-\BOOKMARK [1][]{section.4.4}{D}{chapter.4}% 40
-\BOOKMARK [-1][]{part.3}{III Solution}{}% 41
-\BOOKMARK [0][]{chapter.5}{Design}{part.3}% 42
-\BOOKMARK [1][]{section.5.1}{A}{chapter.5}% 43
-\BOOKMARK [1][]{section.5.2}{B}{chapter.5}% 44
-\BOOKMARK [2][]{subsection.5.2.1}{B1}{section.5.2}% 45
-\BOOKMARK [2][]{subsection.5.2.2}{B2}{section.5.2}% 46
-\BOOKMARK [1][]{section.5.3}{C}{chapter.5}% 47
-\BOOKMARK [1][]{section.5.4}{D}{chapter.5}% 48
-\BOOKMARK [0][]{chapter.6}{Implementation}{part.3}% 49
-\BOOKMARK [1][]{section.6.1}{A}{chapter.6}% 50
-\BOOKMARK [1][]{section.6.2}{B}{chapter.6}% 51
-\BOOKMARK [2][]{subsection.6.2.1}{B1}{section.6.2}% 52
-\BOOKMARK [2][]{subsection.6.2.2}{B2}{section.6.2}% 53
-\BOOKMARK [1][]{section.6.3}{C}{chapter.6}% 54
-\BOOKMARK [1][]{section.6.4}{D}{chapter.6}% 55
-\BOOKMARK [-1][]{part.4}{IV Evaluation and Conclusion}{}% 56
-\BOOKMARK [0][]{chapter.7}{Evaluation}{part.4}% 57
-\BOOKMARK [1][]{section.7.1}{A}{chapter.7}% 58
-\BOOKMARK [1][]{section.7.2}{B}{chapter.7}% 59
-\BOOKMARK [2][]{subsection.7.2.1}{B1}{section.7.2}% 60
-\BOOKMARK [2][]{subsection.7.2.2}{B2}{section.7.2}% 61
-\BOOKMARK [1][]{section.7.3}{C}{chapter.7}% 62
-\BOOKMARK [1][]{section.7.4}{D}{chapter.7}% 63
-\BOOKMARK [0][]{chapter.8}{Conclusion}{part.4}% 64
-\BOOKMARK [1][]{section.8.1}{A}{chapter.8}% 65
-\BOOKMARK [1][]{section.8.2}{B}{chapter.8}% 66
-\BOOKMARK [2][]{subsection.8.2.1}{B1}{section.8.2}% 67
-\BOOKMARK [2][]{subsection.8.2.2}{B2}{section.8.2}% 68
-\BOOKMARK [1][]{section.8.3}{C}{chapter.8}% 69
-\BOOKMARK [1][]{section.8.4}{D}{chapter.8}% 70
-\BOOKMARK [-1][]{part.5}{V Appendices}{}% 71
-\BOOKMARK [0][]{chapter.1}{Apache HDFS Unit Tests Passing List}{part.5}% 72
+\BOOKMARK [3][]{subsubsection.2.1.2.3}{Single-Writer, Multiple-reader Model}{subsection.2.1.2}% 18
+\BOOKMARK [1][]{section.2.2}{Concurrency Control and Isolation Level in Transactional Systems}{chapter.2}% 19
+\BOOKMARK [1][]{section.2.3}{MySQL Cluster}{chapter.2}% 20
+\BOOKMARK [2][]{subsection.2.3.1}{Design Principle}{section.2.3}% 21
+\BOOKMARK [2][]{subsection.2.3.2}{The Architecture of MySQL Cluster}{section.2.3}% 22
+\BOOKMARK [2][]{subsection.2.3.3}{The Benchmark of MySQL Cluster}{section.2.3}% 23
+\BOOKMARK [1][]{section.2.4}{Hadoop Open Platform-as-a-service and Hop-HDFS}{chapter.2}% 24
+\BOOKMARK [2][]{subsection.2.4.1}{Hadoop Open Platform-as-a-service Design Purpose}{section.2.4}% 25
+\BOOKMARK [2][]{subsection.2.4.2}{Overcoming Limitations in HDFS NameNode Architecture}{section.2.4}% 26
+\BOOKMARK [2][]{subsection.2.4.3}{The Architecture of Hop-HDFS}{section.2.4}% 27
+\BOOKMARK [-1][]{part.2}{II Concurrency Control in Namespace}{}% 28
+\BOOKMARK [0][]{chapter.3}{Namespace Locking}{part.2}% 29
+\BOOKMARK [1][]{section.3.1}{Namespace Management and Locking in GFS}{chapter.3}% 30
+\BOOKMARK [1][]{section.3.2}{Namespace Management and Locking in HDFS}{chapter.3}% 31
+\BOOKMARK [1][]{section.3.3}{B}{chapter.3}% 32
+\BOOKMARK [1][]{section.3.4}{C}{chapter.3}% 33
+\BOOKMARK [1][]{section.3.5}{D}{chapter.3}% 34
+\BOOKMARK [0][]{chapter.4}{Systematic Assessment of Hop-HDFS Performance}{part.2}% 35
+\BOOKMARK [1][]{section.4.1}{A}{chapter.4}% 36
+\BOOKMARK [1][]{section.4.2}{B}{chapter.4}% 37
+\BOOKMARK [2][]{subsection.4.2.1}{B1}{section.4.2}% 38
+\BOOKMARK [2][]{subsection.4.2.2}{B2}{section.4.2}% 39
+\BOOKMARK [1][]{section.4.3}{C}{chapter.4}% 40
+\BOOKMARK [1][]{section.4.4}{D}{chapter.4}% 41
+\BOOKMARK [-1][]{part.3}{III Solution}{}% 42
+\BOOKMARK [0][]{chapter.5}{Design}{part.3}% 43
+\BOOKMARK [1][]{section.5.1}{A}{chapter.5}% 44
+\BOOKMARK [1][]{section.5.2}{B}{chapter.5}% 45
+\BOOKMARK [2][]{subsection.5.2.1}{B1}{section.5.2}% 46
+\BOOKMARK [2][]{subsection.5.2.2}{B2}{section.5.2}% 47
+\BOOKMARK [1][]{section.5.3}{C}{chapter.5}% 48
+\BOOKMARK [1][]{section.5.4}{D}{chapter.5}% 49
+\BOOKMARK [0][]{chapter.6}{Implementation}{part.3}% 50
+\BOOKMARK [1][]{section.6.1}{A}{chapter.6}% 51
+\BOOKMARK [1][]{section.6.2}{B}{chapter.6}% 52
+\BOOKMARK [2][]{subsection.6.2.1}{B1}{section.6.2}% 53
+\BOOKMARK [2][]{subsection.6.2.2}{B2}{section.6.2}% 54
+\BOOKMARK [1][]{section.6.3}{C}{chapter.6}% 55
+\BOOKMARK [1][]{section.6.4}{D}{chapter.6}% 56
+\BOOKMARK [-1][]{part.4}{IV Evaluation and Conclusion}{}% 57
+\BOOKMARK [0][]{chapter.7}{Evaluation}{part.4}% 58
+\BOOKMARK [1][]{section.7.1}{A}{chapter.7}% 59
+\BOOKMARK [1][]{section.7.2}{B}{chapter.7}% 60
+\BOOKMARK [2][]{subsection.7.2.1}{B1}{section.7.2}% 61
+\BOOKMARK [2][]{subsection.7.2.2}{B2}{section.7.2}% 62
+\BOOKMARK [1][]{section.7.3}{C}{chapter.7}% 63
+\BOOKMARK [1][]{section.7.4}{D}{chapter.7}% 64
+\BOOKMARK [0][]{chapter.8}{Conclusion}{part.4}% 65
+\BOOKMARK [1][]{section.8.1}{A}{chapter.8}% 66
+\BOOKMARK [1][]{section.8.2}{B}{chapter.8}% 67
+\BOOKMARK [2][]{subsection.8.2.1}{B1}{section.8.2}% 68
+\BOOKMARK [2][]{subsection.8.2.2}{B2}{section.8.2}% 69
+\BOOKMARK [1][]{section.8.3}{C}{chapter.8}% 70
+\BOOKMARK [1][]{section.8.4}{D}{chapter.8}% 71
+\BOOKMARK [-1][]{part.5}{V Appendices}{}% 72
+\BOOKMARK [0][]{chapter.1}{Apache HDFS Unit Tests Passing List}{part.5}% 73

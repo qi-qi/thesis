@@ -21,7 +21,7 @@
 \BOOKMARK [2][]{subsection.2.3.2}{The Architecture of MySQL Cluster}{section.2.3}% 21
 \BOOKMARK [2][]{subsection.2.3.3}{The Benchmark of MySQL Cluster}{section.2.3}% 22
 \BOOKMARK [1][]{section.2.4}{Hadoop Open Platform-as-a-service and Hop-HDFS}{chapter.2}% 23
-\BOOKMARK [2][]{subsection.2.4.1}{Overcome Limitations of HDFS NameNode Architecture}{section.2.4}% 24
+\BOOKMARK [2][]{subsection.2.4.1}{Overcoming Limitations in HDFS NameNode Architecture}{section.2.4}% 24
 \BOOKMARK [2][]{subsection.2.4.2}{The Architecture of Hop-HDFS}{section.2.4}% 25
 \BOOKMARK [-1][]{part.2}{II Concurrency Control in Namespace}{}% 26
 \BOOKMARK [0][]{chapter.3}{Namespace Locking}{part.2}% 27

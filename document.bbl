@@ -87,6 +87,11 @@ MySQL.
 \newblock
   \url{http://dev.mysql.com/doc/refman/5.6/en/mysql-cluster-nodes-groups.html}.
 
+\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{2012}]{mysqlclusterwhitepaper}
+MySQL (2012, July).
+\newblock Mysql cluster benchmarks: Oracle and intel achieve 1 billion writes
+  per minute.
+
 \bibitem[\protect\citeauthoryear{Oracle}{Oracle}{}]{reentrantReadWriteLock}
 Oracle.
 \newblock Java api documentation: Class reentrantreadwritelock.

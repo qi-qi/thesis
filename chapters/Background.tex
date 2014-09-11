@@ -57,7 +57,7 @@ Distributed File systems is the fundamental in big data era. They provide a high
 \subsubsection{The Architecture of GFS}
 \noindent The architecture of a GFS cluster consists of a single \textit{master}, multiple \textit{chunkservers}, and is accessed by multiple \textit{clients} as shown in Figure~\ref{fig:gfs}.
 
-\begin{figure}[ht]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=\linewidth]{figs/GFSArchitecture.pdf}
 	\caption{The Architecture of GFS \protect \cite{ghemawat2003google}}
@@ -99,9 +99,9 @@ The \textit{Hadoop Distributed File System} (HDFS) is inspired by the Google Fil
 \subsection{The Architecture of MySQL Cluster}
 \noindent A MySQL Cluster consists of different processes, called the \textit{nodes}. The communication between the nodes can be seen from Figure~\ref{fig:mysqlclusterarchitecture}. \textit{MySQL Servers} (mysqld, for query processing and NDB data accessing) are the main nodes. \textit{Data Nodes} (ndbd) serve as storage nodes. Besides, there will be one or more \textit{NDB Management Servers} (ndb\_mgmd).
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.4]{figs/mysqlcluster.png}
+	\includegraphics[scale=0.5]{figs/mysqlcluster.png}
 	\caption{The Architecture of MySQL Cluster \protect \cite{mysqlcluster}}
 	\label{fig:mysqlclusterarchitecture}
 \end{figure}
@@ -114,22 +114,40 @@ The \textit{Hadoop Distributed File System} (HDFS) is inspired by the Google Fil
 
 \noindent For example, suppose that we have a cluster consisted with 4 data nodes with replication factor of 2, so there are 2 node groups as shown in Figure~\ref{fig:mysqlclusterng}.
 
-\begin{figure}[h]
+\begin{figure}
 	\centering     %%% not \center
-	\subfigure[Node Groups in MySQL Cluster]{\label{fig:NGa}\includegraphics[width=60mm]{figs/replicas-groups-1-1}}
-	\subfigure[Fault Tolerance in Node Groups]{\label{fig:NGb}\includegraphics[width=60mm]{figs/replicas-groups-1-2}}
+	\subfigure[Node Groups in MySQL Cluster]{\label{fig:NGa}\includegraphics[scale=0.5]{figs/replicas-groups-1-1}}
+	\subfigure[Fault Tolerance in Node Groups]{\label{fig:NGb}\includegraphics[scale=0.5]{figs/replicas-groups-1-2}}
 	\caption{Node Groups in MySQL Cluster and Fault Tolerance \protect  \cite{mysqlclusterng}}
 	\label{fig:mysqlclusterng}
 \end{figure}
 
-\noindent As we can see from Figure~\ref{fig:NGa}, the data stored in the cluster is divided into four partitions: \textit{0, 1, 2, 3}. Each partition is stored within the same group with multiple replicas. So as long as each participating node group has at least one operating node, the cluster will have a complete copy of the data as shown in Figure~\ref{fig:NGb}.
+\noindent As we can see from Figure~\ref{fig:NGa}, the data stored in the cluster is divided into four partitions: \textit{0, 1, 2, 3}. Each partition is stored within the same group with multiple replicas. So as long as each participating node group has at least one operating node, the cluster will have a complete copy of the data as shown in Figure~\ref{fig:NGb}. For example, suppose that \textit{Node 2} and\textit{ Node 3} are operating, then partitions \textit{0, 1, 2, 3} remain viable.
 
 \subsection{The Benchmark of MySQL Cluster}
+According to the white paper published by Oracle~\cite{mysqlclusterwhitepaper}, MySQL Cluster can handle:
+\begin{itemize}[noitemsep]
+	\item 4.3 Billion fully consistent reads per minute
+	\item 1.2 Billion fully transactional writes per minute
+\end{itemize}
+
+\noindent They used an open source benchmarking tool, \textit{FlexAsynch}, to test the performance and scalability of a MySQL Cluster running across 30 commodity Intel Xeon E5-equipped servers, comprised 15 node groups. The result for the write operation performance is shown in Figure~\ref{fig:mysqlwrite}.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=1]{figs/mysqlclusterbenchmark.pdf}
+	\caption{MySQL Cluster Scaling-out Writes Operations}
+	\label{fig:mysqlwrite}
+\end{figure}
+
+\noindent Therefore, the high operations throughput, \textit{72 million reads and 19.5 million writes operations per second}, of MySQL Cluster makes it the distributed in-memory storage layer for the metadata in Hop-HDFS. See Section~\ref{sc:Hop-HDFS} for further details.
 
 \section{Hadoop Open Platform-as-a-service and Hop-HDFS}
+\label{sc:Hop-HDFS}
+\subsection{Overcoming Limitations in HDFS NameNode Architecture}
+The \textit{Hadoop Open Platform-as-a-service} (Hop) ~\cite{hop} is an open platform-as-a-Service (PaaS) support of the Hadoop ecosystem on existing cloud platforms including Amazon Web Service and OpenStack. The goal is to automate the installation of both HDFS and Apache YARN so that unsophisticated users can deploy the stack on the cloud easily by a few clicks from our portal website. 
 
-\subsection{Overcome Limitations of HDFS NameNode Architecture}
-The \textit{Hadoop Open Platform-as-a-service} (Hop) ~\cite{hop} is an open platform-as-a-Service (PaaS) support of the Hadoop ecosystem on existing cloud platforms including Amazon Web Service and OpenStack. The storage layer of Hop, called the Hop-HDFS, aims to overcome the major limitations of HDFS NameNode architecture:
+\noindent The storage layer of Hop, called the Hop-HDFS, aims to overcome the major limitations of HDFS NameNode architecture:
 
 \begin{itemize}[noitemsep]
 	\item \textbf{The scalability of the namespace}: the memory size restricts the storage capacity in the system.
@@ -141,9 +159,9 @@ The \textit{Hadoop Open Platform-as-a-service} (Hop) ~\cite{hop} is an open plat
 
 \noindent The architecture of Hop-HDFS consists of multiple \textit{NameNodes}, multiple \textit{DataNodes}, a \textit{MySQL cluster} and is accessed by multiple \textit{clients} as shown in Figure~\ref{fig:hophdfsarchitecture}.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\linewidth]{figs/HopHDFSArchitecture.pdf}
+	\includegraphics[scale=0.7]{figs/HopHDFSArchitecture.pdf}
 	\caption{The Architecture of Hop-HDFS}
 	\label{fig:hophdfsarchitecture}
 \end{figure}

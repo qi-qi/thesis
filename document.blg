@@ -47,6 +47,8 @@ Warning--empty year in mysqlcluster
 Warning--empty year in mysql48nodes
 Warning--empty year in ndblimits
 Warning--empty year in mysqlclusterng
+Warning--empty booktitle in mysqlclusterwhitepaper
+Warning--empty publisher in mysqlclusterwhitepaper
 Warning--empty year in reentrantReadWriteLock
 Warning--no journal in peiro2013maintaining
 Warning--no number and no volume in peiro2013maintaining
@@ -56,45 +58,45 @@ Warning--empty year in apachespark
 Warning--no journal in wasif2012distributed
 Warning--no number and no volume in wasif2012distributed
 Warning--page numbers missing in wasif2012distributed
-You've used 24 entries,
+You've used 25 entries,
             2861 wiz_defined-function locations,
-            724 strings with 7937 characters,
-and the built_in function-call counts, 13817 in all, are:
-= -- 1173
-> -- 895
+            728 strings with 8151 characters,
+and the built_in function-call counts, 14331 in all, are:
+= -- 1213
+> -- 921
 < -- 7
-+ -- 252
-- -- 314
-* -- 1010
-:= -- 2606
-add.period$ -- 72
-call.type$ -- 24
-change.case$ -- 159
-chr.to.int$ -- 21
-cite$ -- 48
-duplicate$ -- 436
-empty$ -- 869
-format.name$ -- 338
-if$ -- 2531
++ -- 258
+- -- 324
+* -- 1046
+:= -- 2703
+add.period$ -- 74
+call.type$ -- 25
+change.case$ -- 165
+chr.to.int$ -- 22
+cite$ -- 51
+duplicate$ -- 457
+empty$ -- 910
+format.name$ -- 348
+if$ -- 2623
 int.to.chr$ -- 4
 int.to.str$ -- 0
-missing$ -- 13
-newline$ -- 119
-num.names$ -- 234
-pop$ -- 212
+missing$ -- 14
+newline$ -- 123
+num.names$ -- 244
+pop$ -- 222
 preamble$ -- 1
-purify$ -- 298
+purify$ -- 310
 quote$ -- 0
-skip$ -- 372
+skip$ -- 390
 stack$ -- 0
-substring$ -- 629
-swap$ -- 152
+substring$ -- 649
+swap$ -- 156
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 458
-warning$ -- 24
-while$ -- 233
+type$ -- 478
+warning$ -- 26
+while$ -- 243
 width$ -- 0
-write$ -- 306
+write$ -- 317
 (There was 1 error message)

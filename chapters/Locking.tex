@@ -156,3 +156,39 @@ Unlike GFS, the interface to HDFS is patterned after UNIX, and it support POSIX 
   %
 
 \section{Namespace Concurrency Control in Hop-HDFS}
+
+\subsection{Namespace Structure}
+In HDFS, the namespace is kept in-memory as arrays and optimized data structure (like LinkedList) of objects with references for semantic constraints. Therefore, it has a \textit{directed tree structure}, similar to Figure~\ref{fig:gfsTree}. 
+
+\noindent In Hop-HDFS, the namespace is stored into tables of MySQL Cluster database, so all INode objects are represented as individual row records in a single \textit{inodes table}. In order to preserve the directed tree structure, we add an id column and a parent\_id column to each row of in \textit{inodes table}. Therefore, the graphical representation of the filesystem hierarchy for INodes is like Figure~\ref{fig:hoptree}. The table representation in the database is like Table~\ref{table:hoptreeTable}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{figs/hoptree.pdf}
+	\caption{Filesystem Hierarchy with ID for INodes in Hop-HDFS}
+	\label{fig:hoptree}
+\end{figure}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{id} & \textbf{parent\_id} & \textbf{name} & \textbf{other parameters...} \\ \hline
+		1 & 0 & / & ... \\ \hline
+		2 & 1 & a & ... \\ \hline
+		3 & 1 & b & ... \\ \hline
+		4 & 1 & c & ... \\ \hline
+		5 & 2 & d & ... \\ \hline
+		6 & 3 & e & ... \\ \hline
+		7 & 5 & f & ... \\ \hline
+		8 & 6 & g & ... \\ \hline
+		9 & 7 & h & ... \\ \hline
+		10 & 7 & i & ... \\ \hline
+	\end{tabular}
+	\caption{INode Table for Hop-HDFS}
+	\label{table:hoptreeTable}
+\end{table}
+
+\noindent The \textit{id} is unique and atomically generated for each INode. With the \textit{id} and \textit{parent\_id} relationship, the hierarchy will be constructed correctly from the rows to be in-memory objects used by the name system.
+
+\subsection{Namespace Concurrency Control}

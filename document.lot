@@ -4,6 +4,7 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {3.1}{\ignorespaces Concurrent Mutations within for different files/directories and Related Read-Write Lock Sets}}{20}{table.3.1}
 \contentsline {table}{\numberline {3.2}{\ignorespaces Serialized Concurrent Mutations and Conflict Locks}}{21}{table.3.2}
+\contentsline {table}{\numberline {3.3}{\ignorespaces INode Table for Hop-HDFS}}{26}{table.3.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

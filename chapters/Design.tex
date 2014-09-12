@@ -24,7 +24,7 @@
 
 \section{Resolving the Semantic Related Group}
 
-Resolving the semantic related group for each transaction is the fundamental step to preclude \textit{anomalies} in our implementation. Because it defines the constraints between individual data rows. In Hop-HDFS, each metadata operation is implemented as an individual transaction running by a worker thread. Any metadata operation related to the namespace will have one or two input parameters, called \textit{Path}. Here's two examples for methods in the Filesystem API:
+Resolving the semantic related group for each transaction is the fundamental step to preclude \textit{anomalies} in our implementation. The constraint between individual data is formed within a semantic related group. In Hop-HDFS, each metadata operation is implemented as an individual transaction running by a worker thread. Any metadata operation related to the namespace will have one or two input parameters, called \textit{Path}. Here's two examples for methods in the Filesystem API:
 
 \begin{itemize}[noitemsep]
 	\item boolean \textbf{mkdirs} (Path \textit{f}): \textit{f} is the path of the INodeDirectory to be created
@@ -36,12 +36,14 @@ Resolving the semantic related group for each transaction is the fundamental ste
 	/a/d/f/h
 \end{center}
 
-\noindent Therefore, with the preservation of the \textit{directed tree structure}, we can resolving a semantic related group for each INode along the edge of ancestors as a \textit{LinkedList}. Therefore, the semantic related group representation for INode \textit{h} is:
+\noindent Therefore, with the preservation of the \textit{directed tree structure}, we can resolving a semantic related group for each INode along the edge of ancestors as a \textit{LinkedList}. The semantic related group representation for INode \textit{h} is:
 \begin{center}
 	h: \{/-$>$a-$>$d-$>$f\}
 \end{center}
 
-\noindent In other words, for each row in \textit{inodes table}, we can figure out its semantic related rows as shown in Table~\ref{table:semanticrelatedTable}.
+\noindent In other words, when mutating INode \textit{h}, all the semantic constraint can be found within INodes \textit{/, a, d, f}. With this knowledge, we can maintain the strung consistency semantics of original HDFS.
+
+\noindent For each row in \textit{inodes table}, we can figure out its semantic related rows as shown in Table~\ref{table:semanticrelatedTable}.
 
 \begin{table}[h]
 	\centering
@@ -61,7 +63,7 @@ Resolving the semantic related group for each transaction is the fundamental ste
 	\end{tabular}
 	\caption{Table Representation for the Semantic Related Group}
 	\label{table:semanticrelatedTable}
-\end{table}
+\end{table}   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
 %%%%%                      SECOND SECTION

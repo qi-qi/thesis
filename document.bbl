@@ -81,7 +81,13 @@ MySQL.
 \newblock
   \url{http://dev.mysql.com/doc/mysql-cluster-excerpt/5.1/en/mysql-cluster-limitations-transactions.html}.
 
-\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{d}]{mysqlclusterng}
+\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{d}]{mysqlreadcommited}
+MySQL.
+\newblock Limits relating to transaction handling in mysql cluster.
+\newblock
+  \url{http://dev.mysql.com/doc/refman/5.0/en/mysql-cluster-limitations-transactions.html}.
+
+\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{e}]{mysqlclusterng}
 MySQL.
 \newblock Mysql cluster nodes, node groups, replicas, and partitions.
 \newblock

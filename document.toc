@@ -25,49 +25,37 @@
 \contentsline {subsection}{\numberline {2.4.1}Hadoop Open Platform-as-a-service Design Purpose}{13}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Overcoming Limitations in HDFS NameNode Architecture}{14}{subsection.2.4.2}
 \contentsline {subsection}{\numberline {2.4.3}The Architecture of Hop-HDFS}{14}{subsection.2.4.3}
-\contentsline {part}{II\hspace {1em}Concurrency Control in Namespace}{17}{part.2}
-\contentsline {chapter}{\numberline {3}Namespace Locking}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}Namespace Management and Locking in GFS}{19}{section.3.1}
-\contentsline {section}{\numberline {3.2}Namespace Management and Locking in HDFS}{21}{section.3.2}
-\contentsline {section}{\numberline {3.3}B}{24}{section.3.3}
-\contentsline {section}{\numberline {3.4}C}{24}{section.3.4}
-\contentsline {section}{\numberline {3.5}D}{24}{section.3.5}
-\contentsline {chapter}{\numberline {4}Systematic Assessment of Hop-HDFS Performance}{25}{chapter.4}
-\contentsline {section}{\numberline {4.1}A}{25}{section.4.1}
-\contentsline {section}{\numberline {4.2}B}{25}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}B1}{25}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}B2}{25}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}C}{25}{section.4.3}
-\contentsline {section}{\numberline {4.4}D}{25}{section.4.4}
-\contentsline {part}{III\hspace {1em}Solution}{27}{part.3}
-\contentsline {chapter}{\numberline {5}Design}{29}{chapter.5}
-\contentsline {section}{\numberline {5.1}A}{29}{section.5.1}
-\contentsline {section}{\numberline {5.2}B}{29}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}B1}{29}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}B2}{29}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}C}{29}{section.5.3}
-\contentsline {section}{\numberline {5.4}D}{29}{section.5.4}
-\contentsline {chapter}{\numberline {6}Implementation}{31}{chapter.6}
-\contentsline {section}{\numberline {6.1}A}{31}{section.6.1}
-\contentsline {section}{\numberline {6.2}B}{31}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}B1}{31}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}B2}{31}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}C}{31}{section.6.3}
-\contentsline {section}{\numberline {6.4}D}{31}{section.6.4}
-\contentsline {part}{IV\hspace {1em}Evaluation and Conclusion}{33}{part.4}
-\contentsline {chapter}{\numberline {7}Evaluation}{35}{chapter.7}
-\contentsline {section}{\numberline {7.1}A}{35}{section.7.1}
-\contentsline {section}{\numberline {7.2}B}{35}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}B1}{35}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}B2}{35}{subsection.7.2.2}
-\contentsline {section}{\numberline {7.3}C}{35}{section.7.3}
-\contentsline {section}{\numberline {7.4}D}{35}{section.7.4}
-\contentsline {chapter}{\numberline {8}Conclusion}{37}{chapter.8}
-\contentsline {section}{\numberline {8.1}A}{37}{section.8.1}
-\contentsline {section}{\numberline {8.2}B}{37}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}B1}{37}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}B2}{37}{subsection.8.2.2}
-\contentsline {section}{\numberline {8.3}C}{37}{section.8.3}
-\contentsline {section}{\numberline {8.4}D}{37}{section.8.4}
-\contentsline {part}{V\hspace {1em}Appendices}{41}{part.5}
-\contentsline {chapter}{\numberline {A}Apache HDFS Unit Tests Passing List}{43}{chapter.1}
+\contentsline {part}{II\hspace {1em}Namespace Concurrency Control and Assessment}{17}{part.2}
+\contentsline {chapter}{\numberline {3}Namespace Concurrency Control}{19}{chapter.3}
+\contentsline {section}{\numberline {3.1}Namespace Concurrency Control in GFS}{19}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Namespace Structure}{19}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Namespace Concurrency Control}{19}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Namespace Concurrency Control in HDFS}{21}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Namespace Structure}{21}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Namespace Concurrency Control}{21}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Concurrency Bottleneck}{22}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Namespace Concurrency Control in Hop-HDFS}{25}{section.3.3}
+\contentsline {chapter}{\numberline {4}Namespace Operation Performance Assessment}{27}{chapter.4}
+\contentsline {section}{\numberline {4.1}A}{27}{section.4.1}
+\contentsline {section}{\numberline {4.2}B}{27}{section.4.2}
+\contentsline {section}{\numberline {4.3}C}{27}{section.4.3}
+\contentsline {part}{III\hspace {1em}Solution}{29}{part.3}
+\contentsline {chapter}{\numberline {5}Design}{31}{chapter.5}
+\contentsline {section}{\numberline {5.1}A}{31}{section.5.1}
+\contentsline {section}{\numberline {5.2}B}{31}{section.5.2}
+\contentsline {section}{\numberline {5.3}C}{31}{section.5.3}
+\contentsline {chapter}{\numberline {6}Implementation}{33}{chapter.6}
+\contentsline {section}{\numberline {6.1}A}{33}{section.6.1}
+\contentsline {section}{\numberline {6.2}B}{33}{section.6.2}
+\contentsline {section}{\numberline {6.3}C}{33}{section.6.3}
+\contentsline {part}{IV\hspace {1em}Evaluation and Conclusion}{35}{part.4}
+\contentsline {chapter}{\numberline {7}Evaluation}{37}{chapter.7}
+\contentsline {section}{\numberline {7.1}A}{37}{section.7.1}
+\contentsline {section}{\numberline {7.2}B}{37}{section.7.2}
+\contentsline {section}{\numberline {7.3}C}{37}{section.7.3}
+\contentsline {chapter}{\numberline {8}Conclusion}{39}{chapter.8}
+\contentsline {section}{\numberline {8.1}A}{39}{section.8.1}
+\contentsline {section}{\numberline {8.2}B}{39}{section.8.2}
+\contentsline {section}{\numberline {8.3}C}{39}{section.8.3}
+\contentsline {part}{V\hspace {1em}Appendices}{43}{part.5}
+\contentsline {chapter}{\numberline {A}Apache HDFS Unit Tests Passing List}{45}{chapter.1}

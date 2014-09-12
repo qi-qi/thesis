@@ -33,29 +33,25 @@
 \contentsline {section}{\numberline {3.2}Namespace Concurrency Control in HDFS}{21}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Namespace Structure}{21}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Namespace Concurrency Control}{21}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Concurrency Bottleneck}{22}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.3}Bottleneck}{22}{subsection.3.2.3}
 \contentsline {section}{\numberline {3.3}Namespace Concurrency Control in Hop-HDFS}{25}{section.3.3}
 \contentsline {chapter}{\numberline {4}Namespace Operation Performance Assessment}{27}{chapter.4}
 \contentsline {section}{\numberline {4.1}A}{27}{section.4.1}
 \contentsline {section}{\numberline {4.2}B}{27}{section.4.2}
 \contentsline {section}{\numberline {4.3}C}{27}{section.4.3}
 \contentsline {part}{III\hspace {1em}Solution}{29}{part.3}
-\contentsline {chapter}{\numberline {5}Design}{31}{chapter.5}
+\contentsline {chapter}{\numberline {5}Design and Implementation}{31}{chapter.5}
 \contentsline {section}{\numberline {5.1}A}{31}{section.5.1}
 \contentsline {section}{\numberline {5.2}B}{31}{section.5.2}
 \contentsline {section}{\numberline {5.3}C}{31}{section.5.3}
-\contentsline {chapter}{\numberline {6}Implementation}{33}{chapter.6}
-\contentsline {section}{\numberline {6.1}A}{33}{section.6.1}
-\contentsline {section}{\numberline {6.2}B}{33}{section.6.2}
-\contentsline {section}{\numberline {6.3}C}{33}{section.6.3}
-\contentsline {part}{IV\hspace {1em}Evaluation and Conclusion}{35}{part.4}
-\contentsline {chapter}{\numberline {7}Evaluation}{37}{chapter.7}
+\contentsline {part}{IV\hspace {1em}Evaluation and Conclusion}{33}{part.4}
+\contentsline {chapter}{\numberline {6}Evaluation}{35}{chapter.6}
+\contentsline {section}{\numberline {6.1}A}{35}{section.6.1}
+\contentsline {section}{\numberline {6.2}B}{35}{section.6.2}
+\contentsline {section}{\numberline {6.3}C}{35}{section.6.3}
+\contentsline {chapter}{\numberline {7}Conclusion}{37}{chapter.7}
 \contentsline {section}{\numberline {7.1}A}{37}{section.7.1}
 \contentsline {section}{\numberline {7.2}B}{37}{section.7.2}
 \contentsline {section}{\numberline {7.3}C}{37}{section.7.3}
-\contentsline {chapter}{\numberline {8}Conclusion}{39}{chapter.8}
-\contentsline {section}{\numberline {8.1}A}{39}{section.8.1}
-\contentsline {section}{\numberline {8.2}B}{39}{section.8.2}
-\contentsline {section}{\numberline {8.3}C}{39}{section.8.3}
-\contentsline {part}{V\hspace {1em}Appendices}{43}{part.5}
-\contentsline {chapter}{\numberline {A}Apache HDFS Unit Tests Passing List}{45}{chapter.1}
+\contentsline {part}{V\hspace {1em}Appendices}{41}{part.5}
+\contentsline {chapter}{\numberline {A}Apache HDFS Unit Tests Passing List}{43}{chapter.1}

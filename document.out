@@ -33,29 +33,25 @@
 \BOOKMARK [1][]{section.3.2}{Namespace Concurrency Control in HDFS}{chapter.3}% 33
 \BOOKMARK [2][]{subsection.3.2.1}{Namespace Structure}{section.3.2}% 34
 \BOOKMARK [2][]{subsection.3.2.2}{Namespace Concurrency Control}{section.3.2}% 35
-\BOOKMARK [2][]{subsection.3.2.3}{Concurrency Bottleneck}{section.3.2}% 36
+\BOOKMARK [2][]{subsection.3.2.3}{Bottleneck}{section.3.2}% 36
 \BOOKMARK [1][]{section.3.3}{Namespace Concurrency Control in Hop-HDFS}{chapter.3}% 37
 \BOOKMARK [0][]{chapter.4}{Namespace Operation Performance Assessment}{part.2}% 38
 \BOOKMARK [1][]{section.4.1}{A}{chapter.4}% 39
 \BOOKMARK [1][]{section.4.2}{B}{chapter.4}% 40
 \BOOKMARK [1][]{section.4.3}{C}{chapter.4}% 41
 \BOOKMARK [-1][]{part.3}{III Solution}{}% 42
-\BOOKMARK [0][]{chapter.5}{Design}{part.3}% 43
+\BOOKMARK [0][]{chapter.5}{Design and Implementation}{part.3}% 43
 \BOOKMARK [1][]{section.5.1}{A}{chapter.5}% 44
 \BOOKMARK [1][]{section.5.2}{B}{chapter.5}% 45
 \BOOKMARK [1][]{section.5.3}{C}{chapter.5}% 46
-\BOOKMARK [0][]{chapter.6}{Implementation}{part.3}% 47
-\BOOKMARK [1][]{section.6.1}{A}{chapter.6}% 48
-\BOOKMARK [1][]{section.6.2}{B}{chapter.6}% 49
-\BOOKMARK [1][]{section.6.3}{C}{chapter.6}% 50
-\BOOKMARK [-1][]{part.4}{IV Evaluation and Conclusion}{}% 51
-\BOOKMARK [0][]{chapter.7}{Evaluation}{part.4}% 52
+\BOOKMARK [-1][]{part.4}{IV Evaluation and Conclusion}{}% 47
+\BOOKMARK [0][]{chapter.6}{Evaluation}{part.4}% 48
+\BOOKMARK [1][]{section.6.1}{A}{chapter.6}% 49
+\BOOKMARK [1][]{section.6.2}{B}{chapter.6}% 50
+\BOOKMARK [1][]{section.6.3}{C}{chapter.6}% 51
+\BOOKMARK [0][]{chapter.7}{Conclusion}{part.4}% 52
 \BOOKMARK [1][]{section.7.1}{A}{chapter.7}% 53
 \BOOKMARK [1][]{section.7.2}{B}{chapter.7}% 54
 \BOOKMARK [1][]{section.7.3}{C}{chapter.7}% 55
-\BOOKMARK [0][]{chapter.8}{Conclusion}{part.4}% 56
-\BOOKMARK [1][]{section.8.1}{A}{chapter.8}% 57
-\BOOKMARK [1][]{section.8.2}{B}{chapter.8}% 58
-\BOOKMARK [1][]{section.8.3}{C}{chapter.8}% 59
-\BOOKMARK [-1][]{part.5}{V Appendices}{}% 60
-\BOOKMARK [0][]{chapter.1}{Apache HDFS Unit Tests Passing List}{part.5}% 61
+\BOOKMARK [-1][]{part.5}{V Appendices}{}% 56
+\BOOKMARK [0][]{chapter.1}{Apache HDFS Unit Tests Passing List}{part.5}% 57

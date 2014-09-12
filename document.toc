@@ -45,7 +45,7 @@
 \contentsline {chapter}{\numberline {5}Design and Implementation}{31}{chapter.5}
 \contentsline {section}{\numberline {5.1}Resolving the Semantic Related Group}{31}{section.5.1}
 \contentsline {section}{\numberline {5.2}Per-Transaction Snapshot Isolation}{32}{section.5.2}
-\contentsline {section}{\numberline {5.3}Optimistic Concurrency Control}{33}{section.5.3}
+\contentsline {section}{\numberline {5.3}Optimistic Concurrency Control}{34}{section.5.3}
 \contentsline {part}{IV\hspace {1em}Evaluation and Conclusion}{35}{part.4}
 \contentsline {chapter}{\numberline {6}Evaluation}{37}{chapter.6}
 \contentsline {section}{\numberline {6.1}Experimental Setup}{37}{section.6.1}

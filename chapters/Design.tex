@@ -89,22 +89,24 @@ As we mentioned before, MySQL Cluster supports only the READ COMMITTED transacti
 \noindent Before validation phase, the transaction will never fetch any data from database since it has all the semantic related rows in the cache. Therefore, the snapshot provides a consistent view of data for each transaction from read phase until validation phase: 
 \begin{itemize}[noitemsep]
 	\item \textit{Fuzzy Read} is precluded by \textit{snapshot isolation}: As we can see from Figure~\ref{fig:snapfuzzy}, the second read of Transaction 1 read from snapshot instead of database, not affected by the value committed by Transaction 2.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=\linewidth]{figs/snapfuzzy.pdf}
+		\caption{Snapshot Isolation Precludes Fuzzy Read}
+		\label{fig:snapfuzzy}
+	\end{figure}
+	
 	\item \textit{Phantom Read} is also precluded by \textit{snapshot isolation with Semantic Related Group}: As we can see from Figure~\ref{fig:snapphantom}, Transaction 1 snapshot the semantic related group of x after the first count operation. So its second count operation is not affected by the value inserted by Transaction 2.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=\linewidth]{figs/snapphantom.pdf}
+		\caption{Snapshot Isolation + Semantic Related Group Precludes Phantom Read}
+		\label{fig:snapphantom}
+	\end{figure}
+	
 \end{itemize} 
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\linewidth]{figs/snapfuzzy.pdf}
-	\caption{Snapshot Isolation Precludes Fuzzy Read}
-	\label{fig:snapfuzzy}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\linewidth]{figs/snapphantom.pdf}
-	\caption{Snapshot Isolation + Semantic Related Group Precludes Phantom Read}
-	\label{fig:snapphantom}
-\end{figure}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
 %%%%%                         ANOTHER SECTION

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  12 SEP 2014 23:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  12 SEP 2014 23:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1045,33 +1045,23 @@ Chapter 4.
 Chapter 5.
 [31
 
-] [32] <figs/snapfuzzy.pdf, id=789, 683.58034pt x 264.65776pt>
+] [32] <figs/snapfuzzy.pdf, id=788, 683.58034pt x 264.65776pt>
 File: figs/snapfuzzy.pdf Graphic file (type pdf)
 
 <use figs/snapfuzzy.pdf>
-Package pdftex.def Info: figs/snapfuzzy.pdf used on input line 97.
+Package pdftex.def Info: figs/snapfuzzy.pdf used on input line 95.
 (pdftex.def)             Requested size: 455.24408pt x 176.25768pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figs/snapphantom.pdf, id=790, 783.19751pt x 275.9921pt>
+ [33 <./figs/snapfuzzy.pdf>]
+<figs/snapphantom.pdf, id=811, 783.19751pt x 275.9921pt>
 File: figs/snapphantom.pdf Graphic file (type pdf)
 
 <use figs/snapphantom.pdf>
 Package pdftex.def Info: figs/snapphantom.pdf used on input line 104.
 (pdftex.def)             Requested size: 455.24408pt x 160.42505pt.
+) [34 <./figs/snapphantom.pdf>] [35
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) [33] [34 <./figs/snapfuzzy.pdf> <./figs/snapphantom.pdf
-
-pdfTeX warning: pdflatex (file ./figs/snapphantom.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
->] [35
-
-] [36] (./chapters/Evaluation.tex
+] [36]
+(./chapters/Evaluation.tex
 Chapter 6.
 ) (./chapters/Conclusion.tex [37
 
@@ -1179,10 +1169,10 @@ fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
 o/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pf
 b>
-Output written on document.pdf (66 pages, 1847004 bytes).
+Output written on document.pdf (66 pages, 1847232 bytes).
 PDF statistics:
- 1001 PDF objects out of 1200 (max. 8388607)
- 865 compressed objects within 9 object streams
+ 1002 PDF objects out of 1200 (max. 8388607)
+ 866 compressed objects within 9 object streams
  181 named destinations out of 1000 (max. 500000)
  532 words of extra memory for PDF output out of 10000 (max. 10000000)
 

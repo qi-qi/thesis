@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  12 SEP 2014 11:11
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  12 SEP 2014 12:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -662,24 +662,37 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@toks=\toks27
 \enit@inbox=\box65
 \enitdp@description=\count144
-) (./document.aux)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+)) (./document.aux)
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
- (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -711,7 +724,7 @@ e
 \everyMPtoPDFconversion=\toks29
 )
 \AtBeginShipoutBox=\box67
-Package hyperref Info: Link coloring ON on input line 42.
+Package hyperref Info: Link coloring ON on input line 43.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -720,9 +733,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count151
 )
-LaTeX Info: Redefining \ref on input line 42.
-LaTeX Info: Redefining \pageref on input line 42.
-LaTeX Info: Redefining \nameref on input line 42.
+LaTeX Info: Redefining \ref on input line 43.
+LaTeX Info: Redefining \pageref on input line 43.
+LaTeX Info: Redefining \nameref on input line 43.
 
 (./document.out) (./document.out)
 \@outlinefile=\write6
@@ -744,7 +757,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 59.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<figs/preliminar/Logo_IST_web.pdf, id=228, 500.87125pt x 193.72375pt>
+<figs/preliminar/Logo_IST_web.pdf, id=232, 500.87125pt x 193.72375pt>
 File: figs/preliminar/Logo_IST_web.pdf Graphic file (type pdf)
 
 <use figs/preliminar/Logo_IST_web.pdf>
@@ -838,14 +851,14 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.65 \part{Introduction and Background}
+l.66 \part{Introduction and Background}
                                         [1
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.65 \part{Introduction and Background}
+l.66 \part{Introduction and Background}
                                         [2] (./chapters/Introduction.tex
 Chapter 1.
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
@@ -885,7 +898,7 @@ Chapter 2.
 
 pdfTeX warning: pdflatex (file ./figs/GFSArchitecture.pdf): PDF inclusion: foun
 d PDF version <1.6>, but at most version <1.5> allowed
-<figs/GFSArchitecture.pdf, id=492, 409.22083pt x 157.46529pt>
+<figs/GFSArchitecture.pdf, id=499, 409.22083pt x 157.46529pt>
 File: figs/GFSArchitecture.pdf Graphic file (type pdf)
 
 <use figs/GFSArchitecture.pdf>
@@ -904,7 +917,7 @@ l.65 \end{figure}
                    \relax 
 l.77 
       [8 <./figs/GFSArchitecture.pdf>]
-<figs/hdfsarchitecturev1.png, id=532, 877.2775pt x 606.265pt>
+<figs/hdfsarchitecturev1.png, id=539, 877.2775pt x 606.265pt>
 File: figs/hdfsarchitecturev1.png Graphic file (type png)
 
 <use figs/hdfsarchitecturev1.png>
@@ -920,21 +933,21 @@ h the same identifier (name{page.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.107 
-       [10] <figs/mysqlcluster.png, id=548, 826.1453pt x 527.14589pt>
+       [10] <figs/mysqlcluster.png, id=555, 826.1453pt x 527.14589pt>
 File: figs/mysqlcluster.png Graphic file (type png)
 
 <use figs/mysqlcluster.png>
 Package pdftex.def Info: figs/mysqlcluster.png used on input line 110.
 (pdftex.def)             Requested size: 330.45226pt x 210.85461pt.
 
-<figs/replicas-groups-1-1.png, id=551, 501.875pt x 506.89375pt>
+<figs/replicas-groups-1-1.png, id=558, 501.875pt x 506.89375pt>
 File: figs/replicas-groups-1-1.png Graphic file (type png)
 
 <use figs/replicas-groups-1-1.png>
 Package pdftex.def Info: figs/replicas-groups-1-1.png used on input line 125.
 (pdftex.def)             Requested size: 301.12732pt x 304.1386pt.
 
-<figs/replicas-groups-1-2.png, id=552, 501.875pt x 396.48125pt>
+<figs/replicas-groups-1-2.png, id=559, 501.875pt x 396.48125pt>
 File: figs/replicas-groups-1-2.png Graphic file (type png)
 
 <use figs/replicas-groups-1-2.png>
@@ -952,7 +965,7 @@ ation with the same identifier (name{page.12}) has been already used, duplicate
                    \relax 
 l.138 \end{itemize}
                     [12 <./figs/replicas-groups-1-1.png> <./figs/replicas-group
-s-1-2.png>] <figs/mysqlclusterbenchmark.pdf, id=573, 361.35pt x 216.81pt>
+s-1-2.png>] <figs/mysqlclusterbenchmark.pdf, id=580, 361.35pt x 216.81pt>
 File: figs/mysqlclusterbenchmark.pdf Graphic file (type pdf)
 
 <use figs/mysqlclusterbenchmark.pdf>
@@ -960,7 +973,7 @@ Package pdftex.def Info: figs/mysqlclusterbenchmark.pdf used on input line 144.
 
 (pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
  [13 <./figs/mysqlclusterbenchmark.pdf>]
-<figs/HopHDFSArchitecture.pdf, id=589, 566.19568pt x 319.48157pt>
+<figs/HopHDFSArchitecture.pdf, id=596, 566.19568pt x 319.48157pt>
 File: figs/HopHDFSArchitecture.pdf Graphic file (type pdf)
 
 <use figs/HopHDFSArchitecture.pdf>
@@ -971,7 +984,7 @@ Package pdftex.def Info: figs/HopHDFSArchitecture.pdf used on input line 172.
 
 ] [17] [18] (./chapters/Locking.tex
 Chapter 3.
-<figs/gfstree.pdf, id=624, 518.06837pt x 323.75955pt>
+<figs/gfstree.pdf, id=631, 518.06837pt x 323.75955pt>
 File: figs/gfstree.pdf Graphic file (type pdf)
  <use figs/gfstree.pdf>
 Package pdftex.def Info: figs/gfstree.pdf used on input line 43.
@@ -982,7 +995,7 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <10.95> not available
 [19
 
 ] [20 <./figs/gfstree.pdf>]
-<figs/INodeUML.pdf, id=648, 611.64447pt x 394.30353pt>
+<figs/INodeUML.pdf, id=655, 611.64447pt x 394.30353pt>
 File: figs/INodeUML.pdf Graphic file (type pdf)
  <use figs/INodeUML.pdf>
 Package pdftex.def Info: figs/INodeUML.pdf used on input line 105.
@@ -991,7 +1004,7 @@ Package pdftex.def Info: figs/INodeUML.pdf used on input line 105.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figs/hdfsquota.pdf, id=650, 497.62212pt x 541.26152pt>
+<figs/hdfsquota.pdf, id=657, 497.62212pt x 541.26152pt>
 File: figs/hdfsquota.pdf Graphic file (type pdf)
 
 <use figs/hdfsquota.pdf>
@@ -1002,13 +1015,13 @@ Package pdftex.def Info: figs/hdfsquota.pdf used on input line 118.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [21] [22 <./figs/INodeUML.pdf>] [23 <./figs/hdfsquota.pdf>]
-<figs/nnRPC.pdf, id=701, 513.16719pt x 507.92761pt>
+<figs/nnRPC.pdf, id=708, 513.16719pt x 507.92761pt>
 File: figs/nnRPC.pdf Graphic file (type pdf)
  <use figs/nnRPC.pdf>
 Package pdftex.def Info: figs/nnRPC.pdf used on input line 147.
 (pdftex.def)             Requested size: 410.53432pt x 406.34264pt.
 
-[24 <./figs/nnRPC.pdf>] <figs/hoptree.pdf, id=724, 284.97264pt x 288.41954pt>
+[24 <./figs/nnRPC.pdf>] <figs/hoptree.pdf, id=731, 284.97264pt x 288.41954pt>
 File: figs/hoptree.pdf Graphic file (type pdf)
 
 <use figs/hoptree.pdf>
@@ -1026,11 +1039,14 @@ Chapter 4.
 
 ] [29] [30] (./chapters/Design.tex
 Chapter 5.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 ) [31
 
-] [32
+] [32] [33
 
-] [33] [34] (./chapters/Evaluation.tex
+] [34] (./chapters/Evaluation.tex
 Chapter 6.
 ) (./chapters/Conclusion.tex [35
 
@@ -1091,30 +1107,23 @@ No file document.ind.
 ] [44
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 176.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 176.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 177.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 177.
  (./document.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 176.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 176.
-
-
-Package rerunfilecheck Warning: File `document.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `document.out':
-(rerunfilecheck)             Before: A921073FA524F3ADD949149AFCC6998A;3987
-(rerunfilecheck)             After:  A1C5462348A399465F247916554668ED;4069.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 176.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 177.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 177.
+Package rerunfilecheck Info: File `document.out' has not changed.
+(rerunfilecheck)             Checksum: 7DD131C253F1E862FDA57D7A6977B676;4104.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 177.
  ) 
 Here is how much of TeX's memory you used:
- 8057 strings out of 493304
- 114825 string characters out of 6139871
- 214502 words of memory out of 5000000
- 11126 multiletter control sequences out of 15000+600000
- 34088 words of font info for 80 fonts, out of 8000000 for 9000
+ 8101 strings out of 493304
+ 115538 string characters out of 6139871
+ 215134 words of memory out of 5000000
+ 11158 multiletter control sequences out of 15000+600000
+ 34778 words of font info for 82 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 39i,13n,29p,860b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,13n,29p,860b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texliv
 e/texmf-dist/fonts/enc/dvips/lobster2/lbst2_2vl4dw.enc}</usr/share/texlive/texm
 f-dist/fonts/type1/impallari/lobster2/LobsterTwo-BoldItalic.pfb></usr/share/tex
@@ -1127,16 +1136,17 @@ amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/eule
 r/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbr8.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrsl8.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palati
-no/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.p
-fb>
-Output written on document.pdf (64 pages, 1347771 bytes).
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
+o/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pf
+b>
+Output written on document.pdf (64 pages, 1358781 bytes).
 PDF statistics:
- 929 PDF objects out of 1000 (max. 8388607)
- 804 compressed objects within 9 object streams
- 171 named destinations out of 1000 (max. 500000)
- 514 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 941 PDF objects out of 1000 (max. 8388607)
+ 815 compressed objects within 9 object streams
+ 172 named destinations out of 1000 (max. 500000)
+ 522 words of extra memory for PDF output out of 10000 (max. 10000000)
 

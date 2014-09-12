@@ -24,7 +24,7 @@
 
 \section{Resolving the Semantic Related Group}
 
-Resolving the semantic related group for each transaction is the fundamental step to preclude \textit{anomalies} in our implementation. In Hop-HDFS, each metadata operation is implemented as an individual transaction running by a worker thread. Any metadata operation related to the namespace will have one or two input parameters, called \textit{Path}. Here's two examples for methods in the Filesystem API:
+Resolving the semantic related group for each transaction is the fundamental step to preclude \textit{anomalies} in our implementation. Because it defines the constraints between individual data rows. In Hop-HDFS, each metadata operation is implemented as an individual transaction running by a worker thread. Any metadata operation related to the namespace will have one or two input parameters, called \textit{Path}. Here's two examples for methods in the Filesystem API:
 
 \begin{itemize}[noitemsep]
 	\item boolean \textbf{mkdirs} (Path \textit{f}): \textit{f} is the path of the INodeDirectory to be created

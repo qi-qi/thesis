@@ -46,12 +46,10 @@
 \contentsline {section}{\numberline {5.3}C}{31}{section.5.3}
 \contentsline {part}{IV\hspace {1em}Evaluation and Conclusion}{33}{part.4}
 \contentsline {chapter}{\numberline {6}Evaluation}{35}{chapter.6}
-\contentsline {section}{\numberline {6.1}A}{35}{section.6.1}
-\contentsline {section}{\numberline {6.2}B}{35}{section.6.2}
-\contentsline {section}{\numberline {6.3}C}{35}{section.6.3}
-\contentsline {chapter}{\numberline {7}Conclusion}{37}{chapter.7}
-\contentsline {section}{\numberline {7.1}A}{37}{section.7.1}
-\contentsline {section}{\numberline {7.2}B}{37}{section.7.2}
-\contentsline {section}{\numberline {7.3}C}{37}{section.7.3}
+\contentsline {section}{\numberline {6.1}Experimental Setup}{35}{section.6.1}
+\contentsline {section}{\numberline {6.2}Performance Comparison}{35}{section.6.2}
+\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{37}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusion}{37}{section.7.1}
+\contentsline {section}{\numberline {7.2}Future Work}{37}{section.7.2}
 \contentsline {part}{V\hspace {1em}Appendices}{41}{part.5}
 \contentsline {chapter}{\numberline {A}Apache HDFS Unit Tests Passing List}{43}{chapter.1}

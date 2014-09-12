@@ -189,6 +189,6 @@ In HDFS, the namespace is kept in-memory as arrays and optimized data structure 
 	\label{table:hoptreeTable}
 \end{table}
 
-\noindent The \textit{id} is unique and atomically generated for each INode. With the \textit{id} and \textit{parent\_id} relationship, the hierarchy will be constructed correctly from the rows to be in-memory objects used by the name system.
+\noindent Since the \textit{id} is unique and atomically generated for INodes in each new transaction, the \textit{Primary Key} for the table is $<$name, parent\_id$>$ pair to avoid duplicated data rows during primary key lookup. With the \textit{id} and \textit{parent\_id} relationship, the hierarchy will be constructed correctly from the rows to be in-memory objects used by the name system.
 
 \subsection{Namespace Concurrency Control}

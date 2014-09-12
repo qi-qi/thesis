@@ -18,10 +18,16 @@
   %
 
 \chapter{Design and Implementation}
-%\addcontentsline{lof}{chapter}{\thechapter\quad Nihil Molestiae}
-%\addcontentsline{lot}{chapter}{\thechapter\quad Nihil Molestiae}
+The solution we propose to improve the throughput is based on the following four phases:
+\begin{enumerate}[noitemsep]
+	\item \textbf{Read Phase}: resolving the semantic related group and cache the snapshot copy within the handling transaction.
+	\item \textbf{Execution Phase}: transaction read/write operations are performed on its own snapshot and never fetch data from database.
+	\item \textbf{Validation Phase}: snapshot's related data rows are fetched from the database. If all their versions match with the original copy of the snapshot, go to update phase; else, abort and retry current transaction.
+	\item \textbf{Update Phase}: update related data in the database table. Abort and retry transaction if the instance already exists in the database for "new" data.
+\end{enumerate}
 \label{ch:Design}
 
+\noindent The phases mentioned above will be illustrated detailedly in the following sections.
 \section{Resolving the Semantic Related Group}
 
 Resolving the semantic related group for each transaction is the fundamental step to preclude \textit{anomalies} in our implementation. The constraint between individual data is formed within a semantic related group. In Hop-HDFS, each metadata operation is implemented as an individual transaction running by a worker thread. Any metadata operation related to the namespace will have one or two input parameters, called \textit{Path}. Here's two examples for methods in the Filesystem API:
@@ -63,7 +69,7 @@ Resolving the semantic related group for each transaction is the fundamental ste
 	\end{tabular}
 	\caption{Table Representation for the Semantic Related Group}
 	\label{table:semanticrelatedTable}
-\end{table}   
+\end{table}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
 %%%%%                      SECOND SECTION
@@ -78,7 +84,7 @@ As we mentioned before, MySQL Cluster supports only the READ COMMITTED transacti
 
 \noindent In commercial database management systems, like Microsoft SQL Server, Oracle, etc, \textit{snapshot isolation} is implemented within multi version concurrency control (MVCC)~\cite{berenson1995critique} on database server side. However, we need to implement snapshot isolation on the application side since MySQL Cluster supports only the READ COMMITTED isolation level.
 
-\noindent After resolving the semantic related group, we take a snapshot on selected rows as well as all related rows on the committed values from database. This snapshot will be cached in its transaction. Each transaction will have its own copy of snapshot during its lifetime. All transaction operations will be performed on its own snapshot. Therefore, we called it Per-Transaction Snapshot Isolation.
+\noindent After resolving the semantic related group, we take a snapshot on selected rows as well as all related rows of the committed values from database. This snapshot will be cached in-memory within its transaction. Each transaction will have its own copy of snapshot during the lifetime. All transaction operations will be performed on its own snapshot. Therefore, we called it Per-Transaction Snapshot Isolation.
 
 \noindent Before validation phase, the transaction will never fetch any data from database since it has all the semantic related rows in the cache. Therefore, the snapshot provides a consistent view of data for each transaction from read phase until validation phase: 
 \begin{itemize}[noitemsep]
@@ -104,7 +110,7 @@ As we mentioned before, MySQL Cluster supports only the READ COMMITTED transacti
 %%%%%                         ANOTHER SECTION
  %%%
   %
-\section{C}
+\section{Optimistic Concurrency Control}
 
-CCC
+Our algorithm is based on \textit{Optimistic Concurrency Control} model to improve the overall read/write performance.
 

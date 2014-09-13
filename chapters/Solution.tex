@@ -178,18 +178,18 @@ We have a total order update rule in update phase so that dead lock will not occ
 	\caption{Pseudocode of the Complete Algorithm - Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}
 	\label{algo:pseudocode}
 	\begin{algorithmic}
-		\STATE {\textbf{init:} snapshot.clear, restart = \TRUE, try = 0, path = operation.src}
+		\STATE {\textbf{init:} restart = \TRUE, try = 0, path = operation.src}
 		
 		\WHILE{restart \AND try $<$ 5}
 			\STATE {restart = \FALSE}
 			\STATE {try += 1}
+			\STATE {tx.snapshot.clear()}
 			
 			\STATE {}
 			\STATE {tx.begin()}
 			\STATE {\textit{\textbf{/* 1. Read Phase */}}}
-			\STATE {tx.lockMode(Read\_Committed)}
+			\STATE {tx.lockMode(\textit{Read\_Committed})}
 			\STATE {tx.snapshot = resolve\_semantic\_related\_group(path)}
-			\STATE {tx.snapshot\_copy = tx.snapshot}
 			
 			\STATE {}
 			\STATE {\textit{\textbf{/* 2. Execution Phase */}}}
@@ -197,11 +197,11 @@ We have a total order update rule in update phase so that dead lock will not occ
 			
 			\STATE {}
 			\STATE {\textit{\textbf{/* 3. Validation Phase */}}}
-			\STATE {tx.lockMode(Shared)}
-			\STATE {relatedRows\_DataBase = batchRead\_Database(tx.snapshot\_copy)}
-			\STATE {tx.lockMode(Exclusive)}
-			\STATE {modifiedRows\_DataBase = batchRead\_Database(tx.snapshot\_copy)}
-			\IF{versionCompare(relatedRows\_DataBase, modifiedRows\_DataBase, tx.snapshot\_copy) $==$ \TRUE}
+			\STATE {tx.lockMode(\textit{Shared})}
+			\STATE {relatedRows\_DataBase = batchRead\_Database(tx.snapshot.originalCopy)}
+			\STATE {tx.lockMode(\textit{Exclusive})}
+			\STATE {modifiedRows\_DataBase = batchRead\_Database(tx.snapshot.originalCopy)}
+			\IF{versionCompare(relatedRows\_DataBase, tx.snapshot.originalCopy) $==$ \TRUE \textbf{ and} versionCompare(modifiedRows\_DataBase, tx.snapshot.originalCopy) $==$ \TRUE}
 				\STATE {operation.modifiedRows.version+=1}
 					
 				\STATE {}

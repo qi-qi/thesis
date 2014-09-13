@@ -26,6 +26,10 @@ Dowling, J. (2013).
 D'Souza, J.~C. (2013).
 \newblock Kthfs--a highly available andscalable file system.
 
+\bibitem[\protect\citeauthoryear{Franklin}{Franklin}{1997}]{franklin1997concurrency}
+Franklin, M.~J. (1997).
+\newblock Concurrency control and recovery.
+
 \bibitem[\protect\citeauthoryear{Ghemawat, Gobioff, \& Leung}{Ghemawat
   et~al.}{2003}]{ghemawat2003google}
 Ghemawat, S., H.~Gobioff, \& S.-T. Leung (2003).
@@ -75,19 +79,24 @@ MySQL.
 \newblock
   \url{http://dev.mysql.com/doc/refman/5.6/en/mysql-cluster-ndbd-definition.html}.
 
-\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{c}]{ndblimits}
+\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{c}]{mysqlclusterj}
+MySQL.
+\newblock Java and mysql cluster.
+\newblock \url{http://dev.mysql.com/doc/ndbapi/en/mccj-overview-java.html}.
+
+\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{d}]{ndblimits}
 MySQL.
 \newblock Limits relating to transaction handling in mysql cluster.
 \newblock
   \url{http://dev.mysql.com/doc/mysql-cluster-excerpt/5.1/en/mysql-cluster-limitations-transactions.html}.
 
-\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{d}]{mysqlreadcommited}
+\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{e}]{mysqlreadcommited}
 MySQL.
 \newblock Limits relating to transaction handling in mysql cluster.
 \newblock
   \url{http://dev.mysql.com/doc/refman/5.0/en/mysql-cluster-limitations-transactions.html}.
 
-\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{e}]{mysqlclusterng}
+\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{f}]{mysqlclusterng}
 MySQL.
 \newblock Mysql cluster nodes, node groups, replicas, and partitions.
 \newblock
@@ -98,7 +107,13 @@ MySQL (2012, July).
 \newblock Mysql cluster benchmarks: Oracle and intel achieve 1 billion writes
   per minute.
 
-\bibitem[\protect\citeauthoryear{Oracle}{Oracle}{}]{reentrantReadWriteLock}
+\bibitem[\protect\citeauthoryear{Oracle}{Oracle}{a}]{oraclemvcc}
+Oracle.
+\newblock Data concurrency and consistency.
+\newblock
+  \url{http://docs.oracle.com/cd/B28359_01/server.111/b28318/consist.htm}.
+
+\bibitem[\protect\citeauthoryear{Oracle}{Oracle}{b}]{reentrantReadWriteLock}
 Oracle.
 \newblock Java api documentation: Class reentrantreadwritelock.
 \newblock

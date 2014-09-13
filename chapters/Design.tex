@@ -102,7 +102,7 @@ As we mentioned before, MySQL Cluster supports only the READ COMMITTED transacti
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=\linewidth]{figs/snapphantom.pdf}
-		\caption{Snapshot Isolation + Semantic Related Group Precludes Phantom Read}
+		\caption{Snapshot Isolation with Semantic Related Group Precludes Phantom Read}
 		\label{fig:snapphantom}
 	\end{figure}
 	
@@ -112,7 +112,39 @@ As we mentioned before, MySQL Cluster supports only the READ COMMITTED transacti
 %%%%%                         ANOTHER SECTION
  %%%
   %
+  
+\section{ClusterJ and Lock Mode in MySQL Cluster}
+
+\textit{ClusterJ}~\cite{mysqlclusterj} is a Java connector based on object-relational mapping persistence frameworks to access data in MySQL Cluster. Since it uses a JNI bridge to the NDB API for direct access to NDB Cluster, it doesn't depend on the MySQL Server to access data in MySQL Cluster, which means that ClusterJ can perform some operations much more quickly since it communicates to the data nodes directly. 
+
+\noindent Therefore, with the mapping from java classes to database tables, we use ClusterJ to fetch and persist data in MySQL Cluster using primary key and unique key operations for single-table queries (not supporting multi-table operations though). If we recall the architecture of MySQL Cluster from Figure~\ref{fig:mysqlclusterarchitecture}, ClusterJ will be the Java Persistence API between Hop-HDFS and the \textit{Data Nodes} (ndbd) , without going through \textit{MySQL Servers} (mysqld).
+
+\noindent Unlike \textit{two-phase locking} (2PL)~\cite{franklin1997concurrency}, there are three lock modes in MySQL Cluster:
+
+\begin{enumerate}[noitemsep]
+	\item \textbf{SHARED} (Read Lock, RL): Set a shared lock on rows
+	\item \textbf{EXCLUSIVE} (Write Lock, WL): Set an exclusive lock on rows
+	\item \textbf{READ\_COMMITTED} (Read Committed, RC): Set no locks but read the most recent committed values
+\end{enumerate}
+
+\noindent \textit{Shared} and \textit{Exclusive} locks have the same definition of those in Two-phase Locking. For \textit{Read\_Committed}, it is implemented for consistent nonlocking reads, which means that a fresh committed snapshot of data row is always presented to a query of database, regardless of whether Shared Lock or Exclusive Lock are taken on the current row or not. It is based on \textit{Multiversion Concurrency Control} described by Oracle~\cite{oraclemvcc}. See Table~\ref{table:locktable} for the reference of the blocking effect.
+
+\noindent We use \textit{Read\_Committed} for the \textit{read phase} in our algorithm.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{Lock Type} & \textbf{SHARED} & \textbf{EXCLUSIVE} & \textbf{READ\_COMMITTED} \\ \hline
+		SHARED             & \checkmark               & Block              & \checkmark                        \\ \hline
+		EXCLUSIVE          & Block           & Block              & \checkmark                        \\ \hline
+		READ\_COMMITTED    & \checkmark               &            \checkmark        & \checkmark                        \\ \hline
+	\end{tabular}
+	\caption{Locks Blocking Table in MySQL Cluster}
+	\label{table:locktable}
+\end{table}
 \section{Optimistic Concurrency Control}
 
 Our algorithm is based on \textit{Optimistic Concurrency Control} (OCC) model to improve the overall read/write performance. Transactions are allowed to perform operations without blocking each other with optimistic methods. Concurrent transactions need to pass through a \textit{validation phase} to before committing, so that the serializability is not violated. Transactions will abort and restart if they fail in the \textit{validation phase}. OCC is the key approach to help remove the parent directory lock in Hop-HDFS so that transactions can operate under the same directory concurrently.
 
+In read phase, 

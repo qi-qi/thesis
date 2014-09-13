@@ -17,7 +17,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Snapshot Isolation Precludes Fuzzy Read}}{33}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Snapshot Isolation + Semantic Related Group Precludes Phantom Read}}{34}{figure.5.2}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Snapshot Isolation with Semantic Related Group Precludes Phantom Read}}{34}{figure.5.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

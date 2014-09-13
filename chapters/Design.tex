@@ -170,3 +170,5 @@ Our algorithm is based on \textit{Optimistic Concurrency Control} (OCC) model to
 We have a total order update rule in update phase so that dead lock will not occur due to lock cycle. If multiple rows will be modified in a transaction during update phase, they will be sorted first by the \textit{id value}, then they will be updated in ascending order by their \textit{ids}. 
 
 \noindent Since we can not take an Exclusive lock on the "new" row which not yet exists in the database beforehand, transactions may try to persist "new" with the same \textit{Primary Key} and one will be overwritten by the other. As we have defined the $<$name, parent\_id$>$ pair to be the \textit{Primary Key}, exception will be thrown when "duplicated" data is going to be persisted into the table by invoking \textit{makePersistent()} function in ClusterJ rather than \textit{savePersistent()} function.
+
+\section{Pseudocode of the Complete Algorithm}

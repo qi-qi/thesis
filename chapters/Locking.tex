@@ -124,7 +124,7 @@ Unlike GFS, the interface to HDFS is patterned after UNIX, and it support POSIX 
 
 \noindent HDFS categorizes the metadata operations into \textit{read operations} and \textit{write operations}. Concurrent threads to access the namespace for read operations are allowed, but it restricts a single thread to namespace for write operations. Therefore, all concurrent readers get the same view of the mutated data reflected by completed writes. We call it \textit{Strong Consistency Semantics} in HDFS. (But it is still weaker than the standard POSIX consistency model since it trades some POSIX requirements for performance in terms of data coherency~\cite{white2012hadoop})
 
-\subsection{Bottleneck}
+\subsection{Limitations}
 
 \noindent Although the namespace is kept in-memory for fast operations, the system-level lock is still the bottleneck in NameNode under high workload pressure. Here we analyze the Remote Procedure Call (RPC) for namespace operations between clients and NameNode. See Figure~\ref{fig:nnRPC} for the process:
 
@@ -211,7 +211,9 @@ In the first version of Hop-HDFS~\cite{wasif2012distributed} (also named as KTHF
 
 \noindent Besides, \textit{implicit locking}~\cite{gray1976granularity} is used to lock on the data row of the root of a subtree in a transaction, which implicitly acquires locks on all the descendants, so that the strong consistent semantics in original HDFS can be maintained.
 
-\noindent There are two major limitations on this approach:
+\subsection{Limitations}
+
+\noindent There are two major limitations in this locking scheme:
 \begin{enumerate}[noitemsep]
 	\item It lowers the concurrency when multiple transactions try to mutate different descendants within the same subtree. Only one writer is allowed to work on INodes under one directory due to the implicit lock (Write Lock) for parent directory.
 	

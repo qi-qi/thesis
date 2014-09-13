@@ -33,10 +33,11 @@
 \contentsline {section}{\numberline {3.2}Namespace Concurrency Control in HDFS}{21}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Namespace Structure}{21}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Namespace Concurrency Control}{21}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Bottleneck}{22}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.3}Limitations}{22}{subsection.3.2.3}
 \contentsline {section}{\numberline {3.3}Namespace Concurrency Control in Hop-HDFS}{25}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Namespace Structure}{25}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Namespace Concurrency Control}{26}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Limitations}{27}{subsection.3.3.3}
 \contentsline {chapter}{\numberline {4}Namespace Operation Performance Assessment}{29}{chapter.4}
 \contentsline {section}{\numberline {4.1}A}{29}{section.4.1}
 \contentsline {section}{\numberline {4.2}B}{29}{section.4.2}

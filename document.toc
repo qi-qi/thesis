@@ -47,12 +47,13 @@
 \contentsline {section}{\numberline {5.2}Per-Transaction Snapshot Isolation}{32}{section.5.2}
 \contentsline {section}{\numberline {5.3}ClusterJ and Lock Mode in MySQL Cluster}{34}{section.5.3}
 \contentsline {section}{\numberline {5.4}Optimistic Concurrency Control}{35}{section.5.4}
-\contentsline {part}{IV\hspace {1em}Evaluation and Conclusion}{37}{part.4}
-\contentsline {chapter}{\numberline {6}Evaluation}{39}{chapter.6}
-\contentsline {section}{\numberline {6.1}Experimental Setup}{39}{section.6.1}
-\contentsline {section}{\numberline {6.2}Performance Comparison}{39}{section.6.2}
-\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{41}{chapter.7}
-\contentsline {section}{\numberline {7.1}Conclusion}{41}{section.7.1}
-\contentsline {section}{\numberline {7.2}Future Work}{41}{section.7.2}
-\contentsline {part}{V\hspace {1em}Appendices}{47}{part.5}
-\contentsline {chapter}{\numberline {A}Apache HDFS Unit Tests Passing List}{49}{chapter.1}
+\contentsline {section}{\numberline {5.5}Total Order Update and Abort in Update Phase}{36}{section.5.5}
+\contentsline {part}{IV\hspace {1em}Evaluation and Conclusion}{39}{part.4}
+\contentsline {chapter}{\numberline {6}Evaluation}{41}{chapter.6}
+\contentsline {section}{\numberline {6.1}Experimental Setup}{41}{section.6.1}
+\contentsline {section}{\numberline {6.2}Performance Comparison}{41}{section.6.2}
+\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{43}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusion}{43}{section.7.1}
+\contentsline {section}{\numberline {7.2}Future Work}{43}{section.7.2}
+\contentsline {part}{V\hspace {1em}Appendices}{49}{part.5}
+\contentsline {chapter}{\numberline {A}Apache HDFS Unit Tests Passing List}{51}{chapter.1}

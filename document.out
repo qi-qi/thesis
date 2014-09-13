@@ -47,7 +47,7 @@
 \BOOKMARK [1][]{section.5.2}{Per-Transaction Snapshot Isolation}{chapter.5}% 47
 \BOOKMARK [1][]{section.5.3}{ClusterJ and Lock Mode in MySQL Cluster}{chapter.5}% 48
 \BOOKMARK [1][]{section.5.4}{Optimistic Concurrency Control}{chapter.5}% 49
-\BOOKMARK [1][]{section.5.5}{Total Order Update and Abort in Update Phase}{chapter.5}% 50
+\BOOKMARK [1][]{section.5.5}{Total Order Update, Abort and Version Increase in Update Phase}{chapter.5}% 50
 \BOOKMARK [1][]{section.5.6}{Pseudocode of the Complete Algorithm}{chapter.5}% 51
 \BOOKMARK [-1][]{part.4}{IV Evaluation and Conclusion}{}% 52
 \BOOKMARK [0][]{chapter.6}{Evaluation}{part.4}% 53

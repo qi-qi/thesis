@@ -47,7 +47,7 @@
 \contentsline {section}{\numberline {5.2}Per-Transaction Snapshot Isolation}{32}{section.5.2}
 \contentsline {section}{\numberline {5.3}ClusterJ and Lock Mode in MySQL Cluster}{33}{section.5.3}
 \contentsline {section}{\numberline {5.4}Optimistic Concurrency Control}{35}{section.5.4}
-\contentsline {section}{\numberline {5.5}Total Order Update and Abort in Update Phase}{37}{section.5.5}
+\contentsline {section}{\numberline {5.5}Total Order Update, Abort and Version Increase in Update Phase}{37}{section.5.5}
 \contentsline {section}{\numberline {5.6}Pseudocode of the Complete Algorithm}{37}{section.5.6}
 \contentsline {part}{IV\hspace {1em}Evaluation and Conclusion}{39}{part.4}
 \contentsline {chapter}{\numberline {6}Evaluation}{41}{chapter.6}

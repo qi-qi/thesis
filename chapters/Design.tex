@@ -23,7 +23,7 @@ The solution we propose to improve the throughput is based on the following four
 	\item \textbf{Read Phase}: resolving the semantic related group and cache the snapshot copy within the handling transaction.
 	\item \textbf{Execution Phase}: transaction read/write operations are performed on its own snapshot and never fetch data from database.
 	\item \textbf{Validation Phase}: snapshot's related data rows are fetched from the database. If all their versions match with the original copy of the snapshot, go to update phase; else, abort and retry current transaction.
-	\item \textbf{Update Phase}: update related data in the database table. Abort and retry transaction if the instance already exists in the database for "new" data.
+	\item \textbf{Update Phase}: update related data in the database table. Abort and retry transaction if the instance already exists in the database for "new" data. Increase the versions of the modified rows by 1 if updated successfully.
 \end{enumerate}
 \label{ch:Design}
 
@@ -149,7 +149,7 @@ Our algorithm is based on \textit{Optimistic Concurrency Control} (OCC) model to
 
 \noindent In \textit{read phase}, transactions use \textit{Read\_Committed Lock} to fetch semantic related group as snapshots and cache them in-memory for their own use.
 
-\noindent In \textit{validation phase}, transactions will fetch the modified rows using \textit{Exclusive Lock} and fetch the semantic related rows using \textit{Shared Lock}. Then they compare the fetched values with the original copy of snapshot in the cache. If they are all the same, go to \textit{update phase}. If not, abort current transaction, wait for a random milliseconds, and retry a new transaction from \textit{read phase}.
+\noindent In \textit{validation phase}, transactions will fetch the modified rows using \textit{Exclusive Lock} and fetch the semantic related rows using \textit{Shared Lock}. Then they compare the fetched values and the original copy of snapshot in the cache for their \textit{versions}. If they are all the same, go to \textit{update phase}. If not, abort current transaction, wait for a random milliseconds, and retry a new transaction from \textit{read phase}.
 
 \noindent Note that using \textit{Shared Lock} to fetch semantic related rows can guarantee a consistent view in database until the transaction goes to the update phase, and also allows other Shared Locks taken on the same rows. 
 
@@ -166,9 +166,10 @@ Our algorithm is based on \textit{Optimistic Concurrency Control} (OCC) model to
 
 \noindent Therefore, we use optimistic concurrency control with snapshot isolation on semantic related group to improve the throughput while the strong consistency semantics in original HDFS is maintained.
 
-\section{Total Order Update and Abort in Update Phase}
+\section{Total Order Update, Abort and Version Increase in Update Phase}
 We have a total order update rule in update phase so that dead lock will not occur due to lock cycle. If multiple rows will be modified in a transaction during update phase, they will be sorted first by the \textit{id value}, then they will be updated in ascending order by their \textit{ids}. 
 
 \noindent Since we can not take an Exclusive lock on the "new" row which not yet exists in the database beforehand, transactions may try to persist "new" with the same \textit{Primary Key} and one will be overwritten by the other. As we have defined the $<$name, parent\_id$>$ pair to be the \textit{Primary Key}, exception will be thrown when "duplicated" data is going to be persisted into the table by invoking \textit{makePersistent()} function in ClusterJ rather than \textit{savePersistent()} function.
 
+\noindent The versions of the modified rows will be increased by 1 if they are successfully updated.
 \section{Pseudocode of the Complete Algorithm}

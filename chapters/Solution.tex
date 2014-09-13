@@ -202,10 +202,10 @@ We have a total order update rule in update phase so that dead lock will not occ
 			\STATE {tx.lockMode(\textit{Exclusive})}
 			\STATE {modifiedRows\_DataBase = batchRead\_Database(tx.snapshot.originalCopy)}
 			\IF{versionCompare(relatedRows\_DataBase, tx.snapshot.originalCopy) $==$ \TRUE \textbf{ and} versionCompare(modifiedRows\_DataBase, tx.snapshot.originalCopy) $==$ \TRUE}
-				\STATE {operation.modifiedRows.version+=1}
-					
+				
 				\STATE {}
 				\STATE {\textit{\textbf{/* 4. Update Phase */}}}
+				\STATE {operation.modifiedRows.version+=1}
 				\STATE {total\_order\_sort(operation.modifiedRows)}
 				\IF{batchPersist\_Database(operation.modifiedRows) \textbf{success}}
 					\STATE {tx.commit()}

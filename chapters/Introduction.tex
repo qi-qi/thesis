@@ -82,7 +82,6 @@ The \textit{Hadoop Open Platform-as-a-service} (Hop) ~\cite{hop} is an open plat
  %%%
   %
 
-% TODO?
 \section{Problem Statement}
 
 In HDFS, the NameNode's operations are categorized into \textit{read} or \textit{write} operations. To protect the metadata among parallel running threads, a global read/write lock (fsLock in \textit{FSNamesystem} - \textit{ReentrantReadWriteLock} in java language) is used to maintain the atomicity of the namespace. We call it \textit{system-level lock}. Although ReentrantReadWriteLock~\cite{reentrantReadWriteLock} adopts a similar idea from \textit{two-phase locking}~\cite{berenson1995critique}, it has other locking semantics including \textit{fair mode, lock interruptions, condition support, etc,} which means that it is not totally equal to two-phase locking.

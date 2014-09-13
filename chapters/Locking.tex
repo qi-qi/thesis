@@ -87,7 +87,8 @@ Each node (either an absolute directory name or an absolute file name) in the na
 
 \noindent For example, if there are another two concurrent operations. \textit{Operation 1} wants to snapshot directory \textit{d8} to be under directory \textit{d3}, but \textit{Operation 2} wants to create a new file \textit{Qi.txt} under directory \textit{d8}. Table~\ref{table:gfsLock2} shows how conflict locks prevent the new file \textit{Qi.txt} being created when directory \textit{d8} is being snapshotting.
 
-\noindent In sum, GFS trades off common file system requirements for this namespace locking scheme with nice concurrency control properties.
+\subsection{Limitations}
+\noindent The concurrency for the namespace is maximized in GFS, but it trades off common file system functions for those nice concurrency control properties.
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
 %%%%%                        FIRST SECTION

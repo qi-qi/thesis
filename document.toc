@@ -30,6 +30,7 @@
 \contentsline {section}{\numberline {3.1}Namespace Concurrency Control in GFS}{19}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Namespace Structure}{19}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Namespace Concurrency Control}{19}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Limitations}{20}{subsection.3.1.3}
 \contentsline {section}{\numberline {3.2}Namespace Concurrency Control in HDFS}{21}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Namespace Structure}{21}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Namespace Concurrency Control}{21}{subsection.3.2.2}

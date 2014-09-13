@@ -48,12 +48,13 @@
 \BOOKMARK [1][]{section.5.3}{ClusterJ and Lock Mode in MySQL Cluster}{chapter.5}% 48
 \BOOKMARK [1][]{section.5.4}{Optimistic Concurrency Control}{chapter.5}% 49
 \BOOKMARK [1][]{section.5.5}{Total Order Update and Abort in Update Phase}{chapter.5}% 50
-\BOOKMARK [-1][]{part.4}{IV Evaluation and Conclusion}{}% 51
-\BOOKMARK [0][]{chapter.6}{Evaluation}{part.4}% 52
-\BOOKMARK [1][]{section.6.1}{Experimental Setup}{chapter.6}% 53
-\BOOKMARK [1][]{section.6.2}{Performance Comparison}{chapter.6}% 54
-\BOOKMARK [0][]{chapter.7}{Conclusion and Future Work}{part.4}% 55
-\BOOKMARK [1][]{section.7.1}{Conclusion}{chapter.7}% 56
-\BOOKMARK [1][]{section.7.2}{Future Work}{chapter.7}% 57
-\BOOKMARK [-1][]{part.5}{V Appendices}{}% 58
-\BOOKMARK [0][]{chapter.1}{Apache HDFS Unit Tests Passing List}{part.5}% 59
+\BOOKMARK [1][]{section.5.6}{Pseudocode of the Complete Algorithm}{chapter.5}% 51
+\BOOKMARK [-1][]{part.4}{IV Evaluation and Conclusion}{}% 52
+\BOOKMARK [0][]{chapter.6}{Evaluation}{part.4}% 53
+\BOOKMARK [1][]{section.6.1}{Experimental Setup}{chapter.6}% 54
+\BOOKMARK [1][]{section.6.2}{Performance Comparison}{chapter.6}% 55
+\BOOKMARK [0][]{chapter.7}{Conclusion and Future Work}{part.4}% 56
+\BOOKMARK [1][]{section.7.1}{Conclusion}{chapter.7}% 57
+\BOOKMARK [1][]{section.7.2}{Future Work}{chapter.7}% 58
+\BOOKMARK [-1][]{part.5}{V Appendices}{}% 59
+\BOOKMARK [0][]{chapter.1}{Apache HDFS Unit Tests Passing List}{part.5}% 60

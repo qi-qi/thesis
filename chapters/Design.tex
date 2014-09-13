@@ -47,9 +47,9 @@ Resolving the semantic related group for each transaction is the fundamental ste
 	h: \{/-$>$a-$>$d-$>$f\}
 \end{center}
 
-\noindent In other words, when mutating INode \textit{h}, all the semantic constraint can be found within INodes \textit{/, a, d, f}. With this knowledge, we can maintain the strung consistency semantics of original HDFS.
+\noindent In other words, when mutating INode \textit{h}, all the semantic constraint can be found within INodes \textit{/, a, d, f}. With this knowledge, we can maintain the strong consistency semantics of original HDFS.
 
-\noindent For each row in \textit{inodes table}, we can figure out its semantic related rows as shown in Table~\ref{table:semanticrelatedTable}.
+\noindent For each row in \textit{inodes table}, the $<$name, parent\_id$>$ pair is the \textit{Primary Key}. We can get its semantic related rows by primary key lookups directly from database as shown in Table~\ref{table:semanticrelatedTable}. No transactions needed during the \textit{Read Phase} for resolving the semantic related group.
 
 \begin{table}[h]
 	\centering

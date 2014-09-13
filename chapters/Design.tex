@@ -30,7 +30,7 @@ The solution we propose to improve the throughput is based on the following four
 \noindent The phases mentioned above will be illustrated detailedly in the following sections.
 \section{Resolving the Semantic Related Group}
 
-Resolving the semantic related group for each transaction is the fundamental step to preclude \textit{anomalies} in our implementation. The constraint between individual data is formed within a semantic related group. In Hop-HDFS, each metadata operation is implemented as an individual transaction running by a worker thread. Any metadata operation related to the namespace will have one or two input parameters, called \textit{Path}. Here's two examples for methods in the Filesystem API:
+Resolving the semantic related group for each transaction is the fundamental step to preclude \textit{anomalies} in our implementation. The \textit{constraint violation}~\cite{berenson1995critique} between individual data is formed within a semantic related group. In Hop-HDFS, each metadata operation is implemented as an individual transaction running by a worker thread. Any metadata operation related to the namespace will have one or two input parameters, called \textit{Path}. Here's two examples for methods in the Filesystem API:
 
 \begin{itemize}[noitemsep]
 	\item boolean \textbf{mkdirs} (Path \textit{f}): \textit{f} is the path of the INodeDirectory to be created
@@ -127,7 +127,7 @@ As we mentioned before, MySQL Cluster supports only the READ COMMITTED transacti
 	\item \textbf{READ\_COMMITTED} (Read Committed, RC): Set no locks but read the most recent committed values
 \end{enumerate}
 
-\noindent \textit{Shared} and \textit{Exclusive} locks have the same definition of those in Two-phase Locking. For \textit{Read\_Committed}, it is implemented for consistent nonlocking reads, which means that a fresh committed snapshot of data row is always presented to a query of database, regardless of whether Shared Lock or Exclusive Lock are taken on the current row or not. It is based on \textit{Multiversion Concurrency Control} described by Oracle~\cite{oraclemvcc}. See Table~\ref{table:locktable} for the reference of the blocking effect.
+\noindent \textit{Shared} and \textit{Exclusive} locks have the same definition of those in Two-phase Locking. For \textit{Read\_Committed}, it is implemented for consistent nonlocking reads, which means that a fresh committed snapshot of data row is always presented to a query of database, regardless of whether Shared Lock or Exclusive Lock are taken on the current row or not. It is based on \textit{Multiversion Concurrency Control} described by Oracle~\cite{oraclemvcc} for read consistency from a single point in time (\textit{statement-level read consistency}). See Table~\ref{table:locktable} for the reference of the blocking effect.
 
 \noindent We use \textit{Read\_Committed} for the \textit{read phase} in our algorithm.
 
@@ -147,4 +147,21 @@ As we mentioned before, MySQL Cluster supports only the READ COMMITTED transacti
 
 Our algorithm is based on \textit{Optimistic Concurrency Control} (OCC) model to improve the overall read/write performance. Transactions are allowed to perform operations without blocking each other with optimistic methods. Concurrent transactions need to pass through a \textit{validation phase} to before committing, so that the serializability is not violated. Transactions will abort and restart if they fail in the \textit{validation phase}. OCC is the key approach to help remove the parent directory lock in Hop-HDFS so that transactions can operate under the same directory concurrently.
 
-In read phase, 
+\noindent In \textit{read phase}, transactions use \textit{Read\_Committed Lock} to fetch semantic related group as snapshots and cache them in-memory for their own use.
+
+\noindent In \textit{validation phase}, transactions will fetch the modified rows using \textit{Exclusive Lock} and fetch the semantic related rows using \textit{Shared Lock}. Then they compare the fetched values with the original copy of snapshot in the cache. If they are all the same, go to \textit{update phase}. If not, abort current transaction, wait for a random milliseconds, and retry a new transaction from \textit{read phase}.
+
+\noindent Note that using \textit{Shared Lock} to fetch semantic related rows can guarantee a consistent view in database until the transaction goes to the update phase, and also allows other Shared Locks taken on the same rows. 
+
+\noindent In order to avoid multiple database round trips, we will do the fetching in batch processing provided by \textit{ClusterJ}.
+
+\noindent \textit{Write skew} anomaly is precluded by the validation phase on the snapshot of semantic related group in OCC, because constraint violation on all related data rows will be checked before transaction committed. See Figure~\ref{fig:snapwriteskew} to see how optimistic concurrency control with snapshot isolation on semantic related group precludes \textit{Write Skew}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{figs/snapwriteskew.pdf}
+	\caption{Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group Precludes Write Skew}
+	\label{fig:snapwriteskew}
+\end{figure}
+
+\noindent Therefore, we use optimistic concurrency control with snapshot isolation on semantic related group to improve the throughput while the strong consistency semantics in original HDFS is maintained.

@@ -175,9 +175,9 @@ We have a total order update rule in update phase so that dead lock will not occ
 
 \section{Pseudocode of the Complete Algorithm}
 \begin{algorithm}[!h]
-	\caption{Pseudocode of the Complete Algorithm - Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}
+	\caption{Pseudocode of the Complete Algorithm \\ Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}
 	\label{algo:pseudocode}
-	\begin{algorithmic}
+	\begin{algorithmic}[1]
 		\STATE {\textbf{init:} restart = \TRUE, try = 0, path = operation.src}
 		
 		\WHILE{restart \AND try $<$ 5}

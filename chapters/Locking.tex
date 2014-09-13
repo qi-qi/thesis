@@ -194,3 +194,50 @@ In HDFS, the namespace is kept in-memory as arrays and optimized data structure 
 \noindent With the \textit{id} and \textit{parent\_id} relationship, the hierarchy will be constructed correctly from the rows to be in-memory objects used by the name system.
 
 \subsection{Namespace Concurrency Control}
+
+In the first version of Hop-HDFS~\cite{wasif2012distributed} (also named as KTHFS), the main task is to migrate the metadata from memory to MySQL Cluster. Therefore, it still depends on the system-level lock in HDFS NameNode (fsLock in \textit{FSNamesystem} - \textit{ReentrantReadWriteLock} to serialize the operations and maintain the semantics. This becomes a big problem since the network latency between NameNode and database is far more larger than it was when operated inside memory in original HDFS. Each operation takes a long time lock on the filesystem. The throughput heavily decreases. A fine grained locking scheme is needed to improve the concurrency.
+
+\noindent In the second version of Hop-HDFS~\cite{peiro2013maintaining} (also named as KTHFS), it adopts a fine-grained row-level locking mechanism to improve the throughput while maintaining the strong consistency semantics. It uses transactions with \textit{Pessimistic Concurrency Control} (PCC) to ensure the safety and progress of metadata operations. 
+
+\noindent Based on a hierarchical concurrency model, it builds a \textit{directed acyclic graph} (DAG) for the namespace. Metadata operation that mutates the DAG either commit or abort (for partial failures) in a single transaction. See Figure~\ref{fig:dag}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=2]{figs/dag.pdf}
+	\caption{Acyclic DAG. Operations start from root, locks taken in order from leftmost child \protect \cite{hakimzadeh2014scaling} 
+		\\ \textit{I: INode, B: BlockInfo, L: Lease, LP: LeasePath, CR: CorruptedReplica, URB: UnderReplicatedBlock, R: Replica, UCR: UnderConstructionReplica, PB: PendingBlock, IB: InvalidBlock, ER: ExcessReplica}}
+	\label{fig:dag}
+\end{figure}
+
+\noindent Besides, \textit{implicit locking}~\cite{gray1976granularity} is used to lock on the data row of the root of a subtree in a transaction, which implicitly acquires locks on all the descendants, so that the strong consistent semantics in original HDFS can be maintained.
+
+\noindent There are two major limitations on this approach:
+\begin{enumerate}[noitemsep]
+	\item It lowers the concurrency when multiple transactions try to mutate different descendants within the same subtree. Only one writer is allowed to work on INodes under one directory due to the implicit lock (Write Lock) for parent directory.
+	
+	 For example, if transaction Tx1 wants to mutate INode \textit{h}, and another transaction Tx2 wants to mutate INode \textit{i} concurrently in Figure~\ref{fig:hoptree}. Tx1 will take a parent lock on INode \textit{f} first and then perform operations. No more transactions can work under INode \textit{f} anymore. Tx2 will be blocked by the implicit lock until Tx1 commits. See Table~\ref{table:hoplockTable}.
+	
+	\item There is un-avoided duplicated database round trips overhead. It takes two transactions to finish the implicit locking. The first transaction is used to resolve the path in the database so that we know which rows existed in the database so that the INode's parent directory can be taken the implicit write lock in the second transaction, or last existing INode directory can be taken the implicit write lock if the path is not full resolved(HDFS will build up the missing intermediate INodeDirectories).
+	
+	 For example, if transaction Tx1 wants to mutate INode \textit{h} in Figure~\ref{fig:hoptree}, in the first database round trip, it needs to resolve the path to see if the related rows of INode\textit{ /, a, d, f, h} are all in the database. If yes, in the second database round trip, INode\textit{ /, a, d} will be taken Read Locks~\footnote{The third version of Hop-HDFS is trying to Replace Read Lock to Read\_Committed for this PCC scheme} and the INode \textit{f} will be taken a Write Lock; if no, the last existing INode will be taken a Write Lock while others will be taken Read Locks.
+\end{enumerate}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\textbf{id} & \textbf{parent\_id} & \textbf{name} & \textbf{Locks by Tx1} & \textbf{Locks by Tx2} \\ \hline
+		1 & 0 & / & Read Lock & Read Lock \\ \hline
+		2 & 1 & a & Read Lock & Read Lock \\ \hline
+		3 & 1 & b & ~ & ~ \\ \hline
+		4 & 1 & c & ~ & ~ \\ \hline
+		5 & 2 & d & Read Lock & Read Lock\\ \hline
+		6 & 3 & e & ~ & ~ \\ \hline
+		7 & 5 & f  & Write Lock & Write Lock \\ \hline
+		8 & 6 & g & ~ & ~ \\ \hline
+		9 & 7 & h (Mutated by Tx1) & Write Lock (Implicit) & Write Lock (Implicit)\\ \hline
+		10 & 7 & i (Mutated by Tx2) & Write Lock (Implicit) & Write Lock (Implicit)\\ \hline
+	\end{tabular}
+	\caption{Implicit Lock Table in Hop-HDFS}
+	\label{table:hoplockTable}
+\end{table}

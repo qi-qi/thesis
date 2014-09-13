@@ -37,24 +37,24 @@
 \contentsline {section}{\numberline {3.3}Namespace Concurrency Control in Hop-HDFS}{25}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Namespace Structure}{25}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Namespace Concurrency Control}{26}{subsection.3.3.2}
-\contentsline {chapter}{\numberline {4}Namespace Operation Performance Assessment}{27}{chapter.4}
-\contentsline {section}{\numberline {4.1}A}{27}{section.4.1}
-\contentsline {section}{\numberline {4.2}B}{27}{section.4.2}
-\contentsline {section}{\numberline {4.3}C}{27}{section.4.3}
-\contentsline {part}{III\hspace {1em}Algorithmic Solution}{29}{part.3}
-\contentsline {chapter}{\numberline {5}Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}{31}{chapter.5}
-\contentsline {section}{\numberline {5.1}Resolving the Semantic Related Group}{31}{section.5.1}
-\contentsline {section}{\numberline {5.2}Per-Transaction Snapshot Isolation}{32}{section.5.2}
-\contentsline {section}{\numberline {5.3}ClusterJ and Lock Mode in MySQL Cluster}{34}{section.5.3}
-\contentsline {section}{\numberline {5.4}Optimistic Concurrency Control}{35}{section.5.4}
-\contentsline {section}{\numberline {5.5}Total Order Update, Abort and Version Increase in Update Phase}{37}{section.5.5}
-\contentsline {section}{\numberline {5.6}Pseudocode of the Complete Algorithm}{37}{section.5.6}
-\contentsline {part}{IV\hspace {1em}Evaluation and Conclusion}{39}{part.4}
-\contentsline {chapter}{\numberline {6}Evaluation}{41}{chapter.6}
-\contentsline {section}{\numberline {6.1}Experimental Setup}{41}{section.6.1}
-\contentsline {section}{\numberline {6.2}Performance Comparison}{41}{section.6.2}
-\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{43}{chapter.7}
-\contentsline {section}{\numberline {7.1}Conclusion}{43}{section.7.1}
-\contentsline {section}{\numberline {7.2}Future Work}{43}{section.7.2}
-\contentsline {part}{V\hspace {1em}Appendices}{49}{part.5}
-\contentsline {chapter}{\numberline {A}Apache HDFS Unit Tests Passing List}{51}{chapter.1}
+\contentsline {chapter}{\numberline {4}Namespace Operation Performance Assessment}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}A}{29}{section.4.1}
+\contentsline {section}{\numberline {4.2}B}{29}{section.4.2}
+\contentsline {section}{\numberline {4.3}C}{29}{section.4.3}
+\contentsline {part}{III\hspace {1em}Algorithmic Solution}{31}{part.3}
+\contentsline {chapter}{\numberline {5}Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}{33}{chapter.5}
+\contentsline {section}{\numberline {5.1}Resolving the Semantic Related Group}{33}{section.5.1}
+\contentsline {section}{\numberline {5.2}Per-Transaction Snapshot Isolation}{34}{section.5.2}
+\contentsline {section}{\numberline {5.3}ClusterJ and Lock Mode in MySQL Cluster}{36}{section.5.3}
+\contentsline {section}{\numberline {5.4}Optimistic Concurrency Control}{37}{section.5.4}
+\contentsline {section}{\numberline {5.5}Total Order Update, Abort and Version Increase in Update Phase}{39}{section.5.5}
+\contentsline {section}{\numberline {5.6}Pseudocode of the Complete Algorithm}{39}{section.5.6}
+\contentsline {part}{IV\hspace {1em}Evaluation and Conclusion}{41}{part.4}
+\contentsline {chapter}{\numberline {6}Evaluation}{43}{chapter.6}
+\contentsline {section}{\numberline {6.1}Experimental Setup}{43}{section.6.1}
+\contentsline {section}{\numberline {6.2}Performance Comparison}{43}{section.6.2}
+\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{45}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusion}{45}{section.7.1}
+\contentsline {section}{\numberline {7.2}Future Work}{45}{section.7.2}
+\contentsline {part}{V\hspace {1em}Appendices}{51}{part.5}
+\contentsline {chapter}{\numberline {A}Apache HDFS Unit Tests Passing List}{53}{chapter.1}

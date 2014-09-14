@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  14 SEP 2014 21:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  14 SEP 2014 21:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1203,19 +1203,9 @@ Package pdftex.def Info: figs/hdfs_pcc_parentlock.pdf used on input line 68.
 
 ] [35] [36] (./chapters/Solution.tex
 Chapter 5.
-
-Overfull \vbox (19.19574pt too high) detected at line 20
- []
-
 [37
 
-]
-Overfull \hbox (165.46788pt too wide) has occurred while \output is active
-\OT1/ppl/m/n/10.95 38 \OT1/ppl/m/sl/10.95 CHAPTER 5.  OPTIMISTIC CONCURRENCY CO
-NTROL WITH SNAPSHOT ISOLATION ON SEMANTIC RELATED GROUP
- []
-
-[38] <figs/snapfuzzy.pdf, id=1265, 683.58034pt x 264.65776pt>
+] [38] <figs/snapfuzzy.pdf, id=1265, 683.58034pt x 264.65776pt>
 File: figs/snapfuzzy.pdf Graphic file (type pdf)
 
 <use figs/snapfuzzy.pdf>
@@ -1235,13 +1225,7 @@ Package pdftex.def Info: figs/snapphantom.pdf used on input line 106.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[39]
-Overfull \hbox (165.46788pt too wide) has occurred while \output is active
-\OT1/ppl/m/n/10.95 40 \OT1/ppl/m/sl/10.95 CHAPTER 5.  OPTIMISTIC CONCURRENCY CO
-NTROL WITH SNAPSHOT ISOLATION ON SEMANTIC RELATED GROUP
- []
-
-[40 <./figs/snapfuzzy.pdf> <./figs/snapphantom.pdf
+[39] [40 <./figs/snapfuzzy.pdf> <./figs/snapphantom.pdf
 
 pdfTeX warning: pdflatex (file ./figs/snapphantom.pdf): PDF inclusion: multiple
  pdfs with page group included in a single page
@@ -1251,26 +1235,14 @@ File: figs/snapwriteskew.pdf Graphic file (type pdf)
 <use figs/snapwriteskew.pdf>
 Package pdftex.def Info: figs/snapwriteskew.pdf used on input line 162.
 (pdftex.def)             Requested size: 455.24408pt x 222.54707pt.
-
-Overfull \hbox (165.46788pt too wide) has occurred while \output is active
-\OT1/ppl/m/n/10.95 42 \OT1/ppl/m/sl/10.95 CHAPTER 5.  OPTIMISTIC CONCURRENCY CO
-NTROL WITH SNAPSHOT ISOLATION ON SEMANTIC RELATED GROUP
- []
-
-[42 <./figs/snapwriteskew.pdf>]
+ [42 <./figs/snapwriteskew.pdf>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 178.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [43]
-Overfull \hbox (165.46788pt too wide) has occurred while \output is active
-\OT1/ppl/m/n/10.95 44 \OT1/ppl/m/sl/10.95 CHAPTER 5.  OPTIMISTIC CONCURRENCY CO
-NTROL WITH SNAPSHOT ISOLATION ON SEMANTIC RELATED GROUP
- []
-
-[44] [45
+) [43] [44] [45
 
 ] [46] (./chapters/Evaluation.tex
 Chapter 6.
@@ -1350,13 +1322,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 180.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 180.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 180.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: D95CCD78C92E2A7AB225D285B0D69C6A;4830.
+(rerunfilecheck)             Checksum: BCA34FB1BF5FF1091AD68EB089913D5A;4758.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 180.
  ) 
 Here is how much of TeX's memory you used:
  9526 strings out of 493304
  139656 string characters out of 6139871
- 241554 words of memory out of 5000000
+ 241482 words of memory out of 5000000
  12462 multiletter control sequences out of 15000+600000
  39172 words of font info for 95 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1380,7 +1352,7 @@ fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
 o/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pf
 b>
-Output written on document.pdf (78 pages, 2535495 bytes).
+Output written on document.pdf (78 pages, 2534885 bytes).
 PDF statistics:
  1597 PDF objects out of 1728 (max. 8388607)
  1126 compressed objects within 12 object streams

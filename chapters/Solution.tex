@@ -17,8 +17,8 @@
  %%%
   %
 
-\chapter{Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}
-The solution we propose to improve the throughput is based on the following four phases:
+\chapter{Solution}
+The solution we propose to improve the throughput can be summarized as \textit{Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}. The solution algorithm has the following four phases:
 \begin{enumerate}[noitemsep]
 	\item \textbf{Read Phase}: resolving the semantic related group and cache the snapshot copy within the handling transaction.
 	\item \textbf{Execution Phase}: transaction read/write operations are performed on its own snapshot and never fetch data from database.

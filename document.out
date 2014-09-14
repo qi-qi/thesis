@@ -45,7 +45,7 @@
 \BOOKMARK [1][]{section.4.1}{NameNode Throughput Benchmark}{chapter.4}% 45
 \BOOKMARK [1][]{section.4.2}{Parent Directory Contention Assessment}{chapter.4}% 46
 \BOOKMARK [-1][]{part.3}{III Algorithmic Solution}{}% 47
-\BOOKMARK [0][]{chapter.5}{Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}{part.3}% 48
+\BOOKMARK [0][]{chapter.5}{Solution}{part.3}% 48
 \BOOKMARK [1][]{section.5.1}{Resolving the Semantic Related Group}{chapter.5}% 49
 \BOOKMARK [1][]{section.5.2}{Per-Transaction Snapshot Isolation}{chapter.5}% 50
 \BOOKMARK [1][]{section.5.3}{ClusterJ and Lock Mode in MySQL Cluster}{chapter.5}% 51

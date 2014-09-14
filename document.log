@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  13 SEP 2014 22:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  14 SEP 2014 02:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -947,7 +947,7 @@ Chapter 2.
 
 pdfTeX warning: pdflatex (file ./figs/GFSArchitecture.pdf): PDF inclusion: foun
 d PDF version <1.6>, but at most version <1.5> allowed
-<figs/GFSArchitecture.pdf, id=541, 409.22083pt x 157.46529pt>
+<figs/GFSArchitecture.pdf, id=546, 409.22083pt x 157.46529pt>
 File: figs/GFSArchitecture.pdf Graphic file (type pdf)
 
 <use figs/GFSArchitecture.pdf>
@@ -966,7 +966,7 @@ l.65 \end{figure}
                    \relax 
 l.77 
       [8 <./figs/GFSArchitecture.pdf>]
-<figs/hdfsarchitecturev1.png, id=586, 877.2775pt x 606.265pt>
+<figs/hdfsarchitecturev1.png, id=591, 877.2775pt x 606.265pt>
 File: figs/hdfsarchitecturev1.png Graphic file (type png)
 
 <use figs/hdfsarchitecturev1.png>
@@ -978,67 +978,147 @@ been already used, duplicate ignored
                    \relax 
 l.92 \subsubsection
                    {Single-Writer, Multiple-reader Model} [9 <./figs/hdfsarchit
-ecturev1.png>] <figs/mysqlcluster.png, id=596, 826.1453pt x 527.14589pt>
-File: figs/mysqlcluster.png Graphic file (type png)
-
-<use figs/mysqlcluster.png>
-Package pdftex.def Info: figs/mysqlcluster.png used on input line 110.
-(pdftex.def)             Requested size: 330.45226pt x 210.85461pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
- been already used, duplicate ignored
+ecturev1.png>]pdfTeX warning (ext4): destination with the same identifier (name
+{page.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.113 \end{figure}
-                   [10]
-<figs/replicas-groups-1-1.png, id=603, 501.875pt x 506.89375pt>
-File: figs/replicas-groups-1-1.png Graphic file (type png)
+l.109 \end{enumerate}
+                      [10]
+Overfull \hbox (3.99918pt too wide) in paragraph at lines 121--121
+[]\OT1/ppl/b/n/10.95 Dirty
+ []
 
-<use figs/replicas-groups-1-1.png>
-Package pdftex.def Info: figs/replicas-groups-1-1.png used on input line 125.
-(pdftex.def)             Requested size: 301.12732pt x 304.1386pt.
 
-<figs/replicas-groups-1-2.png, id=604, 501.875pt x 396.48125pt>
-File: figs/replicas-groups-1-2.png Graphic file (type png)
+Overfull \hbox (4.40443pt too wide) in paragraph at lines 121--121
+\OT1/ppl/b/n/10.95 Write| 
+ []
 
-<use figs/replicas-groups-1-2.png>
-Package pdftex.def Info: figs/replicas-groups-1-2.png used on input line 126.
-(pdftex.def)             Requested size: 301.12732pt x 237.89058pt.
+
+Overfull \hbox (3.99918pt too wide) in paragraph at lines 121--121
+[]\OT1/ppl/b/n/10.95 Dirty
+ []
+
+
+Overfull \hbox (2.78398pt too wide) in paragraph at lines 121--121
+\OT1/ppl/b/n/10.95 Read| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
+[]\OT1/ppl/b/n/10.95 Cursor
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
+\OT1/ppl/b/n/10.95 Lost
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
+[]\OT1/ppl/b/n/10.95 Lost
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
+\OT1/ppl/b/n/10.95 Up-
+ []
+
+
+Overfull \hbox (1.3639pt too wide) in paragraph at lines 121--121
+[]\OT1/ppl/b/n/10.95 Fuzzy
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
+[]\OT1/ppl/b/n/10.95 Read
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
+[]\OT1/ppl/b/n/10.95 Write
+ []
+
+
+Overfull \hbox (0.72873pt too wide) in paragraph at lines 124--124
+[]\OT1/ppl/m/n/10.95 some-
+ []
+
+
+Overfull \hbox (0.72873pt too wide) in paragraph at lines 124--124
+[]\OT1/ppl/m/n/10.95 some-
+ []
+
+
+Overfull \hbox (0.72873pt too wide) in paragraph at lines 124--124
+[]\OT1/ppl/m/n/10.95 some-
+ []
+
+
+Overfull \hbox (0.63257pt too wide) in paragraph at lines 126--126
+[]\OT1/ppl/m/n/10.95 sometimes| 
+ []
+
+
+Overfull \hbox (0.77864pt too wide) in paragraph at lines 119--129
+ [][] 
+ []
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.138 \end{itemize}
-                    [11 <./figs/mysqlcluster.png>]pdfTeX warning (ext4): destin
-ation with the same identifier (name{page.12}) has been already used, duplicate
- ignored
+l.138 
+       [11] <figs/mysqlcluster.png, id=625, 826.1453pt x 527.14589pt>
+File: figs/mysqlcluster.png Graphic file (type png)
+
+<use figs/mysqlcluster.png>
+Package pdftex.def Info: figs/mysqlcluster.png used on input line 144.
+(pdftex.def)             Requested size: 330.45226pt x 210.85461pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.138 \end{itemize}
-                    [12 <./figs/replicas-groups-1-1.png> <./figs/replicas-group
-s-1-2.png>] <figs/mysqlclusterbenchmark.pdf, id=627, 361.35pt x 216.81pt>
+l.156 
+       [12 <./figs/mysqlcluster.png>]
+<figs/replicas-groups-1-1.png, id=635, 501.875pt x 506.89375pt>
+File: figs/replicas-groups-1-1.png Graphic file (type png)
+
+<use figs/replicas-groups-1-1.png>
+Package pdftex.def Info: figs/replicas-groups-1-1.png used on input line 159.
+(pdftex.def)             Requested size: 301.12732pt x 304.1386pt.
+
+<figs/replicas-groups-1-2.png, id=636, 501.875pt x 396.48125pt>
+File: figs/replicas-groups-1-2.png Graphic file (type png)
+
+<use figs/replicas-groups-1-2.png>
+Package pdftex.def Info: figs/replicas-groups-1-2.png used on input line 160.
+(pdftex.def)             Requested size: 301.12732pt x 237.89058pt.
+
+<figs/mysqlclusterbenchmark.pdf, id=643, 361.35pt x 216.81pt>
 File: figs/mysqlclusterbenchmark.pdf Graphic file (type pdf)
 
 <use figs/mysqlclusterbenchmark.pdf>
-Package pdftex.def Info: figs/mysqlclusterbenchmark.pdf used on input line 144.
+Package pdftex.def Info: figs/mysqlclusterbenchmark.pdf used on input line 178.
 
 (pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
- [13 <./figs/mysqlclusterbenchmark.pdf>]
-<figs/HopHDFSArchitecture.pdf, id=646, 566.19568pt x 319.48157pt>
-File: figs/HopHDFSArchitecture.pdf Graphic file (type pdf)
-
-<use figs/HopHDFSArchitecture.pdf>
-Package pdftex.def Info: figs/HopHDFSArchitecture.pdf used on input line 172.
-(pdftex.def)             Requested size: 396.33427pt x 223.63557pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[14]) [15 <./figs/HopHDFSArchitecture.pdf>] [16
+[13] [14 <./figs/replicas-groups-1-1.png> <./figs/replicas-groups-1-2.png>]
+<figs/HopHDFSArchitecture.pdf, id=662, 566.19568pt x 319.48157pt>
+File: figs/HopHDFSArchitecture.pdf Graphic file (type pdf)
 
-] [17] [18]
+<use figs/HopHDFSArchitecture.pdf>
+Package pdftex.def Info: figs/HopHDFSArchitecture.pdf used on input line 206.
+(pdftex.def)             Requested size: 396.33427pt x 223.63557pt.
+ [15 <./figs/mysqlclusterbenchmark.pdf>]
+[16 <./figs/HopHDFSArchitecture.pdf>]) [17] [18
+
+] [19] [20]
 (./chapters/Locking.tex
 Chapter 3.
-<figs/gfstree.pdf, id=680, 518.06837pt x 323.75955pt>
+<figs/gfstree.pdf, id=708, 518.06837pt x 323.75955pt>
 File: figs/gfstree.pdf Graphic file (type pdf)
  <use figs/gfstree.pdf>
 Package pdftex.def Info: figs/gfstree.pdf used on input line 43.
@@ -1046,10 +1126,10 @@ Package pdftex.def Info: figs/gfstree.pdf used on input line 43.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <10.95> not available
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 54.
 
-[19
+[21
 
-] [20 <./figs/gfstree.pdf>]
-<figs/INodeUML.pdf, id=704, 611.64447pt x 394.30353pt>
+] [22 <./figs/gfstree.pdf>]
+<figs/INodeUML.pdf, id=732, 611.64447pt x 394.30353pt>
 File: figs/INodeUML.pdf Graphic file (type pdf)
  <use figs/INodeUML.pdf>
 Package pdftex.def Info: figs/INodeUML.pdf used on input line 106.
@@ -1058,7 +1138,7 @@ Package pdftex.def Info: figs/INodeUML.pdf used on input line 106.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figs/hdfsquota.pdf, id=706, 497.62212pt x 541.26152pt>
+<figs/hdfsquota.pdf, id=734, 497.62212pt x 541.26152pt>
 File: figs/hdfsquota.pdf Graphic file (type pdf)
 
 <use figs/hdfsquota.pdf>
@@ -1068,14 +1148,14 @@ Package pdftex.def Info: figs/hdfsquota.pdf used on input line 119.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21] [22 <./figs/INodeUML.pdf>] [23 <./figs/hdfsquota.pdf>]
-<figs/nnRPC.pdf, id=758, 513.16719pt x 507.92761pt>
+[23] [24 <./figs/INodeUML.pdf>] [25 <./figs/hdfsquota.pdf>]
+<figs/nnRPC.pdf, id=786, 513.16719pt x 507.92761pt>
 File: figs/nnRPC.pdf Graphic file (type pdf)
  <use figs/nnRPC.pdf>
 Package pdftex.def Info: figs/nnRPC.pdf used on input line 148.
 (pdftex.def)             Requested size: 410.53432pt x 406.34264pt.
 
-[24 <./figs/nnRPC.pdf>] <figs/hoptree.pdf, id=780, 284.97264pt x 288.41954pt>
+[26 <./figs/nnRPC.pdf>] <figs/hoptree.pdf, id=808, 284.97264pt x 288.41954pt>
 File: figs/hoptree.pdf Graphic file (type pdf)
 
 <use figs/hoptree.pdf>
@@ -1085,11 +1165,11 @@ Package pdftex.def Info: figs/hoptree.pdf used on input line 168.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[25 <./figs/hoptree.pdf>]
+[27 <./figs/hoptree.pdf>]
 
 pdfTeX warning: pdflatex (file ./figs/dag.pdf): PDF inclusion: found PDF versio
 n <1.6>, but at most version <1.5> allowed
-<figs/dag.pdf, id=796, 173.79631pt x 115.55873pt>
+<figs/dag.pdf, id=824, 173.79631pt x 115.55873pt>
 File: figs/dag.pdf Graphic file (type pdf)
  <use figs/dag.pdf>
 Package pdftex.def Info: figs/dag.pdf used on input line 207.
@@ -1098,27 +1178,27 @@ Package pdftex.def Info: figs/dag.pdf used on input line 207.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[26] [27 <./figs/dag.pdf>]) (./chapters/Assessment.tex [28]
+[28] [29 <./figs/dag.pdf>]) (./chapters/Assessment.tex [30]
 Chapter 4.
-) [29
+) [31
 
-] [30
+] [32
 
-] [31] [32] (./chapters/Solution.tex
+] [33] [34] (./chapters/Solution.tex
 Chapter 5.
 
 Overfull \vbox (19.19574pt too high) detected at line 20
  []
 
-[33
+[35
 
 ]
 Overfull \hbox (165.46788pt too wide) has occurred while \output is active
-\OT1/ppl/m/n/10.95 34 \OT1/ppl/m/sl/10.95 CHAPTER 5.  OPTIMISTIC CONCURRENCY CO
+\OT1/ppl/m/n/10.95 36 \OT1/ppl/m/sl/10.95 CHAPTER 5.  OPTIMISTIC CONCURRENCY CO
 NTROL WITH SNAPSHOT ISOLATION ON SEMANTIC RELATED GROUP
  []
 
-[34] <figs/snapfuzzy.pdf, id=1189, 683.58034pt x 264.65776pt>
+[36] <figs/snapfuzzy.pdf, id=1217, 683.58034pt x 264.65776pt>
 File: figs/snapfuzzy.pdf Graphic file (type pdf)
 
 <use figs/snapfuzzy.pdf>
@@ -1128,7 +1208,7 @@ Package pdftex.def Info: figs/snapfuzzy.pdf used on input line 99.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figs/snapphantom.pdf, id=1190, 783.19751pt x 275.9921pt>
+<figs/snapphantom.pdf, id=1218, 783.19751pt x 275.9921pt>
 File: figs/snapphantom.pdf Graphic file (type pdf)
 
 <use figs/snapphantom.pdf>
@@ -1138,17 +1218,17 @@ Package pdftex.def Info: figs/snapphantom.pdf used on input line 106.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[35]
+[37]
 Overfull \hbox (165.46788pt too wide) has occurred while \output is active
-\OT1/ppl/m/n/10.95 36 \OT1/ppl/m/sl/10.95 CHAPTER 5.  OPTIMISTIC CONCURRENCY CO
+\OT1/ppl/m/n/10.95 38 \OT1/ppl/m/sl/10.95 CHAPTER 5.  OPTIMISTIC CONCURRENCY CO
 NTROL WITH SNAPSHOT ISOLATION ON SEMANTIC RELATED GROUP
  []
 
-[36 <./figs/snapfuzzy.pdf> <./figs/snapphantom.pdf
+[38 <./figs/snapfuzzy.pdf> <./figs/snapphantom.pdf
 
 pdfTeX warning: pdflatex (file ./figs/snapphantom.pdf): PDF inclusion: multiple
  pdfs with page group included in a single page
->] [37] <figs/snapwriteskew.pdf, id=1249, 1091.31702pt x 533.50214pt>
+>] [39] <figs/snapwriteskew.pdf, id=1274, 1091.31702pt x 533.50214pt>
 File: figs/snapwriteskew.pdf Graphic file (type pdf)
 
 <use figs/snapwriteskew.pdf>
@@ -1156,84 +1236,84 @@ Package pdftex.def Info: figs/snapwriteskew.pdf used on input line 162.
 (pdftex.def)             Requested size: 455.24408pt x 222.54707pt.
 
 Overfull \hbox (165.46788pt too wide) has occurred while \output is active
-\OT1/ppl/m/n/10.95 38 \OT1/ppl/m/sl/10.95 CHAPTER 5.  OPTIMISTIC CONCURRENCY CO
+\OT1/ppl/m/n/10.95 40 \OT1/ppl/m/sl/10.95 CHAPTER 5.  OPTIMISTIC CONCURRENCY CO
 NTROL WITH SNAPSHOT ISOLATION ON SEMANTIC RELATED GROUP
  []
 
-[38 <./figs/snapwriteskew.pdf>]
+[40 <./figs/snapwriteskew.pdf>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 178.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [39]
+) [41]
 Overfull \hbox (165.46788pt too wide) has occurred while \output is active
-\OT1/ppl/m/n/10.95 40 \OT1/ppl/m/sl/10.95 CHAPTER 5.  OPTIMISTIC CONCURRENCY CO
+\OT1/ppl/m/n/10.95 42 \OT1/ppl/m/sl/10.95 CHAPTER 5.  OPTIMISTIC CONCURRENCY CO
 NTROL WITH SNAPSHOT ISOLATION ON SEMANTIC RELATED GROUP
  []
 
-[40] [41
+[42] [43
 
-] [42] (./chapters/Evaluation.tex
+] [44] (./chapters/Evaluation.tex
 Chapter 6.
-) (./chapters/Conclusion.tex [43
+) (./chapters/Conclusion.tex [45
 
-] [44
+] [46
 
 ]
 Chapter 7.
-) (./document.bbl [45] [46
+) (./document.bbl [47] [48
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 19.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 30.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 1117) in paragraph at lines 16--20
+Underfull \hbox (badness 1117) in paragraph at lines 27--31
 []\OT1/ppl/m/n/10.95 Cloudera.  Hadoop and big data.  [][]$\OT1/pcr/m/n/10.95 h
 ttp : / / www . cloudera . com / content /
  []
 
-[47]
-Underfull \hbox (badness 10000) in paragraph at lines 88--92
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 99--103
 []\OT1/ppl/m/n/10.95 MySQL.  Lim-its re-lat-ing to trans-ac-tion han-dling in m
 ysql clus-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--92
+Underfull \hbox (badness 10000) in paragraph at lines 99--103
 \OT1/ppl/m/n/10.95 ter.  [][]$\OT1/pcr/m/n/10.95 http : / / dev . mysql . com /
  doc / mysql-[]cluster-[]excerpt / 5 . 1 / en /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--98
+Underfull \hbox (badness 10000) in paragraph at lines 105--109
 []\OT1/ppl/m/n/10.95 MySQL.  Lim-its re-lat-ing to trans-ac-tion han-dling in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--98
+Underfull \hbox (badness 10000) in paragraph at lines 105--109
 \OT1/ppl/m/n/10.95 mysql clus-ter.  [][]$\OT1/pcr/m/n/10.95 http : / / dev . my
 sql . com / doc / refman / 5 . 0 / en /
  []
 
 
-Underfull \hbox (badness 4686) in paragraph at lines 117--121
+Underfull \hbox (badness 4686) in paragraph at lines 128--132
 []\OT1/ppl/m/n/10.95 Oracle.  Java api doc-u-men-ta-tion: Class reen-trantread-
 write-lock.  [][]$\OT1/pcr/m/n/10.95 http :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--121
+Underfull \hbox (badness 10000) in paragraph at lines 128--132
 \OT1/pcr/m/n/10.95 / / docs . oracle . com / javase / 7 / docs / api / java / u
 til / concurrent / locks /
  []
 
-[48]) [49] [50
+[50]) [51] [52
 
-] [51] [52] (./chapters/Testing.texpdfTeX warning (ext4): destination with the 
+] [53] [54] (./chapters/Testing.texpdfTeX warning (ext4): destination with the 
 same identifier (name{chapter.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1242,9 +1322,9 @@ l.20 \chapter{Apache HDFS Unit Tests Passing List}
 Appendix A.
 )
 No file document.ind.
-[53
+[55
 
-] [54
+] [56
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 180.
@@ -1253,14 +1333,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 180.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 180.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 180.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: EA1DC880A9AAB92C6F726E0811307D08;4637.
+(rerunfilecheck)             Checksum: BCF975B6340CC0A51D0A10BD7D3AD264;4716.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 180.
  ) 
 Here is how much of TeX's memory you used:
- 9491 strings out of 493304
- 139053 string characters out of 6139871
- 239792 words of memory out of 5000000
- 12444 multiletter control sequences out of 15000+600000
+ 9502 strings out of 493304
+ 139221 string characters out of 6139871
+ 241054 words of memory out of 5000000
+ 12447 multiletter control sequences out of 15000+600000
  39172 words of font info for 95 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  39i,13n,39p,860b,728s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1283,10 +1363,10 @@ fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
 o/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pf
 b>
-Output written on document.pdf (74 pages, 2506433 bytes).
+Output written on document.pdf (76 pages, 2510803 bytes).
 PDF statistics:
- 1520 PDF objects out of 1728 (max. 8388607)
- 1061 compressed objects within 11 object streams
- 245 named destinations out of 1000 (max. 500000)
+ 1548 PDF objects out of 1728 (max. 8388607)
+ 1086 compressed objects within 11 object streams
+ 253 named destinations out of 1000 (max. 500000)
  582 words of extra memory for PDF output out of 10000 (max. 10000000)
 

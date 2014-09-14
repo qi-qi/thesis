@@ -67,45 +67,45 @@ Warning--empty year in apachespark
 Warning--no journal in wasif2012distributed
 Warning--no number and no volume in wasif2012distributed
 Warning--page numbers missing in wasif2012distributed
-You've used 29 entries,
+You've used 31 entries,
             2861 wiz_defined-function locations,
-            740 strings with 8547 characters,
-and the built_in function-call counts, 16009 in all, are:
-= -- 1363
-> -- 1010
+            751 strings with 8813 characters,
+and the built_in function-call counts, 17214 in all, are:
+= -- 1470
+> -- 1088
 < -- 7
-+ -- 282
-- -- 358
-* -- 1140
-:= -- 3040
-add.period$ -- 85
-call.type$ -- 29
-change.case$ -- 189
-chr.to.int$ -- 23
-cite$ -- 58
-duplicate$ -- 511
-empty$ -- 1019
-format.name$ -- 382
-if$ -- 2916
++ -- 304
+- -- 388
+* -- 1235
+:= -- 3265
+add.period$ -- 90
+call.type$ -- 31
+change.case$ -- 202
+chr.to.int$ -- 25
+cite$ -- 60
+duplicate$ -- 544
+empty$ -- 1094
+format.name$ -- 416
+if$ -- 3133
 int.to.chr$ -- 7
 int.to.str$ -- 0
-missing$ -- 14
-newline$ -- 142
-num.names$ -- 278
-pop$ -- 257
+missing$ -- 15
+newline$ -- 151
+num.names$ -- 298
+pop$ -- 266
 preamble$ -- 1
-purify$ -- 352
+purify$ -- 377
 quote$ -- 0
-skip$ -- 430
+skip$ -- 469
 stack$ -- 0
-substring$ -- 720
-swap$ -- 173
+substring$ -- 785
+swap$ -- 184
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 546
+type$ -- 586
 warning$ -- 29
-while$ -- 277
+while$ -- 299
 width$ -- 0
-write$ -- 364
+write$ -- 388
 (There was 1 error message)

@@ -1,10 +1,21 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\citeauthoryear{Ansi}{Ansi}{1992}]{ansi1992x3}
+Ansi, A. (1992).
+\newblock x3. 135-1992, american national standard for information
+  systems-database language-sql.
+
 \bibitem[\protect\citeauthoryear{Berenson, Bernstein, Gray, Melton, O'Neil, \&
   O'Neil}{Berenson et~al.}{1995}]{berenson1995critique}
 Berenson, H., P.~Bernstein, J.~Gray, J.~Melton, E.~O'Neil, \& P.~O'Neil (1995).
 \newblock A critique of ansi sql isolation levels.
 \newblock In {\em ACM SIGMOD Record}, Volume~24, pp.\  1--10. ACM.
+
+\bibitem[\protect\citeauthoryear{Bernstein \& Goodman}{Bernstein \&
+  Goodman}{1981}]{bernstein1981concurrency}
+Bernstein, P.~A. \& N.~Goodman (1981).
+\newblock Concurrency control in distributed database systems.
+\newblock {\em ACM Computing Surveys (CSUR)\/}~{\em 13\/}(2), 185--221.
 
 \bibitem[\protect\citeauthoryear{Borthakur}{Borthakur}{2008}]{borthakur2008hdfs}
 Borthakur, D. (2008).

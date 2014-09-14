@@ -2,24 +2,24 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces The Architecture of GFS \cite {ghemawat2003google}\relax }}{8}{figure.caption.12}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces The Architecture of HDFS \cite {borthakur2008hdfs}\relax }}{9}{figure.caption.13}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces The Architecture of MySQL Cluster \cite {mysqlcluster}\relax }}{11}{figure.caption.14}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Node Groups in MySQL Cluster and Fault Tolerance \cite {mysqlclusterng}\relax }}{12}{figure.caption.15}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Node Groups in MySQL Cluster}}}{12}{figure.caption.15}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Fault Tolerance in Node Groups}}}{12}{figure.caption.15}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces MySQL Cluster Scaling-out Writes Operations\relax }}{13}{figure.caption.16}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces The Architecture of Hop-HDFS\relax }}{15}{figure.caption.17}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces The Architecture of MySQL Cluster \cite {mysqlcluster}\relax }}{12}{figure.caption.15}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Node Groups in MySQL Cluster and Fault Tolerance \cite {mysqlclusterng}\relax }}{14}{figure.caption.16}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Node Groups in MySQL Cluster}}}{14}{figure.caption.16}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Fault Tolerance in Node Groups}}}{14}{figure.caption.16}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces MySQL Cluster Scaling-out Writes Operations\relax }}{15}{figure.caption.17}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces The Architecture of Hop-HDFS\relax }}{16}{figure.caption.18}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces A Graphical Tree Representation for the Namespace in GFS\relax }}{20}{figure.caption.18}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces The Namespace INode Structure in HDFS\relax }}{22}{figure.caption.21}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Violation in Quota Semantic\relax }}{23}{figure.caption.22}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces RPC between Clients and NameNode for Namespace Operations\relax }}{24}{figure.caption.23}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Filesystem Hierarchy with ID for INodes in Hop-HDFS\relax }}{25}{figure.caption.24}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Acyclic DAG. Operations start from root, locks taken in order from leftmost child \cite {hakimzadeh2014scaling} \textit {I: INode, B: BlockInfo, L: Lease, LP: LeasePath, CR: CorruptedReplica, URB: UnderReplicatedBlock, R: Replica, UCR: UnderConstructionReplica, PB: PendingBlock, IB: InvalidBlock, ER: ExcessReplica}\relax }}{27}{figure.caption.26}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A Graphical Tree Representation for the Namespace in GFS\relax }}{22}{figure.caption.19}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces The Namespace INode Structure in HDFS\relax }}{24}{figure.caption.22}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Violation in Quota Semantic\relax }}{25}{figure.caption.23}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces RPC between Clients and NameNode for Namespace Operations\relax }}{26}{figure.caption.24}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Filesystem Hierarchy with ID for INodes in Hop-HDFS\relax }}{27}{figure.caption.25}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Acyclic DAG. Operations start from root, locks taken in order from leftmost child \cite {hakimzadeh2014scaling} \textit {I: INode, B: BlockInfo, L: Lease, LP: LeasePath, CR: CorruptedReplica, URB: UnderReplicatedBlock, R: Replica, UCR: UnderConstructionReplica, PB: PendingBlock, IB: InvalidBlock, ER: ExcessReplica}\relax }}{29}{figure.caption.27}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Snapshot Isolation Precludes Fuzzy Read\relax }}{36}{figure.caption.29}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Snapshot Isolation with Semantic Related Group Precludes Phantom Read\relax }}{36}{figure.caption.30}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group Precludes Write Skew\relax }}{38}{figure.caption.32}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Snapshot Isolation Precludes Fuzzy Read\relax }}{38}{figure.caption.30}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Snapshot Isolation with Semantic Related Group Precludes Phantom Read\relax }}{38}{figure.caption.31}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group Precludes Write Skew\relax }}{40}{figure.caption.33}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

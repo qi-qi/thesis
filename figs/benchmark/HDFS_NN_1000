@@ -1,0 +1,93 @@
+2014-09-14 17:53:32,895 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(599)) - --- create inputs ---
+2014-09-14 17:53:32,895 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(600)) - nrFiles = 1000
+2014-09-14 17:53:32,895 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(601)) - nrThreads = 3
+2014-09-14 17:53:32,895 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(602)) - nrFilesPerDir = 4
+2014-09-14 17:53:32,895 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(370)) - --- create stats  ---
+2014-09-14 17:53:32,895 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(371)) - # operations: 1000
+2014-09-14 17:53:32,895 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(372)) - Elapsed Time: 1326
+2014-09-14 17:53:32,895 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(373)) -  Ops per sec: 754.1478129713424
+2014-09-14 17:53:32,895 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(374)) - Average Time: 3
+2014-09-14 17:53:32,895 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:runBenchmark(1454)) - 
+2014-09-14 17:53:32,895 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(691)) - --- mkdirs inputs ---
+2014-09-14 17:53:32,895 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(692)) - nrDirs = 1000
+2014-09-14 17:53:32,895 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(693)) - nrThreads = 3
+2014-09-14 17:53:32,895 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(694)) - nrDirsPerDir = 2
+2014-09-14 17:53:32,895 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(370)) - --- mkdirs stats  ---
+2014-09-14 17:53:32,896 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(371)) - # operations: 1000
+2014-09-14 17:53:32,896 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(372)) - Elapsed Time: 1258
+2014-09-14 17:53:32,896 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(373)) -  Ops per sec: 794.912559618442
+2014-09-14 17:53:32,896 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(374)) - Average Time: 3
+2014-09-14 17:53:32,896 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:runBenchmark(1454)) - 
+2014-09-14 17:53:32,896 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(599)) - --- open inputs ---
+2014-09-14 17:53:32,896 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(600)) - nrFiles = 1000
+2014-09-14 17:53:32,896 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(601)) - nrThreads = 3
+2014-09-14 17:53:32,896 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(602)) - nrFilesPerDir = 4
+2014-09-14 17:53:32,896 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(370)) - --- open stats  ---
+2014-09-14 17:53:32,896 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(371)) - # operations: 1000
+2014-09-14 17:53:32,896 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(372)) - Elapsed Time: 36
+2014-09-14 17:53:32,896 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(373)) -  Ops per sec: 27777.777777777777
+2014-09-14 17:53:32,896 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(374)) - Average Time: 0
+2014-09-14 17:53:32,896 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:runBenchmark(1454)) - 
+2014-09-14 17:53:32,896 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(599)) - --- delete inputs ---
+2014-09-14 17:53:32,896 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(600)) - nrFiles = 1000
+2014-09-14 17:53:32,896 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(601)) - nrThreads = 3
+2014-09-14 17:53:32,897 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(602)) - nrFilesPerDir = 4
+2014-09-14 17:53:32,897 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(370)) - --- delete stats  ---
+2014-09-14 17:53:32,897 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(371)) - # operations: 1000
+2014-09-14 17:53:32,897 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(372)) - Elapsed Time: 1244
+2014-09-14 17:53:32,897 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(373)) -  Ops per sec: 803.8585209003215
+2014-09-14 17:53:32,897 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(374)) - Average Time: 3
+2014-09-14 17:53:32,897 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:runBenchmark(1454)) - 
+2014-09-14 17:53:32,897 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(599)) - --- fileStatus inputs ---
+2014-09-14 17:53:32,897 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(600)) - nrFiles = 1000
+2014-09-14 17:53:32,897 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(601)) - nrThreads = 3
+2014-09-14 17:53:32,897 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(602)) - nrFilesPerDir = 4
+2014-09-14 17:53:32,897 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(370)) - --- fileStatus stats  ---
+2014-09-14 17:53:32,897 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(371)) - # operations: 1000
+2014-09-14 17:53:32,897 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(372)) - Elapsed Time: 9
+2014-09-14 17:53:32,897 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(373)) -  Ops per sec: 111111.11111111111
+2014-09-14 17:53:32,897 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(374)) - Average Time: 0
+2014-09-14 17:53:32,897 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:runBenchmark(1454)) - 
+2014-09-14 17:53:32,897 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(599)) - --- rename inputs ---
+2014-09-14 17:53:32,897 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(600)) - nrFiles = 1000
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(601)) - nrThreads = 3
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(602)) - nrFilesPerDir = 4
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(370)) - --- rename stats  ---
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(371)) - # operations: 1000
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(372)) - Elapsed Time: 1240
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(373)) -  Ops per sec: 806.4516129032259
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(374)) - Average Time: 3
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:runBenchmark(1454)) - 
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(1200)) - --- blockReport inputs ---
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(1201)) - reports = 1000
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(1202)) - datanodes = 3 (0, 0, 0)
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(1203)) - blocksPerReport = 100
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(1204)) - blocksPerFile = 10
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(370)) - --- blockReport stats  ---
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(371)) - # operations: 1000
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(372)) - Elapsed Time: 250
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(373)) -  Ops per sec: 4000.0
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(374)) - Average Time: 0
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:runBenchmark(1454)) - 
+2014-09-14 17:53:32,898 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(1356)) - --- replication inputs ---
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(1357)) - numOpsRequired = 66
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(1358)) - datanodes = 3 (0, 0, 0)
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(1359)) - decommissioned datanodes = 1
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(1360)) - datanode replication limit = 100
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(1361)) - total blocks = 100
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(370)) - --- replication stats  ---
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(371)) - # operations: 1
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(372)) - Elapsed Time: 1
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(373)) -  Ops per sec: 1000.0
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(374)) - Average Time: 1
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(1363)) - decommissioned blocks = 0
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(1364)) - pending replications = 0
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(1365)) - replications per sec: 0.0
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:runBenchmark(1454)) - 
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(493)) - --- clean inputs ---
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printResults(494)) - Remove directory /nnThroughputBenchmark
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(370)) - --- clean stats  ---
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(371)) - # operations: 1
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(372)) - Elapsed Time: 3
+2014-09-14 17:53:32,899 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(373)) -  Ops per sec: 333.3333333333333
+2014-09-14 17:53:32,900 INFO  namenode.NNThroughputBenchmark (NNThroughputBenchmark.java:printStats(374)) - Average Time: 2

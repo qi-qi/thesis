@@ -42,7 +42,7 @@
 \BOOKMARK [2][]{subsection.3.3.2}{Namespace Concurrency Control}{section.3.3}% 42
 \BOOKMARK [2][]{subsection.3.3.3}{Limitations}{section.3.3}% 43
 \BOOKMARK [0][]{chapter.4}{Namespace Operation Performance Assessment}{part.2}% 44
-\BOOKMARK [1][]{section.4.1}{A}{chapter.4}% 45
+\BOOKMARK [1][]{section.4.1}{NameNode Throughput Benchmark}{chapter.4}% 45
 \BOOKMARK [-1][]{part.3}{III Algorithmic Solution}{}% 46
 \BOOKMARK [0][]{chapter.5}{Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}{part.3}% 47
 \BOOKMARK [1][]{section.5.1}{Resolving the Semantic Related Group}{chapter.5}% 48
@@ -53,7 +53,7 @@
 \BOOKMARK [1][]{section.5.6}{Pseudocode of the Complete Algorithm}{chapter.5}% 53
 \BOOKMARK [-1][]{part.4}{IV Evaluation and Conclusion}{}% 54
 \BOOKMARK [0][]{chapter.6}{Evaluation}{part.4}% 55
-\BOOKMARK [1][]{section.6.1}{Experimental Setup}{chapter.6}% 56
+\BOOKMARK [1][]{section.6.1}{Experimental Testbed}{chapter.6}% 56
 \BOOKMARK [1][]{section.6.2}{Performance Comparison}{chapter.6}% 57
 \BOOKMARK [0][]{chapter.7}{Conclusion and Future Work}{part.4}% 58
 \BOOKMARK [1][]{section.7.1}{Conclusion}{chapter.7}% 59

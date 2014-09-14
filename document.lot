@@ -8,9 +8,10 @@
 \contentsline {table}{\numberline {3.3}{\ignorespaces INode Table for Hop-HDFS\relax }}{28}{table.caption.26}
 \contentsline {table}{\numberline {3.4}{\ignorespaces Implicit Lock Table in Hop-HDFS\relax }}{30}{table.caption.28}
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Operation Performance Comparison between HDFS and PCC (Hop-HDFS)\relax }}{32}{table.caption.30}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Table Representation for the Semantic Related Group\relax }}{36}{table.caption.29}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Locks Blocking Table in MySQL Cluster\relax }}{39}{table.caption.32}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Table Representation for the Semantic Related Group\relax }}{36}{table.caption.31}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Locks Blocking Table in MySQL Cluster\relax }}{39}{table.caption.34}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

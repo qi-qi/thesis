@@ -43,20 +43,21 @@
 \BOOKMARK [2][]{subsection.3.3.3}{Limitations}{section.3.3}% 43
 \BOOKMARK [0][]{chapter.4}{Namespace Operation Performance Assessment}{part.2}% 44
 \BOOKMARK [1][]{section.4.1}{NameNode Throughput Benchmark}{chapter.4}% 45
-\BOOKMARK [-1][]{part.3}{III Algorithmic Solution}{}% 46
-\BOOKMARK [0][]{chapter.5}{Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}{part.3}% 47
-\BOOKMARK [1][]{section.5.1}{Resolving the Semantic Related Group}{chapter.5}% 48
-\BOOKMARK [1][]{section.5.2}{Per-Transaction Snapshot Isolation}{chapter.5}% 49
-\BOOKMARK [1][]{section.5.3}{ClusterJ and Lock Mode in MySQL Cluster}{chapter.5}% 50
-\BOOKMARK [1][]{section.5.4}{Optimistic Concurrency Control}{chapter.5}% 51
-\BOOKMARK [1][]{section.5.5}{Total Order Update, Abort and Version Increase in Update Phase}{chapter.5}% 52
-\BOOKMARK [1][]{section.5.6}{Pseudocode of the Complete Algorithm}{chapter.5}% 53
-\BOOKMARK [-1][]{part.4}{IV Evaluation and Conclusion}{}% 54
-\BOOKMARK [0][]{chapter.6}{Evaluation}{part.4}% 55
-\BOOKMARK [1][]{section.6.1}{Experimental Testbed}{chapter.6}% 56
-\BOOKMARK [1][]{section.6.2}{Performance Comparison}{chapter.6}% 57
-\BOOKMARK [0][]{chapter.7}{Conclusion and Future Work}{part.4}% 58
-\BOOKMARK [1][]{section.7.1}{Conclusion}{chapter.7}% 59
-\BOOKMARK [1][]{section.7.2}{Future Work}{chapter.7}% 60
-\BOOKMARK [-1][]{part.5}{V Appendices}{}% 61
-\BOOKMARK [0][]{chapter.1}{Apache HDFS Unit Tests Passing List}{part.5}% 62
+\BOOKMARK [1][]{section.4.2}{Parent Directory Contention Assessment}{chapter.4}% 46
+\BOOKMARK [-1][]{part.3}{III Algorithmic Solution}{}% 47
+\BOOKMARK [0][]{chapter.5}{Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}{part.3}% 48
+\BOOKMARK [1][]{section.5.1}{Resolving the Semantic Related Group}{chapter.5}% 49
+\BOOKMARK [1][]{section.5.2}{Per-Transaction Snapshot Isolation}{chapter.5}% 50
+\BOOKMARK [1][]{section.5.3}{ClusterJ and Lock Mode in MySQL Cluster}{chapter.5}% 51
+\BOOKMARK [1][]{section.5.4}{Optimistic Concurrency Control}{chapter.5}% 52
+\BOOKMARK [1][]{section.5.5}{Total Order Update, Abort and Version Increase in Update Phase}{chapter.5}% 53
+\BOOKMARK [1][]{section.5.6}{Pseudocode of the Complete Algorithm}{chapter.5}% 54
+\BOOKMARK [-1][]{part.4}{IV Evaluation and Conclusion}{}% 55
+\BOOKMARK [0][]{chapter.6}{Evaluation}{part.4}% 56
+\BOOKMARK [1][]{section.6.1}{Experimental Testbed}{chapter.6}% 57
+\BOOKMARK [1][]{section.6.2}{Performance Comparison}{chapter.6}% 58
+\BOOKMARK [0][]{chapter.7}{Conclusion and Future Work}{part.4}% 59
+\BOOKMARK [1][]{section.7.1}{Conclusion}{chapter.7}% 60
+\BOOKMARK [1][]{section.7.2}{Future Work}{chapter.7}% 61
+\BOOKMARK [-1][]{part.5}{V Appendices}{}% 62
+\BOOKMARK [0][]{chapter.1}{Apache HDFS Unit Tests Passing List}{part.5}% 63

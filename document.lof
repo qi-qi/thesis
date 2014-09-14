@@ -17,10 +17,11 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Acyclic DAG. Operations start from root, locks taken in order from leftmost child \cite {hakimzadeh2014scaling} \textit {I: INode, B: BlockInfo, L: Lease, LP: LeasePath, CR: CorruptedReplica, URB: UnderReplicatedBlock, R: Replica, UCR: UnderConstructionReplica, PB: PendingBlock, IB: InvalidBlock, ER: ExcessReplica}\relax }}{29}{figure.caption.27}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Operation Performance Comparison between HDFS and PCC (Hop-HDFS)\relax }}{32}{figure.caption.29}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Parent Directory Contention Assessment between HDFS and PCC (Hop-HDFS)\relax }}{33}{figure.caption.31}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Snapshot Isolation Precludes Fuzzy Read\relax }}{38}{figure.caption.32}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Snapshot Isolation with Semantic Related Group Precludes Phantom Read\relax }}{38}{figure.caption.33}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group Precludes Write Skew\relax }}{40}{figure.caption.35}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Snapshot Isolation Precludes Fuzzy Read\relax }}{40}{figure.caption.34}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Snapshot Isolation with Semantic Related Group Precludes Phantom Read\relax }}{40}{figure.caption.35}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group Precludes Write Skew\relax }}{42}{figure.caption.37}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

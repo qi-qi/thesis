@@ -154,6 +154,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces The Namespace INode Structure in HDFS\relax }}{24}{figure.caption.22}}
 \newlabel{fig:inodeuml}{{3.2}{24}{The Namespace INode Structure in HDFS\relax }{figure.caption.22}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Limitations}{24}{subsection.3.2.3}}
+\newlabel{subsec:rpc}{{3.2.3}{24}{Limitations}{subsection.3.2.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Violation in Quota Semantic\relax }}{25}{figure.caption.23}}
 \newlabel{fig:hdfsquota}{{3.3}{25}{Violation in Quota Semantic\relax }{figure.caption.23}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces RPC between Clients and NameNode for Namespace Operations\relax }}{26}{figure.caption.24}}
@@ -185,49 +186,54 @@
 \newlabel{fig:nntp}{{4.1}{32}{Operation Performance Comparison between HDFS and PCC (Hop-HDFS)\relax }{figure.caption.29}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Operation Performance Comparison between HDFS and PCC (Hop-HDFS)\relax }}{32}{table.caption.30}}
 \newlabel{table:nntpb}{{4.1}{32}{Operation Performance Comparison between HDFS and PCC (Hop-HDFS)\relax }{table.caption.30}{}}
-\@writefile{toc}{\contentsline {part}{III\hspace  {1em}Algorithmic Solution}{33}{part.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Parent Directory Contention Assessment}{32}{section.4.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Parent Directory Contention Assessment between HDFS and PCC (Hop-HDFS)\relax }}{33}{figure.caption.31}}
+\newlabel{fig:hdfsPCCparent}{{4.2}{33}{Parent Directory Contention Assessment between HDFS and PCC (Hop-HDFS)\relax }{figure.caption.31}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Parent Directory Contention Assessment between HDFS and PCC (Hop-HDFS)\relax }}{33}{table.caption.32}}
+\newlabel{table:hdfsPCCparent}{{4.2}{33}{Parent Directory Contention Assessment between HDFS and PCC (Hop-HDFS)\relax }{table.caption.32}{}}
+\@writefile{toc}{\contentsline {part}{III\hspace  {1em}Algorithmic Solution}{35}{part.3}}
 \citation{berenson1995critique}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}{35}{chapter.5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}{37}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:Design}{{5}{35}{Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}{Item.18}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Resolving the Semantic Related Group}{35}{section.5.1}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Table Representation for the Semantic Related Group\relax }}{36}{table.caption.31}}
-\newlabel{table:semanticrelatedTable}{{5.1}{36}{Table Representation for the Semantic Related Group\relax }{table.caption.31}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Per-Transaction Snapshot Isolation}{36}{section.5.2}}
+\newlabel{ch:Design}{{5}{37}{Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}{Item.18}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Resolving the Semantic Related Group}{37}{section.5.1}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Table Representation for the Semantic Related Group\relax }}{38}{table.caption.33}}
+\newlabel{table:semanticrelatedTable}{{5.1}{38}{Table Representation for the Semantic Related Group\relax }{table.caption.33}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Per-Transaction Snapshot Isolation}{38}{section.5.2}}
 \citation{berenson1995critique}
 \citation{mysqlclusterj}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Snapshot Isolation Precludes Fuzzy Read\relax }}{38}{figure.caption.32}}
-\newlabel{fig:snapfuzzy}{{5.1}{38}{Snapshot Isolation Precludes Fuzzy Read\relax }{figure.caption.32}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Snapshot Isolation with Semantic Related Group Precludes Phantom Read\relax }}{38}{figure.caption.33}}
-\newlabel{fig:snapphantom}{{5.2}{38}{Snapshot Isolation with Semantic Related Group Precludes Phantom Read\relax }{figure.caption.33}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}ClusterJ and Lock Mode in MySQL Cluster}{38}{section.5.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Snapshot Isolation Precludes Fuzzy Read\relax }}{40}{figure.caption.34}}
+\newlabel{fig:snapfuzzy}{{5.1}{40}{Snapshot Isolation Precludes Fuzzy Read\relax }{figure.caption.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Snapshot Isolation with Semantic Related Group Precludes Phantom Read\relax }}{40}{figure.caption.35}}
+\newlabel{fig:snapphantom}{{5.2}{40}{Snapshot Isolation with Semantic Related Group Precludes Phantom Read\relax }{figure.caption.35}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}ClusterJ and Lock Mode in MySQL Cluster}{40}{section.5.3}}
 \citation{oraclemvcc}
-\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Locks Blocking Table in MySQL Cluster\relax }}{39}{table.caption.34}}
-\newlabel{table:locktable}{{5.2}{39}{Locks Blocking Table in MySQL Cluster\relax }{table.caption.34}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Optimistic Concurrency Control}{39}{section.5.4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group Precludes Write Skew\relax }}{40}{figure.caption.35}}
-\newlabel{fig:snapwriteskew}{{5.3}{40}{Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group Precludes Write Skew\relax }{figure.caption.35}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Total Order Update, Abort and Version Increase in Update Phase}{41}{section.5.5}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.6}Pseudocode of the Complete Algorithm}{41}{section.5.6}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Pseudocode of the Complete Algorithm   Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group\relax }}{42}{algorithm.1}}
-\newlabel{algo:pseudocode}{{1}{42}{Pseudocode of the Complete Algorithm \\ Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group\relax }{algorithm.1}{}}
-\@writefile{toc}{\contentsline {part}{IV\hspace  {1em}Evaluation and Conclusion}{43}{part.4}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Evaluation}{45}{chapter.6}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Locks Blocking Table in MySQL Cluster\relax }}{41}{table.caption.36}}
+\newlabel{table:locktable}{{5.2}{41}{Locks Blocking Table in MySQL Cluster\relax }{table.caption.36}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Optimistic Concurrency Control}{41}{section.5.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group Precludes Write Skew\relax }}{42}{figure.caption.37}}
+\newlabel{fig:snapwriteskew}{{5.3}{42}{Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group Precludes Write Skew\relax }{figure.caption.37}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Total Order Update, Abort and Version Increase in Update Phase}{43}{section.5.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Pseudocode of the Complete Algorithm}{43}{section.5.6}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Pseudocode of the Complete Algorithm   Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group\relax }}{44}{algorithm.1}}
+\newlabel{algo:pseudocode}{{1}{44}{Pseudocode of the Complete Algorithm \\ Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group\relax }{algorithm.1}{}}
+\@writefile{toc}{\contentsline {part}{IV\hspace  {1em}Evaluation and Conclusion}{45}{part.4}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Evaluation}{47}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:evaluation}{{6}{45}{Evaluation}{chapter.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Experimental Testbed}{45}{section.6.1}}
-\newlabel{sec:testbed}{{6.1}{45}{Experimental Testbed}{section.6.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Performance Comparison}{45}{section.6.2}}
+\newlabel{ch:evaluation}{{6}{47}{Evaluation}{chapter.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Experimental Testbed}{47}{section.6.1}}
+\newlabel{sec:testbed}{{6.1}{47}{Experimental Testbed}{section.6.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Performance Comparison}{47}{section.6.2}}
 \bibstyle{chicago}
 \bibdata{reference}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{47}{chapter.7}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{49}{chapter.7}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:conclusion}{{7}{47}{Conclusion and Future Work}{chapter.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Conclusion}{47}{section.7.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Future Work}{47}{section.7.2}}
+\newlabel{ch:conclusion}{{7}{49}{Conclusion and Future Work}{chapter.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Conclusion}{49}{section.7.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Future Work}{49}{section.7.2}}
 \bibcite{ansi1992x3}{\citeauthoryear {Ansi}{Ansi}{1992}}
 \bibcite{berenson1995critique}{\citeauthoryear {Berenson, Bernstein, Gray, Melton, O'Neil, \& O'Neil}{Berenson et\nobreakspace  {}al.}{1995}}
 \bibcite{bernstein1981concurrency}{\citeauthoryear {Bernstein \& Goodman}{Bernstein \& Goodman}{1981}}
@@ -259,8 +265,8 @@
 \bibcite{apachespark}{\citeauthoryear {Spark}{Spark}{}}
 \bibcite{wasif2012distributed}{\citeauthoryear {Wasif}{Wasif}{2012}}
 \bibcite{white2012hadoop}{\citeauthoryear {White}{White}{2012}}
-\@writefile{toc}{\contentsline {part}{V\hspace  {1em}Appendices}{53}{part.5}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Apache HDFS Unit Tests Passing List}{55}{chapter.1}}
+\@writefile{toc}{\contentsline {part}{V\hspace  {1em}Appendices}{55}{part.5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Apache HDFS Unit Tests Passing List}{57}{chapter.1}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:Testing}{{A}{55}{Apache HDFS Unit Tests Passing List}{chapter.1}{}}
+\newlabel{ch:Testing}{{A}{57}{Apache HDFS Unit Tests Passing List}{chapter.1}{}}

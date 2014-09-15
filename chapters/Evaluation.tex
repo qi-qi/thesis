@@ -22,12 +22,12 @@
 %\addcontentsline{lot}{chapter}{\thechapter\quad Nihil Molestiae}
 \label{ch:evaluation}
 
-The solution \textit{Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group} (OCC) is built on top of the transactional framework~\cite{peiro2013maintaining} in the second version of Hop-HDFS (PCC). The goal is to demonstrate how our OCC solution performs better than PCC. As a proof of concept, we implemented the OCC version for the operation \textit{mkdirs} and give a detailed evaluation compared with PCC in this chapter. For this purpose, we concern about the execution time (elapsed time) needed to finish all the concurrent tasks.
+The solution \textit{Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group} (OCC) is built on top of the transactional framework~\cite{peiro2013maintaining} in the second version of Hop-HDFS (PCC). The goal of this chapter is to proof that our OCC model performs better than PCC. As a proof of concept, we implemented the OCC version for the operation \textit{mkdirs} and also give a detailed evaluation on it compared with the PCC version. For this purpose, we concern about the execution time (elapsed time) needed to finish all the concurrent tasks.
 
 \section{Experimental Testbed}
 \label{sec:testbed}
 
-The MySQL Cluster consists of six data nodes connected by 1 Gigabit LAN. Each data node has an Intel Xeon X5660 CPU at 2.80GHz, and contributes 6 GB RAM (5 GB Data Memory + 1 GB Index Memory), therefore, the total available memory for the cluster is 36 GB. The number of data replica is 2. The maximum concurrent transactions is 10000 for each data node, and the inactive timeout for each transaction is 5 seconds. 
+The MySQL Cluster consists of six data nodes connected by 1 Gigabit LAN. Each data node has an Intel Xeon X5660 CPU at 2.80GHz, and contributes 6 GB RAM (5 GB Data Memory + 1 GB Index Memory) separately. Therefore, the total available memory for the cluster is 36 GB. The number of data replicas is 2. The maximum concurrent transactions is 10000 for each data node, and the inactive timeout for each transaction is 5 seconds. 
 
 \noindent To avoid any communication overhead caused by RPC connections and serialization, we run the NameNode and Clients on the same machine with Intel i7-4770T CPU at 2.50GHz and 16 GB RAM. This machine is connected with the MySQL Cluster data nodes by 100 Megabits LAN.
 
@@ -40,7 +40,7 @@ The MySQL Cluster consists of six data nodes connected by 1 Gigabit LAN. Each da
 \section{Parent Directory Contention Assessment}
 \label{sec:ww}
 
-This experiment is the same as described in Section~\ref{sec:pdcassement}, but we expand it to include the results with OCC. See Figure~\ref{fig:hdfsPCCOCCparentDiragram} for the workload visual diagram. Hence, we have a full performance comparison here among HDFS, PCC and OCC (Hop-HDFS).
+This experiment is the same as described in Section~\ref{sec:pdcassement}, but we expand it to include the results with OCC. See Figure~\ref{fig:hdfsPCCOCCparentDiragram} for the workload visual diagram. Here we have a full performance comparison here among HDFS, PCC and OCC.
 
 \begin{figure}[ht]
 	\centering
@@ -49,7 +49,7 @@ This experiment is the same as described in Section~\ref{sec:pdcassement}, but w
 	\label{fig:hdfsPCCOCCparentDiragram}
 \end{figure}
 
-\noindent From Figure~\ref{fig:hdfsPCCOCCparent} and Table~\ref{fig:hdfsPCCOCCparent}, we can see that OCC significantly outperforms PCC by almost 70 \% on this concurrent write-write parent directory contention workload.
+\noindent From Figure~\ref{fig:hdfsPCCOCCparent} and Table~\ref{fig:hdfsPCCOCCparent}, we can see that OCC significantly outperforms PCC by almost 70 \% on this concurrent write-write parent directory contention workload. Under heavy workload, the execution time is just 1.3 times of HDFS. Remember that this is just a single NameNode performance test. We believe that OCC can much better outperform HDFS in our multiple NameNodes architecture.
 
 \begin{figure}[ht]
 	\centering
@@ -76,7 +76,9 @@ This experiment is the same as described in Section~\ref{sec:pdcassement}, but w
 
 \section{Read-Write Mixed Workload Assessment}
 
-In this experiment, we did a test for a read-write mixed workload assessment while the parent directory is still the contention point for PCC and OCC will still outperform in this workload. Similar to the experiment in Section~\ref{sec:ww}, we have 1000, 10000 and 100000 concurrent operations running under the same parent directory. But in each task, half of them will do the metadata read operation \textit{getFileStatus()}, while the other half will do the write operation \textit{mkdirs()}. See Figure~\ref{fig:rwWorkload} for a reference.
+In this experiment, we did a test for a read-write mixed workload assessment while the parent directory is still the contention point for PCC. So we assume that OCC will still outperform PCC in this kind of workload. 
+
+\noindent Similar to the experiment in Section~\ref{sec:ww}, we have 1000, 10000 and 100000 concurrent operations running under the same parent directory. But in each task, half of them will do the metadata read operation \textit{getFileStatus()}, while the other half will do the write operation \textit{mkdirs()}. See Figure~\ref{fig:rwWorkload} for a reference.
 
 \begin{figure}[ht]
 	\centering

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  15 SEP 2014 20:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  15 SEP 2014 21:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1284,27 +1284,29 @@ Package pdftex.def Info: figs/hdfs_pcc_occ_parent.pdf used on input line 56.
 <figs/rw.pdf, id=1481, 666.72488pt x 396.79343pt>
 File: figs/rw.pdf Graphic file (type pdf)
  <use figs/rw.pdf>
-Package pdftex.def Info: figs/rw.pdf used on input line 83.
+Package pdftex.def Info: figs/rw.pdf used on input line 85.
 (pdftex.def)             Requested size: 400.03801pt x 238.07788pt.
-
-<figs/pcc_occ_rw.pdf, id=1484, 361.35pt x 216.81pt>
+ [46 <./figs/ww.pdf>] <figs/pcc_occ_rw.pdf, id=1497, 361.35pt x 216.81pt>
 File: figs/pcc_occ_rw.pdf Graphic file (type pdf)
- <use figs/pcc_occ_rw.pdf>
-Package pdftex.def Info: figs/pcc_occ_rw.pdf used on input line 92.
-(pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
 
-[46 <./figs/ww.pdf>] <figs/srgSize.pdf, id=1500, 361.35pt x 216.81pt>
-File: figs/srgSize.pdf Graphic file (type pdf)
-
-<use figs/srgSize.pdf>
-Package pdftex.def Info: figs/srgSize.pdf used on input line 118.
+<use figs/pcc_occ_rw.pdf>
+Package pdftex.def Info: figs/pcc_occ_rw.pdf used on input line 94.
 (pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
  [47 <./figs/hdfs_pcc_occ_parent.pdf>]
+<figs/srgSize.pdf, id=1512, 361.35pt x 216.81pt>
+File: figs/srgSize.pdf Graphic file (type pdf)
+ <use figs/srgSize.pdf>
+Package pdftex.def Info: figs/srgSize.pdf used on input line 120.
+(pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
+
 <figs/conflict.pdf, id=1514, 361.35pt x 216.81pt>
 File: figs/conflict.pdf Graphic file (type pdf)
  <use figs/conflict.pdf>
-Package pdftex.def Info: figs/conflict.pdf used on input line 131.
+Package pdftex.def Info: figs/conflict.pdf used on input line 133.
 (pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [48 <./figs/rw.pdf>]) (./chapters/Conclusion.tex [49 <./figs/pcc_occ_rw.pdf>]
 [50 <./figs/srgSize.pdf> <./figs/conflict.pdf
@@ -1444,7 +1446,7 @@ fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
 o/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pf
 b>
-Output written on document.pdf (84 pages, 2865836 bytes).
+Output written on document.pdf (84 pages, 2866088 bytes).
 PDF statistics:
  1796 PDF objects out of 2073 (max. 8388607)
  1292 compressed objects within 13 object streams

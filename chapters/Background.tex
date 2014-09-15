@@ -196,7 +196,7 @@ The \textit{Hadoop Open Platform-as-a-service} (Hop) ~\cite{hop} is an open plat
 \begin{itemize}[noitemsep]
 	\item \textbf{The scalability of the namespace}: the memory size restricts the storage capacity in the system.
 	\item \textbf{The throughput problem}: the throughput of the metadata operations is bounded by the ability of the single machine (NameNode)
-	\item \textbf{The failure recovery}: it takes a long time for the NameNode to restart since it needs to load the checkpoint and replay the edit logs into the memory
+	\item \textbf{The failure recovery}: it takes a long time for the NameNode to restart since it needs to load the checkpoint and replay the edit logs from the journal into the memory
 \end{itemize}
 
 \subsection{The Architecture of Hop-HDFS}
@@ -210,10 +210,10 @@ The \textit{Hadoop Open Platform-as-a-service} (Hop) ~\cite{hop} is an open plat
 	\label{fig:hophdfsarchitecture}
 \end{figure}
 
-\noindent The design purpose for Hop-HDFS is to migrate the metadata from NameNode to an external distributed, in-memory, replicated database \textit{MySQL Cluster}. Therefore, the size of the metadata is not limited by a single NameNode's heap size and the scalability problem is solved. We can now have multiple stateless NameNodes architecture so that multiple-writers-multiple-readers are allowed to operate on the namespace to improve the throughput. 
+\noindent The design purpose for Hop-HDFS is to migrate the metadata from NameNode to an external distributed, in-memory, replicated database \textit{MySQL Cluster}. Therefore, the size of the metadata is not limited by a single NameNode's heap size so that the scalability problem can be solved. In Hop-HDFS, we have this \textit{multiple stateless NameNodes} architecture so that multiple-writers and multiple-readers are allowed to operate on the namespace to improve the throughput. 
 
-\noindent Moreover, the fault tolerance of the metadata is handled by MySQL Cluster, which grantees high availability of 99.999\%. The \textit{checkpoint} and the \textit{journal} for namespace is not needed, which save time from writing edit logs as well as restarting new NameNodes. Note that we have a leader election in this distributed NameNode architecture. The leader, \textit{master}, will be responsible for tasks like block reporting and statistic functions.
+\noindent Moreover, the fault tolerance of the metadata is handled by MySQL Cluster, which grantees high availability of 99.999\%. The \textit{checkpoint} and the \textit{journal} for namespace is removed as a result, which reduces the time on writing edit logs as well as restarting new NameNodes on namespace recovery. Note that we have a leader election process in this distributed NameNode architecture. The leader, \textit{master}, will be responsible for tasks like block reporting and statistic functions.
 
-\noindent As we discuss earlier, the size of the metadata for a single file object having two blocks (replicated three times by default) is 600 bytes. It requires 60 GB of RAM to store 100 million files in HDFS, 100 million files is also the maximum storage capacity for HDFS in practice. For MySQL Cluster, it supports up to 48 datanodes~\cite{mysql48nodes}, which means that it can scale up to 12 TB in size with 256 GB RAM for each node in size. But conservatively, we assume that Cluster can support up to 3.072 TB for metadata with a replication of 2, which means that Hop-HDFS can store up to 4.1 billion files. A factor of 40 times increase~\cite{hakimzadeh2014scaling}. 
+\noindent As we discuss earlier, the size of the metadata for a single file object having two blocks (replicated three times by default) is 600 bytes. It requires 60 GB of RAM to store 100 million files in HDFS, 100 million files is also the maximum storage capacity for HDFS in practice. For MySQL Cluster, it supports up to 48 datanodes~\cite{mysql48nodes}, which means that it can scale up to 12 TB in size with 256 GB RAM for each node in size. But conservatively, we assume that MySQL Cluster can support up to 3.072 TB for metadata with a data replication of 2, which means that Hop-HDFS can store up to 4.1 billion files. A factor of 40 times increase over Shvachko's estimate~\cite{shvachko2010hdfs} for HDFS from 2010.
 
 

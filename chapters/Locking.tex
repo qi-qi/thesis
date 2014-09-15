@@ -31,7 +31,7 @@
 \section{Namespace Concurrency Control in GFS}
 
 \subsection{Namespace Structure}
-Unlike traditional file systems, GFS doesn't have a per-directory data structure, which means that it doesn't support listing all files in a directory (i.e, \textit{ls} in POSIX), nor aliasing for the same file or directory (i.e, hard or symbolic links). Instead, with prefix compression, GFS represents the namespace as a lookup table mapping full pathnames to metadata logically, which means that the full pathnames are similar to the hash keys in a hash table.
+Unlike traditional file systems, GFS doesn't have a per-directory data structure, which means that it doesn't support operations like listing all files in a directory (i.e, \textit{ls} in POSIX), nor aliasing for the same file or directory (i.e, hard or symbolic links). Instead, with prefix compression, GFS represents the namespace as a lookup table mapping full pathnames to metadata logically, which means that the full pathnames are similar to the hash keys in a hash table.
 
 \subsection{Namespace Concurrency Control}
 Each node (either an absolute directory name or an absolute file name) in the namespace tree will be associated a \textit{read-write} lock. To prevent deadlock, locks are acquired in a \textit{consistent total order}: first ordered by level, then ordered lexicographically within the same level~\cite{ghemawat2003google}.
@@ -67,7 +67,7 @@ Each node (either an absolute directory name or an absolute file name) in the na
 	\label{table:gfsLock1}
 \end{table}
 
-\noindent Since operations will be serialized properly when trying to obtain conflict locks(\textit{Read-Write and Write-Write}), concurrent mutations on the same file/directory will be prevented.
+\noindent Besides, since operations will be serialized properly when trying to obtain conflict locks (\textit{Read-Write and Write-Write}), concurrent mutations on the same file/directory will be prevented.
 
 \begin{table}[ht]
 	\centering
@@ -99,7 +99,7 @@ Each node (either an absolute directory name or an absolute file name) in the na
 
 \subsection{Namespace Structure}
 
-Unlike GFS, the interface to HDFS is patterned after UNIX, and it support POSIX like commands (e.g, \textit{ls, mkdir, rm, cp, chown}) to the common file system. The namespace of HDFS is structured as a hierarchy of files and directories. Files and directories are represented on the NameNode by \textit{INodes} with attributes like permissions, modification and access times, namespace and disk space quotas~\cite{borthakur2008hdfs}. Each file is represented by an \textit{INodeFile} object, each directory is represented by an \textit{INodeDirectory}, and each symbolic link is represented by an \textit{INodeSymlink object}. Figure~\ref{fig:inodeuml} shows the Namespace INode Structure in UML diagram with major attributes.
+Unlike GFS, the interface to HDFS is patterned after UNIX, so it supports operations like \textit{ls, mkdir, rm, cp, chown} in POSIX standards. The namespace of HDFS is structured as a hierarchy of files and directories. Files and directories are represented on the NameNode by \textit{INodes} with attributes like permissions, modification and access times, namespace and disk space quotas~\cite{borthakur2008hdfs}. Each file is represented by an \textit{INodeFile} object, each directory is represented by an \textit{INodeDirectory}, and each symbolic link is represented by an \textit{INodeSymlink object}. Figure~\ref{fig:inodeuml} shows the Namespace INode Structure in UML diagram with major attributes.
 
 \begin{figure}[h]
 	\centering
@@ -110,7 +110,7 @@ Unlike GFS, the interface to HDFS is patterned after UNIX, and it support POSIX 
 
 \subsection{Namespace Concurrency Control}
 
-\noindent The hierarchical INode structure makes HDFS not possible to adopt the namespace locking scheme from GFS. In order to support POSIX like operations (list files, set quotas, create symbolic links), INodeFiles, INodeDirectories and INodeSymlink objects are semantically related to each other, rather than just logical representation.
+\noindent The hierarchical INode structure with semantic related INodes makes HDFS not possible to adopt the namespace locking scheme from GFS. In order to support POSIX like operations (list files, set quotas, create symbolic links), INodeFiles, INodeDirectories and INodeSymlink objects are semantically related to each other, rather than just being logical representation.
 
 \noindent For example, suppose that HDFS adopts the namespace locking scheme in GFS. An INodeDirectory \textit{D3} with quota \textit{1} which only allows 1 more INode to be created inside it. Concurrently, there are four operations try to create an INodeFile inside \textit{D3}. All of them put a read lock on \textit{D3} first. Finding that the quota is 1, they then put a write lock on the file and create it under the directory. Finally four files are created under \textit{D3} but it violates the quota. See Figure~\ref{fig:hdfsquota}.
 
@@ -121,9 +121,9 @@ Unlike GFS, the interface to HDFS is patterned after UNIX, and it support POSIX 
 	\label{fig:hdfsquota}
 \end{figure}
 
-\noindent One way to solve this consistency problem is to synchronize all the related attributes among different threads under proper semantic group. However, it complicates the namespace design and is not realistic. Therefore, to protect the namespace among parallel running threads, a global read/write lock (fsLock in \textit{FSNamesystem} - \textit{ReentrantReadWriteLock} in java language) is used to maintain the atomicity of the namespace. We call it \textit{system-level lock}.
+\noindent One way to solve this consistency problem is to synchronize all semantic related attributes with proper order. However, it is not realistic because it complicates the namespace design. Therefore, to protect the namespace among parallel running threads, a global read/write lock (fsLock in \textit{FSNamesystem} - \textit{ReentrantReadWriteLock} in java language) is used to maintain the atomicity. We call it \textit{system-level lock}.
 
-\noindent HDFS categorizes the metadata operations into \textit{read operations} and \textit{write operations}. Concurrent threads to access the namespace for read operations are allowed, but it restricts a single thread to namespace for write operations. Therefore, all concurrent readers get the same view of the mutated data reflected by completed writes. We call it \textit{Strong Consistency Semantics} in HDFS. (But it is still weaker than the standard POSIX consistency model since it trades some POSIX requirements for performance in terms of data coherency~\cite{white2012hadoop})
+\noindent HDFS categorizes the metadata operations into \textit{read operations} and \textit{write operations}. The NameNode allows concurrent threads to access shared object for read operations, but it restricts a single thread to access object for write operations. Therefore, all concurrent readers get the same view of the mutated data reflected by completed writes. We call it \textit{Strong Consistency Semantics} in HDFS. (But it is still weaker than the standard POSIX consistency model since it trades some POSIX requirements for performance in terms of data coherency~\cite{white2012hadoop})
 
 \subsection{Limitations}
 \label{subsec:rpc}
@@ -142,7 +142,7 @@ Unlike GFS, the interface to HDFS is patterned after UNIX, and it support POSIX 
 	\item The client get the result for this operation (either success or fail).
 \end{enumerate}
 
-\noindent As we can see, any of the steps above may become the bottle. But in step 6, while the entire namespace is protected by the system-level lock, the modification record needs to be saved into the editlogs. Since the editlogs are written into the physical hard drives sequentially, the more syn edit to be handled, the slower it will be for the responder to return the callback. The system-level lock won't be released during this process, so the throughput will be decreased greatly during heavy workload.
+\noindent As we can see, any of the steps above may become the communication bottle. But in step 6, while the entire namespace is protected by the system-level lock, the modification record needs to be saved into the editlogs. Since the editlogs are written into the physical hard drives sequentially, the more syn edit to be handled, the slower it will be for the responder to return the callback. The system-level lock won't be released during this process, so the throughput will be decreased greatly during heavy workload.
 
 \begin{figure}[h]
 	\centering
@@ -191,13 +191,13 @@ In HDFS, the namespace is kept in-memory as arrays and optimized data structure 
 	\label{table:hoptreeTable}
 \end{table}
 
-\noindent Since the \textit{id} is unique and atomically generated for INodes in each new transaction, the \textit{Primary Key} for the table is $<$name, parent\_id$>$ pair to avoid duplicated data rows during primary key lookup. Besides, the INode \textit{id} is not known beforehand on the application side, but the $<$name, parent\_id$>$ pair is known since it is stored as a path string. So data rows can be looked up by the $<$name, parent\_id$>$ pair \textit{Primary Key} directly from database.
+\noindent Since the \textit{id} is unique and atomically generated for INodes in each new transaction, the \textit{Primary Key} for the table is $<$name, parent\_id$>$ pair. Because the INode \textit{id} is not known beforehand on the application side, but the $<$name, parent\_id$>$ pair is known since it can be resolved from the path string. Therefore, data rows can be looked up by the $<$name, parent\_id$>$ pair \textit{Primary Key} directly from database on the application side.
 
-\noindent With the \textit{id} and \textit{parent\_id} relationship, the hierarchy will be constructed correctly from the rows to be in-memory objects used by the name system.
+\noindent With the \textit{id} and \textit{parent\_id} relationship, the hierarchy will be constructed correctly from the data rows to in-memory objects used by the name system.
 
 \subsection{Namespace Concurrency Control}
 
-In the first version of Hop-HDFS~\cite{wasif2012distributed} (also named as KTHFS), the main task is to migrate the metadata from memory to MySQL Cluster. Therefore, it still depends on the system-level lock in HDFS NameNode (fsLock in \textit{FSNamesystem} - \textit{ReentrantReadWriteLock} to serialize the operations and maintain the semantics. This becomes a big problem since the network latency between NameNode and database is far more larger than it was when operated inside memory in original HDFS. Each operation takes a long time lock on the filesystem. The throughput heavily decreases. A fine grained locking scheme is needed to improve the concurrency.
+In the first version of Hop-HDFS~\cite{wasif2012distributed} (also named as KTHFS), the main task is to migrate the metadata from memory to MySQL Cluster. Therefore, it still depends on the system-level lock in HDFS NameNode (fsLock in \textit{FSNamesystem} - \textit{ReentrantReadWriteLock} to serialize the operations and maintain the semantics. This becomes a big problem since the network latency between NameNode and database is far more larger than it was when operated in-memory in original HDFS. Hence, each operation will take a long time lock on the name system. The throughput heavily decreases. A fine grained locking scheme is needed to improve the concurrency.
 
 \noindent In the second version of Hop-HDFS~\cite{peiro2013maintaining} (also named as KTHFS), it adopts a fine-grained row-level locking mechanism to improve the throughput while maintaining the strong consistency semantics. It uses transactions with \textit{Pessimistic Concurrency Control} (PCC) to ensure the safety and progress of metadata operations. 
 
@@ -211,15 +211,15 @@ In the first version of Hop-HDFS~\cite{wasif2012distributed} (also named as KTHF
 	\label{fig:dag}
 \end{figure}
 
-\noindent Besides, \textit{implicit locking}~\cite{gray1976granularity} is used to lock on the data row of the root of a subtree in a transaction, which implicitly acquires locks on all the descendants, so that the strong consistent semantics in original HDFS can be maintained.
+\noindent Besides, \textit{implicit locking}~\cite{gray1976granularity} is used to lock on the root of a subtree in a transaction, which implicitly acquires locks on all the descendants, so that the strong consistent semantics from original HDFS can be maintained.
 
 \subsection{Limitations}
 
 \noindent There are two major limitations in this locking scheme:
 \begin{enumerate}[noitemsep]
-	\item It lowers the concurrency when multiple transactions try to mutate different descendants within the same subtree. Only one writer is allowed to work on INodes under one directory due to the implicit lock (Write Lock) for parent directory.
+	\item It lowers the concurrency when multiple transactions try to mutate different descendants within the same subtree. Only one writer is allowed to work on INodes under one directory due to the implicit lock (Write Lock) for the parent directory.
 	
-	 For example, if transaction Tx1 wants to mutate INode \textit{h}, and another transaction Tx2 wants to mutate INode \textit{i} concurrently in Figure~\ref{fig:hoptree}. Tx1 will take a parent lock on INode \textit{f} first and then perform operations. No more transactions can work under INode \textit{f} anymore. Tx2 will be blocked by the implicit lock until Tx1 commits. See Table~\ref{table:hoplockTable}.
+	 For example, if transaction Tx1 wants to mutate INode \textit{h}, and another transaction Tx2 wants to mutate INode \textit{i} concurrently in Figure~\ref{fig:hoptree}, Tx1 will take a parent lock on INode \textit{f} first and then perform operations. No more transactions can work under INode \textit{f} at the moment. Tx2 will be blocked by the implicit lock until Tx1 commits. See Table~\ref{table:hoplockTable}.
 	
 	\item There is un-avoided duplicated database round trips overhead. It takes two transactions to finish the implicit locking. The first transaction is used to resolve the path in the database so that we know which rows existed in the database so that the INode's parent directory can be taken the implicit write lock in the second transaction, or last existing INode directory can be taken the implicit write lock if the path is not full resolved(HDFS will build up the missing intermediate INodeDirectories).
 	
@@ -237,10 +237,10 @@ In the first version of Hop-HDFS~\cite{wasif2012distributed} (also named as KTHF
 		4 & 1 & c & ~ & ~ \\ \hline
 		5 & 2 & d & Read Lock & Read Lock\\ \hline
 		6 & 3 & e & ~ & ~ \\ \hline
-		7 & 5 & f  & Write Lock & Write Lock \\ \hline
+		7 & 5 & f  & Write Lock & Write Lock \textbf{(Blocked!)} \\ \hline
 		8 & 6 & g & ~ & ~ \\ \hline
-		9 & 7 & h (Mutated by Tx1) & Write Lock (Implicit) & Write Lock (Implicit)\\ \hline
-		10 & 7 & i (Mutated by Tx2) & Write Lock (Implicit) & Write Lock (Implicit)\\ \hline
+		9 & 7 & h (Mutated by Tx1) & Write Lock (Implicit) & Write Lock (Implicit) \textbf{(Blocked!)}\\ \hline
+		10 & 7 & i (Mutated by Tx2) & Write Lock (Implicit) & Write Lock (Implicit)  \textbf{(Blocked!)}\\ \hline
 	\end{tabular}
 	\caption{Implicit Lock Table in Hop-HDFS}
 	\label{table:hoplockTable}

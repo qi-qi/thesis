@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  15 SEP 2014 15:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  15 SEP 2014 16:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1161,7 +1161,7 @@ Package pdftex.def Info: figs/hdfsquota.pdf used on input line 119.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [21] [22 <./figs/INodeUML.pdf>] [23 <./figs/hdfsquota.pdf>]
-<figs/nnRPC.pdf, id=852, 513.16719pt x 507.92761pt>
+<figs/nnRPC.pdf, id=853, 513.16719pt x 507.92761pt>
 File: figs/nnRPC.pdf Graphic file (type pdf)
  <use figs/nnRPC.pdf>
 Package pdftex.def Info: figs/nnRPC.pdf used on input line 149.
@@ -1190,7 +1190,12 @@ Package pdftex.def Info: figs/dag.pdf used on input line 208.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[26] [27 <./figs/dag.pdf>]) (./chapters/Assessment.tex [28]
+[26] [27 <./figs/dag.pdf>]
+Overfull \hbox (10.9849pt too wide) in paragraph at lines 231--245
+ [][] 
+ []
+
+) (./chapters/Assessment.tex [28]
 Chapter 4.
 <figs/nn_100.pdf, id=1251, 361.35pt x 216.81pt>
 File: figs/nn_100.pdf Graphic file (type pdf)
@@ -1436,7 +1441,7 @@ fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
 o/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pf
 b>
-Output written on document.pdf (84 pages, 2865466 bytes).
+Output written on document.pdf (84 pages, 2865523 bytes).
 PDF statistics:
  1791 PDF objects out of 2073 (max. 8388607)
  1287 compressed objects within 13 object streams

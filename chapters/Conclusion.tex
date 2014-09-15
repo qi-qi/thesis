@@ -56,9 +56,7 @@ In this thesis, we provide a solution for Hop-HDFS based on optimistic concurren
 
 \section{Future Work}
 
-The result of our OCC solution is promising. Other operations in Hop-HDFS can also adopt the same approach to achieve better concurrency.
+The result of our OCC solution is promising. Other operations in Hop-HDFS can also adopt the same algorithm to achieve better performance.
 
-\noindent For create operation, we can remove the parent directory lock and use OCC to validate the semantic related group before transaction commits.
-
-\noindent Future evaluation on Hop-DHFS multiple NameNodes with OCC is needed to proof that it can greatly outperform HDFS.
+\noindent Future evaluation on Hop-HDFS in multiple NameNodes architecture with OCC solution is needed to prove that it can achieve better performance than HDFS in single NameNode architecture.
 

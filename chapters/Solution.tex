@@ -86,11 +86,11 @@ As we mentioned before, MySQL Cluster supports only the READ COMMITTED transacti
 
 \noindent After resolving the semantic related group, we take a snapshot on selected rows as well as all related rows of the committed values from database. This snapshot will be cached in-memory within its transaction. Each transaction will have its own copy of snapshot during the lifetime. All transaction operations will be performed on its own snapshot. Therefore, we called it Per-Transaction Snapshot Isolation.
 
-\noindent Before validation phase, the transaction will never fetch any data from database since it has all the semantic related rows in the cache. Therefore, the snapshot provides a consistent view of data for each transaction from read phase until validation phase: 
+\noindent Before validation phase, the transaction will never fetch any data from database since it has all the semantic related rows in the cached snapshot. Therefore, the snapshot provides a consistent view of data for each transaction from read phase until validation phase. Hence: 
 \begin{itemize}[noitemsep]
 	\item \textit{Fuzzy Read} is precluded by \textit{snapshot isolation}: As we can see from Figure~\ref{fig:snapfuzzy}, the second read of Transaction 1 read from snapshot instead of database, not affected by the value committed by Transaction 2.
 	
-	\item \textit{Phantom Read} is also precluded by \textit{snapshot isolation with Semantic Related Group}: As we can see from Figure~\ref{fig:snapphantom}, Transaction 1 snapshot the semantic related group of x after the first count operation. So its second count operation is not affected by the value inserted by Transaction 2.
+	\item \textit{Phantom Read} is also precluded by \textit{snapshot isolation on Semantic Related Group}: As we can see from Figure~\ref{fig:snapphantom}, Transaction 1 snapshot the semantic related group of x after the first count operation. So its second count operation is not affected by the value inserted by Transaction 2 since it counts from the snapshot.
 	
 \end{itemize} 
 
@@ -145,7 +145,7 @@ As we mentioned before, MySQL Cluster supports only the READ COMMITTED transacti
 \end{table}
 \section{Optimistic Concurrency Control}
 
-Our algorithm is based on \textit{Optimistic Concurrency Control} (OCC) model to improve the overall read/write performance. Transactions are allowed to perform operations without blocking each other with optimistic methods. Concurrent transactions need to pass through a \textit{validation phase} to before committing, so that the serializability is not violated. Transactions will abort and restart if they fail in the \textit{validation phase}. OCC is the key approach to help remove the parent directory lock in Hop-HDFS so that transactions can operate under the same directory concurrently.
+Our algorithm is based on \textit{Optimistic Concurrency Control} (OCC) method to improve the overall read/write performance. Transactions are allowed to perform operations without blocking each other with optimistic methods. Concurrent transactions need to pass through a \textit{validation phase} before committing, so that the serializability is not violated. Transactions will abort and restart if they fail in the \textit{validation phase}. OCC is the key approach so that the parent directory lock is not needed in Hop-HDFS. Hence, transactions can operate under the same directory concurrently.
 
 \noindent In \textit{read phase}, transactions use \textit{Read\_Committed Lock} to fetch semantic related group as snapshots and cache them in-memory for their own use.
 

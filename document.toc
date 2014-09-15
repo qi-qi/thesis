@@ -22,7 +22,8 @@
 \contentsline {section}{\numberline {2.3}MySQL Cluster}{11}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Design Principle}{11}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}The Architecture of MySQL Cluster}{12}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}The Benchmark of MySQL Cluster}{14}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.3}Fault Tolerance in MySQL Cluster}{12}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}The Benchmark of MySQL Cluster}{14}{subsection.2.3.4}
 \contentsline {section}{\numberline {2.4}Hadoop Open Platform-as-a-service and Hop-HDFS}{15}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Hadoop Open Platform-as-a-service Design Purpose}{15}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Overcoming Limitations in HDFS NameNode Architecture}{15}{subsection.2.4.2}

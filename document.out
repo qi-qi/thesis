@@ -22,46 +22,47 @@
 \BOOKMARK [1][]{section.2.3}{MySQL Cluster}{chapter.2}% 22
 \BOOKMARK [2][]{subsection.2.3.1}{Design Principle}{section.2.3}% 23
 \BOOKMARK [2][]{subsection.2.3.2}{The Architecture of MySQL Cluster}{section.2.3}% 24
-\BOOKMARK [2][]{subsection.2.3.3}{The Benchmark of MySQL Cluster}{section.2.3}% 25
-\BOOKMARK [1][]{section.2.4}{Hadoop Open Platform-as-a-service and Hop-HDFS}{chapter.2}% 26
-\BOOKMARK [2][]{subsection.2.4.1}{Hadoop Open Platform-as-a-service Design Purpose}{section.2.4}% 27
-\BOOKMARK [2][]{subsection.2.4.2}{Overcoming Limitations in HDFS NameNode Architecture}{section.2.4}% 28
-\BOOKMARK [2][]{subsection.2.4.3}{The Architecture of Hop-HDFS}{section.2.4}% 29
-\BOOKMARK [-1][]{part.2}{II Namespace Concurrency Control and Assessment}{}% 30
-\BOOKMARK [0][]{chapter.3}{Namespace Concurrency Control}{part.2}% 31
-\BOOKMARK [1][]{section.3.1}{Namespace Concurrency Control in GFS}{chapter.3}% 32
-\BOOKMARK [2][]{subsection.3.1.1}{Namespace Structure}{section.3.1}% 33
-\BOOKMARK [2][]{subsection.3.1.2}{Namespace Concurrency Control}{section.3.1}% 34
-\BOOKMARK [2][]{subsection.3.1.3}{Limitations}{section.3.1}% 35
-\BOOKMARK [1][]{section.3.2}{Namespace Concurrency Control in HDFS}{chapter.3}% 36
-\BOOKMARK [2][]{subsection.3.2.1}{Namespace Structure}{section.3.2}% 37
-\BOOKMARK [2][]{subsection.3.2.2}{Namespace Concurrency Control}{section.3.2}% 38
-\BOOKMARK [2][]{subsection.3.2.3}{Limitations}{section.3.2}% 39
-\BOOKMARK [1][]{section.3.3}{Namespace Concurrency Control in Hop-HDFS}{chapter.3}% 40
-\BOOKMARK [2][]{subsection.3.3.1}{Namespace Structure}{section.3.3}% 41
-\BOOKMARK [2][]{subsection.3.3.2}{Namespace Concurrency Control}{section.3.3}% 42
-\BOOKMARK [2][]{subsection.3.3.3}{Limitations}{section.3.3}% 43
-\BOOKMARK [0][]{chapter.4}{Namespace Operation Performance Assessment}{part.2}% 44
-\BOOKMARK [1][]{section.4.1}{NameNode Throughput Benchmark}{chapter.4}% 45
-\BOOKMARK [1][]{section.4.2}{Parent Directory Contention Assessment}{chapter.4}% 46
-\BOOKMARK [-1][]{part.3}{III Algorithmic Solution}{}% 47
-\BOOKMARK [0][]{chapter.5}{Solution}{part.3}% 48
-\BOOKMARK [1][]{section.5.1}{Resolving the Semantic Related Group}{chapter.5}% 49
-\BOOKMARK [1][]{section.5.2}{Per-Transaction Snapshot Isolation}{chapter.5}% 50
-\BOOKMARK [1][]{section.5.3}{ClusterJ and Lock Mode in MySQL Cluster}{chapter.5}% 51
-\BOOKMARK [1][]{section.5.4}{Optimistic Concurrency Control}{chapter.5}% 52
-\BOOKMARK [1][]{section.5.5}{Total Order Update, Abort and Version Increase in Update Phase}{chapter.5}% 53
-\BOOKMARK [1][]{section.5.6}{Pseudocode of the Complete Algorithm}{chapter.5}% 54
-\BOOKMARK [-1][]{part.4}{IV Evaluation and Conclusion}{}% 55
-\BOOKMARK [0][]{chapter.6}{Evaluation}{part.4}% 56
-\BOOKMARK [1][]{section.6.1}{Experimental Testbed}{chapter.6}% 57
-\BOOKMARK [1][]{section.6.2}{Parent Directory Contention Assessment}{chapter.6}% 58
-\BOOKMARK [1][]{section.6.3}{Read-Write Mixed Workload Assessment}{chapter.6}% 59
-\BOOKMARK [1][]{section.6.4}{The Size of Semantic Related Group}{chapter.6}% 60
-\BOOKMARK [1][]{section.6.5}{OCC Performance with Different Size of Conflicts}{chapter.6}% 61
-\BOOKMARK [1][]{section.6.6}{Correctness Assessment}{chapter.6}% 62
-\BOOKMARK [0][]{chapter.7}{Conclusion and Future Work}{part.4}% 63
-\BOOKMARK [1][]{section.7.1}{Conclusion}{chapter.7}% 64
-\BOOKMARK [1][]{section.7.2}{Future Work}{chapter.7}% 65
-\BOOKMARK [-1][]{part.5}{V Appendices}{}% 66
-\BOOKMARK [0][]{chapter.1}{Apache HDFS Unit Tests Passing List}{part.5}% 67
+\BOOKMARK [2][]{subsection.2.3.3}{Fault Tolerance in MySQL Cluster}{section.2.3}% 25
+\BOOKMARK [2][]{subsection.2.3.4}{The Benchmark of MySQL Cluster}{section.2.3}% 26
+\BOOKMARK [1][]{section.2.4}{Hadoop Open Platform-as-a-service and Hop-HDFS}{chapter.2}% 27
+\BOOKMARK [2][]{subsection.2.4.1}{Hadoop Open Platform-as-a-service Design Purpose}{section.2.4}% 28
+\BOOKMARK [2][]{subsection.2.4.2}{Overcoming Limitations in HDFS NameNode Architecture}{section.2.4}% 29
+\BOOKMARK [2][]{subsection.2.4.3}{The Architecture of Hop-HDFS}{section.2.4}% 30
+\BOOKMARK [-1][]{part.2}{II Namespace Concurrency Control and Assessment}{}% 31
+\BOOKMARK [0][]{chapter.3}{Namespace Concurrency Control}{part.2}% 32
+\BOOKMARK [1][]{section.3.1}{Namespace Concurrency Control in GFS}{chapter.3}% 33
+\BOOKMARK [2][]{subsection.3.1.1}{Namespace Structure}{section.3.1}% 34
+\BOOKMARK [2][]{subsection.3.1.2}{Namespace Concurrency Control}{section.3.1}% 35
+\BOOKMARK [2][]{subsection.3.1.3}{Limitations}{section.3.1}% 36
+\BOOKMARK [1][]{section.3.2}{Namespace Concurrency Control in HDFS}{chapter.3}% 37
+\BOOKMARK [2][]{subsection.3.2.1}{Namespace Structure}{section.3.2}% 38
+\BOOKMARK [2][]{subsection.3.2.2}{Namespace Concurrency Control}{section.3.2}% 39
+\BOOKMARK [2][]{subsection.3.2.3}{Limitations}{section.3.2}% 40
+\BOOKMARK [1][]{section.3.3}{Namespace Concurrency Control in Hop-HDFS}{chapter.3}% 41
+\BOOKMARK [2][]{subsection.3.3.1}{Namespace Structure}{section.3.3}% 42
+\BOOKMARK [2][]{subsection.3.3.2}{Namespace Concurrency Control}{section.3.3}% 43
+\BOOKMARK [2][]{subsection.3.3.3}{Limitations}{section.3.3}% 44
+\BOOKMARK [0][]{chapter.4}{Namespace Operation Performance Assessment}{part.2}% 45
+\BOOKMARK [1][]{section.4.1}{NameNode Throughput Benchmark}{chapter.4}% 46
+\BOOKMARK [1][]{section.4.2}{Parent Directory Contention Assessment}{chapter.4}% 47
+\BOOKMARK [-1][]{part.3}{III Algorithmic Solution}{}% 48
+\BOOKMARK [0][]{chapter.5}{Solution}{part.3}% 49
+\BOOKMARK [1][]{section.5.1}{Resolving the Semantic Related Group}{chapter.5}% 50
+\BOOKMARK [1][]{section.5.2}{Per-Transaction Snapshot Isolation}{chapter.5}% 51
+\BOOKMARK [1][]{section.5.3}{ClusterJ and Lock Mode in MySQL Cluster}{chapter.5}% 52
+\BOOKMARK [1][]{section.5.4}{Optimistic Concurrency Control}{chapter.5}% 53
+\BOOKMARK [1][]{section.5.5}{Total Order Update, Abort and Version Increase in Update Phase}{chapter.5}% 54
+\BOOKMARK [1][]{section.5.6}{Pseudocode of the Complete Algorithm}{chapter.5}% 55
+\BOOKMARK [-1][]{part.4}{IV Evaluation and Conclusion}{}% 56
+\BOOKMARK [0][]{chapter.6}{Evaluation}{part.4}% 57
+\BOOKMARK [1][]{section.6.1}{Experimental Testbed}{chapter.6}% 58
+\BOOKMARK [1][]{section.6.2}{Parent Directory Contention Assessment}{chapter.6}% 59
+\BOOKMARK [1][]{section.6.3}{Read-Write Mixed Workload Assessment}{chapter.6}% 60
+\BOOKMARK [1][]{section.6.4}{The Size of Semantic Related Group}{chapter.6}% 61
+\BOOKMARK [1][]{section.6.5}{OCC Performance with Different Size of Conflicts}{chapter.6}% 62
+\BOOKMARK [1][]{section.6.6}{Correctness Assessment}{chapter.6}% 63
+\BOOKMARK [0][]{chapter.7}{Conclusion and Future Work}{part.4}% 64
+\BOOKMARK [1][]{section.7.1}{Conclusion}{chapter.7}% 65
+\BOOKMARK [1][]{section.7.2}{Future Work}{chapter.7}% 66
+\BOOKMARK [-1][]{part.5}{V Appendices}{}% 67
+\BOOKMARK [0][]{chapter.1}{Apache HDFS Unit Tests Passing List}{part.5}% 68

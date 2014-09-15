@@ -134,7 +134,7 @@ In a multiuser database management system, \textit{Concurrency Control} permits 
 \section{MySQL Cluster}
 
 \subsection{Design Principle}
-\textit{MySQL Cluster} is a highly available version of MySQL, an open source database management system, with high-redundancy adapted for the distributed computing environment. It integrates the standard MySQL server with an in-memory clustered storage engine called \textit{NDB} (which stands for “Network DataBase”). MySQL Cluster is designed not to have any single point of failure a shared-nothing system running on inexpensive hardware~\cite{mysqlcluster}.
+\textit{MySQL Cluster} is a highly available version of MySQL, an open source database management system, with high-redundancy adapted for the distributed computing environment. It integrates the standard MySQL server with an in-memory clustered storage engine called \textit{NDB} (which stands for “Network DataBase”). MySQL Cluster is designed not to have any single point of failure as a shared-nothing system running on inexpensive hardware~\cite{mysqlcluster}.
 
 \subsection{The Architecture of MySQL Cluster}
 \noindent A MySQL Cluster consists of different processes, called the \textit{nodes}. The communication between the nodes can be seen from Figure~\ref{fig:mysqlclusterarchitecture}. \textit{MySQL Servers} (mysqld, for query processing and NDB data accessing) are the main nodes. \textit{Data Nodes} (ndbd) serve as storage nodes. Besides, there will be one or more \textit{NDB Management Servers} (ndb\_mgmd).
@@ -145,6 +145,8 @@ In a multiuser database management system, \textit{Concurrency Control} permits 
 	\caption{The Architecture of MySQL Cluster \protect \cite{mysqlcluster}}
 	\label{fig:mysqlclusterarchitecture}
 \end{figure}
+
+\subsection{Fault Tolerance in MySQL Cluster}
 
 \noindent For fault tolerance, data in MySQL Cluster is replicated across multiple ndbds. Ndbds are divided into \textit{node groups}. Each unit of data is called a \textit{partition} stored by ndbd. The partitions of data are replicated within the same \textit{node group}. The number of \textit{node groups} is calculated as:
 
@@ -180,7 +182,7 @@ According to the white paper published by Oracle~\cite{mysqlclusterwhitepaper}, 
 	\label{fig:mysqlwrite}
 \end{figure}
 
-\noindent Therefore, the high operations throughput, \textit{72 million reads and 19.5 million writes operations per second}, of MySQL Cluster makes it the choice to be the distributed in-memory storage layer for the metadata in Hop-HDFS. But the trade off is that the NDB cluster storage engine supports only the \textit{READ COMMITTED} transaction isolation level~\cite{mysqlreadcommited}, which means that we need to put extra effort on the application layer to preclude anomalies in our implementation. See Chapter~\ref{ch:Design}.
+\noindent Therefore, the high operation throughput, \textit{72 million reads and 19.5 million writes operations per second}, of MySQL Cluster makes it the choice to be the distributed in-memory storage layer for the metadata in Hop-HDFS. But the trade off is that the NDB cluster storage engine supports only the \textit{READ COMMITTED} transaction isolation level~\cite{mysqlreadcommited}, which means that we need to put extra effort on the application layer to preclude \textit{anomalies} in our implementation. See Chapter~\ref{ch:Design}.
 
 \section{Hadoop Open Platform-as-a-service and Hop-HDFS}
 \label{sc:Hop-HDFS}

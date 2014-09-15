@@ -42,7 +42,7 @@ A \textit{NNThroughtBenchmark}~\cite{shvachko2010hdfs} tool has been developed t
 	\label{fig:nntp}
 \end{figure}
 
-\noindent From Table~\ref{table:nntpb}, we find that the throughput of \textit{mkdirs} in PCC is 64.9 \% of HDFS, while others are all less than 30\%. The reason why \textit{create, delete and rename} is even worse is because they involve multiple NameNode primitive operations. For example, to finish \textit{create} operations, it took two NameNode primitive operations: \textit{startFile} and \textit{completeFile}. Since each NameNode primitive operation is implemented as a single transaction in Hop-HDFS, the more primitive operations involved, the more parent write locks will be, which means that more transactions will be blocked.
+\noindent From Table~\ref{table:nntpb}, we find that the throughput of \textit{mkdirs} in PCC is 64.9 \% of HDFS, while others are all less than 30\%. The reason why the performance of \textit{create, delete and rename} is worse is because they involve multiple NameNode primitive operations. For example, to finish the \textit{create} operations, it takes two NameNode primitive operations (two transactions): \textit{startFile} and \textit{completeFile}. Since each NameNode primitive operation is implemented as a single transaction, the more primitive operations involved, the more parent write locks will be, which means that more transactions will be blocked.
 
 \begin{table}[h]
 	\centering

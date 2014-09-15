@@ -39,7 +39,7 @@
 
 \section{Distributed File Systems}
 
-Distributed File systems is the fundamental in big data era. They provide a high available storage service with fault tolerance for data corruption, which enable petabytes of data to be persisted across multiple low cost commodity machines reliably.
+Distributed File system is the fundamental storage layer in big data era. They provide a high available storage service with fault tolerance for data corruption, which enable petabytes of data to be persisted across multiple low cost commodity machines reliably.
 
 \subsection{The Google File System}
 
@@ -50,8 +50,8 @@ Distributed File systems is the fundamental in big data era. They provide a high
 	\item The system runs on top on inexpensive commodity hardware so component may often fails.
 	\item Files stored on the system are fairly huge than the transitional standards, which means that Gigabyte files are common.
 	\item There are three kinds of workloads in the system: large streaming reads, small random reads and large sequential writes which append data to files.
-	\item Efficiently well-defined semantics for concurrent appends to the same file is needed.
-	\item Data processing in bulk with high sustained bandwidth is more important than individual read or write with low latency.
+	\item Well-defined semantics for concurrent appends to the same file is needed.
+	\item Data processing in bulk with high sustained bandwidth is more important than individual low latency read or write.
 \end{itemize}
 
 \subsubsection{The Architecture of GFS}
@@ -66,7 +66,7 @@ Distributed File systems is the fundamental in big data era. They provide a high
 
 \noindent Files are divided into fixed size \textit{chunks} stored in \textit{chunkservers}. For fault tolerance, each chunk is replicated across multiple chunkservers and the default replication factor is three.
 
-\noindent The \textit{master} is a metadata server maintaining namespace, access control information, the file-chunk mappings and chunks' current locations. Besides, it is also responsible for system-wide activities including garbage collection, chunk lease management, chunk migration between chunkservers.
+\noindent The \textit{master} is a metadata server maintaining namespace, access control information, the file-chunk mappings and chunks' current locations. Besides, it is also responsible for system-wide activities including garbage collection, chunk lease management and chunk migrations.
 
 \noindent Although this single master server architecture simplifies the design of GFS, especially on complexed tasks like chunk placement and replication decisions using global knowledge, yet the master's involvement in reads and writes needs to be minimized otherwise it will become a bottleneck in the system.
 

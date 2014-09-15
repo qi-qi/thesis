@@ -38,7 +38,13 @@
 
 \section{Conclusion}
 
-AAA
+In this thesis, we first analyze the limitation in HDFS NameNode implementation and provide an overview of Hop-HDFS illustrating how we overcome those problems. 
+
+\noindent Second, we give a systematic assessment on precedent works for Hop-HDFS comparing to HDFS, and also analyze the restriction when using pessimistic locking mechanisms to ensure the strong consistency semantics.
+
+\noindent Third, based on the investigation of current shortcomings, we provide a solution based on Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group to improve the throughput performance in the NamNode while maintaining the strong consistent semantics.
+
+\noindent Finally, as a proof of concept, the evaluation shows that our solution outperforms the previous work of Hop-HDFS up to 70 \%. The correctness of our implementation has been validated by 300+ Apache HDFS unit tests passing.
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
@@ -48,5 +54,5 @@ AAA
 
 \section{Future Work}
 
-BBB
+Based on the same idea of our solution, other operations, like \textit{create, rename} in the NameNode can also adopt the approach to improve the throughput.
 

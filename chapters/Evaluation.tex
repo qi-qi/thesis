@@ -148,4 +148,11 @@ When OCC conflicts happen, transactions will abort, wait for some random time an
 	\label{table:conflicts}
 \end{table}
 
-\noindent From Figure~\ref{fig:rwWorkload} and Table~\ref{fig:rw}, if all operations conflict, the performance degrades by 19.1\%~\footnote{$(14.53-11.75) \div 14.53 = 19.1$\%} for maximum.
+\noindent From Figure~\ref{fig:rwWorkload} and Table~\ref{fig:rw}, we can calculate that the maximum performance degradation is 19.1\% when all operations conflict:
+\begin{center}
+	$(14.53-11.75) \div 14.53 = 19.1\%$
+\end{center}
+
+\section{Correctness Assessment}
+
+The correctness of our OCC implementation for \textit{mkdirs()}~\footnote{other operations are in PCC in Hop-HDFS} has been validated by 300+ Apache HDFS 2.0.4 Alpha unit tests passing. The full passing tests list can be found in Appendix~\ref{ch:Testing}.

@@ -12,8 +12,8 @@ set xlabel "Total Number of Concurrent Operations Under the Same Parent Director
 set ylabel "Elapsed Time (Second)"
 set grid
 
-plot "pcc_occ_rw.data" using 2:xtic(1) title "PCC",\
-	"" using 3 title "OCC"
+plot "pcc_occ_rw.data" using 2:xtic(1) title "PCC" lt rgb "#4A8C61",\
+	"" using 3 title "OCC" lt rgb "#54778C"
 #plot "nn_100.data" using 2:xtic(1) title "Total" lt rgb "#406090",\
 #     "" using 3 title "From web" lt rgb "#40FF00"
 #pause -1 "Hit any key to continue"

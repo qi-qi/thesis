@@ -9,7 +9,7 @@ set boxwidth 0.9
 set xtic rotate by -45 scale 0 font ",8"
 
 set title "OCC Performance with Different Size of Conflicts"
-set xlabel "Total Number of Sub-Directories Created"
+set xlabel "Total Number of Sub-Directories Created for 10000 Operations"
 set ylabel "Elapsed Time (Second)"
 set grid
 

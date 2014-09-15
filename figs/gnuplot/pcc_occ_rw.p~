@@ -11,7 +11,6 @@ set title "OCC Performance Improvement on Read-Write Mixed Workload"
 set xlabel "Total Number of Concurrent Operations Under the Same Parent Directory"
 set ylabel "Elapsed Time (Second)"
 set grid
-set xtic rotate by -45 scale 0
 
 plot "pcc_occ_rw.data" using 2:xtic(1) title "PCC",\
 	"" using 3 title "OCC"

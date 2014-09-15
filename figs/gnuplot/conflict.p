@@ -13,7 +13,7 @@ set xlabel "Total Number of Sub-Directories Created for 10000 Operations"
 set ylabel "Elapsed Time (Second)"
 set grid
 
-plot "conflict.data" using 2:xtic(1) title "OCC"
+plot "conflict.data" using 2:xtic(1) title "OCC" lt rgb "#54778C"
 #plot "nn_100.data" using 2:xtic(1) title "Total" lt rgb "#406090",\
 #     "" using 3 title "From web" lt rgb "#40FF00"
 #pause -1 "Hit any key to continue"

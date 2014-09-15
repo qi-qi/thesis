@@ -7,7 +7,7 @@ set style histogram cluster gap 1
 set style fill solid border -1
 set boxwidth 0.9
 
-set title "Parent Directory Contention Assessment among HDFS, PCC and OCC"
+set title "OCC Performance Improvement on Parent Directory Contention"
 set xlabel "Number of Concurrent Creations Under the Same Parent Directory"
 set ylabel "Elapsed Time (Second)"
 set grid

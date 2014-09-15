@@ -12,9 +12,6 @@ set xlabel "Number of Concurrent Creations Under the Same Parent Directory"
 set ylabel "Elapsed Time (Second)"
 set grid
 
-plot "hdfs_pcc_occ_parent.data" using 2:xtic(1) title "HDFS",\
-	"" using 3 title "PCC",\
-	"" using 4 title "OCC"
-#plot "nn_100.data" using 2:xtic(1) title "Total" lt rgb "#406090",\
-#     "" using 3 title "From web" lt rgb "#40FF00"
-#pause -1 "Hit any key to continue"
+plot "hdfs_pcc_occ_parent.data" using 2:xtic(1) title "HDFS" lt rgb "#BF5A36",\
+	"" using 3 title "PCC" lt rgb "#4A8C61",\
+	"" using 4 title "OCC" lt rgb "#54778C"

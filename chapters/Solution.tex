@@ -86,6 +86,8 @@ As we mentioned before, MySQL Cluster supports only the READ COMMITTED transacti
 
 \noindent After resolving the semantic related group, we take a snapshot on selected rows as well as all related rows of the committed values from database. This snapshot will be cached in-memory within its transaction. Each transaction will have its own copy of snapshot during the lifetime. All transaction operations will be performed on its own snapshot. Therefore, we called it Per-Transaction Snapshot Isolation.
 
+\subsection{Fuzzy Read and Phantom Read are Precluded}
+
 \noindent Before validation phase, the transaction will never fetch any data from database since it has all the semantic related rows in the cached snapshot. Therefore, the snapshot provides a consistent view of data for each transaction from read phase until validation phase. Hence: 
 \begin{itemize}[noitemsep]
 	\item \textit{Fuzzy Read} is precluded by \textit{snapshot isolation}: As we can see from Figure~\ref{fig:snapfuzzy}, the second read of Transaction 1 read from snapshot instead of database, not affected by the value committed by Transaction 2.
@@ -147,15 +149,17 @@ As we mentioned before, MySQL Cluster supports only the READ COMMITTED transacti
 
 Our algorithm is based on \textit{Optimistic Concurrency Control} (OCC) method to improve the overall read/write performance. Transactions are allowed to perform operations without blocking each other with optimistic methods. Concurrent transactions need to pass through a \textit{validation phase} before committing, so that the serializability is not violated. Transactions will abort and restart if they fail in the \textit{validation phase}. OCC is the key approach so that the parent directory lock is not needed in Hop-HDFS. Hence, transactions can operate under the same directory concurrently.
 
-\noindent In \textit{read phase}, transactions use \textit{Read\_Committed Lock} to fetch semantic related group as snapshots and cache them in-memory for their own use.
+\noindent In \textit{read phase}, transactions use \textit{Read\_Committed Lock Mode} to fetch semantic related group as snapshots and cache them in-memory for their own use without being blocked.
 
-\noindent In \textit{validation phase}, transactions will fetch the modified rows using \textit{Exclusive Lock} and fetch the semantic related rows using \textit{Shared Lock}. Then they compare the fetched values and the original copy of snapshot in the cache for their \textit{versions}. If they are all the same, go to \textit{update phase}. If not, abort current transaction, wait for a random milliseconds, and retry a new transaction from \textit{read phase}.
+\noindent In \textit{validation phase}, transactions will fetch the modified rows using \textit{Exclusive Lock} and fetch the semantic related rows using \textit{Shared Lock}. Then they compare the fetched values and the snapshot copy in the cache for their \textit{versions}. If versions are all the same, go to \textit{update phase}. If not, abort current transaction, wait for a random milliseconds, and retry a new transaction from \textit{read phase}.
 
-\noindent Note that using \textit{Shared Lock} to fetch semantic related rows can guarantee a consistent view in database until the transaction goes to the update phase, and also allows other Shared Locks taken on the same rows. 
+\noindent Note that using \textit{Shared Lock} to fetch semantic related rows can guarantee a consistent view in database until the transaction commits while allowing other Shared Locks taken on the same rows for their validation phase.
 
-\noindent In order to avoid multiple database round trips, we will do the fetching in batch processing provided by \textit{ClusterJ}.
+\noindent In order to avoid multiple database round trips, we will do the fetching in batch processing using \textit{ClusterJ}.
 
-\noindent \textit{Write skew} anomaly is precluded by the validation phase on the snapshot of semantic related group in OCC, because constraint violation on all related data rows will be checked before transaction committed. See Figure~\ref{fig:snapwriteskew} to see how optimistic concurrency control with snapshot isolation on semantic related group precludes \textit{Write Skew}.
+\subsection{Write Skew is Precluded}
+
+\noindent The \textit{Write Skew} anomaly is precluded by the validation phase on the snapshot of semantic related group in OCC, because constraint violation on all related data rows will be checked before transaction committed. See Figure~\ref{fig:snapwriteskew} for how optimistic concurrency control with snapshot isolation on semantic related group precludes \textit{Write Skew}.
 
 \begin{figure}[h]
 	\centering

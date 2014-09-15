@@ -21,7 +21,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Snapshot Isolation Precludes Fuzzy Read\relax }}{38}{figure.caption.35}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Snapshot Isolation with Semantic Related Group Precludes Phantom Read\relax }}{38}{figure.caption.36}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group Precludes Write Skew\relax }}{40}{figure.caption.38}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group Precludes Write Skew\relax }}{41}{figure.caption.38}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Workload of Parent Directory Contention Assessment\relax }}{46}{figure.caption.39}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces OCC Performance Improvement on Parent Directory Contention\relax }}{47}{figure.caption.40}

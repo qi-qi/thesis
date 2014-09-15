@@ -87,14 +87,14 @@ The \textit{Hadoop Distributed File System} (HDFS) is inspired by the Google Fil
 
 \noindent Files in HDFS are split into smaller blocks stored in \textit{DataNodes}. For fault tolerance, each block is replicated across multiple \textit{DataNodes}.
 
-\noindent The \textit{NameNode} is a single dedicated metadata server maintaining the namespace, access control information, and file blocks mappings to DataNodes. The entire namespace is kept in-memory, called the \textit{image}, of the \textit{NameNode}. Its related persistent record, called the \textit{checkpoint} is stored in the local physical file system. The modification, \textit{editlogs}, of the \textit{image}, called the \textit{journal}, is also persisted in the local physical file system. Copies of the \textit{checkpoints} and the \textit{journals} can made at other servers for durability. Therefore, the \textit{NameNode} restores the namespace by loading the checkpoint and replaying the journal during its restart.
+\noindent The \textit{NameNode} is a single dedicated metadata server maintaining the namespace, access control information, and file blocks mappings to DataNodes. The entire namespace is kept in-memory, called the \textit{image}, of the \textit{NameNode}. The persistent record of \textit{image}, called the \textit{checkpoint}, is stored in the local physical file system. The modification of the namespace (\textit{image}), called the \textit{journal}, is also persisted in the local physical file system. Copies of the \textit{checkpoints} and the \textit{journals} can be stored at other servers for durability. Therefore, the \textit{NameNode} restores the namespace by loading the checkpoint and replaying the journal during its restart.
 
 \subsubsection{Single-Writer, Multiple-reader Model}
-Once a file is created, written with data and closed by the client application, the bytes written can not be modified. The file can only be reopened for append.
+Once a file is created, written with data and closed by a client application, the written bytes can not be modified. The file can only be reopened for append.
 
-\noindent HDFS implements a \textit{single-Writer, multiple-reader} model using lease management. A HDFS client opens a file for writing is granted a lease for the file and no other client can write to that file at the same time. The writing client needs to renew the lease periodically with the NameNode so that it can keep writing to the file. Otherwise, once the \textit{soft limit} expires, other clients can preempt the lease. If the \textit{hard limit} (one hour) expires and the client didn't renew the lease, HDFS will close the file on behalf of the writer and recover the lease.
+\noindent HDFS implements a \textit{single-Writer, multiple-reader} model by using lease management. A HDFS client opens a file for writing is granted a lease of the file and no other clients can write to that file at the same time. The writing client needs to renew the lease periodically with the NameNode so that it can keep writing to the file. Otherwise, once the \textit{soft limit} expires, other clients can preempt the lease. If the \textit{hard limit} (one hour) expires and the client didn't renew the lease, HDFS will close the file on behalf of the writer and recover the lease.
 
-\noindent HDFS allows a client to read a file which is open for writing, which means that the lease does not prevent other clients' reading. A file can have multiple concurrent readers.
+\noindent HDFS allows a client to read a file that is open for writing, which means that the lease does not prevent other clients' reading. A file can have multiple concurrent readers.
 
 \section{Concurrency Control and Isolation Level}
 
@@ -103,16 +103,16 @@ In a multiuser database management system, \textit{Concurrency Control} permits 
 
 \noindent In general, there are three concurrency control methods~\cite{franklin1997concurrency}:
 \begin{enumerate}[noitemsep]
-	\item \textbf{Pessimistic Concurrency Control} (PCC): depends on \textit{Two-Phase Locking} (2PL) to block transactions when running on to the shared data so that interference does not occur.
-	\item \textbf{Optimistic Concurrency Control} (OCC): depends on validation to ensure serializability so that before transactions commit, the reads and writes performed by a validating transaction di not conflict with other concurrent transactions. If not, the validating transaction will be aborted and restarted.
-	\item \textbf{Multi Version Concurrency Control} (MVCC): when data items are updating by transactions, their previous versions will retain so that other read-only transactions will be provided with these older versions, allowing a consistent snapshot of the database to be presented.
+	\item \textbf{Pessimistic Concurrency Control} (PCC): depends on \textit{Two-Phase Locking} (2PL) to block transactions so that interference does not occur when transactions run on to the shared data.
+	\item \textbf{Optimistic Concurrency Control} (OCC): depends on validation to ensure serializability. Before transactions commit, the reads and writes should not conflict with other concurrent transactions. If not, the validatation phase will abort and retry the current transaction.
+	\item \textbf{Multi Version Concurrency Control} (MVCC): when data items are updating by transactions, their previous versions will retain so that other read-only transactions can be provided with these older versions instead of blocking to read new data. It allows a consistent snapshot of the database to be presented.
 \end{enumerate}
 
 \subsection{Isolation Level for Concurrent Transactions}
 
 \noindent Complete isolation of concurrent running transactions might make one transaction not possible to perform an update into a database table being queried by another transaction. Therefore, real-world databases will provide different levels of transaction isolation so that data consistency will be compromised for performance.
 
-\noindent Four isolation levels are defined in ANSI/ISO SQL-92 specifications~\cite{ansi1992x3}: (1) \textit{Read Uncommitted} (2) \textit{Read Committed} (3) \textit{Repeatable Read} (4) \textit{Serializable}. But a new isolation level, \textit{Snapshot Isolation} and the \textit{anomalies} characterized by isolation types is re-defined in the paper \textit{A Critique of ANSI SQL Isolation Levels}~\cite{berenson1995critique}.
+\noindent Therefore, there are four isolation levels are defined in ANSI/ISO SQL-92 specifications~\cite{ansi1992x3}: (1) \textit{Read Uncommitted} (2) \textit{Read Committed} (3) \textit{Repeatable Read} (4) \textit{Serializable}. But a new isolation level, \textit{Snapshot Isolation} and the \textit{anomalies} characterized by isolation types is re-defined in the paper \textit{A Critique of ANSI SQL Isolation Levels}~\cite{berenson1995critique}.
 
 \begin{table}[h]
 	\centering
@@ -130,7 +130,7 @@ In a multiuser database management system, \textit{Concurrency Control} permits 
 	\label{table:anomaly}
 \end{table}
 
-\noindent Full definitions of all the anomalies mentioned in Table~\ref{table:anomaly} can be found in the paper \textit{A Critique of ANSI SQL Isolation Levels}. We will discuss how we preclude \textit{fuzzy read, phantom and write skew} in our solution based on \textit{Snapshot Isolation} level in Chapter~\ref{ch:Design}.
+\noindent Full definitions of all the anomalies mentioned in Table~\ref{table:anomaly} can be found in the paper \textit{A Critique of ANSI SQL Isolation Levels}. We will discuss how we preclude \textit{fuzzy read, phantom and write skew} in our solution, which is based on \textit{Snapshot Isolation} level in Chapter~\ref{ch:Design}.
 \section{MySQL Cluster}
 
 \subsection{Design Principle}

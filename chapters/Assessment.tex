@@ -57,6 +57,7 @@ A \textit{NNThroughtBenchmark}~\cite{shvachko2010hdfs} tool has been developed t
 \end{table}
 
 \section{Parent Directory Contention Assessment}
+\label{sec:pdcassement}
 The worst case in PCC (Hop-HDFS) happens when all concurrent operations try to work under the same directory. Even though they mutate different INodes, all related transactions will put a parent directory write lock to block each other. Therefore, the parent directory becomes a contention point.
 
 \noindent Here we design a test for the parent directory contention assessment. We build a thread pool and its size is 1024. With this thread pool, we have three tests with 1000, 10000 and 100000 concurrent clients separately. Each client creates one sub-directory. All these sub-directories are different, but they are all created under the same parent directory. The parent directory is the contention point in each task. We measure the elapsed time to finish all the concurrent creation tasks in each test.

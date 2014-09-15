@@ -55,9 +55,12 @@
 \BOOKMARK [-1][]{part.4}{IV Evaluation and Conclusion}{}% 55
 \BOOKMARK [0][]{chapter.6}{Evaluation}{part.4}% 56
 \BOOKMARK [1][]{section.6.1}{Experimental Testbed}{chapter.6}% 57
-\BOOKMARK [1][]{section.6.2}{Performance Comparison}{chapter.6}% 58
-\BOOKMARK [0][]{chapter.7}{Conclusion and Future Work}{part.4}% 59
-\BOOKMARK [1][]{section.7.1}{Conclusion}{chapter.7}% 60
-\BOOKMARK [1][]{section.7.2}{Future Work}{chapter.7}% 61
-\BOOKMARK [-1][]{part.5}{V Appendices}{}% 62
-\BOOKMARK [0][]{chapter.1}{Apache HDFS Unit Tests Passing List}{part.5}% 63
+\BOOKMARK [1][]{section.6.2}{Parent Directory Contention Assessment}{chapter.6}% 58
+\BOOKMARK [1][]{section.6.3}{Read-Write Mixed Workload Assessment}{chapter.6}% 59
+\BOOKMARK [1][]{section.6.4}{The Size of Semantic Related Group}{chapter.6}% 60
+\BOOKMARK [1][]{section.6.5}{OCC Performance with Different Size of Conflicts}{chapter.6}% 61
+\BOOKMARK [0][]{chapter.7}{Conclusion and Future Work}{part.4}% 62
+\BOOKMARK [1][]{section.7.1}{Conclusion}{chapter.7}% 63
+\BOOKMARK [1][]{section.7.2}{Future Work}{chapter.7}% 64
+\BOOKMARK [-1][]{part.5}{V Appendices}{}% 65
+\BOOKMARK [0][]{chapter.1}{Apache HDFS Unit Tests Passing List}{part.5}% 66

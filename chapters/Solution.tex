@@ -178,9 +178,9 @@ We have a total order update rule in update phase so that dead lock will not occ
 	\caption{Pseudocode of the Complete Algorithm \\ Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}
 	\label{algo:pseudocode}
 	\begin{algorithmic}[1]
-		\STATE {\textbf{init:} restart = \TRUE, try = 0, path = operation.src}
+		\STATE {\textbf{init:} restart = \TRUE, try = 0, path = operation.src, TotalRetry = 10}
 		
-		\WHILE{restart \AND try $<$ 5}
+		\WHILE{restart \AND try $<$ TotalRetry}
 			\STATE {restart = \FALSE}
 			\STATE {try += 1}
 			\STATE {tx.snapshot.clear()}
@@ -212,10 +212,12 @@ We have a total order update rule in update phase so that dead lock will not occ
 					\STATE {return \textbf{SUCCESS} // HDFS Operation Success and Return}
 				\ELSE
 					\STATE {tx.abort()} 
+					\STATE{waitForRandomTime()}
 					\STATE{retry = \TRUE}
 				\ENDIF
 			\ELSE 
 				\STATE {tx.abort()}
+				\STATE{waitForRandomTime()}
 				\STATE{retry = \TRUE}
 			\ENDIF
 		\ENDWHILE

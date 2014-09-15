@@ -23,5 +23,11 @@
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Snapshot Isolation with Semantic Related Group Precludes Phantom Read\relax }}{40}{figure.caption.35}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group Precludes Write Skew\relax }}{42}{figure.caption.37}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Workload of Parent Directory Contention Assessment\relax }}{48}{figure.caption.38}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces OCC Performance Improvement on Parent Directory Contention\relax }}{49}{figure.caption.39}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Read-Write Mixed Workload\relax }}{50}{figure.caption.41}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces OCC Performance Improvement on Read-Write Mixed Workload\relax }}{51}{figure.caption.42}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces The Size of Semantic Related Group and Related Execution Time\relax }}{52}{figure.caption.44}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces OCC Performance with Different Size of Conflicts\relax }}{52}{figure.caption.45}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

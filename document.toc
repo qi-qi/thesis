@@ -55,9 +55,12 @@
 \contentsline {part}{IV\hspace {1em}Evaluation and Conclusion}{45}{part.4}
 \contentsline {chapter}{\numberline {6}Evaluation}{47}{chapter.6}
 \contentsline {section}{\numberline {6.1}Experimental Testbed}{47}{section.6.1}
-\contentsline {section}{\numberline {6.2}Performance Comparison}{47}{section.6.2}
-\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{49}{chapter.7}
-\contentsline {section}{\numberline {7.1}Conclusion}{49}{section.7.1}
-\contentsline {section}{\numberline {7.2}Future Work}{49}{section.7.2}
-\contentsline {part}{V\hspace {1em}Appendices}{55}{part.5}
-\contentsline {chapter}{\numberline {A}Apache HDFS Unit Tests Passing List}{57}{chapter.1}
+\contentsline {section}{\numberline {6.2}Parent Directory Contention Assessment}{47}{section.6.2}
+\contentsline {section}{\numberline {6.3}Read-Write Mixed Workload Assessment}{48}{section.6.3}
+\contentsline {section}{\numberline {6.4}The Size of Semantic Related Group}{49}{section.6.4}
+\contentsline {section}{\numberline {6.5}OCC Performance with Different Size of Conflicts}{50}{section.6.5}
+\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{53}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusion}{53}{section.7.1}
+\contentsline {section}{\numberline {7.2}Future Work}{53}{section.7.2}
+\contentsline {part}{V\hspace {1em}Appendices}{59}{part.5}
+\contentsline {chapter}{\numberline {A}Apache HDFS Unit Tests Passing List}{61}{chapter.1}

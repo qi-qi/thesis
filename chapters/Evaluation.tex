@@ -111,9 +111,12 @@ In this experiment, we did a test for a read-write mixed workload assessment whi
 
 \section{The Size of Semantic Related Group}
 
-In the read phase and validation phase, we need to fetch the semantic related group from the mutation data. The more levels of directories, the more related rows will be fetch. The depth of the path equals the size of the semantic related group. But since the namespace is a tree structure, in reality, the depth of the namespace won't be too much. HDFS also limit the maximum number of levels to be 1000 and maximum 3000 characters for the whole path. Besides, batch reading is also used to minimize the network round-trips when fetching data. Therefore, the size of semantic related group will not be a big problem in practice. 
+In the read phase and validation phase, we need to fetch the semantic related group. The more levels of directories involved, the more related data rows needs to be fetch. The depth of the path equals to the size of the semantic related group. 
+\noindent But since the namespace is a tree structure, the depth of the namespace won't be too much due to the logarithmic order. Also, HDFS limits the maximum number of levels to be 1000, and maximum number of characters for the full path name to be 3000~\footnote{If we assume that 10 characters for one directory name, the maximum level will be 300.}. 
 
-\noindent Here we did a test to see how performance affected by different size of semantic related group. Similar to the experiment in Section~\ref{sec:ww}, we have 100 concurrent operations (\textit{mkdirs()}) running under the same parent directory. See Figure~\ref{fig:srg}.
+\noindent In addition, batch reading is also used to minimize the network round-trips so that multiple data can fetched in one round-trip. Therefore, the size of semantic related group will not be a limitation in practice. 
+
+\noindent Here we did a test to see how performance affected by different size of semantic related group. Similar to the experiment in Section~\ref{sec:ww}, we have 100 concurrent operations (\textit{mkdirs()}) running under the same parent directory. See Figure~\ref{fig:srg} for the linear relationship between the size and the elapsed time.
 
 \begin{figure}[ht]
 	\centering
@@ -124,9 +127,9 @@ In the read phase and validation phase, we need to fetch the semantic related gr
 
 \section{OCC Performance with Different Size of Conflicts}
 
-When OCC conflicts happen, transactions will abort, wait for some random time and retry. Eventually one transaction will success and others will read the updated values when retry and return related RPC callbacks to clients.
+When OCC conflicts happen, transactions will abort, wait for random milliseconds and retry. Eventually one transaction will success, and others will get updated values after retry and return RPC callbacks.
 
-\noindent Similar to the experiment in Section~\ref{sec:ww}, we have 10000 concurrent operations running under the same parent directory and each operation only creates one sub-directory. But these operations will try to create the same sub-directories in the number of 1 (all conflicts), 10, 100, 1000 and 10000 (no conflicts) separately.
+\noindent Here we have 10000 concurrent operations running under the same parent directory. Each operation creates only one sub-directory. Some of them will success and some others will fail due to conflicts. These operations will try to create same sub-directories in different numbers from 1 (all conflicts), to 10000 (no conflicts). Therefore, we have different size of conflicts.
 
 \begin{figure}[ht]
 	\centering
@@ -135,7 +138,7 @@ When OCC conflicts happen, transactions will abort, wait for some random time an
 	\label{fig:conflict}
 \end{figure}
 
-\begin{table}[h]
+\begin{table}[ht]
 	\centering
 \begin{tabular}{|c|c|}
 	\hline
@@ -157,4 +160,4 @@ When OCC conflicts happen, transactions will abort, wait for some random time an
 
 \section{Correctness Assessment}
 
-The correctness of our OCC implementation for \textit{mkdirs()}~\footnote{other operations are in PCC in Hop-HDFS} has been validated by 300+ Apache HDFS 2.0.4 Alpha unit tests passing. The full passing tests list can be found in Appendix~\ref{ch:Testing}.
+The correctness of our OCC implementation for \textit{mkdirs()}~\footnote{other operations are PCC} has been validated by 300+ Apache HDFS 2.0.4 Alpha unit tests passing. The full passing tests list can be found in Appendix~\ref{ch:Testing}.

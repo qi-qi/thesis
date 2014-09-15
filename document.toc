@@ -62,9 +62,9 @@
 \contentsline {section}{\numberline {6.3}Read-Write Mixed Workload Assessment}{46}{section.6.3}
 \contentsline {section}{\numberline {6.4}The Size of Semantic Related Group}{47}{section.6.4}
 \contentsline {section}{\numberline {6.5}OCC Performance with Different Size of Conflicts}{48}{section.6.5}
-\contentsline {section}{\numberline {6.6}Correctness Assessment}{49}{section.6.6}
-\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{51}{chapter.7}
-\contentsline {section}{\numberline {7.1}Conclusion}{51}{section.7.1}
-\contentsline {section}{\numberline {7.2}Future Work}{51}{section.7.2}
-\contentsline {part}{V\hspace {1em}Appendices}{57}{part.5}
-\contentsline {chapter}{\numberline {A}Apache HDFS Unit Tests Passing List}{59}{chapter.1}
+\contentsline {section}{\numberline {6.6}Correctness Assessment}{50}{section.6.6}
+\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{53}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusion}{53}{section.7.1}
+\contentsline {section}{\numberline {7.2}Future Work}{53}{section.7.2}
+\contentsline {part}{V\hspace {1em}Appendices}{59}{part.5}
+\contentsline {chapter}{\numberline {A}Apache HDFS Unit Tests Passing List}{61}{chapter.1}

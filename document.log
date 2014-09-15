@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  15 SEP 2014 21:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  15 SEP 2014 21:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1293,31 +1293,24 @@ File: figs/pcc_occ_rw.pdf Graphic file (type pdf)
 Package pdftex.def Info: figs/pcc_occ_rw.pdf used on input line 94.
 (pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
  [47 <./figs/hdfs_pcc_occ_parent.pdf>]
-<figs/srgSize.pdf, id=1512, 361.35pt x 216.81pt>
+<figs/srgSize.pdf, id=1513, 361.35pt x 216.81pt>
 File: figs/srgSize.pdf Graphic file (type pdf)
  <use figs/srgSize.pdf>
-Package pdftex.def Info: figs/srgSize.pdf used on input line 120.
+Package pdftex.def Info: figs/srgSize.pdf used on input line 123.
 (pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
 
-<figs/conflict.pdf, id=1514, 361.35pt x 216.81pt>
+[48 <./figs/rw.pdf>] <figs/conflict.pdf, id=1527, 361.35pt x 216.81pt>
 File: figs/conflict.pdf Graphic file (type pdf)
- <use figs/conflict.pdf>
-Package pdftex.def Info: figs/conflict.pdf used on input line 133.
+
+<use figs/conflict.pdf>
+Package pdftex.def Info: figs/conflict.pdf used on input line 136.
 (pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
+) (./chapters/Conclusion.tex [49 <./figs/pcc_occ_rw.pdf>] [50 <./figs/srgSize.p
+df>] [51 <./figs/conflict.pdf>] [52
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[48 <./figs/rw.pdf>]) (./chapters/Conclusion.tex [49 <./figs/pcc_occ_rw.pdf>]
-[50 <./figs/srgSize.pdf> <./figs/conflict.pdf
-
-pdfTeX warning: pdflatex (file ./figs/conflict.pdf): PDF inclusion: multiple pd
-fs with page group included in a single page
->]
+]
 Chapter 7.
-) (./document.bbl [51
-
-] [52
+) (./document.bbl [53] [54
 
 ]
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 30.
@@ -1330,7 +1323,7 @@ Underfull \hbox (badness 1117) in paragraph at lines 27--31
 ttp : / / www . cloudera . com / content /
  []
 
-[53]
+[55]
 Underfull \hbox (badness 10000) in paragraph at lines 99--103
 []\OT1/ppl/m/n/10.95 MySQL.  Lim-its re-lat-ing to trans-ac-tion han-dling in m
 ysql clus-
@@ -1365,9 +1358,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--132
 til / concurrent / locks /
  []
 
-[54]) [55] [56
+[56]) [57] [58
 
-] [57] [58] (./chapters/Testing.texpdfTeX warning (ext4): destination with the 
+] [59] [60] (./chapters/Testing.texpdfTeX warning (ext4): destination with the 
 same identifier (name{chapter.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1378,7 +1371,7 @@ Appendix A.
 
 pdfTeX warning: pdflatex (file ./figs/unitTest1.pdf): PDF inclusion: found PDF 
 version <1.6>, but at most version <1.5> allowed
-<figs/unitTest1.pdf, id=1644, 469.03912pt x 654.50333pt>
+<figs/unitTest1.pdf, id=1654, 469.03912pt x 654.50333pt>
 File: figs/unitTest1.pdf Graphic file (type pdf)
 
 <use figs/unitTest1.pdf>
@@ -1392,7 +1385,7 @@ LaTeX Warning: Float too large for page by 4.44357pt on input line 30.
 
 pdfTeX warning: pdflatex (file ./figs/unitTest2.pdf): PDF inclusion: found PDF 
 version <1.6>, but at most version <1.5> allowed
-<figs/unitTest2.pdf, id=1645, 469.03912pt x 654.50333pt>
+<figs/unitTest2.pdf, id=1655, 469.03912pt x 654.50333pt>
 File: figs/unitTest2.pdf Graphic file (type pdf)
 
 <use figs/unitTest2.pdf>
@@ -1404,9 +1397,9 @@ LaTeX Warning: Float too large for page by 4.44357pt on input line 36.
 
 )
 No file document.ind.
-[59
+[61
 
-] [60 <./figs/unitTest1.pdf>] [61 <./figs/unitTest2.pdf>] [62
+] [62 <./figs/unitTest1.pdf>] [63 <./figs/unitTest2.pdf>] [64
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 181.
@@ -1420,8 +1413,8 @@ Package rerunfilecheck Info: File `document.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 181.
  ) 
 Here is how much of TeX's memory you used:
- 9609 strings out of 493304
- 141069 string characters out of 6139871
+ 9612 strings out of 493304
+ 141094 string characters out of 6139871
  242510 words of memory out of 5000000
  12515 multiletter control sequences out of 15000+600000
  39172 words of font info for 95 fonts, out of 8000000 for 9000
@@ -1446,10 +1439,10 @@ fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
 o/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pf
 b>
-Output written on document.pdf (84 pages, 2866114 bytes).
+Output written on document.pdf (86 pages, 2866964 bytes).
 PDF statistics:
- 1796 PDF objects out of 2073 (max. 8388607)
- 1292 compressed objects within 13 object streams
- 282 named destinations out of 1000 (max. 500000)
+ 1809 PDF objects out of 2073 (max. 8388607)
+ 1302 compressed objects within 14 object streams
+ 285 named destinations out of 1000 (max. 500000)
  696 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -182,7 +182,7 @@ According to the white paper published by Oracle~\cite{mysqlclusterwhitepaper}, 
 	\label{fig:mysqlwrite}
 \end{figure}
 
-\noindent Therefore, the high operation throughput, \textit{72 million reads and 19.5 million writes operations per second}, of MySQL Cluster makes it the choice to be the distributed in-memory storage layer for the metadata in Hop-HDFS. But the trade off is that the NDB cluster storage engine supports only the \textit{READ COMMITTED} transaction isolation level~\cite{mysqlreadcommited}, which means that we need to put extra effort on the application layer to preclude \textit{anomalies} in our implementation. See Chapter~\ref{ch:Design}.
+\noindent Therefore, the high operation throughput, \textit{72 million reads and 19.5 million writes operations per second}, of MySQL Cluster makes it the choice to be the distributed in-memory storage layer for the metadata in Hop-HDFS. But the trade off is that the NDB cluster storage engine supports only the \textit{READ COMMITTED} transaction isolation level~\cite{ndblimits}, which means that we need to put extra effort on the application layer to preclude \textit{anomalies} in our implementation. See Chapter~\ref{ch:Design}.
 
 \section{Hadoop Open Platform-as-a-service and Hop-HDFS}
 \label{sc:Hop-HDFS}

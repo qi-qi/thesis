@@ -7,7 +7,7 @@ set style histogram cluster gap 1
 set style fill solid border -1
 set boxwidth 0.9
 
-set title "Parent Directory Contention Assessment between HDFS and PCC (Hop-HDFS)"
+set title "Parent Directory Contention Assessment between HDFS and PCC"
 set xlabel "Number of Concurrent Creations Under the Same Parent Directory"
 set ylabel "Elapsed Time (Second)"
 set grid

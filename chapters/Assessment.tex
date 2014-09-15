@@ -25,49 +25,49 @@
 %\addcontentsline{lot}{chapter}{\thechapter\quad Irure Dolor}
 \label{ch:Assessment}
 
- As this thesis is developed based on transactional framework of the second version (we called it PCC version) of Hop-HDFS, we will give a systematic namespace operation performance assessment between PCC and original HDFS in this section. All the tests are performed under same the experimental testbed described in Chapter~\ref{ch:evaluation} Section~\ref{sec:testbed}.
+ In this chapter, we will give the namespace operation performance assessment between the second version (we called it PCC version) of Hop-HDFS and original HDFS. All the tests in this chapter are performed under same the experimental testbed described in Chapter~\ref{ch:evaluation} Section~\ref{sec:testbed}.
 
 \section{NameNode Throughput Benchmark}
 
-A \textit{NNThroughtBenchmark}~\cite{shvachko2010hdfs} tool has been developed to measure the NameNode performance. It is included in the Apache HDFS test package. The one used in this assessment is basically based on the code from Apache Hadoop HDFS 2.0.4 Aplha (We integrate the code which tests \textit{mkdirs} from HDFS 2.3.0 NNThroughtBenchmark into this one).
+A \textit{NNThroughtBenchmark}~\cite{shvachko2010hdfs} tool has been developed to measure the NameNode performance. It is included in the Apache HDFS test package. The tool used in this assessment is based on the code from Apache Hadoop HDFS 2.0.4 Aplha (We integrate the part which tests \textit{mkdirs} operation from HDFS 2.3.0 NNThroughtBenchmark into this one).
 
-\noindent \textit{NNThroughtBenchmark} starts a NameNode and runs multiple client threads on the same node.  The same NameNode operation is performed by each client repetitively via directly calling the implemented NameNode method. The number of operations performed by the NameNode per second is measured.
+\noindent \textit{NNThroughtBenchmark} starts a single NameNode and runs multiple client threads on the same node.  The same NameNode operation is performed by each client repetitively via directly calling the implemented method. The number of operations performed by the NameNode per second is measured.
 
-\noindent In this section, we aims to give a performance comparison overview between HDFS and PCC. Since the workload is generated from a single machine by the \textit{NNThroughtBenchmark}, we set the number of operations to be 100 and the number of threads to be 3. For operations \textit{create, delete and rename}, the total number of files involved is 100. They are placed under 4 different directories equally. For operation \textit{mkdirs}, the total number of directories created is 100 and they are also placed under 4 different directories equally. See Figure~\ref{fig:nntp} for the operation performance comparison between HDFS and PCC (Hop-HDFS).
+\noindent In this section, we aims to give a performance comparison between HDFS and PCC. Since the workload is generated from a single machine by the \textit{NNThroughtBenchmark}, we set the number of operations to be 100 and the number of threads to be 3. For operations \textit{create, delete and rename}, the total number of files involved is 100. They are placed under 4 different directories equally. For operation \textit{mkdirs}, the total number of directories created is 100 and they are also placed under 4 different directories equally. See Figure~\ref{fig:nntp} for the operation performance comparison between HDFS and PCC.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\linewidth]{figs/nn_100.pdf}
-	\caption{Operation Performance Comparison between HDFS and PCC (Hop-HDFS)}
+	\caption{Operation Performance Comparison between HDFS and PCC}
 	\label{fig:nntp}
 \end{figure}
 
-\noindent From Table~\ref{table:nntpb}, we find that the throughput of \textit{mkdirs} in PCC (Hop-HDFS) is 64.9 \% of HDFS, while others are all less than 30\%. The reason why \textit{create, delete and rename} is even worse is because they involve multiple NameNode primitive operations. For example, to finish \textit{create} operations, it took two NameNode primitive operations: \textit{startFile} and \textit{completeFile}. Since each NameNode primitive operation is implemented as a single transaction in Hop-HDFS, the more primitive operations involved, the more parent write locks will be, which means that more transactions will be blocked.
+\noindent From Table~\ref{table:nntpb}, we find that the throughput of \textit{mkdirs} in PCC is 64.9 \% of HDFS, while others are all less than 30\%. The reason why \textit{create, delete and rename} is even worse is because they involve multiple NameNode primitive operations. For example, to finish \textit{create} operations, it took two NameNode primitive operations: \textit{startFile} and \textit{completeFile}. Since each NameNode primitive operation is implemented as a single transaction in Hop-HDFS, the more primitive operations involved, the more parent write locks will be, which means that more transactions will be blocked.
 \begin{table}[h]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|}
 		\hline
 		\textbf{Operations per Second} & \textbf{create} & \textbf{mkdirs} & \textbf{delete} & \textbf{rename} \\ \hline
 		HDFS                           & 609             & 636             & 833             & 869             \\ \hline
-		PCC (Hop-HDFS)                 & 188             & 413             & 242             & 132             \\ \hline
+		PCC                 & 188             & 413             & 242             & 132             \\ \hline
 		PCC / HDFS              & 30.9\%          & 64.9\%          & 29.1\%          & 15.2\%          \\ \hline
 	\end{tabular}
-	\caption{Operation Performance Comparison between HDFS and PCC (Hop-HDFS)}
+	\caption{Operation Performance Comparison between HDFS and PCC}
 	\label{table:nntpb}
 \end{table}
 
 \section{Parent Directory Contention Assessment}
 \label{sec:pdcassement}
-The worst case in PCC (Hop-HDFS) happens when all concurrent operations try to work under the same directory. Even though they mutate different INodes, all related transactions will put a parent directory write lock to block each other. Therefore, the parent directory becomes a contention point.
+The worst case in PCC happens when all concurrent operations try to work under the same directory. Even though they mutate different INodes, all related transactions will put a parent directory write lock to block each other. Therefore, the parent directory becomes a contention point.
 
 \noindent Here we design a test for the parent directory contention assessment. We build a thread pool and its size is 1024. With this thread pool, we have three tests with 1000, 10000 and 100000 concurrent clients separately. Each client creates one sub-directory. All these sub-directories are different, but they are all created under the same parent directory. The parent directory is the contention point in each task. We measure the elapsed time to finish all the concurrent creation tasks in each test.
 
-\noindent As we can see from Figure~\ref{fig:hdfsPCCparent} and Table~\ref{table:hdfsPCCparent}, it takes 4 - 5 more times in PCC (Hop-HDFS) to finish all these tasks compared to HDFS. But the good thing is, when the size of concurrent tasks increases, the ratio decreases. Because as mentioned in Section~\ref{subsec:rpc}, under heavy workload, the edit logs in HDFS degrade the NameNode performance. However, there is no edit logging and check pointing part in Hop-HDFS since MySQL Cluster takes care the fault tolerance for the metadata.
+\noindent As we can see from Figure~\ref{fig:hdfsPCCparent} and Table~\ref{table:hdfsPCCparent}, it takes 4 - 5 more times in PCC to finish all these tasks compared to HDFS. But the good thing is, when the size of concurrent tasks increases, the ratio decreases. Because as mentioned in Section~\ref{subsec:rpc}, under heavy workload, the edit logs in HDFS degrade the NameNode performance. However, there is no edit logging and check pointing part in Hop-HDFS since MySQL Cluster takes care the fault tolerance for the metadata.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\linewidth]{figs/hdfs_pcc_parentlock.pdf}
-	\caption{Parent Directory Contention Assessment between HDFS and PCC (Hop-HDFS)}
+	\caption{Parent Directory Contention Assessment between HDFS and PCC}
 	\label{fig:hdfsPCCparent}
 \end{figure}
 
@@ -77,9 +77,9 @@ The worst case in PCC (Hop-HDFS) happens when all concurrent operations try to w
 		\hline
 		\textbf{Num. of Concurrent Creation} & \textbf{1000} & \textbf{10000} & \textbf{100000} \\ \hline
 		HDFS                                 & 0.82s         & 7.83s          & 77.13s          \\ \hline
-		PCC (Hop-HDFS)                       & 4.35s         & 36.74s         & 332.36s         \\ \hline
+		PCC                       & 4.35s         & 36.74s         & 332.36s         \\ \hline
 		PCC / HDFS                           & 530.5\%       & 469.2\%        & 430.9\%         \\ \hline
 	\end{tabular}
-		\caption{Parent Directory Contention Assessment between HDFS and PCC (Hop-HDFS)}
+		\caption{Parent Directory Contention Assessment between HDFS and PCC}
 		\label{table:hdfsPCCparent}
 \end{table}

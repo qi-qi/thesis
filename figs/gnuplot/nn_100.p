@@ -7,7 +7,7 @@ set style histogram cluster gap 1
 set style fill solid border -1
 set boxwidth 0.9
 
-set title "Operation Performance Comparison between HDFS and PCC (Hop-HDFS)"
+set title "Operation Performance Comparison between HDFS and PCC"
 set xlabel "Operations"
 set ylabel "Operations per Second"
 set grid

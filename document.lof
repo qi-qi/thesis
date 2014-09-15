@@ -16,8 +16,8 @@
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Filesystem Hierarchy with ID for INodes in Hop-HDFS\relax }}{25}{figure.caption.26}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Acyclic DAG. Operations start from root, locks taken in order from leftmost child \cite {hakimzadeh2014scaling} \textit {I: INode, B: BlockInfo, L: Lease, LP: LeasePath, CR: CorruptedReplica, URB: UnderReplicatedBlock, R: Replica, UCR: UnderConstructionReplica, PB: PendingBlock, IB: InvalidBlock, ER: ExcessReplica}\relax }}{27}{figure.caption.28}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Operation Performance Comparison between HDFS and PCC (Hop-HDFS)\relax }}{30}{figure.caption.30}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Parent Directory Contention Assessment between HDFS and PCC (Hop-HDFS)\relax }}{31}{figure.caption.32}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Operation Performance Comparison between HDFS and PCC\relax }}{30}{figure.caption.30}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Parent Directory Contention Assessment between HDFS and PCC\relax }}{31}{figure.caption.32}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Snapshot Isolation Precludes Fuzzy Read\relax }}{38}{figure.caption.35}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Snapshot Isolation with Semantic Related Group Precludes Phantom Read\relax }}{38}{figure.caption.36}

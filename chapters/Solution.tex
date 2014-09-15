@@ -18,19 +18,19 @@
   %
 
 \chapter{Solution}
-The solution we propose to improve the throughput can be summarized as \textit{Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}. The solution algorithm has the following four phases:
+The solution we propose to improve the throughput can be summarized as \textit{Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}. The solution algorithm consists of the following four phases:
 \begin{enumerate}[noitemsep]
 	\item \textbf{Read Phase}: resolving the semantic related group and cache the snapshot copy within the handling transaction.
 	\item \textbf{Execution Phase}: transaction read/write operations are performed on its own snapshot and never fetch data from database.
-	\item \textbf{Validation Phase}: snapshot's related data rows are fetched from the database. If all their versions match with the original copy of the snapshot, go to update phase; else, abort and retry current transaction.
-	\item \textbf{Update Phase}: update related data in the database table. Abort and retry transaction if the instance already exists in the database for "new" data. Increase the versions of the modified rows by 1 if updated successfully.
+	\item \textbf{Validation Phase}: snapshot's related data rows are fetched from the database. If their versions all match with the snapshot copy, go to update phase; else, abort and retry current transaction.
+	\item \textbf{Update Phase}: update related data in the database table. Abort and retry transactions if the instance already exists in the database for "new" data. For successful updates, the versions of the modified rows will be increased by 1.
 \end{enumerate}
 \label{ch:Design}
 
-\noindent The phases mentioned above will be illustrated detailedly in the following sections. The complete algorithm pseudocode can be found in Algorithm~\ref{algo:pseudocode}.
+\noindent The phases mentioned above will be illustrated in the following sections with more details. The complete algorithm pseudocode can be found in Algorithm~\ref{algo:pseudocode}.
 \section{Resolving the Semantic Related Group}
 
-Resolving the semantic related group for each transaction is the fundamental step to preclude \textit{anomalies} in our implementation. The \textit{constraint violation}~\cite{berenson1995critique} between individual data is formed within a semantic related group. In Hop-HDFS, each metadata operation is implemented as an individual transaction running by a worker thread. Any metadata operation related to the namespace will have one or two input parameters, called \textit{Path}. Here's two examples for methods in the Filesystem API:
+Resolving the semantic related group for each transaction is the fundamental step to preclude \textit{anomalies} in our implementation. The \textit{constraint violation}~\cite{berenson1995critique} between individual data is formed within a semantic related group. In Hop-HDFS, each metadata operation is implemented as a single transaction running by a worker thread. Any metadata operation related to the namespace will have one or two input parameters, called \textit{Path}. Here's two examples for operation methods in the Filesystem API:
 
 \begin{itemize}[noitemsep]
 	\item boolean \textbf{mkdirs} (Path \textit{f}): \textit{f} is the path of the INodeDirectory to be created
@@ -42,14 +42,14 @@ Resolving the semantic related group for each transaction is the fundamental ste
 	/a/d/f/h
 \end{center}
 
-\noindent Therefore, with the preservation of the \textit{directed tree structure}, we can resolving a semantic related group for each INode along the edge of ancestors as a \textit{LinkedList}. The semantic related group representation for INode \textit{h} is:
+\noindent Therefore, with the preservation of the \textit{directed tree structure}, we can resolve a semantic related group for each INode along the edge of ancestors into a LinkedList. The semantic related group representation for INode \textit{h} is:
 \begin{center}
 	h: \{/-$>$a-$>$d-$>$f\}
 \end{center}
 
-\noindent In other words, when mutating INode \textit{h}, all the semantic constraint can be found within INodes \textit{/, a, d, f}. With this knowledge, we can maintain the strong consistency semantics of original HDFS.
+\noindent In other words, when mutating INode \textit{h}, all the semantic constraint can be found within INodes \textit{/, a, d, f}. With this knowledge, we can maintain the strong consistency semantics in original HDFS.
 
-\noindent For each row in \textit{inodes table}, the $<$name, parent\_id$>$ pair is the \textit{Primary Key}. With the full path string, we can resolve its semantic related rows by primary key lookups directly from database as shown in Table~\ref{table:semanticrelatedTable}.
+\noindent For each row in \textit{inodes table}, the $<$name, parent\_id$>$ pair is the \textit{Primary Key}. With the full path string, we can iteratively resolve its semantic related rows by primary key lookups directly from database as shown in Table~\ref{table:semanticrelatedTable}.
 
 \begin{table}[h]
 	\centering

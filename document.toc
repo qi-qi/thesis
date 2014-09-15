@@ -1,3 +1,4 @@
+\select@language {portuguese}
 \contentsline {part}{I\hspace {1em}Introduction and Background}{1}{part.1}
 \contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motivation}{3}{section.1.1}
@@ -65,6 +66,6 @@
 \contentsline {section}{\numberline {6.6}Correctness Assessment}{50}{section.6.6}
 \contentsline {chapter}{\numberline {7}Conclusion and Future Work}{53}{chapter.7}
 \contentsline {section}{\numberline {7.1}Conclusion}{53}{section.7.1}
-\contentsline {section}{\numberline {7.2}Future Work}{53}{section.7.2}
+\contentsline {section}{\numberline {7.2}Future Work}{54}{section.7.2}
 \contentsline {part}{V\hspace {1em}Appendices}{59}{part.5}
 \contentsline {chapter}{\numberline {A}Apache HDFS Unit Tests Passing List}{61}{chapter.1}

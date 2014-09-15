@@ -192,7 +192,7 @@ The work presented is delivered as the final thesis report at Instituto Superior
 \begin{flushright}
   \begin{minipage}{8cm}
     \begin{center}
-      \today, Stockholm
+      15 September 2014, Stockholm
 
       Qi Qi
     \end{center}
@@ -248,7 +248,13 @@ The thesis is a part of the curricula of the European Master in Distributed Comp
 \chapter*{Resumo}
 \thispagestyle{empty}
 
-[To be added] Portuguese Abstract
+O Hadoop Distributed File System (HDFS) é a camada de armazenamento para o ecossistema Apache Hadoop, armazenando grandes conjuntos de dados em várias máquinas. No entanto, a capacidade de armazenamento total é limitada uma vez que os metadados são armazenados na memória de um único servidor, chamado NameNode. O  tamanho de heap do NameNode restringe o volume de dados,  ficheiros e blocos endereçáveis ​​no sistema.
+
+\noindent A plataforma Hadoop Open (Hop) é uma plataforma-como-serviço (PaaS) para o ecossistema Hadoop em plataformasde nuvem existentes, incluindo Amazon Web Service e OpenStack.  A camada de armazenamento Hop, Hop-HDFS, é uma implementação de alta disponibilidade do HDFS, armazenando os metadados numa base de dados replicada em memória distribuída, MySQL Cluster. O objetivo é superar as limitações do NameNode, mantendo a semântica de consistência forte do HDFS para que as aplicações escritas para HDFS podem ser executados em Hop-HDFS sem modificações.
+
+\noindent Trabalhos anteriores têm contribuído para a adopção de um modelo transaccional para o Hop-HDFS. De granularidade lata de nível sistema até a mais fina, com trincos sobre registos, as semânticas de consistência forte foram mantidas no Hop-HDFS, mas com desempenho muito restrito comparado com o HDFS orginal.
+
+\noindent Nesta tese, analisamos primeiro as limitações na implementação actual do HDFS e fornecemos uma visão geral do Hop-HDFS ilustrando como superámos essas limitações. Em seguida, fazemos uma avaliação sistemática dos trabalhos anteriores para o Hop-HDFS comparando com o HDFS, e também analisamos as restrições ao utilizar mecanismos de sincronização pessimista para garantir consistência forte. Finalmente, a partir da investigação de deficiências atuais, demonstramos como melhorar o desempenho através da concepção de um novo modelo baseado no controle de concorrência optimista com snapshot isolation como prova de conceito. A avaliação mostra melhoria significativa do desempenho com novo modelo. A nossa implementação foi validada por mais de 300 testes de unidade ao Apache HDFS.
 
 \newpage
 
@@ -286,13 +292,13 @@ modifications.
 
 \noindent HDFS
 
-\noindent MySQL Cluster
+\noindent Cluster MySQL
 
-\noindent Controle de Concorrência
+\noindent Controlo de Concorrência
 
 \noindent Snapshot Isolation
 
-\noindent Vazão
+\noindent Débito
 
 }
 

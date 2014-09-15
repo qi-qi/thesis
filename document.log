@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  15 SEP 2014 04:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  15 SEP 2014 13:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -847,8 +847,21 @@ figs/preliminar/Logo_IST_web.pdf>] [2
 ] [3] [4
 
 ]
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 211.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 211.
+ [5
+
+] [6
+
+]
 LaTeX Font Info:    Try loading font information for T1+LobsterTwo-LF on input 
-line 220.
+line 232.
 
 (/usr/share/texlive/texmf-dist/tex/latex/lobster2/T1LobsterTwo-LF.fd
 File: T1LobsterTwo-LF.fd 2014/01/08 (autoinst) Font definitions for T1/LobsterT
@@ -857,19 +870,17 @@ wo-LF.
 LaTeX Font Info:    Font shape `T1/LobsterTwo-LF/bx/it' in size <14.4> not avai
 lable
 (Font)              Font shape `T1/LobsterTwo-LF/b/it' tried instead on input l
-ine 220.
- [5
+ine 232.
+ [7]
+[8
 
-]
-[6
+] [9
 
-] [7
-
-] [8
-
-] [9] [10
+] [10
 
 ] [11] [12
+
+] [13] [14
 
 ] (./document.toc
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
@@ -882,7 +893,8 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
 \tf@toc=\write7
 \openout7 = `document.toc'.
 
- [4] (./document.lof [5
+ [4]
+(./document.lof [5
 
 ])
 \tf@lof=\write8
@@ -927,17 +939,8 @@ l.88
 <to be read again> 
                    \relax 
 l.96 
-      [5]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 108.
-
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
-File: omsppl.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 108.
-)
-(./chapters/Background.texpdfTeX warning (ext4): destination with the same iden
-tifier (name{page.6}) has been already used, duplicate ignored
+      [5]) (./chapters/Background.texpdfTeX warning (ext4): destination with th
+e same identifier (name{page.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.20 \chapter
@@ -947,7 +950,7 @@ Chapter 2.
 
 pdfTeX warning: pdflatex (file ./figs/GFSArchitecture.pdf): PDF inclusion: foun
 d PDF version <1.6>, but at most version <1.5> allowed
-<figs/GFSArchitecture.pdf, id=607, 409.22083pt x 157.46529pt>
+<figs/GFSArchitecture.pdf, id=616, 409.22083pt x 157.46529pt>
 File: figs/GFSArchitecture.pdf Graphic file (type pdf)
 
 <use figs/GFSArchitecture.pdf>
@@ -966,7 +969,7 @@ l.65 \end{figure}
                    \relax 
 l.77 
       [8 <./figs/GFSArchitecture.pdf>]
-<figs/hdfsarchitecturev1.png, id=653, 877.2775pt x 606.265pt>
+<figs/hdfsarchitecturev1.png, id=662, 877.2775pt x 606.265pt>
 File: figs/hdfsarchitecturev1.png Graphic file (type png)
 
 <use figs/hdfsarchitecturev1.png>
@@ -1068,7 +1071,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
 <to be read again> 
                    \relax 
 l.138 
-       [11] <figs/mysqlcluster.png, id=685, 826.1453pt x 527.14589pt>
+       [11] <figs/mysqlcluster.png, id=694, 826.1453pt x 527.14589pt>
 File: figs/mysqlcluster.png Graphic file (type png)
 
 <use figs/mysqlcluster.png>
@@ -1080,21 +1083,21 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
                    \relax 
 l.156 
        [12 <./figs/mysqlcluster.png>]
-<figs/replicas-groups-1-1.png, id=695, 501.875pt x 506.89375pt>
+<figs/replicas-groups-1-1.png, id=704, 501.875pt x 506.89375pt>
 File: figs/replicas-groups-1-1.png Graphic file (type png)
 
 <use figs/replicas-groups-1-1.png>
 Package pdftex.def Info: figs/replicas-groups-1-1.png used on input line 159.
 (pdftex.def)             Requested size: 301.12732pt x 304.1386pt.
 
-<figs/replicas-groups-1-2.png, id=696, 501.875pt x 396.48125pt>
+<figs/replicas-groups-1-2.png, id=705, 501.875pt x 396.48125pt>
 File: figs/replicas-groups-1-2.png Graphic file (type png)
 
 <use figs/replicas-groups-1-2.png>
 Package pdftex.def Info: figs/replicas-groups-1-2.png used on input line 160.
 (pdftex.def)             Requested size: 301.12732pt x 237.89058pt.
 
-<figs/mysqlclusterbenchmark.pdf, id=703, 361.35pt x 216.81pt>
+<figs/mysqlclusterbenchmark.pdf, id=712, 361.35pt x 216.81pt>
 File: figs/mysqlclusterbenchmark.pdf Graphic file (type pdf)
 
 <use figs/mysqlclusterbenchmark.pdf>
@@ -1105,8 +1108,20 @@ Package pdftex.def Info: figs/mysqlclusterbenchmark.pdf used on input line 178.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[13] [14 <./figs/replicas-groups-1-1.png> <./figs/replicas-groups-1-2.png>]
-<figs/HopHDFSArchitecture.pdf, id=722, 566.19568pt x 319.48157pt>
+pdfTeX warning (ext4): destination with the same identifier (name{page.13}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.190 \subsection
+                 {Overcoming Limitations in HDFS NameNode Architecture}
+[13]pdfTeX warning (ext4): destination with the same identifier (name{page.14})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.190 \subsection
+                 {Overcoming Limitations in HDFS NameNode Architecture}
+[14 <./figs/replicas-groups-1-1.png> <./figs/replicas-groups-1-2.png>]
+<figs/HopHDFSArchitecture.pdf, id=729, 566.19568pt x 319.48157pt>
 File: figs/HopHDFSArchitecture.pdf Graphic file (type pdf)
 
 <use figs/HopHDFSArchitecture.pdf>
@@ -1118,7 +1133,7 @@ Package pdftex.def Info: figs/HopHDFSArchitecture.pdf used on input line 206.
 ] [19] [20]
 (./chapters/Locking.tex
 Chapter 3.
-<figs/gfstree.pdf, id=769, 518.06837pt x 323.75955pt>
+<figs/gfstree.pdf, id=776, 518.06837pt x 323.75955pt>
 File: figs/gfstree.pdf Graphic file (type pdf)
  <use figs/gfstree.pdf>
 Package pdftex.def Info: figs/gfstree.pdf used on input line 43.
@@ -1129,7 +1144,7 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <10.95> not available
 [21
 
 ] [22 <./figs/gfstree.pdf>]
-<figs/INodeUML.pdf, id=793, 611.64447pt x 394.30353pt>
+<figs/INodeUML.pdf, id=801, 611.64447pt x 394.30353pt>
 File: figs/INodeUML.pdf Graphic file (type pdf)
  <use figs/INodeUML.pdf>
 Package pdftex.def Info: figs/INodeUML.pdf used on input line 106.
@@ -1138,7 +1153,7 @@ Package pdftex.def Info: figs/INodeUML.pdf used on input line 106.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figs/hdfsquota.pdf, id=795, 497.62212pt x 541.26152pt>
+<figs/hdfsquota.pdf, id=803, 497.62212pt x 541.26152pt>
 File: figs/hdfsquota.pdf Graphic file (type pdf)
 
 <use figs/hdfsquota.pdf>
@@ -1149,13 +1164,13 @@ Package pdftex.def Info: figs/hdfsquota.pdf used on input line 119.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [23] [24 <./figs/INodeUML.pdf>] [25 <./figs/hdfsquota.pdf>]
-<figs/nnRPC.pdf, id=846, 513.16719pt x 507.92761pt>
+<figs/nnRPC.pdf, id=853, 513.16719pt x 507.92761pt>
 File: figs/nnRPC.pdf Graphic file (type pdf)
  <use figs/nnRPC.pdf>
 Package pdftex.def Info: figs/nnRPC.pdf used on input line 149.
 (pdftex.def)             Requested size: 410.53432pt x 406.34264pt.
 
-[26 <./figs/nnRPC.pdf>] <figs/hoptree.pdf, id=868, 284.97264pt x 288.41954pt>
+[26 <./figs/nnRPC.pdf>] <figs/hoptree.pdf, id=876, 284.97264pt x 288.41954pt>
 File: figs/hoptree.pdf Graphic file (type pdf)
 
 <use figs/hoptree.pdf>
@@ -1169,7 +1184,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 pdfTeX warning: pdflatex (file ./figs/dag.pdf): PDF inclusion: found PDF versio
 n <1.6>, but at most version <1.5> allowed
-<figs/dag.pdf, id=885, 173.79631pt x 115.55873pt>
+<figs/dag.pdf, id=893, 173.79631pt x 115.55873pt>
 File: figs/dag.pdf Graphic file (type pdf)
  <use figs/dag.pdf>
 Package pdftex.def Info: figs/dag.pdf used on input line 208.
@@ -1180,7 +1195,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [28] [29 <./figs/dag.pdf>]) (./chapters/Assessment.tex [30]
 Chapter 4.
-<figs/nn_100.pdf, id=1245, 361.35pt x 216.81pt>
+<figs/nn_100.pdf, id=1252, 361.35pt x 216.81pt>
 File: figs/nn_100.pdf Graphic file (type pdf)
  <use figs/nn_100.pdf>
 Package pdftex.def Info: figs/nn_100.pdf used on input line 40.
@@ -1192,7 +1207,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [31
 
 ] [32 <./figs/nn_100.pdf>]
-<figs/hdfs_pcc_parentlock.pdf, id=1266, 361.35pt x 216.81pt>
+<figs/hdfs_pcc_parentlock.pdf, id=1273, 361.35pt x 216.81pt>
 File: figs/hdfs_pcc_parentlock.pdf Graphic file (type pdf)
 
 <use figs/hdfs_pcc_parentlock.pdf>
@@ -1205,7 +1220,7 @@ Package pdftex.def Info: figs/hdfs_pcc_parentlock.pdf used on input line 69.
 Chapter 5.
 [37
 
-] [38] <figs/snapfuzzy.pdf, id=1312, 683.58034pt x 264.65776pt>
+] [38] <figs/snapfuzzy.pdf, id=1319, 683.58034pt x 264.65776pt>
 File: figs/snapfuzzy.pdf Graphic file (type pdf)
 
 <use figs/snapfuzzy.pdf>
@@ -1215,7 +1230,7 @@ Package pdftex.def Info: figs/snapfuzzy.pdf used on input line 99.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figs/snapphantom.pdf, id=1313, 783.19751pt x 275.9921pt>
+<figs/snapphantom.pdf, id=1320, 783.19751pt x 275.9921pt>
 File: figs/snapphantom.pdf Graphic file (type pdf)
 
 <use figs/snapphantom.pdf>
@@ -1229,7 +1244,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 pdfTeX warning: pdflatex (file ./figs/snapphantom.pdf): PDF inclusion: multiple
  pdfs with page group included in a single page
->] [41] <figs/snapwriteskew.pdf, id=1369, 1091.31702pt x 533.50214pt>
+>] [41] <figs/snapwriteskew.pdf, id=1376, 1091.31702pt x 533.50214pt>
 File: figs/snapwriteskew.pdf Graphic file (type pdf)
 
 <use figs/snapwriteskew.pdf>
@@ -1246,7 +1261,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ] [46] (./chapters/Evaluation.tex
 Chapter 6.
-<figs/ww.pdf, id=1457, 516.34207pt x 295.29422pt>
+<figs/ww.pdf, id=1465, 516.34207pt x 295.29422pt>
 File: figs/ww.pdf Graphic file (type pdf)
  <use figs/ww.pdf>
 Package pdftex.def Info: figs/ww.pdf used on input line 47.
@@ -1254,33 +1269,33 @@ Package pdftex.def Info: figs/ww.pdf used on input line 47.
  [47
 
 ]
-<figs/hdfs_pcc_occ_parent.pdf, id=1466, 361.35pt x 216.81pt>
+<figs/hdfs_pcc_occ_parent.pdf, id=1473, 361.35pt x 216.81pt>
 File: figs/hdfs_pcc_occ_parent.pdf Graphic file (type pdf)
 
 <use figs/hdfs_pcc_occ_parent.pdf>
 Package pdftex.def Info: figs/hdfs_pcc_occ_parent.pdf used on input line 56.
 (pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
 
-<figs/rw.pdf, id=1469, 666.72488pt x 396.79343pt>
+<figs/rw.pdf, id=1476, 666.72488pt x 396.79343pt>
 File: figs/rw.pdf Graphic file (type pdf)
  <use figs/rw.pdf>
 Package pdftex.def Info: figs/rw.pdf used on input line 83.
 (pdftex.def)             Requested size: 400.03801pt x 238.07788pt.
 
-<figs/pcc_occ_rw.pdf, id=1472, 361.35pt x 216.81pt>
+<figs/pcc_occ_rw.pdf, id=1479, 361.35pt x 216.81pt>
 File: figs/pcc_occ_rw.pdf Graphic file (type pdf)
  <use figs/pcc_occ_rw.pdf>
 Package pdftex.def Info: figs/pcc_occ_rw.pdf used on input line 92.
 (pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
 
-[48 <./figs/ww.pdf>] <figs/srgSize.pdf, id=1487, 361.35pt x 216.81pt>
+[48 <./figs/ww.pdf>] <figs/srgSize.pdf, id=1494, 361.35pt x 216.81pt>
 File: figs/srgSize.pdf Graphic file (type pdf)
 
 <use figs/srgSize.pdf>
 Package pdftex.def Info: figs/srgSize.pdf used on input line 118.
 (pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
  [49 <./figs/hdfs_pcc_occ_parent.pdf>]
-<figs/conflict.pdf, id=1502, 361.35pt x 216.81pt>
+<figs/conflict.pdf, id=1509, 361.35pt x 216.81pt>
 File: figs/conflict.pdf Graphic file (type pdf)
  <use figs/conflict.pdf>
 Package pdftex.def Info: figs/conflict.pdf used on input line 131.
@@ -1356,7 +1371,7 @@ Appendix A.
 
 pdfTeX warning: pdflatex (file ./figs/unitTest1.pdf): PDF inclusion: found PDF 
 version <1.6>, but at most version <1.5> allowed
-<figs/unitTest1.pdf, id=1632, 469.03912pt x 654.50333pt>
+<figs/unitTest1.pdf, id=1639, 469.03912pt x 654.50333pt>
 File: figs/unitTest1.pdf Graphic file (type pdf)
 
 <use figs/unitTest1.pdf>
@@ -1370,7 +1385,7 @@ LaTeX Warning: Float too large for page by 4.44357pt on input line 30.
 
 pdfTeX warning: pdflatex (file ./figs/unitTest2.pdf): PDF inclusion: found PDF 
 version <1.6>, but at most version <1.5> allowed
-<figs/unitTest2.pdf, id=1633, 469.03912pt x 654.50333pt>
+<figs/unitTest2.pdf, id=1640, 469.03912pt x 654.50333pt>
 File: figs/unitTest2.pdf Graphic file (type pdf)
 
 <use figs/unitTest2.pdf>
@@ -1398,10 +1413,10 @@ Package rerunfilecheck Info: File `document.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 181.
  ) 
 Here is how much of TeX's memory you used:
- 9607 strings out of 493304
- 141014 string characters out of 6139871
+ 9609 strings out of 493304
+ 141033 string characters out of 6139871
  242554 words of memory out of 5000000
- 12511 multiletter control sequences out of 15000+600000
+ 12512 multiletter control sequences out of 15000+600000
  39172 words of font info for 95 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  39i,13n,39p,930b,728s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1424,10 +1439,10 @@ fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
 o/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pf
 b>
-Output written on document.pdf (84 pages, 2864500 bytes).
+Output written on document.pdf (86 pages, 2865556 bytes).
 PDF statistics:
- 1785 PDF objects out of 2073 (max. 8388607)
- 1281 compressed objects within 13 object streams
- 284 named destinations out of 1000 (max. 500000)
+ 1793 PDF objects out of 2073 (max. 8388607)
+ 1287 compressed objects within 13 object streams
+ 285 named destinations out of 1000 (max. 500000)
  672 words of extra memory for PDF output out of 10000 (max. 10000000)
 

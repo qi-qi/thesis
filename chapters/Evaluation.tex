@@ -78,7 +78,7 @@ This experiment is the same as described in Section~\ref{sec:pdcassement}, but w
 
 In this experiment, we did a test for a read-write mixed workload assessment while the parent directory is still the contention point for PCC. So we assume that OCC will still outperform PCC in this kind of workload. 
 
-\noindent Similar to the experiment in Section~\ref{sec:ww}, we have 1000, 10000 and 100000 concurrent operations running under the same parent directory. But in each task, half of them will do the metadata read operation \textit{getFileStatus()}, while the other half will do the write operation \textit{mkdirs()}. See Figure~\ref{fig:rwWorkload} for a reference.
+\noindent Similar to the experiment in Section~\ref{sec:ww}, we have 1000, 10000 and 100000 concurrent clients' operations running under the same parent directory. But in each task, half of them will do the metadata read operation \textit{getFileStatus()}, while the other half will do the write operation \textit{mkdirs()}. See Figure~\ref{fig:rwWorkload} for a visual reference.
 
 \begin{figure}[ht]
 	\centering
@@ -87,7 +87,7 @@ In this experiment, we did a test for a read-write mixed workload assessment whi
 	\label{fig:rwWorkload}
 \end{figure}
 
-\noindent From Figure~\ref{fig:rwWorkload} and Table~\ref{fig:rw}, we can see that OCC still significantly outperforms PCC around by 65 \% on this concurrent read-write Mixed Workload. 
+\noindent From Figure~\ref{fig:rwWorkload} and Table~\ref{fig:rw}, we can see that OCC still significantly outperforms PCC by 65 \% on this concurrent read-write mixed workload. 
 
 \begin{figure}[ht]
 	\centering

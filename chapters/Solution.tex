@@ -178,7 +178,9 @@ We have a total order update rule in update phase so that dead lock will not occ
 \noindent Finally, for successful updates, the versions of the modified rows will be increased by 1.
 
 \section{Pseudocode of the Complete Algorithm}
-\begin{algorithm}[!h]
+
+See Algorithm~\ref{algo:pseudocode}.
+\begin{algorithm}[h]
 	\caption{Pseudocode of the Complete Algorithm \\ Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}
 	\label{algo:pseudocode}
 	\begin{algorithmic}[1]
@@ -221,3 +223,7 @@ We have a total order update rule in update phase so that dead lock will not occ
 		\STATE {return \textbf{FAIL} // Return HDFS Operation} 
 	\end{algorithmic}
 \end{algorithm}
+
+\section*{Summary}
+
+In this chapter, we proposed a solution to improve the throughput in Hop-HDFS based optimistic concurrency control with snapshot isolation on semantic related Group. We gave all the details on related phases of the algorithm and discuss how anomalies are precluded in our solution. Finally, we provided the chapter with the complete algorithm pseudocode for our solution.

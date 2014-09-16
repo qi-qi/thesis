@@ -22,7 +22,7 @@
 %\addcontentsline{lot}{chapter}{\thechapter\quad Nihil Molestiae}
 \label{ch:evaluation}
 
-The solution \textit{Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group} (OCC) is built on top of the transactional framework~\cite{peiro2013maintaining} in the second version of Hop-HDFS (PCC). The goal of this chapter is to proof that our OCC model performs better than PCC. As a proof of concept, we implemented the OCC version for the operation \textit{mkdirs} and also give a detailed evaluation on it compared with the PCC version. For this purpose, we concern about the execution time (elapsed time) needed to finish all the concurrent tasks.
+The solution \textit{Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group} (OCC) is built on top of the transactional framework~\cite{peiro2013maintaining} in the second version of Hop-HDFS (PCC). The goal of this chapter is to prove that our OCC model performs better than PCC. As a proof of concept, we implemented the OCC version for the operation \textit{mkdirs} and also give a detailed evaluation on it compared with the PCC version. For this purpose, we concern about the execution time (elapsed time) needed to finish all the concurrent tasks.
 
 \section{Experimental Testbed}
 \label{sec:testbed}
@@ -170,3 +170,6 @@ When OCC conflicts happen, transactions will abort, wait for random milliseconds
 \section{Correctness Assessment}
 
 The correctness of our OCC implementation for \textit{mkdirs()}~\footnote{other operations are PCC} has been validated by 300+ Apache HDFS 2.0.4 Alpha unit tests passing. The full passing tests list can be found in Appendix~\ref{ch:Testing}.
+
+\section*{Summary}
+In this chapter, we gave a detailed evaluation on our OCC solution compared to the previous work on Hop-HDFS (PCC version). We prove that our OCC model performs better than PCC up to \textbf{70 \%} on write-write intense concurrent workload and \textbf{65 \%} on read-write mixed intense concurrent workload. We also evaluated OCC performance decrease on different size of conflict. We find that the maximum OCC performance decrease is only 23.7\% when 100 \% of the operations conflict, and the decrease rate grows very slowly from conflict size 10\% to conflict size 100 \%.

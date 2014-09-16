@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  16 SEP 2014 14:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  16 SEP 2014 14:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1374,7 +1374,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 23.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 30.
-<figs/nn_100.pdf, id=1271, 361.35pt x 216.81pt>
+<figs/nn_100.pdf, id=1272, 361.35pt x 216.81pt>
 File: figs/nn_100.pdf Graphic file (type pdf)
  <use figs/nn_100.pdf>
 Package pdftex.def Info: figs/nn_100.pdf used on input line 40.
@@ -1397,7 +1397,7 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 65.
  [32 <./figs/nn_100.pdf>]
-<figs/hdfs_pcc_parentlock.pdf, id=1293, 361.35pt x 216.81pt>
+<figs/hdfs_pcc_parentlock.pdf, id=1294, 361.35pt x 216.81pt>
 File: figs/hdfs_pcc_parentlock.pdf Graphic file (type pdf)
 
 <use figs/hdfs_pcc_parentlock.pdf>
@@ -1454,14 +1454,14 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 96.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 96.
- [39] <figs/snapfuzzy.pdf, id=1345, 683.58034pt x 264.65776pt>
+ [39] <figs/snapfuzzy.pdf, id=1346, 683.58034pt x 264.65776pt>
 File: figs/snapfuzzy.pdf Graphic file (type pdf)
 
 <use figs/snapfuzzy.pdf>
 Package pdftex.def Info: figs/snapfuzzy.pdf used on input line 101.
 (pdftex.def)             Requested size: 455.24408pt x 176.25768pt.
 
-<figs/snapphantom.pdf, id=1346, 783.19751pt x 275.9921pt>
+<figs/snapphantom.pdf, id=1347, 783.19751pt x 275.9921pt>
 File: figs/snapphantom.pdf Graphic file (type pdf)
 
 <use figs/snapphantom.pdf>
@@ -1487,7 +1487,7 @@ Package babel Info: Redefining portuges shorthand "|
  [41]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 160.
- <figs/snapwriteskew.pdf, id=1397, 1091.31702pt x 533.50214pt>
+ <figs/snapwriteskew.pdf, id=1398, 1091.31702pt x 533.50214pt>
 File: figs/snapwriteskew.pdf Graphic file (type pdf)
 
 <use figs/snapwriteskew.pdf>
@@ -1550,7 +1550,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 27.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 40.
-<figs/ww.pdf, id=1483, 516.34207pt x 295.29422pt>
+<figs/ww.pdf, id=1484, 516.34207pt x 295.29422pt>
 File: figs/ww.pdf Graphic file (type pdf)
  <use figs/ww.pdf>
 Package pdftex.def Info: figs/ww.pdf used on input line 47.
@@ -1562,7 +1562,7 @@ Package babel Info: Redefining portuges shorthand "|
  [47
 
 ]
-<figs/hdfs_pcc_occ_parent.pdf, id=1491, 361.35pt x 216.81pt>
+<figs/hdfs_pcc_occ_parent.pdf, id=1492, 361.35pt x 216.81pt>
 File: figs/hdfs_pcc_occ_parent.pdf Graphic file (type pdf)
 
 <use figs/hdfs_pcc_occ_parent.pdf>
@@ -1571,7 +1571,7 @@ Package pdftex.def Info: figs/hdfs_pcc_occ_parent.pdf used on input line 56.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 77.
 
-<figs/rw.pdf, id=1494, 666.72488pt x 396.79343pt>
+<figs/rw.pdf, id=1495, 666.72488pt x 396.79343pt>
 File: figs/rw.pdf Graphic file (type pdf)
  <use figs/rw.pdf>
 Package pdftex.def Info: figs/rw.pdf used on input line 85.
@@ -1580,7 +1580,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 88.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 88.
- [48 <./figs/ww.pdf>] <figs/pcc_occ_rw.pdf, id=1510, 361.35pt x 216.81pt>
+ [48 <./figs/ww.pdf>] <figs/pcc_occ_rw.pdf, id=1511, 361.35pt x 216.81pt>
 File: figs/pcc_occ_rw.pdf Graphic file (type pdf)
 
 <use figs/pcc_occ_rw.pdf>
@@ -1593,7 +1593,7 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 117.
  [49 <./figs/hdfs_pcc_occ_parent.pdf>]
-<figs/srgSize.pdf, id=1526, 361.35pt x 216.81pt>
+<figs/srgSize.pdf, id=1527, 361.35pt x 216.81pt>
 File: figs/srgSize.pdf Graphic file (type pdf)
  <use figs/srgSize.pdf>
 Package pdftex.def Info: figs/srgSize.pdf used on input line 123.
@@ -1605,13 +1605,13 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 133.
 
-[50 <./figs/rw.pdf>] <figs/conflict.pdf, id=1540, 361.35pt x 216.81pt>
+[50 <./figs/rw.pdf>] <figs/conflict.pdf, id=1541, 361.35pt x 216.81pt>
 File: figs/conflict.pdf Graphic file (type pdf)
 
 <use figs/conflict.pdf>
 Package pdftex.def Info: figs/conflict.pdf used on input line 136.
 (pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
- <figs/conRate.pdf, id=1544, 361.35pt x 216.81pt>
+ <figs/conRate.pdf, id=1545, 361.35pt x 216.81pt>
 File: figs/conRate.pdf Graphic file (type pdf)
 
 <use figs/conRate.pdf>
@@ -1743,7 +1743,7 @@ Package babel Info: Redefining portuges shorthand "|
 
 pdfTeX warning: pdflatex (file ./figs/unitTest1.pdf): PDF inclusion: found PDF 
 version <1.6>, but at most version <1.5> allowed
-<figs/unitTest1.pdf, id=1682, 469.03912pt x 654.50333pt>
+<figs/unitTest1.pdf, id=1683, 469.03912pt x 654.50333pt>
 File: figs/unitTest1.pdf Graphic file (type pdf)
 
 <use figs/unitTest1.pdf>
@@ -1757,7 +1757,7 @@ LaTeX Warning: Float too large for page by 4.44357pt on input line 30.
 
 pdfTeX warning: pdflatex (file ./figs/unitTest2.pdf): PDF inclusion: found PDF 
 version <1.6>, but at most version <1.5> allowed
-<figs/unitTest2.pdf, id=1683, 469.03912pt x 654.50333pt>
+<figs/unitTest2.pdf, id=1684, 469.03912pt x 654.50333pt>
 File: figs/unitTest2.pdf Graphic file (type pdf)
 
 <use figs/unitTest2.pdf>
@@ -1802,8 +1802,8 @@ Package rerunfilecheck Info: File `document.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 183.
  ) 
 Here is how much of TeX's memory you used:
- 10815 strings out of 493304
- 157524 string characters out of 6139871
+ 10816 strings out of 493304
+ 157535 string characters out of 6139871
  264606 words of memory out of 5000000
  13684 multiletter control sequences out of 15000+600000
  39172 words of font info for 95 fonts, out of 8000000 for 9000
@@ -1828,10 +1828,10 @@ fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
 o/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pf
 b>
-Output written on document.pdf (88 pages, 2884003 bytes).
+Output written on document.pdf (88 pages, 2884288 bytes).
 PDF statistics:
- 1839 PDF objects out of 2073 (max. 8388607)
- 1325 compressed objects within 14 object streams
- 291 named destinations out of 1000 (max. 500000)
+ 1840 PDF objects out of 2073 (max. 8388607)
+ 1326 compressed objects within 14 object streams
+ 292 named destinations out of 1000 (max. 500000)
  701 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,24 +1,14 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.1.25)  16 SEP 2014 11:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  16 SEP 2014 13:31
 entering extended mode
-**D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MSc*Thesis
-*Report_Latex/document.tex
-
-("D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MSc Thesis
- Report_Latex/document.tex"
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**document.tex
+(./document.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\bk11.clo"
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk11.clo
 File: bk11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -33,13 +23,10 @@ File: bk11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\thesis.sty"
+) (./thesis.sty
 Package: thesis 2009/06/14 21:04 David's excellent thesis package!
 
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\noweb.sty"
+(./noweb.sty
 \nwmarginglue=\dimen103
 \codehsize=\dimen104
 \codemargin=\dimen105
@@ -67,26 +54,25 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \nw@chunkcount=\count97
 \@commacount=\count98
 \nwix@counter=\count99
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
+) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
-Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\palatino.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/palatino.sty
 Package: palatino 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-(C:\Users\lveiga\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\utf8x.def
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/utf8x.def
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
 ))
-(C:\Users\lveiga\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\ucs.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucs.sty
 Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
 
-(C:\Users\lveiga\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-global.def
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-global.def
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
 \uc@secondtry=\count100
@@ -94,47 +80,41 @@ File: uni-global.def 2013/05/13 UCS: Unicode global data
 \uc@combtoksb=\toks17
 \uc@temptokena=\toks18
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2008/07/08 v3.8m The Babel package
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2013/12/03 3.9h The Babel package
 
-*************************************
-* Local config file bblopts.cfg used
-*
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\portuges.ldf"
+(/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/portuges.ldf
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2008/07/08 v3.8m Babel common definitions
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2013/12/03 3.9h Babel common definitions
 \babel@savecnt=\count101
 \U@D=\dimen108
 )
 Package babel Info: Making " an active character on input line 145.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks19
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: dvips.def on input line 91.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvips.def"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
 File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
 \Gin@req@height=\dimen109
@@ -143,32 +123,30 @@ File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 \epsfxsize=\dimen111
 \epsfysize=\dimen112
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count102
 ))
-(C:\Users\lveiga\AppData\Roaming\MiKTeX\2.9\tex\latex\misc209\psboxit.sty
+(/usr/share/texlive/texmf-dist/tex/latex/misc209/psboxit.sty
 \gray@box=\box28
 \gray@space=\dimen113
 )
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\doublespace.sty")
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\multicol.sty"
+(./doublespace.sty) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \c@tracingmulticols=\count103
 \mult@box=\box29
@@ -215,59 +193,55 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \mult@nat@firstbox=\box53
 \colbreak@box=\box54
 \multicol@sort@counter=\count111
-)
-(C:\Users\lveiga\AppData\Roaming\MiKTeX\2.9\tex\latex\nomencl\nomencl.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/nomencl/nomencl.sty
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 \nomlabelwidth=\dimen122
 \nom@tempdim=\dimen123
 \nomitemsep=\skip47
-)
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\avm.sty"
+) (./avm.sty
 \avmdimen=\dimen124
 \avmboxone=\box55
 \avmboxthree=\box56
 )
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\chicago.sty"
+(./chicago.sty
 Using Chicago Manual of Style bibliography: 31 August 1992
 \bibhang=\skip48
 \bibindent=\dimen125
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
-Package: amsmath 2000/07/18 v2.13 AMS math features
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip49
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks20
 \ex@=\dimen126
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen127
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count112
-LaTeX Info: Redefining \frac on input line 211.
+LaTeX Info: Redefining \frac on input line 210.
 \uproot@=\count113
 \leftroot@=\count114
-LaTeX Info: Redefining \overline on input line 307.
+LaTeX Info: Redefining \overline on input line 306.
 \classnum@=\count115
 \DOTSCASE@=\count116
-LaTeX Info: Redefining \ldots on input line 379.
-LaTeX Info: Redefining \dots on input line 382.
-LaTeX Info: Redefining \cdots on input line 467.
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box57
 \strutbox@=\box58
 \big@size=\dimen128
-LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count117
 \c@MaxMatrixCols=\count118
 \dotsspace@=\muskip11
@@ -288,20 +262,20 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \multlinegap=\skip50
 \multlinetaggap=\skip51
 \mathdisplay@stack=\toks24
-LaTeX Info: Redefining \[ on input line 2666.
-LaTeX Info: Redefining \] on input line 2667.
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
-Package: amssymb 2009/06/22 v3.00
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
-Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(C:\Users\lveiga\AppData\Roaming\MiKTeX\2.9\tex\latex\index\index.sty
+(/usr/share/texlive/texmf-dist/tex/latex/index/index.sty
 Package: index 2004/01/20 v4.2beta Improved index support (dmj)
 \@indexbox=\insert233
 \indexproofstyle=\toks25
@@ -317,11 +291,15 @@ LaTeX Warning: Command \markright  has changed.
 )
 \idxtitle@default=\toks26
 \tf@default=\write3
+\openout3 = `document.idx'.
+
 Package index Info: Writing index file document.idx on input line 94.
 \idxtitle@aut=\toks27
 \tf@aut=\write4
+\openout4 = `document.adx'.
+
 Package index Info: Writing index file document.adx on input line 95.
- (C:\Users\lveiga\AppData\Roaming\MiKTeX\2.9\tex\latex\floatflt\floatflt.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/floatflt/floatflt.sty
 Package: floatflt 1997/07/16 v. 1.31
 \c@OptionTest=\count124
 \figbox=\box59
@@ -343,7 +321,7 @@ Package: floatflt 1997/07/16 v. 1.31
 \fltitemwidth=\dimen142
 \outputpretest=\toks28
 )
-(C:\Users\lveiga\AppData\Roaming\MiKTeX\2.9\tex\latex\wrapfig\wrapfig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen143
 \WF@size=\dimen144
 \c@WF@wrappedlines=\count131
@@ -351,16 +329,16 @@ Package: floatflt 1997/07/16 v. 1.31
 \WF@everypar=\toks29
 Package: wrapfig 2003/01/31  v 3.6
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
-Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
-Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
@@ -391,7 +369,7 @@ Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
@@ -399,25 +377,25 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen145
 \Hy@linkcounter=\count132
 \Hy@pagecounter=\count133
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count134
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Option `final' set `true' on input line 4319.
@@ -452,12 +430,12 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count140
 \c@bookmark@seq@number=\count141
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
@@ -468,20 +446,21 @@ epsfig option `silent' ignored
 \s@ch@@ghtb@x=\box63
 LaTeX Font Info:    Try loading font information for OT1+ppl on input line 146.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ppl.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 \@nv@s@bl@=\box64
 \s@cskip=\dimen149
 \@glossaryfile=\write5
+\openout5 = `document.glo'.
+
 
 Writing glossary file document.glo 
-)
-(C:\Users\lveiga\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithms\algorithm.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count142
 \float@exts=\toks30
@@ -489,14 +468,13 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks31
 \@floatcapt=\box66
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks32
 \c@algorithm=\count143
 )
-(C:\Users\lveiga\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithms\algorithmic.st
-y
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \c@ALC@unique=\count144
 \c@ALC@line=\count145
@@ -505,8 +483,8 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \ALC@tlm=\skip53
 \algorithmicindent=\skip54
 )
-(C:\Users\lveiga\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfigure.sty
-Package: subfigure 2002/07/30 v2.1.4 subfigure package
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip55
 \subfigcapskip=\skip56
 \subfigcaptopadj=\dimen150
@@ -521,10 +499,11 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-(C:\Users\lveiga\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfigure.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip59
 \subfig@bottom=\skip60
-) (C:\Users\lveiga\AppData\Roaming\MiKTeX\2.9\tex\latex\enumitem\enumitem.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip61
 \enit@outerparindent=\dimen152
@@ -532,23 +511,24 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box67
 \enitdp@description=\count152
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\pifont.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/pifont.sty
 Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
 LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\upzd.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/upzd.fd
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
 )
 LaTeX Font Info:    Try loading font information for U+psy on input line 64.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\upsy.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/upsy.fd
 File: upsy.fd 2001/06/04 font definitions for U/psy.
 ))
-(C:\Users\lveiga\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
-Package: caption 2013/02/03 v3.3-65 Customizing captions (AR)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(C:\Users\lveiga\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
-Package: caption3 2013/02/03 v1.5-62 caption3 kernel (AR)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen153
 \captionmargin@=\dimen154
 \captionwidth=\dimen155
@@ -563,9 +543,9 @@ Package caption Info: floatflt package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: subfigure package is loaded.
 Package caption Info: wrapfig package is loaded.
-)
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\document.aux")
+) (./document.aux)
+\openout1 = `document.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
@@ -580,11 +560,27 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
-
-(C:\Users\lveiga\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\ucsencs.def
+ (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-(C:\Users\lveiga\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+34.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count154
 \scratchdimen=\dimen160
@@ -600,10 +596,10 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 \AtBeginShipoutBox=\box69
 Package hyperref Info: Link coloring ON on input line 49.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count160
@@ -612,32 +608,37 @@ LaTeX Info: Redefining \ref on input line 49.
 LaTeX Info: Redefining \pageref on input line 49.
 LaTeX Info: Redefining \nameref on input line 49.
 
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\document.out")
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\document.out")
+(./document.out) (./document.out)
 \@outlinefile=\write6
+\openout6 = `document.out'.
+
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\chapters/Preliminary.tex"
+ (./chapters/Preliminary.tex
 
 Package hyperref Warning: Option `colorlinks' has already been used,
 (hyperref)                setting the option has no effect on input line 42.
 
 Package hyperref Info: Option `debug' set `false' on input line 42.
 Package hyperref Info: Option `bookmarksopen' set `true' on input line 42.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 42.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 42.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 42.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 42.
 LaTeX Font Info:    Try loading font information for U+msa on input line 59.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 59.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<figs/preliminar/Logo_IST_web.pdf, id=282, 500.87125pt x 193.72375pt>
+<figs/preliminar/Logo_IST_web.pdf, id=284, 500.87125pt x 193.72375pt>
 File: figs/preliminar/Logo_IST_web.pdf Graphic file (type pdf)
 
 <use figs/preliminar/Logo_IST_web.pdf>
@@ -652,7 +653,7 @@ Overfull \vbox (22.10638pt too high) detected at line 82
 
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 89.
-(C:\Users\lveiga\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-0.def
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
 Overfull \vbox (107.8766pt too high) detected at line 114
@@ -670,92 +671,221 @@ Overfull \vbox (20.68036pt too high) detected at line 159
 Underfull \vbox (badness 10000) detected at line 161
  []
 
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 163.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 163.
 [1
 
-pdfTeX warning: pdflatex.exe: pop empty color page stack 0
+pdfTeX warning: pdflatex: pop empty color page stack 0
 
-Non-PDF special ignored!{C:/Users/lveiga/AppData/Local/MiKTeX/2.9/pdftex/config
-/pdftex.map} <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNod
-e/MSc Thesis Report_Latex/figs/preliminar/Logo_IST_web.pdf>] [2
+Non-PDF special ignored!{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./
+figs/preliminar/Logo_IST_web.pdf>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 172.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 172.
+ [2
 
-] [3] [4
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 202.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 202.
+ [3]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 202.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 202.
+ [4
 
 ]
 LaTeX Font Info:    Try loading font information for OMS+ppl on input line 211.
 
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsppl.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 211.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 222.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 222.
  [5
 
-] [6
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 222.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 222.
+ [6
 
 ]
 LaTeX Font Info:    Try loading font information for T1+LobsterTwo-LF on input 
 line 232.
-LaTeX Font Info:    No file T1LobsterTwo-LF.fd. on input line 232.
 
+(/usr/share/texlive/texmf-dist/tex/latex/lobster2/T1LobsterTwo-LF.fd
+File: T1LobsterTwo-LF.fd 2014/01/08 (autoinst) Font definitions for T1/LobsterT
+wo-LF.
+)
+LaTeX Font Info:    Font shape `T1/LobsterTwo-LF/bx/it' in size <14.4> not avai
+lable
+(Font)              Font shape `T1/LobsterTwo-LF/b/it' tried instead on input l
+ine 232.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 240.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 240.
+ [7]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 240.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 240.
 
-LaTeX Font Warning: Font shape `T1/LobsterTwo-LF/bx/it' undefined
-(Font)              using `T1/cmr/m/n' instead on input line 232.
+[8
 
-[7] [8
-
-] (C:\Users\lveiga\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-32.def
+] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-[9
-
-] [10
-
-] [11] [12
-
-] [13] [14
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 259.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 259.
+ [9
 
 ]
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\document.toc"
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 267.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 267.
+ [10
+
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 279.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 279.
+
+[11]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 287.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 287.
+ [12
+
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 324.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 324.
+ [13]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 324.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 324.
+ [14
+
+] (./document.toc
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 3.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 22.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 22.
  [1
 
-] [2] [3])
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 45.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 45.
+ [2]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 66.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 66.
+ [3])
 \tf@toc=\write7
- [4]
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\document.lof" [5
+\openout7 = `document.toc'.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 347.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 347.
+ [4] (./document.lof
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 27.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 27.
+ [5
 
 ])
 \tf@lof=\write8
- [6]
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\document.lot")
+\openout8 = `document.lof'.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 351.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 351.
+
+[6] (./document.lot)
 \tf@lot=\write9
+\openout9 = `document.lot'.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 357.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 357.
  [7
 
-] [8
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 357.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 357.
+ [8
 
-])pdfTeX warning (ext4): destination with the same identifier (name{page.1}) ha
-s been already used, duplicate ignored
+])
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 72.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 72.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 72.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.72 \part{Introduction and Background}
                                         [1
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
- been already used, duplicate ignored
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 72.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 72.
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.72 \part{Introduction and Background}
-                                        [2]
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\chapters/Introduction.tex"
+                                        [2] (./chapters/Introduction.tex
 Cap\'{\i }tulo 1.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 23.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 42.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 44.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 50.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 71.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 71.
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -763,36 +893,71 @@ been already used, duplicate ignored
 l.71 
       [3
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has
- been already used, duplicate ignored
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 72.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 85.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 88.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 88.
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.88 
-      [4]pdfTeX warning (ext4): destination with the same identifier (name{page
-.5}) has been already used, duplicate ignored
+      [4]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 103.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 103.
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.103 \section
-              {Contribution} [5])
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\chapters/Background.tex"pdfTeX warning (ext4): destination with t
-he same identifier (name{page.6}) has been already used, duplicate ignored
+              {Contribution} [5]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 103.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 119.
+) (./chapters/Background.tex
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.20 \chapter
              {Background and Related Work} [6]
 Cap\'{\i }tulo 2.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 40.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 44.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 57.
 
 
-pdfTeX warning: pdflatex.exe (file D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-op
-timistic-HDFS-NameNode/MSc Thesis Report_Latex/figs/GFSArchitecture.pdf): PDF i
-nclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figs/GFSArchitecture.pdf, id=629, 409.22083pt x 157.46529pt>
+pdfTeX warning: pdflatex (file ./figs/GFSArchitecture.pdf): PDF inclusion: foun
+d PDF version <1.6>, but at most version <1.5> allowed
+<figs/GFSArchitecture.pdf, id=634, 409.22083pt x 157.46529pt>
 File: figs/GFSArchitecture.pdf Graphic file (type pdf)
 
 <use figs/GFSArchitecture.pdf>
 Package pdftex.def Info: figs/GFSArchitecture.pdf used on input line 62.
 (pdftex.def)             Requested size: 455.24408pt x 175.17296pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 65.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 65.
 pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -800,33 +965,60 @@ been already used, duplicate ignored
 l.65 \end{figure}
                   [7
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has
- been already used, duplicate ignored
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 73.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 75.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 77.
+pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.77 
-      [8 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MS
-c Thesis Report_Latex/figs/GFSArchitecture.pdf>]
-<figs/hdfsarchitecturev1.png, id=674, 877.2775pt x 606.265pt>
+      [8 <./figs/GFSArchitecture.pdf>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 78.
+
+<figs/hdfsarchitecturev1.png, id=680, 877.2775pt x 606.265pt>
 File: figs/hdfsarchitecturev1.png Graphic file (type png)
 
 <use figs/hdfsarchitecturev1.png>
 Package pdftex.def Info: figs/hdfsarchitecturev1.png used on input line 83.
 (pdftex.def)             Requested size: 350.90479pt x 242.5017pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 92.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 95.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 95.
 pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.95 \noindent
                HDFS implements a \textit{single-Writer, multiple-reader} mod...
-[9 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MSc Thes
-is Report_Latex/figs/hdfsarchitecturev1.png>]pdfTeX warning (ext4): destination
- with the same identifier (name{page.10}) has been already used, duplicate igno
-red
+[9 <./figs/hdfsarchitecturev1.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 99.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 101.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 109.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 109.
+pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.109 \end{enumerate}
                       [10]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 111.
+
 Overfull \hbox (3.99918pt too wide) in paragraph at lines 121--121
 []\OT1/ppl/b/n/10.95 Dirty
  []
@@ -906,62 +1098,94 @@ Overfull \hbox (0.77864pt too wide) in paragraph at lines 119--129
  [][] 
  []
 
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 134.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 136.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 138.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 138.
 pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.138 
-       [11] <figs/mysqlcluster.png, id=707, 826.1453pt x 527.14589pt>
+       [11]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 139.
+ <figs/mysqlcluster.png, id=713, 826.1453pt x 527.14589pt>
 File: figs/mysqlcluster.png Graphic file (type png)
 
 <use figs/mysqlcluster.png>
 Package pdftex.def Info: figs/mysqlcluster.png used on input line 144.
 (pdftex.def)             Requested size: 330.45226pt x 210.85461pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 149.
 
-<figs/replicas-groups-1-1.png, id=711, 501.875pt x 506.89375pt>
+<figs/replicas-groups-1-1.png, id=717, 501.875pt x 506.89375pt>
 File: figs/replicas-groups-1-1.png Graphic file (type png)
 
 <use figs/replicas-groups-1-1.png>
 Package pdftex.def Info: figs/replicas-groups-1-1.png used on input line 161.
 (pdftex.def)             Requested size: 301.12732pt x 304.1386pt.
 
-<figs/replicas-groups-1-2.png, id=712, 501.875pt x 396.48125pt>
+<figs/replicas-groups-1-2.png, id=718, 501.875pt x 396.48125pt>
 File: figs/replicas-groups-1-2.png Graphic file (type png)
 
 <use figs/replicas-groups-1-2.png>
 Package pdftex.def Info: figs/replicas-groups-1-2.png used on input line 162.
 (pdftex.def)             Requested size: 301.12732pt x 237.89058pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 168.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 168.
 pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.168 
-       [12 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/
-MSc Thesis Report_Latex/figs/mysqlcluster.png>]pdfTeX warning (ext4): destinati
-on with the same identifier (name{page.13}) has been already used, duplicate ig
-nored
+       [12 <./figs/mysqlcluster.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 168.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 168.
+pdfTeX warning (ext4): destination with the same identifier (name{page.13}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.168 
-       [13 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/
-MSc Thesis Report_Latex/figs/replicas-groups-1-1.png> <D:/Dropbox/lveiga/Dropbo
-x/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MSc Thesis Report_Latex/figs/replica
-s-groups-1-2.png>]
-<figs/mysqlclusterbenchmark.pdf, id=732, 361.35pt x 216.81pt>
+       [13 <./figs/replicas-groups-1-1.png> <./figs/replicas-groups-1-2.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 169.
+
+<figs/mysqlclusterbenchmark.pdf, id=738, 361.35pt x 216.81pt>
 File: figs/mysqlclusterbenchmark.pdf Graphic file (type pdf)
 
 <use figs/mysqlclusterbenchmark.pdf>
 Package pdftex.def Info: figs/mysqlclusterbenchmark.pdf used on input line 180.
 
 (pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 186.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 186.
 pdfTeX warning (ext4): destination with the same identifier (name{page.14}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.186 
-       [14 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/
-MSc Thesis Report_Latex/figs/mysqlclusterbenchmark.pdf>]
-<figs/HopHDFSArchitecture.pdf, id=749, 566.19568pt x 319.48157pt>
+       [14 <./figs/mysqlclusterbenchmark.pdf>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 187.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 189.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 192.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 202.
+
+<figs/HopHDFSArchitecture.pdf, id=755, 566.19568pt x 319.48157pt>
 File: figs/HopHDFSArchitecture.pdf Graphic file (type pdf)
 
 <use figs/HopHDFSArchitecture.pdf>
@@ -971,26 +1195,66 @@ Package pdftex.def Info: figs/HopHDFSArchitecture.pdf used on input line 208.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[15]) [16 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/M
-Sc Thesis Report_Latex/figs/HopHDFSArchitecture.pdf>] [17
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 214.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 214.
+[15])
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 91.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 91.
+ [16 <./figs/HopHDFSArchitecture.pdf>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 91.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 91.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 91.
+ [17
 
-] [18]
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\chapters/Locking.tex"
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 91.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 91.
+ [18] (./chapters/Locking.tex
 Cap\'{\i }tulo 3.
-<figs/gfstree.pdf, id=779, 518.06837pt x 323.75955pt>
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 31.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 33.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 36.
+<figs/gfstree.pdf, id=786, 518.06837pt x 323.75955pt>
 File: figs/gfstree.pdf Graphic file (type pdf)
  <use figs/gfstree.pdf>
 Package pdftex.def Info: figs/gfstree.pdf used on input line 43.
 (pdftex.def)             Requested size: 362.64539pt x 226.63013pt.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <10.95> not available
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 54.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 89.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 89.
 
 [19
 
-] [20 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MSc T
-hesis Report_Latex/figs/gfstree.pdf>]
-<figs/INodeUML.pdf, id=803, 611.64447pt x 394.30353pt>
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 90.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 98.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 100.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 103.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 103.
+ [20 <./figs/gfstree.pdf>]
+<figs/INodeUML.pdf, id=810, 611.64447pt x 394.30353pt>
 File: figs/INodeUML.pdf Graphic file (type pdf)
  <use figs/INodeUML.pdf>
 Package pdftex.def Info: figs/INodeUML.pdf used on input line 106.
@@ -999,7 +1263,9 @@ Package pdftex.def Info: figs/INodeUML.pdf used on input line 106.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figs/hdfsquota.pdf, id=805, 497.62212pt x 541.26152pt>
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 111.
+<figs/hdfsquota.pdf, id=812, 497.62212pt x 541.26152pt>
 File: figs/hdfsquota.pdf Graphic file (type pdf)
 
 <use figs/hdfsquota.pdf>
@@ -1009,33 +1275,59 @@ Package pdftex.def Info: figs/hdfsquota.pdf used on input line 119.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21] [22 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MS
-c Thesis Report_Latex/figs/INodeUML.pdf>] [23 <D:/Dropbox/lveiga/Dropbox/msc-13
--14-qi-qi-optimistic-HDFS-NameNode/MSc Thesis Report_Latex/figs/hdfsquota.pdf>]
-<figs/nnRPC.pdf, id=857, 513.16719pt x 507.92761pt>
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 125.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 125.
+[21]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 128.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 135.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 135.
+ [22 <./figs/INodeUML.pdf>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 143.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 143.
+ [23 <./figs/hdfsquota.pdf>]
+<figs/nnRPC.pdf, id=864, 513.16719pt x 507.92761pt>
 File: figs/nnRPC.pdf Graphic file (type pdf)
  <use figs/nnRPC.pdf>
 Package pdftex.def Info: figs/nnRPC.pdf used on input line 149.
 (pdftex.def)             Requested size: 410.53432pt x 406.34264pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 160.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 162.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 164.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 164.
 
-[24 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MSc The
-sis Report_Latex/figs/nnRPC.pdf>]
-<figs/hoptree.pdf, id=878, 284.97264pt x 288.41954pt>
+[24 <./figs/nnRPC.pdf>] <figs/hoptree.pdf, id=886, 284.97264pt x 288.41954pt>
 File: figs/hoptree.pdf Graphic file (type pdf)
- <use figs/hoptree.pdf>
+
+<use figs/hoptree.pdf>
 Package pdftex.def Info: figs/hoptree.pdf used on input line 169.
 (pdftex.def)             Requested size: 284.97194pt x 288.41884pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[25 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MSc The
-sis Report_Latex/figs/hoptree.pdf>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 196.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 196.
+[25 <./figs/hoptree.pdf>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 198.
 
-pdfTeX warning: pdflatex.exe (file D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-op
-timistic-HDFS-NameNode/MSc Thesis Report_Latex/figs/dag.pdf): PDF inclusion: fo
-und PDF version <1.6>, but at most version <1.5> allowed
-<figs/dag.pdf, id=894, 173.79631pt x 115.55873pt>
+
+pdfTeX warning: pdflatex (file ./figs/dag.pdf): PDF inclusion: found PDF versio
+n <1.6>, but at most version <1.5> allowed
+<figs/dag.pdf, id=902, 173.79631pt x 115.55873pt>
 File: figs/dag.pdf Graphic file (type pdf)
  <use figs/dag.pdf>
 Package pdftex.def Info: figs/dag.pdf used on input line 208.
@@ -1044,17 +1336,34 @@ Package pdftex.def Info: figs/dag.pdf used on input line 208.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[26] [27 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MS
-c Thesis Report_Latex/figs/dag.pdf>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 215.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 215.
+[26]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 216.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 225.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 225.
+ [27 <./figs/dag.pdf>]
 Overfull \hbox (10.9849pt too wide) in paragraph at lines 231--245
  [][] 
  []
 
-)
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\chapters/Assessment.tex" [28]
+) (./chapters/Assessment.tex
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 23.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 23.
+ [28]
 Cap\'{\i }tulo 4.
-<figs/nn_100.pdf, id=1254, 361.35pt x 216.81pt>
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 23.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 30.
+<figs/nn_100.pdf, id=1262, 361.35pt x 216.81pt>
 File: figs/nn_100.pdf Graphic file (type pdf)
  <use figs/nn_100.pdf>
 Package pdftex.def Info: figs/nn_100.pdf used on input line 40.
@@ -1063,46 +1372,111 @@ Package pdftex.def Info: figs/nn_100.pdf used on input line 40.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 46.
 [29
 
-] [30 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MSc T
-hesis Report_Latex/figs/nn_100.pdf>]
-<figs/hdfs_pcc_parentlock.pdf, id=1275, 361.35pt x 216.81pt>
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 60.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 65.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 65.
+ [30 <./figs/nn_100.pdf>]
+<figs/hdfs_pcc_parentlock.pdf, id=1284, 361.35pt x 216.81pt>
 File: figs/hdfs_pcc_parentlock.pdf Graphic file (type pdf)
 
 <use figs/hdfs_pcc_parentlock.pdf>
 Package pdftex.def Info: figs/hdfs_pcc_parentlock.pdf used on input line 70.
 (pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
-) [31 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MSc T
-hesis Report_Latex/figs/hdfs_pcc_parentlock.pdf>] [32
+)
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 110.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 110.
+ [31 <./figs/hdfs_pcc_parentlock.pdf>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 110.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 110.
 
-] [33] [34]
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\chapters/Solution.tex"
+[32
+
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 110.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 110.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 110.
+ [33]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 110.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 110.
+ [34] (./chapters/Solution.tex
 Cap\'{\i }tulo 5.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 31.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 37.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 37.
 [35
 
-] [36] [37] <figs/snapfuzzy.pdf, id=1325, 683.58034pt x 264.65776pt>
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 79.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 82.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 82.
+ [36]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 89.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 96.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 96.
+ [37] <figs/snapfuzzy.pdf, id=1334, 683.58034pt x 264.65776pt>
 File: figs/snapfuzzy.pdf Graphic file (type pdf)
 
 <use figs/snapfuzzy.pdf>
 Package pdftex.def Info: figs/snapfuzzy.pdf used on input line 101.
 (pdftex.def)             Requested size: 455.24408pt x 176.25768pt.
 
-<figs/snapphantom.pdf, id=1326, 783.19751pt x 275.9921pt>
+<figs/snapphantom.pdf, id=1335, 783.19751pt x 275.9921pt>
 File: figs/snapphantom.pdf Graphic file (type pdf)
 
 <use figs/snapphantom.pdf>
 Package pdftex.def Info: figs/snapphantom.pdf used on input line 108.
 (pdftex.def)             Requested size: 455.24408pt x 160.42505pt.
- [38 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MSc Th
-esis Report_Latex/figs/snapfuzzy.pdf> <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-q
-i-optimistic-HDFS-NameNode/MSc Thesis Report_Latex/figs/snapphantom.pdf
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 118.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 123.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 123.
+ [38 <./figs/snapfuzzy.pdf> <./figs/snapphantom.pdf
 
-pdfTeX warning: pdflatex.exe (file D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-op
-timistic-HDFS-NameNode/MSc Thesis Report_Latex/figs/snapphantom.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
->] [39] <figs/snapwriteskew.pdf, id=1377, 1091.31702pt x 533.50214pt>
+pdfTeX warning: pdflatex (file ./figs/snapphantom.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 148.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 152.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 152.
+ [39]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 160.
+ <figs/snapwriteskew.pdf, id=1386, 1091.31702pt x 533.50214pt>
 File: figs/snapwriteskew.pdf Graphic file (type pdf)
 
 <use figs/snapwriteskew.pdf>
@@ -1112,7 +1486,15 @@ Package pdftex.def Info: figs/snapwriteskew.pdf used on input line 166.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 173.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 177.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 177.
 [40]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 180.
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 182.
 
@@ -1125,73 +1507,154 @@ ppl/m/n/10.95 ver-si-on-Com-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [41 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MSc T
-hesis Report_Latex/figs/snapwriteskew.pdf>] [42] [43
+)
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 128.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 128.
+ [41 <./figs/snapwriteskew.pdf>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 128.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 128.
+ [42]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 128.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 128.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 128.
+ [43
 
-] [44]
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\chapters/Evaluation.tex"
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 128.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 128.
+ [44] (./chapters/Evaluation.tex
 Cap\'{\i }tulo 6.
-<figs/ww.pdf, id=1460, 516.34207pt x 295.29422pt>
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 27.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 40.
+<figs/ww.pdf, id=1470, 516.34207pt x 295.29422pt>
 File: figs/ww.pdf Graphic file (type pdf)
  <use figs/ww.pdf>
 Package pdftex.def Info: figs/ww.pdf used on input line 47.
 (pdftex.def)             Requested size: 309.80763pt x 177.17789pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 53.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 53.
  [45
 
 ]
-<figs/hdfs_pcc_occ_parent.pdf, id=1469, 361.35pt x 216.81pt>
+<figs/hdfs_pcc_occ_parent.pdf, id=1479, 361.35pt x 216.81pt>
 File: figs/hdfs_pcc_occ_parent.pdf Graphic file (type pdf)
 
 <use figs/hdfs_pcc_occ_parent.pdf>
 Package pdftex.def Info: figs/hdfs_pcc_occ_parent.pdf used on input line 56.
 (pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 77.
 
-<figs/rw.pdf, id=1472, 666.72488pt x 396.79343pt>
+<figs/rw.pdf, id=1482, 666.72488pt x 396.79343pt>
 File: figs/rw.pdf Graphic file (type pdf)
  <use figs/rw.pdf>
 Package pdftex.def Info: figs/rw.pdf used on input line 85.
 (pdftex.def)             Requested size: 400.03801pt x 238.07788pt.
- [46 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MSc Th
-esis Report_Latex/figs/ww.pdf>] <figs/pcc_occ_rw.pdf, id=1487, 361.35pt x 216.8
-1pt>
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 88.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 88.
+ [46 <./figs/ww.pdf>] <figs/pcc_occ_rw.pdf, id=1498, 361.35pt x 216.81pt>
 File: figs/pcc_occ_rw.pdf Graphic file (type pdf)
 
 <use figs/pcc_occ_rw.pdf>
 Package pdftex.def Info: figs/pcc_occ_rw.pdf used on input line 94.
 (pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
- [47 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MSc Th
-esis Report_Latex/figs/hdfs_pcc_occ_parent.pdf>]
-<figs/srgSize.pdf, id=1503, 361.35pt x 216.81pt>
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 112.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 117.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 117.
+ [47 <./figs/hdfs_pcc_occ_parent.pdf>]
+<figs/srgSize.pdf, id=1514, 361.35pt x 216.81pt>
 File: figs/srgSize.pdf Graphic file (type pdf)
  <use figs/srgSize.pdf>
 Package pdftex.def Info: figs/srgSize.pdf used on input line 123.
 (pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 128.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 133.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 133.
 
-[48 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MSc The
-sis Report_Latex/figs/rw.pdf>]
-<figs/conflict.pdf, id=1517, 361.35pt x 216.81pt>
+[48 <./figs/rw.pdf>] <figs/conflict.pdf, id=1528, 361.35pt x 216.81pt>
 File: figs/conflict.pdf Graphic file (type pdf)
- <use figs/conflict.pdf>
+
+<use figs/conflict.pdf>
 Package pdftex.def Info: figs/conflict.pdf used on input line 136.
 (pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
-)
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\chapters/Conclusion.tex" [49 <D:/Dropbox/lveiga/Dropbox/msc-13-14
--qi-qi-optimistic-HDFS-NameNode/MSc Thesis Report_Latex/figs/pcc_occ_rw.pdf>]
-[50 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MSc The
-sis Report_Latex/figs/srgSize.pdf>] [51 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi
--qi-optimistic-HDFS-NameNode/MSc Thesis Report_Latex/figs/conflict.pdf>]
-[52
+ <figs/conRate.pdf, id=1532, 361.35pt x 216.81pt>
+File: figs/conRate.pdf Graphic file (type pdf)
+
+<use figs/conRate.pdf>
+Package pdftex.def Info: figs/conRate.pdf used on input line 165.
+(pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 170.
+) (./chapters/Conclusion.tex
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+ [49 <./figs/pcc_occ_rw.pdf>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+[50 <./figs/srgSize.pdf>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+ [51 <./figs/conflict.pdf> <./figs/conRate.pdf
+
+pdfTeX warning: pdflatex (file ./figs/conRate.pdf): PDF inclusion: multiple pdf
+s with page group included in a single page
+>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+ [52
 
 ]
 Cap\'{\i }tulo 7.
-[53])
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\document.bbl" [54]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 39.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 57.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 61.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 61.
+[53]) (./document.bbl
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+ [54]
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 30.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 Underfull \hbox (badness 1117) in paragraph at lines 27--31
@@ -1199,6 +1662,10 @@ Underfull \hbox (badness 1117) in paragraph at lines 27--31
 http : / / www . cloudera . com / content /
  []
 
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 77.
 [55
 
 ]
@@ -1225,23 +1692,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--126
 til / concurrent / locks /
  []
 
-[56]) [57] [58
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 155.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 155.
+[56])
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 161.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 161.
+ [57]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 161.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 161.
+ [58
 
-] [59] [60]
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\chapters/Testing.tex"pdfTeX warning (ext4): destination with the 
-same identifier (name{chapter.1}) has been already used, duplicate ignored
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 161.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 161.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 161.
+ [59]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 161.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 161.
+ [60] (./chapters/Testing.texpdfTeX warning (ext4): destination with the same i
+dentifier (name{chapter.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.20 \chapter{Apache HDFS Unit Tests Passing List}
                                                   
 Appendix A.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 20.
 
 
-pdfTeX warning: pdflatex.exe (file D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-op
-timistic-HDFS-NameNode/MSc Thesis Report_Latex/figs/unitTest1.pdf): PDF inclusi
-on: found PDF version <1.6>, but at most version <1.5> allowed
-<figs/unitTest1.pdf, id=1641, 469.03912pt x 654.50333pt>
+pdfTeX warning: pdflatex (file ./figs/unitTest1.pdf): PDF inclusion: found PDF 
+version <1.6>, but at most version <1.5> allowed
+<figs/unitTest1.pdf, id=1669, 469.03912pt x 654.50333pt>
 File: figs/unitTest1.pdf Graphic file (type pdf)
 
 <use figs/unitTest1.pdf>
@@ -1253,10 +1745,9 @@ LaTeX Warning: Float too large for page by 4.44357pt on input line 30.
 
 
 
-pdfTeX warning: pdflatex.exe (file D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-op
-timistic-HDFS-NameNode/MSc Thesis Report_Latex/figs/unitTest2.pdf): PDF inclusi
-on: found PDF version <1.6>, but at most version <1.5> allowed
-<figs/unitTest2.pdf, id=1642, 469.03912pt x 654.50333pt>
+pdfTeX warning: pdflatex (file ./figs/unitTest2.pdf): PDF inclusion: found PDF 
+version <1.6>, but at most version <1.5> allowed
+<figs/unitTest2.pdf, id=1670, 469.03912pt x 654.50333pt>
 File: figs/unitTest2.pdf Graphic file (type pdf)
 
 <use figs/unitTest2.pdf>
@@ -1266,61 +1757,71 @@ Package pdftex.def Info: figs/unitTest2.pdf used on input line 33.
 
 LaTeX Warning: Float too large for page by 4.44357pt on input line 36.
 
-)
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\document.ind") [61
+) (./document.ind)
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 179.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 179.
+ [61
 
-] [62 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MSc T
-hesis Report_Latex/figs/unitTest1.pdf>]
-[63 <D:/Dropbox/lveiga/Dropbox/msc-13-14-qi-qi-optimistic-HDFS-NameNode/MSc The
-sis Report_Latex/figs/unitTest2.pdf>] [64
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 179.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 179.
+ [62 <./figs/unitTest1.pdf>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 179.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 179.
+ [63 <./figs/unitTest2.pdf>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 179.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 179.
+[64
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 183.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 183.
-
-("D:\Dropbox\lveiga\Dropbox\msc-13-14-qi-qi-optimistic-HDFS-NameNode\MSc Thesis
- Report_Latex\document.aux")
+ (./document.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 183.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 183.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: A82848543601B671CDDFC0DC4199B7BA;5423.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
+(rerunfilecheck)             Checksum: EDC202EB237BEFF1AE08B2FE0E0BC362;5353.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 183.
  ) 
 Here is how much of TeX's memory you used:
- 10551 strings out of 493921
- 157601 string characters out of 3147279
- 254415 words of memory out of 3000000
- 13281 multiletter control sequences out of 15000+200000
- 31854 words of font info for 93 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 39i,13n,39p,1156b,752s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc} <C:\Users\lveig
-a\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi2774\cmbr8.pk> <C
-:\Users\lveiga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi1302
-\cmbrsl8.pk> <C:\Users\lveiga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
-\ec\dpi600\ecrm1440.pk> <C:\Users\lveiga\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
-ur\public\cmbright\dpi1707\cmbr8.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/euler/eurm10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/pala
-tino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplbi8a.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (86 pages, 3065254 bytes).
+ 10809 strings out of 493304
+ 157466 string characters out of 6139871
+ 264606 words of memory out of 5000000
+ 13684 multiletter control sequences out of 15000+600000
+ 39172 words of font info for 95 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 39i,13n,41p,1065b,766s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texliv
+e/texmf-dist/fonts/enc/dvips/lobster2/lbst2_2vl4dw.enc}</usr/share/texlive/texm
+f-dist/fonts/type1/impallari/lobster2/LobsterTwo-BoldItalic.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/eule
+r/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbr8.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrsl8.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
+o/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pf
+b>
+Output written on document.pdf (86 pages, 2881503 bytes).
 PDF statistics:
- 1949 PDF objects out of 2073 (max. 8388607)
- 284 named destinations out of 1000 (max. 500000)
- 696 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1824 PDF objects out of 2073 (max. 8388607)
+ 1312 compressed objects within 14 object streams
+ 285 named destinations out of 1000 (max. 500000)
+ 701 words of extra memory for PDF output out of 10000 (max. 10000000)
 

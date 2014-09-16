@@ -378,19 +378,19 @@ From Table~\ref{table:rwA}, we can see that OCC still significantly outperforms 
 
 When OCC conflicts happen, transactions will abort, wait for random milliseconds and retry. Eventually one transaction will success, and others will get updated values after retry and return RPC callbacks. Here we have 10000 concurrent operations running under the same parent directory. Each operation creates only one sub-directory. Some of them will success and some others will fail due to conflicts. These operations will try to create same sub-directories in different numbers from 1 (all conflicts), to 10000 (no conflicts). Therefore, we have different size of conflicts.
 
-From Table~\ref{table:conflictsA}, we can calculate that the maximum performance degradation is 19.1\% when all operations conflict: $(14.53-11.75) \div 14.53 = 19.1\%$
+From Table~\ref{table:conflictsA}, we can find that the maximum OCC performance decrease is only 23.7\% when 100 \% of the operations conflict: $(14.53-11.75) \div 11.75 = 23.7\%$. Besides, we find that the OCC performance decrease rate grows very slowly after conflict size 10\%. From conflict size 10\% to conflict size 100 \%, the performance decrease rate only grows from 20.1 \% to 23.7 \%.
 
 \begin{table}[ht]
 	\centering
-	\begin{tabular}{|c|c|}
-		\hline
-		\textbf{Total Num. of Sub-DirectoriesCreated for 10000 Operations} & \textbf{Elapsed Time (Second)} \\ \hline
-		1 (all conflicts)                                                  & 14.53                          \\ \hline
-		10 (1000 conflicts)                                                & 14.11                          \\ \hline
-		100 (100 conflicts)                                                & 13.51                          \\ \hline
-		1000 (10 conflicts)                                                & 12.72                          \\ \hline
-		10000 (no conflicts)                                               & 11.75                          \\ \hline
-	\end{tabular}
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	\textbf{\begin{tabular}[c]{@{}c@{}}Total Num. of Sub-Directories \\ Created for 10000 Operations\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Conflict\\  Size\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Elapsed Time\\  (Second)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Performance Decrease\\ Compared to Zero Conflict\end{tabular}} \\ \hline
+	1                                                                                                              & 100\%                                                             & 14.53                                                                     & 23.7\%                                                                                            \\ \hline
+	10                                                                                                             & 10\%                                                              & 14.11                                                                     & 20.1\%                                                                                            \\ \hline
+	100                                                                                                            & 1\%                                                               & 13.51                                                                     & 15.0\%                                                                                            \\ \hline
+	1000                                                                                                           & 0.1\%                                                             & 12.72                                                                     & 8.23\%                                                                                            \\ \hline
+	10000                                                                                                          & 0\%                                                               & 11.75                                                                     & 0\%                                                                                               \\ \hline
+\end{tabular}
 	\caption{OCC Performance with Different Size of Conflicts}
 	\label{table:conflictsA}
 \end{table}

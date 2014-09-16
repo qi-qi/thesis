@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  16 SEP 2014 01:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  16 SEP 2014 02:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -269,7 +269,20 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (./typeinst.aux)
+) (./typeinst.aux
+
+LaTeX Warning: Label `X' multiply defined.
+
+
+LaTeX Warning: Label `X' multiply defined.
+
+
+LaTeX Warning: Label `X' multiply defined.
+
+
+LaTeX Warning: Label `X' multiply defined.
+
+)
 \openout1 = `typeinst.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
@@ -417,159 +430,93 @@ File: HopHDFSArchitecture.pdf Graphic file (type pdf)
 
 <use HopHDFSArchitecture.pdf>
 Package pdftex.def Info: HopHDFSArchitecture.pdf used on input line 111.
-(pdftex.def)             Requested size: 226.47426pt x 127.79036pt.
+(pdftex.def)             Requested size: 283.09715pt x 159.74039pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[2] <failure_long.png, id=17, 642.4pt x 481.8pt>
-File: failure_long.png Graphic file (type png)
- <use failure_long.png>
-Package pdftex.def Info: failure_long.png used on input line 135.
-(pdftex.def)             Requested size: 227.62206pt x 170.71304pt.
-
-<localWFailure_long.png, id=19, 642.4pt x 481.8pt>
-File: localWFailure_long.png Graphic file (type png)
-
-<use localWFailure_long.png>
-Package pdftex.def Info: localWFailure_long.png used on input line 141.
-(pdftex.def)             Requested size: 227.62206pt x 170.71304pt.
- [3 <./HopHDFSArchitecture.pdf>]
-
-LaTeX Warning: Citation `dean2008mapreduce' on page 4 undefined on input line 1
-57.
+[2] <hoptree.pdf, id=17, 284.97264pt x 288.41954pt>
+File: hoptree.pdf Graphic file (type pdf)
+ <use hoptree.pdf>
+Package pdftex.def Info: hoptree.pdf used on input line 128.
+(pdftex.def)             Requested size: 170.9849pt x 173.05305pt.
 
 
-LaTeX Warning: Citation `zaharia2010delay' on page 4 undefined on input line 15
-9.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4 <./failure_long.png> <./localWFailure_long.png>]
+[3 <./HopHDFSArchitecture.pdf> <./hoptree.pdf
 
-LaTeX Warning: Citation `liu2012preemptive' on page 5 undefined on input line 1
-66.
+pdfTeX warning: pdflatex (file ./hoptree.pdf): PDF inclusion: multiple pdfs wit
+h page group included in a single page
+>]
 
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Warning: Citation `wang2013preemptive' on page 5 undefined on input line 
-168.
+[4]
+
+LaTeX Warning: Reference `subsec:rpc' on page 5 undefined on input line 211.
 
 
-LaTeX Warning: Citation `pastorelli2014assisted' on page 5 undefined on input l
-ine 170.
+Underfull \vbox (badness 4647) has occurred while \output is active []
 
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
+ [5]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 235.
 
-LaTeX Warning: Reference `algo:mapTask' on page 5 undefined on input line 186.
 
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-[5]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
- [6]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 223.
-
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 223.
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
+LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 235.
+ [6]
+Underfull \hbox (badness 10000) in paragraph at lines 310--310
+[] []\OT1/cmr/bx/n/9 if \OT1/cmr/m/n/9 ver-sion-Com-pare(relatedRows[]DataBase,
+ tx.snapshot) $==$ \OT1/cmr/bx/n/9 true and \OT1/cmr/m/n/9 ver-sion-Com-
+ []
 
-<time.png, id=44, 642.4pt x 481.8pt>
-File: time.png Graphic file (type png)
- <use time.png>
-Package pdftex.def Info: time.png used on input line 251.
-(pdftex.def)             Requested size: 455.24411pt x 341.4408pt.
- [7]
-<mod.png, id=51, 642.4pt x 481.8pt>
-File: mod.png Graphic file (type png)
- <use mod.png>
-Package pdftex.def Info: mod.png used on input line 262.
-(pdftex.def)             Requested size: 455.24411pt x 341.4408pt.
- [8 <./time.png>]
-<flavorLocality.png, id=56, 876.27374pt x 334.24875pt>
-File: flavorLocality.png Graphic file (type png)
+[7]
 
-<use flavorLocality.png>
-Package pdftex.def Info: flavorLocality.png used on input line 274.
-(pdftex.def)             Requested size: 455.24411pt x 173.65224pt.
- [9 <./mod.png>] (./typeinst.bbl) [10 <./flavorLocality.png>] (./typeinst.aux)
+LaTeX Warning: Reference `fig:hdfsPCCOCCparentA' on page 8 undefined on input l
+ine 340.
+
+[8]
+
+LaTeX Warning: Reference `fig:rwA' on page 9 undefined on input line 362.
+
+[9] (./typeinst.bbl) [10] (./typeinst.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 4232 strings out of 493304
- 62226 string characters out of 6139871
- 130862 words of memory out of 5000000
- 7615 multiletter control sequences out of 15000+600000
- 11293 words of font info for 44 fonts, out of 8000000 for 9000
+ 4207 strings out of 493304
+ 61769 string characters out of 6139871
+ 136930 words of memory out of 5000000
+ 7594 multiletter control sequences out of 15000+600000
+ 11572 words of font info for 44 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,9n,38p,1134b,574s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
-t10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb
->
-Output written on typeinst.pdf (10 pages, 401851 bytes).
+ 38i,13n,38p,1134b,649s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on typeinst.pdf (10 pages, 429328 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 114 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

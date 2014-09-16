@@ -108,7 +108,7 @@ The architecture of Hop-HDFS consists of multiple \textit{NameNodes}, multiple \
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.4]{HopHDFSArchitecture.pdf}
+	\includegraphics[scale=0.5]{HopHDFSArchitecture.pdf}
 	\caption{The Architecture of Hop-HDFS}
 	\label{fig:hophdfsar}
 \end{figure}
@@ -117,178 +117,283 @@ Moreover, the fault tolerance of the metadata is handled by MySQL Cluster, which
 
 The size of the metadata for a single file object having two blocks (replicated three times by default) is 600 bytes. It requires 60 GB of RAM to store 100 million files in HDFS, 100 million files is also the maximum storage capacity for HDFS in practice. For MySQL Cluster, it supports up to 48 datanodes, which means that it can scale up to 12 TB in size with 256 GB RAM for each node in size. But conservatively, we assume that MySQL Cluster can support up to 3.072 TB for metadata with a data replication of 2, which means that Hop-HDFS can store up to 4.1 billion files. A factor of 40 times increase over Shvachko's estimate~\cite{shvachko2010hdfs} for HDFS from 2010.
 
-\subsection{Fault tolerance in Hadoop}
-\subsubsection{Detection of failures}
-Hadoop employs a static timeout mechanism for the detection of fail-stop failures. It keeps track of each Task Tracker\'s last heartbeat, so that should a Task Tracker has not sent any heart beat in a certain amount of time, that Task Tracker will be declared Failed.  Each Task Tracker sends a heart beat every 0.3s (many literatures have claimed that the heart beat interval is 3 seconds, however here we use the value we found in the source code).  The Job Tracker checks every 200s for any Task Tracker that has been silent for 600s. Once found, the Task Tracker is labeled as a failed machine, and the Job Tracker will trigger the failure handling and recovery process.
-\subsubsection{Failure handling and recovery}
-Tasks that were running on the failed Task Tracker will be restarted on other machines. Map tasks that completed on this Task Tracker will also be restarted if they belong to jobs that are still in progress and contain some reduce tasks. Completed Reduce Tasks are not restarted, as the output is supposedly stored persistently on HDFS.
+\subsection{Namespace Concurrency Control and Performance Assessment in Hop-HDFS}
+\subsubsection{Namespace Structure}
+In HDFS, the namespace is kept in-memory as arrays and optimized data structure (like LinkedList) of objects with references for semantic constraints. Therefore, it has a \textit{directed tree structure}.
 
-Hadoop prioritizes failed tasks to run first over pending (non-running) tasks when it comes to assigning new tasks. The aim of this decision is to quickly discover any jobs\' "internal failures". Hadoop jobs\' "internal failures" are failures that are specific to a certain job and cannot be tolerated by re-execution mechanism. One example of internal failures is corrupted input files. While each task consumes a certain amount of resources (disk space, computational cycles, memory...), faster discovery of internal failures allows Hadoop to quickly purge those failed jobs and release the resources for other waiting jobs, hence achieve better utilization of resources.
+In Hop-HDFS, the namespace is stored into tables of MySQL Cluster database, so all INode objects are represented as individual row records in a single \textit{inodes table}. In order to preserve the directed tree structure, we add an id column and a parent\_id column to each row of in \textit{inodes table}. Therefore, the graphical representation of the filesystem hierarchy for INodes is like Figure~\ref{fig:hoptreeA}. The table representation in the database is like Table~\ref{table:hoptreeTableA}.
 
-Although Hadoop pays much effort to achieve locality for Map tasks in normal situation (it tries to assign as many local tasks as possible, while only assign at most 1 non-local tasks regardless of the number of available slot at each time), it completely ignores locality when it comes to failed tasks. As long as there are failed (Map) tasks, any Task Tracker that has free slots will be assigned the maximum number of tasks that it can handle. This leads to degradation in the performance of Hadoop when there are many failed tasks, as the number of non-local tasks might become very high.
-
-\subsection{Failures effect on Hadoop execution}
-\begin{figure}
-\centering
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=1\linewidth]{failure_long.png}
-  \caption{Execution time}
-  \label{fig:failure}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=1\linewidth]{localWFailure_long.png}
-  \caption{Locality}
-  \label{fig:localWFailure}
-\end{subfigure}
-\caption{Performance of Hadoop in 3 scenarios: Normal, Mix Stress and Failure}
-\label{fig:test}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{hoptree.pdf}
+	\caption{Filesystem Hierarchy with ID for INodes in Hop-HDFS}
+	\label{fig:hoptreeA}
 \end{figure}
 
-Figure \ref{fig:failure} presents the total execution time in 3 different scenarios: Normal, Mix Stress and Failure in a cluster of 21 nodes with 6 Hadoop jobs of different sizes. In Normal scenario, we allow Hadoop run on dedicated nodes without introducing any stress or failure. The Mix Stress scenario has some CPU-intensive and IO-intensive processes launched on one node to simulate sporadic overloading situations. Failure scenario has 1 node fail after abitrarily 80 seconds (by simply killing the Task Tracker process running on that node). As we can see from Figure \ref{fig:failure}, stress slightly degrades Hadoop's performance a little, while failures prolong the execution of Hadoop jobs by a significant amount of time as much as 56 seconds (roughly 22.5\%) in case of Capacity scheduler.  Fair scheduler appears to suffer the least: its execution time is prolonged for only 29 seconds (10.4\%), and it also finishes the fastest among the three schedulers under failure (278 seconds compared to 294 seconds for FIFO, and 305 seconds for Capacity scheduler).
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{id} & \textbf{parent\_id} & \textbf{name} & \textbf{other parameters...} \\ \hline
+		1 & 0 & / & ... \\ \hline
+		2 & 1 & a & ... \\ \hline
+		3 & 1 & b & ... \\ \hline
+		4 & 1 & c & ... \\ \hline
+		5 & 2 & d & ... \\ \hline
+		6 & 3 & e & ... \\ \hline
+		7 & 5 & f & ... \\ \hline
+		8 & 6 & g & ... \\ \hline
+		9 & 7 & h & ... \\ \hline
+		10 & 7 & i & ... \\ \hline
+	\end{tabular}
+	\caption{INode Table for Hop-HDFS}
+	\label{table:hoptreeTableA}
+\end{table}
+
+Since the \textit{id} is unique and atomically generated for INodes in each new transaction, the \textit{Primary Key} for the table is $<$name, parent\_id$>$ pair. Because the INode \textit{id} is not known beforehand on the application side, but the $<$name, parent\_id$>$ pair is known since it can be resolved from the path string. Therefore, data rows can be looked up by the $<$name, parent\_id$>$ pair \textit{Primary Key} directly from database on the application side. With the \textit{id} and \textit{parent\_id} relationship, the hierarchy will be constructed correctly from the data rows to in-memory objects used by the name system.
+
+\subsubsection{Namespace Concurrency Control}
+In the first version of Hop-HDFS~\cite{wasif2012distributed} (also named as KTHFS), the main task is to migrate the metadata from memory to MySQL Cluster. Therefore, it still depends on the system-level lock in HDFS NameNode (fsLock in \textit{FSNamesystem} - \textit{ReentrantReadWriteLock} to serialize the operations and maintain the semantics. This becomes a big problem since the network latency between NameNode and database is far more larger than it was when operated in-memory in original HDFS. Hence, each operation will take a long time lock on the name system. The throughput heavily decreases. A fine grained locking scheme is needed to improve the concurrency.
+
+In the second version of Hop-HDFS~\cite{peiro2013maintaining} (also named as KTHFS), it adopts a fine-grained row-level locking mechanism to improve the throughput while maintaining the strong consistency semantics. It uses transactions with \textit{Pessimistic Concurrency Control} (PCC) to ensure the safety and progress of metadata operations. Based on a hierarchical concurrency model, it builds a \textit{directed acyclic graph} (DAG) for the namespace. Metadata operation that mutates the DAG either commit or abort (for partial failures) in a single transaction. Besides, \textit{implicit locking}~\cite{gray1976granularity} is used to lock on the root of a subtree in a transaction, which implicitly acquires locks on all the descendants, so that the strong consistent semantics from original HDFS can be maintained.
+
+\subsubsection{Limitations}
+
+There are two major limitations in this locking scheme: 
+
+1) It lowers the concurrency when multiple transactions try to mutate different descendants within the same subtree. Only one writer is allowed to work on INodes under one directory due to the implicit lock (Write Lock) for the parent directory. For example, if transaction Tx1 wants to mutate INode \textit{h}, and another transaction Tx2 wants to mutate INode \textit{i} concurrently in Figure~\ref{fig:hoptreeA}, Tx1 will take a parent lock on INode \textit{f} first and then perform operations. No more transactions can work under INode \textit{f} at the moment. Tx2 will be blocked by the implicit lock until Tx1 commits. See Table~\ref{table:hoplockTableA}.
+
+2) There is un-avoided duplicated database round trips overhead. It takes two transactions to finish the implicit locking. The first transaction is used to resolve the path in the database so that we know which rows existed in the database so that the INode's parent directory can be taken the implicit write lock in the second transaction, or last existing INode directory can be taken the implicit write lock if the path is not full resolved(HDFS will build up the missing intermediate INodeDirectories). For example, if transaction Tx1 wants to mutate INode \textit{h} in Figure~\ref{fig:hoptreeA}, in the first database round trip, it needs to resolve the path to see if the related rows of INode\textit{ /, a, d, f, h} are all in the database. If yes, in the second database round trip, INode\textit{ /, a, d} will be taken Read Locks~\footnote{The third version of Hop-HDFS is trying to Replace Read Lock to Read\_Committed for this PCC scheme} and the INode \textit{f} will be taken a Write Lock; if no, the last existing INode will be taken a Write Lock while others will be taken Read Locks.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\textbf{id} & \textbf{parent\_id} & \textbf{name} & \textbf{Locks by Tx1} & \textbf{Locks by Tx2} \\ \hline
+		1 & 0 & / & Read Lock & Read Lock \\ \hline
+		2 & 1 & a & Read Lock & Read Lock \\ \hline
+		3 & 1 & b & ~ & ~ \\ \hline
+		4 & 1 & c & ~ & ~ \\ \hline
+		5 & 2 & d & Read Lock & Read Lock\\ \hline
+		6 & 3 & e & ~ & ~ \\ \hline
+		7 & 5 & f  & Write Lock & Write Lock \textbf{(Blocked!)} \\ \hline
+		8 & 6 & g & ~ & ~ \\ \hline
+		9 & 7 & h (Mutated by Tx1) & Write Lock (Implicit) & Write Lock (Implicit) \textbf{(Blocked!)}\\ \hline
+		10 & 7 & i (Mutated by Tx2) & Write Lock (Implicit) & Write Lock (Implicit)  \textbf{(Blocked!)}\\ \hline
+	\end{tabular}
+	\caption{Implicit Lock Table in Hop-HDFS}
+	\label{table:hoplockTableA}
+\end{table}
+
+\subsubsection{Namespace Operation Performance Assessment}
+\label{subsub:exp}
+Here we will give the namespace operation performance assessment between the second version (PCC version) of Hop-HDFS and original HDFS under single NameNode. All the tests in this chapter are performed under same the experimental testbed described in Section~\ref{sec:eva}.
+
+We aims to give a performance comparison between HDFS and PCC. Since the workload is generated from a single machine by the \textit{NNThroughtBenchmark}~\cite{shvachko2010hdfs}, we set the number of operations to be 100 and the number of threads to be 3. For operations \textit{create, delete and rename}, the total number of files involved is 100. They are placed under 4 different directories equally. For operation \textit{mkdirs}, the total number of directories created is 100 and they are also placed under 4 different directories equally. See Table~\ref{table:nntpbb} for the operation performance comparison between HDFS and PCC.
+
+We find that the throughput of \textit{mkdirs} in PCC is 64.9 \% of HDFS, while others are all less than 30\%. The reason why the performance of \textit{create, delete and rename} is worse is because they involve multiple NameNode primitive operations. For example, to finish the \textit{create} operations, it takes two NameNode primitive operations (two transactions): \textit{startFile} and \textit{completeFile}. Since each NameNode primitive operation is implemented as a single transaction, the more primitive operations involved, the more parent write locks will be, which means that more transactions will be blocked.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\textbf{Operations per Second} & \textbf{create} & \textbf{mkdirs} & \textbf{delete} & \textbf{rename} \\ \hline
+		HDFS                           & 609             & 636             & 833             & 869             \\ \hline
+		PCC                 & 188             & 413             & 242             & 132             \\ \hline
+		PCC / HDFS              & 30.9\%          & 64.9\%          & 29.1\%          & 15.2\%          \\ \hline
+	\end{tabular}
+	\caption{Operation Performance Comparison between HDFS and PCC}
+	\label{table:nntpbb}
+\end{table}
+
+The worst case in PCC happens when all concurrent operations try to work under the same directory. Even though they mutate different INodes, all handling transactions will put a parent directory write lock to block each other. Therefore, the parent directory becomes a contention point. We design a test for the parent directory contention assessment. We build a thread pool with size 1024 for clients. We have three tests with 1000, 10000 and 100000 concurrent clients separately. Each client creates (\textit{mkdirs()}) one sub-directory. All these sub-directories are different, but they are all created under the same parent directory. The parent directory is the contention point in each task. We measure the elapsed time to finish all the concurrent creation tasks in each test.
+
+As we can see from Table~\ref{table:hdfsPCCparentA}, it takes 4 - 5 more times in PCC to finish all these tasks compared to HDFS. However, when the size of concurrent tasks increases, this ratio decreases. Because as mentioned in Section~\ref{subsec:rpc}, under heavy workload, the edit logs in HDFS degrade the NameNode performance. Since there is no edit logging and check pointing part in Hop-HDFS, it works more efficiently than HDFS.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{Num. of Concurrent Creation} & \textbf{1000} & \textbf{10000} & \textbf{100000} \\ \hline
+		HDFS                                 & 0.82s         & 7.83s          & 77.13s          \\ \hline
+		PCC                       & 4.35s         & 36.74s         & 332.36s         \\ \hline
+		PCC / HDFS                           & 530.5\%       & 469.2\%        & 430.9\%         \\ \hline
+	\end{tabular}
+	\caption{Parent Directory Contention Assessment between HDFS and PCC}
+	\label{table:hdfsPCCparentA}
+\end{table}
+
+Note that the tests performed in this chapter is based on single NameNode. The multi-NameNode architecture in Hop-HDFS will help to improve the overall throughput.
 
 
-Figure \ref{fig:localWFailure} shows the percentage of locally executed tasks over the total number of tasks in the same scenarios. Fair scheduler still enjoys the highest number of locality, even though this number is decreasing. FIFO and Capacity scheduler shows some degradation, though this degradation is rather small compared to Fair scheduler (3\% and 1\% compared to 9\%). To explain this phenomenon, remember that Fair scheduler was designed based on the assumption that most tasks are short and therefore, nodes will release slot quickly enough for other tasks get locally executed. However, in case of failure, the long failure detection time (expiry time) creates the illusion of long-lasting tasks on failed node. These "fake" long tasks break the assumption of Fair scheduler, leading to high degradation.
+\section{Solution}
+The solution we propose to improve the throughput can be summarized as \textit{Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}. The solution algorithm consists of the following four phases. \textbf{(1) Read Phase}: resolving the semantic related group and cache the snapshot copy within the handling transaction. \textbf{(2)Execution Phase}: transaction read/write operations are performed on its own snapshot and never fetch data from database. \textbf{(3)Validation Phase}: snapshot's related data rows are fetched from the database. If their versions all match with the snapshot copy, go to update phase; else, abort and retry current transaction.\textbf{(4)Update Phase}: update related data in the database table. Abort and retry transactions if the instance already exists in the database for "new" data. For successful updates, the versions of the modified rows will be increased by 1.
 
-\section{Related works}
-There exists a problem regarding the failure handling mechanism of Hadoop that often gets overseen. When a task is declared failed, it gets "special treatment" in the manner that, failed tasks will be launched as soon as any slot becomes available, regardless of data locality. In a cluster where Data Node and Task Tracker processes co-reside, a machines failure will reduce the replication factor for those data splits originally on that node. Providing that Hadoop tries its best to provide locality for tasks in normal situation, it is likely that the failed tasks will have one less machine to run locally, which in turn leads to lower locality in general.
+\subsection{Resolving the Semantic Related Group}
+Resolving the semantic related group for each transaction is the fundamental step to preclude \textit{anomalies} in our implementation. The \textit{constraint violation}~\cite{berenson1995critique} between individual data is formed within a semantic related group. In Hop-HDFS, each metadata operation is implemented as a single transaction running by a worker thread. Any metadata operation related to the namespace will have one or two input parameters, called \textit{Path}.
 
-Providing locality for tasks is crucial for performance of Hadoop in large clusters because network bisection bandwidth becomes a bottleneck \cite{dean2008mapreduce}. Besides, since most of the Hadoop usage is for small jobs (jobs with small number of map tasks), it is difficult for a small job to obtain slots on nodes with local data. Data then has to be transferred through the network, which might significantly increase the execution time if network bandwidth is scarce. Providing locality for these jobs will greatly increase the performance of Hadoop in term of time and resource preserving.
+Each \textit{Path} object is related to a string representation of the "/" based absolute path name. For example, in Figure~\ref{fig:hoptreeA}, the path for INode \textit{h} is: \textbf{h: \{/-$>$a-$>$d-$>$f\}}. In other words, when mutating INode \textit{h}, all the semantic constraint can be found within INodes \textit{/, a, d, f}. With this knowledge, we can maintain the strong consistency semantics in original HDFS.
 
-Unfortunately, achieving high locality is not easy. Zaharia et al \cite{zaharia2010delay} introduces the Delay technique inside the Fair scheduler to improve locality of tasks. Instead of strictly following the order of jobs, Fair scheduler allows behind jobs launch their tasks first if the head-of-line job fails to launch a local task. However, Fair scheduler relies on the assumption that tasks are mostly short and slots are freed up quickly. In case of long tasks that occupy the slots, a node may not free up quickly enough for other jobs to achieve locality.
+For each row in \textit{inodes table}, the $<$name, parent\_id$>$ pair is the \textit{Primary Key}. With the full path string, we can iteratively resolve its semantic related rows by primary key lookups directly from database as shown in Table~\ref{table:semanticrelatedTableA}.
 
-In the effort to overcome the above-mentioned problems, we propose preemption. Preemption allows a task to quickly release the slot for more urgent task. Locality can be assured with the employment of preemption. Also preemption allows the scheduler to have better control on the resources (i.e. the task slots) so that optimal efficiency can be obtained. Shorter tasks can preempt a longer one to achieve fast response time.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		~ & \textbf{id} & \textbf{parent\_id} & \textbf{name} & \textbf{other parameters...} \\ \hline
+		Related * & 1 & 0 & / & ... \\ \hline
+		Related * & 2 & 1 & a & ... \\ \hline
+		~ & 3 & 1 & b & ... \\ \hline
+		~ & 4 & 1 & c & ... \\ \hline
+		Related * & 5 & 2 & d & ... \\ \hline
+		~ & 6 & 3 & e & ... \\ \hline
+		Related * & 7 & 5 & f & ... \\ \hline
+		~ & 8 & 6 & g & ... \\ \hline
+		Selected \checkmark & 9 & 7 & h & ... \\ \hline
+		~ & 10 & 7 & i & ... \\ \hline
+	\end{tabular}
+	\caption{Table Representation for the Semantic Related Group}
+	\label{table:semanticrelatedTableA}
+\end{table}
 
-\subsection*{Preemption in Hadoop}
-To our knowledge, there has been not much work aiming at providing the preemption feature for Hadoop:
+\subsection{Per-Transaction Snapshot Isolation}
 
-Li Liu \cite{liu2012preemptive} introduces a Preemptive Deadline Constraint Scheduler (PDCS), which aims at minimizing the total completion time of jobs under deadlines. Traditional non-preemptive schedulers have to wait for previously assigned jobs’ completion or halt. This delays the execution of production jobs, sometimes renders them violating their deadlines. To avoid this, PDCS employs the Hadoop built-in preemption mechanism (kill) to provide slots for near deadline jobs. Upon submission, jobs are checked whether they can finish under its deadline or not using estimation. Jobs then are scheduled if the number of available slots meets the requirement. Otherwise, the scheduler would determine whether these jobs are legal to preempt the slots that have been already allocated.
+As we mentioned before, MySQL Cluster supports only the READ COMMITTED transaction isolation level, which means that the committed results of write operations in transactions will be exposed by reads in other transactions. Within a long running transaction, it could read two different versions of data, known as \textit{fuzzy read}, and it could also get two different sets of results if the same query is issued twice, known as \textit{phantom read}.
 
-Yandong Wang \cite{wang2013preemptive} introduces the Fair Completion Scheduler (FCS) that supports Reduce Task pre-emption. A long Reduce task would occupy the reduce slot, and significantly increase the completion time of shorter jobs. By check pointing the Reduce task, the reduce slot can be passed on to a different shorter job. After the short job finishes, the long Reduce task picks up the work from where it was left off, and continue until the end.
+\textit{Snapshot isolation} guarantees that all reads made within a transaction see a consistent view of at the database. At the beginning of the transaction, it reads data from a snapshot of the latest committed value. During transaction execution, reads and writes are performed on the this snapshot.
 
-Pastorelli \cite{pastorelli2014assisted} proposes to leverage the already available POSIX signals such as \texttt{SIGTSTP} and \texttt{SIGCONT} to suspend running tasks. In Hadoop, Map and Reduce tasks are regular Unix processes running in child JVMs spawned by the TaskTracker. This means that they can safely be handled with the POSIX signaling infrastructure. The state of tasks is implicitly saved by the operating system, and kept in memory. If not enough physical memory is available for running tasks at any moment, the OS paging mechanisms saves the memory allocated to the suspended tasks in the swap area.
+In commercial database management systems, like Microsoft SQL Server, Oracle, etc, \textit{snapshot isolation} is implemented within multi version concurrency control (MVCC)~\cite{berenson1995critique} on database server side. However, we need to implement snapshot isolation on the application side since MySQL Cluster supports only the READ COMMITTED isolation level.
 
-Pastorelli's approach save the state of the JVM and can be applied seamlessly to abitrary tasks regardless of types. However a suspended process can only be resumed on the same machine it was suspended on. If the same task gets scheduled on a different machine, it has to be restarted from scratch, losing work done so far: in that case, the \texttt{suspend} is effectively analogous to a delayed \texttt{kill}.
+After resolving the semantic related group, we take a snapshot on selected rows as well as all related rows of the committed values from database. This snapshot will be cached in-memory within its transaction. Each transaction will have its own copy of snapshot during the lifetime. All transaction operations will be performed on its own snapshot. Therefore, we called it Per-Transaction Snapshot Isolation.
 
-Although very interesting, the above mentioned efforts all suffer from some drawbacks. The Preemptive Deadline Constraint Scheduler approach employs the naive Kill primitive from Hadoop, which incurs a large amount of waste work. The Fair Completion Scheduler only concerns about preempting Reduce tasks but ignores the case of Map tasks. Pastorelli's OS-assisted preemptive primitives allow a seamless preemption mechanism for all types of tasks, but do not support migration, i.e. restarting the preempted tasks on a different node. These drawbacks limit the usage of these approaches. In the next chapter, we will discuss more about the choices between preemption styles, and our approach to overcome these drawbacks.
+\subsubsection{Fuzzy Read and Phantom Read are Precluded}
+Before validation phase, the transaction will never fetch any data from database since it has all the semantic related rows in the cached snapshot. Therefore, the snapshot provides a consistent view of data for each transaction from read phase until validation phase. Hence: \textit{2. Fuzzy Read} is precluded by \textit{snapshot isolation}: Transactions read from snapshot instead of database, not affected by the value committed by others. \textit{2. Phantom Read} is also precluded by \textit{snapshot isolation on Semantic Related Group}: Transactions snapshot the semantic related group of after the operation. So if same operation peformed, it is not affected by the value committed by others since it operate from the snapshot.
 
+\subsection{ClusterJ and Lock Mode in MySQL Cluster}
+\textit{ClusterJ} is a Java connector based on object-relational mapping persistence frameworks to access data in MySQL Cluster. It doesn't depend on the MySQL Server to access data in MySQL Cluster as it communicates with data nodes directly, which means that ClusterJ can perform some operations much more quickly. 
 
+Unlike \textit{Two-Phase Locking} (2PL), there are three lock modes in MySQL Cluster. \textbf{(1) SHARED} (Read Lock, RL): Set a shared lock on rows; \textbf{(2) EXCLUSIVE} (Write Lock, WL): Set an exclusive lock on rows; \textbf{(3) READ\_COMMITTED} (Read Committed, RC): Set no locks but read the most recent committed values. For \textit{Read\_Committed}, it is implemented for consistent nonlocking reads, which means that a fresh committed snapshot of data row is always presented to a query of database, regardless of whether Shared Lock or Exclusive Lock are taken on the current row or not.
 
-\section{Pause and Resume mechanism}
-Preemption is a highly desirable feature in many cases. It allows schedulers to quickly reallocate resources between jobs for fair sharing. In other cases, preemption can reclaim resources from long running tasks and give them to shorter one. Providing local execution to short tasks helps reducing response time as well as lowering the network traffic between nodes in the same cluster. In this study, we introduce our preemption mechanism that is both fast and light-weight.
+\subsection{Optimistic Concurrency Control}
 
-\subsection{Map task preemption}
-Each Map task belonging to a Hadoop job is assigned a split of the data to process. Once all the input $<key,value>$ pairs have been processed, the Map task reports back to the Job Tracker, and the map output is entrusted to the local Task Tracker to serve to Reduce tasks.
+Our algorithm is based on \textit{Optimistic Concurrency Control} (OCC) method to improve the overall read/write performance. Transactions are allowed to perform operations without blocking each other with optimistic methods. Concurrent transactions need to pass through a \textit{validation phase} before committing, so that the serializability is not violated. Transactions will abort and restart if they fail in the \textit{validation phase}. OCC is the key approach so that the parent directory lock is not needed in Hop-HDFS. Hence, transactions can operate under the same directory concurrently.
 
-Although the name is “pause and resume”, our Map preemption mechanism is inplemented in a structually different manner. There is no “pause” in Map task preemption, but we actually split the map tasks into 2 sub-tasks at the boundery between input $<key, value>$ pairs. The first sub-task covers all the map input $<key, value>$ pair that the task has processed so far. This sub-task is considered Completed and will report back to the Job Tracker as a normally completed task. The second sub-task includes all the map input $<key, value>$ pair that has not yet been processed. This sub-task will be treated as a new independent task with almost no difference compared to any other non-running tasks. The independence between $<key, value>$ pairs of the Map Reduce programming paradigm gurantees that our mechanism works correctly and does not produce any extra (or lose any) $<key, value>$ pair, thus ensuring correctness.
+In \textit{read phase}, transactions use \textit{Read\_Committed Lock Mode} to fetch semantic related group as snapshots and cache them in-memory for their own use without being blocked. In \textit{validation phase}, transactions will fetch the modified rows using \textit{Exclusive Lock} and fetch the semantic related rows using \textit{Shared Lock}. Then they compare the fetched values and the snapshot copy in the cache for their \textit{versions}. If versions are all the same, go to \textit{update phase}. If not, abort current transaction, wait for a random milliseconds, and retry a new transaction from \textit{read phase}. Note that using \textit{Shared Lock} to fetch semantic related rows can guarantee a consistent view in database until the transaction commits while allowing other Shared Locks taken on the same rows for their validation phase.
 
-A Map task now does not simply loop through every single $<key, value>$ pair like in the original source code. At every $<key, value>$ pair, it needs to make sure the pair falls inside the task’s covering range. A simple comparison between starting key, ending key and the current key at each round serves the purpose. Besides, Map task now needs to actively listen to the signal from the Task Tracker in order to stop at any time. Finally, before committing the map output, Map task needs to mark the last processing input $ <key, value> $ pair, so the Job Tracker can know whether this task has completely finished or needs to be split into sub-tasks. Algorithm \ref{algo:mapTask} illustrates the new Map task’s workflow.
+\subsubsection{Write Skew is Precluded} The \textit{Write Skew} anomaly is precluded by the validation phase on the snapshot of semantic related group in OCC, because constraint violation on all related data rows will be checked before transaction committed.
 
-The creation of sub-tasks does not modify the underlying data split’s structure. Sub-tasks still require the same data split to process compared to its parental original task. This poses a drawback in our mechanism regarding the efficiency of data usage: the range of a sub-task might only cover, for example, 10\% of the data, but the same amount of data (1 chunk = 64 MB by default) will be required to transfer. It is then advisable not to split the task into too many small sub-tasks, as the network and computational waste would be high.
-
-\subsection{Reduce task preemption}
-
-A Reduce task is divided into 3 different phases. The Shuffle phase fetches all the segments that belong to it from intermediate Map Output data. The Sort phase performs a sort operation on all the fetches data, which was kept in $<key, value>$ pair format. Finally, the Reduce phase applies the user-defined reduce function on each of the Reduce-input $<key, value>$ pairs. Since the 3 phases are heavily dependent on each other, a similar “splitting” approach like in Map task preemption is unviable. We instead choose the traditional “pause and resume” approach where, at the moment of pausing, all the data of the Reduce task is stored in the local storage of the Task Tracker and, at the moment of resuming, data is loaded back to the memory.
-
-Our mechanism allows a Reduce task to preempt itself at any time during the course of the Shuffle phase, and at the boundery of other phases. The Sort phase is usually very short due to the fact that Hadoop launches a separate thread to merge the data as soon as they become available. Preempting Reduce task during Reduce phase is also feasible, however we will consider this in future work.
-
-\subsubsection{Pause}
-During the Shuffle phase, a Reduce task fetches all the segments that belong to it from all intermediate map outputs. According to the sizes of the segments, Reduce Task stores them either to local disks or in memory. Meanwhile, multiple merging threads merge fetched data into larger segments and store them in an ordered structure that later can be popped out to feed to Reduce function. Preserving the state of Shuffle phase means to keep track of the shuffling status of all segments. Upon receiving preemption request, Reduce task stops all the fetching and merging thread gracefully: it allows the threads to finish the last unit of work they are currently on. Fetching threads can finish fetching the last segment of Map output, while Merging threads can finish merging the current segment.
-
-After stopping all communication and sorting threads, the Reduce task flushes all the in-memory data to the disks while leave all the on-disk segments untouched. In-memory data includes in-memory segments and other data to keep track of the progress (number of copied segments, number of sorted segments...). These data is kept in files stored in each task attempt’s specific folder so that later re-launched attempt can access to these files and resume operation.
-
-Preemption at the phases’ boundery follows exactly the same procedure. Data is flushed to disks, and all the information needed to re-create the running task is also stored in files. After that, the Reduce task preempts itself and releases the slot. The task reports back to the Job Tracker with a new status of “SUSPENDED”. Suspended task will go through almost the same procedure as Failed task, except increasing the count for failed tasks. It is also added back to the pool for later resume.
-
-\subsubsection{Resume}
-
-The information about the previously launched Task Tracker is stored inside the task. Upon re-launch, the Reduce task checks to see if it has been launched somewhere before. The location can be either local (task is re-launched on the same Task Tracker) or remote (task is re-launched on a different Task Tracker). The task then tries to fetch the already processed data from the previously launched Task Tracker before resuming to the point where it left off.
-
-Our mechanism is incremental in the sense that it allows the task to be preempted multiple times. However, we do not allow the re-launched task to be preempted during the period when it fetches data from previously launched Task Tracker. Task needs to finish resuming to the previous state before being able to be preempted again. This is to prevent having flushed data on too many Task Trackers, which will make the resuming process complex and inefficient.
-
-\section {Preemptive locality-driven scheduler}
-In order to demonstrate the effectiveness of out new mechanism, we design a new scheduler, namely the Preemptive Locality-driven scheduler (PLS), that employs this new option to provide better locality for Map Reduce jobs. In normal situations without any failure, PLS behaves similarly to the default FIFO scheduler of Hadoop. However, when failures occur, PLS actively leverages the preemption mechanism to provide local execution for failed tasks.
-
-Upon a task’s failure, PLS assembles a list of Task Trackers that has local data to the failed task (if it was of Map type), or simply list of all running Task Trackers (if it was of Reduce type).  If any of these task trackers has a free slot of the right task type, PLS simply allows the task to be launched from that task tracker at the next heartbeat. If no free slot is found, PLS tries to find appropriate task from all the currently running tasks on those task trackers to preempt. Figure \ref{algo:preemptiveFifo} illustrates the logic of finding a task to preempt:
+\subsection{Total Order Update, Abort and Version Increase in Update Phase}
+We have a total order update rule in update phase so that dead lock will not occur by lock cycle. If multiple rows needed to be during update phase, they will be sorted first by the \textit{id} value. Then they will be updated in ascending order according by \textit{ids}. Since we can not take an Exclusive lock on the "new" row which not yet exists in the database, multiple transactions may try to persist "new" rows with the same \textit{Primary Key}, and one might be overwritten by the other. Using \textit{makePersistent()} function in ClusterJ can throw exception if the instance already exists in the database. Finally, for successful updates, the versions of the modified rows will be increased by 1.
+\subsection{Pseudocode of the Complete Algorithm}
+See Algorithm~\ref{algo:pseudocodeA}.
 \begin{algorithm}[!h]
-\caption{Finding a task to preempt}
-\label{algo:preemptiveFifo}
-\begin{algorithmic}
-\STATE {/*get the list of all suitable Task Trackers*/}
-\STATE List taskTrackers = getListOfTaskTracker();
-\STATE {/*get the list of all tasks running on those task trackers*/}
-\STATE List tasks = getListStatusesOfTasks(taskTrackers);
-\STATE {/*sort the tasks in the reverse job order*/}
-\STATE tasks.sort();
-\FOR {\{Task {\bf t} : tasks\} }
-\IF{( {\bf t} belongs to jobs of lesser priority
-\\ \indent {\bf AND} {\bf t}.progressScore $<$ {\bf THRESHOLD}
-\\ \indent {\bf AND} !t.isCleanUp() {\bf AND} !t.isSetUp()
-\\ \indent {\bf AND} !preemptList.contains(t)}
-\STATE preempt\_task(t);
-\STATE preemptList.add(t);
-\STATE {\bf return};
-\ENDIF
-\ENDFOR
-\end{algorithmic}
+	\caption{Pseudocode of the Complete Algorithm \\ Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}
+	\label{algo:pseudocodeA}
+	\begin{algorithmic}[1]
+		\STATE {\textbf{init:} restart = \TRUE, try = 0, path = operation.src, TotalRetry = 10}
+		
+		\WHILE{restart \AND try $<$ TotalRetry}
+		\STATE {restart = \FALSE}
+		\STATE {try += 1}
+		\STATE {tx.snapshot.clear()}
+		\STATE {tx.begin()}
+		\STATE {\textit{\textbf{/* 1. Read Phase */}}}
+		\STATE {tx.lockMode(\textit{Read\_Committed})}
+		\STATE {tx.snapshot = resolve\_semantic\_related\_group(path)}
+		\STATE {\textit{\textbf{/* 2. Execution Phase */}}}
+		\STATE {operation\_performTask(tx.snapshot) // HDFS operation performs on its snapshot}
+		\STATE {\textit{\textbf{/* 3. Validation Phase */}}}
+		\STATE {tx.lockMode(\textit{Shared})}
+		\STATE {relatedRows\_DataBase = batchRead\_Database(tx.snapshot)}
+		\STATE {tx.lockMode(\textit{Exclusive})}
+		\STATE {modifiedRows\_DataBase = batchRead\_Database(tx.snapshot)}
+		\IF{versionCompare(relatedRows\_DataBase, tx.snapshot) $==$ \TRUE \textbf{ and} versionCompare(modifiedRows\_DataBase, tx.snapshot) $==$ \TRUE}
+		\STATE {\textit{\textbf{/* 4. Update Phase */}}}
+		\STATE {operation.modifiedRows.version+=1}
+		\STATE {total\_order\_sort(operation.modifiedRows)}
+		\IF{batchPersist\_Database(operation.modifiedRows) \textbf{success}}
+		\STATE {tx.commit()}
+		\STATE {return \textbf{SUCCESS} // Return HDFS Operation Success}
+		\ELSE
+		\STATE {tx.abort()} 
+		\STATE{waitForRandomMilliseconds()}
+		\STATE{retry = \TRUE}
+		\ENDIF
+		\ELSE 
+		\STATE {tx.abort()}
+		\STATE{waitForRandomMilliseconds()}
+		\STATE{retry = \TRUE}
+		\ENDIF
+		\ENDWHILE
+		
+		\STATE {return \textbf{FAIL} // Return HDFS Operation} 
+	\end{algorithmic}
 \end{algorithm}
 
-PLS only allows failed tasks to preempt tasks from later submitted jobs. To respect the FIFO order, PLS prioritizes preempting tasks that belong to the latest submitted jobs. However, not all tasks would be considered for preemption. Preempting a task at, for example, 0.99 progress score would not be advisable, as it only introduces unnecessary waste which is more costly than waiting for that task to end (and perhaps the task will be already completed by the time of the next heartbeat). We impose a THRESHOLD of progress score so that almost complete tasks will not be considered for preemption. This THRESHOLD value is configurable via mapred-site.xml file, and the default value is set to 0.8.
-
-In case PLS cannot find any task to preempt (for example, tasks all belong to the same or higher priority jobs, or all tasks are close to completion), PLS let the task to be launched at any arbitrary Task Tracker that has free slot the earliest. This is similar to the original FIFO scheduler’s procedure. This is to avoid having to wait for too long for a local slot.
-
 \section{Evaluation}
-In order to prove the efficiency of Pause and Resume preemption mechanism, we present the result from selected experiments. The goal is to demonstrate how the Preemptive Locality-driven scheduler manages to help jobs under failures. For this purpose, we concern about the execution time of jobs that suffer the failure, as well as their localities.
+\label{sec:eva}
+The goal of this chapter is to proof that our OCC model performs better than PCC. As a proof of concept, we implemented the OCC version for the operation \textit{mkdirs} and also give a detailed evaluation on it compared with the PCC version. For this purpose, we concern about the execution time (elapsed time) needed to finish all the concurrent tasks.
 
-We performed our experiment on Grid5000 testbed, with a cluster of 21 nodes (1Master and 20 Slave nodes). Each node has 2 Map and 2 Reduce slots. Replication factor is set to 2. For timely reason, expiry time is set at 30 seconds. Speculation is turned off for correct evaluation of Pause and Resume mechanism's effeciency.
+Testbed Setup: The MySQL Cluster consists of six data nodes connected by 1 Gigabit LAN. Each data node has an Intel Xeon X5660 CPU at 2.80GHz, and contributes 6 GB RAM (5 GB Data Memory + 1 GB Index Memory) separately. Therefore, the total available memory for the cluster is 36 GB. The number of data replicas is 2. The maximum concurrent transactions is 10000 for each data node, and the inactive timeout for each transaction is 5 seconds. To avoid any communication overhead caused by RPC connections and serialization, we run the NameNode and Clients on the same machine with Intel i7-4770T CPU at 2.50GHz and 16 GB RAM. This machine is connected with the MySQL Cluster data nodes by 100 Megabits LAN.
 
-\subsubsection*{Jobs}
-For simplicity, we only run 2 jobs of WordCount application with the same input size of 30GB. Failure is injected at 150 seconds to maximize the number of failed tasks from job 1.
+\subsection{Parent Directory Contention Assessment}
+This experiment is the same as described in Section~\ref{subsub:exp} but we expand it to include the results with OCC. Therefore, we have a full performance comparison here among HDFS, PCC and OCC. From Table~\ref{fig:hdfsPCCOCCparentA}, we can see that OCC significantly outperforms PCC by almost 70 \% on this concurrent write-write parent directory contention workload. Under heavy workload, the execution time is just 1.3 times of HDFS. Remember that this is just a single NameNode performance test. We believe that OCC can greatly outperform HDFS in our multiple NameNodes architecture.
 
-\subsection*{Execution time}
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=1\linewidth]{time.png}
-    \caption{Finish time of jobs with different schedulers}
-    \label{fig:finalTime}
-\end{figure}
-
-Figure \ref{fig:finalTime} shows the finishing time of each job in the 4 different schedulers: the three readily available schedulers of Hadoop (FIFO, Fair and Capacity scheduler) and Preemptive Locality-driven scheduler (PLS). There is little difference in the total execution time of the two jobs (represented by the finishing time of the seconds job), but the trend is that PLS has to pay the most time to finish the set of jobs. However, PLS shows good improvement in the finishing time of job 1 - the job that suffers from the failure. PLS only requires 256.4 seconds to finish job 1, roughly 14 seconds (5.2\%) faster than in Capacity and about 20 seconds (7.2\%) when compare to FIFO scheduler. Fair scheduler performs poorly on this metrics, as jobs share the resources of the cluster. In fact, job 1 takes more time to finish than job 2 does in Fair scheduling. This can be explained by the fact that job 1 starts first and has more failed tasks than job 2.
-
-To further understand about the efficiency of PLS, as well as the actual behavior of Pause and Resume preemption feature, we perform the same experiment with 3 different flavors of PLS. We omit completely the preemption function of PLS and mimic the FIFO scheduler in a flavor called FIFO*. FIFO* still has to pay the overhead of allowing Pause and Resume at any time (this overhead will be discussed later). The Kill-PLS uses the Kill primitive provided by Hadoop instead of Pause and Resume. Finally, the PLS that leverages the Pause and Resume function is also included.
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=1\linewidth]{mod.png}
-    \caption{Execution with different flavors of PLS}
-    \label{fig:flavors}
-\end{figure}
-
-Figure \ref{fig:flavors} compares the execution of Hadoop with different flavors of PLS. The FIFO* enjoys the best performance due to the fact that there is no killing or preemption overhead. Tasks are launched and finish naturally without any waste work (from killing) or delay (from splitting and re-launching a task).
-
-Though witnessing some degradation in the total performance, Kill-PLS and PLS gain some improvement in term of Job 1's execution time. Both of Kill and Preemption finish the first job faster than that of FIFO*, in the order of roughly 19 (11.2\%) and 7 (2.5\%) seconds, respectively. Kill-PLS outperforms the other 2 competitors thanks to the fact that kill command can instantly rescue the slots from currently running tasks, while preemption command needs to pay some delay so that running tasks can save the states and release the slots. However, PLS manages to save some work from preempted tasks. PLS only requires an extra 102 seconds to finish the second job, compared to 120 seconds in Kill-PLS (an improvement of 15\%).
-
-\subsection*{Data locality of the first job}
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=1\linewidth]{flavorLocality.png}
-    \caption{Locality of the first job}
-    \label{fig:finalLocality}
-\end{figure}
-
-Figure \ref{fig:finalLocality} shows the locality of the first jobs in the three different flavors. FIFO* has the lowest value of data locality (90.4\%) due to the fact that failed tasks are assigned regardless of locality. Kill-PLS and PLS observe higher locality in Map tasks and equal each other with the values of 94.8\% and 95.4\%, respectively. This means PLS manages to improve the locality of Map tasks by almost 5\%. Out of 12 failed tasks (tasks that were initially launched on the failed node), FIFO* assigns all 12 tasks remotely (rack-locally), while Kill-PLS and PLS assigns only 3 remotely (as in table \ref{table:failedlocality}).
-\begin{center}
-\begin{table}[h]
-\centering
-    \begin{tabular}{ | >{\centering}p{4cm} | >{\centering}p{4cm} | >{\centering\arraybackslash}p{4cm} |}
-    \hline
-	FIFO* & Kill-PLS & PLS \\ \hline
-    0/12 (0\%)& 9/12 (75\%) & 9/12 (75\%)   \\ \hline
-    \end{tabular}
-    \caption{Number of local re-executed tasks}
-    \label{table:failedlocality}
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{Num. of Concurrent Creation}                                                 & \textbf{1000}   & \textbf{10000}  & \textbf{100000} \\ \hline
+		HDFS                                                                                 & 0.82s           & 7.83s           & 77.13s          \\ \hline
+		PCC                                                                                  & 4.35s           & 36.74s          & 332.36s         \\ \hline
+		OCC                                                                                  & 1.36s           & 12.01s          & 103.23s         \\ \hline
+		PCC / HDFS                                                                           & 530.5\%         & 469.2\%         & 430.9\%         \\ \hline
+		OCC / HDFS                                                                           & 165.9\%         & 153.4\%         & 133.8\%         \\ \hline
+		\textbf{\begin{tabular}[c]{@{}c@{}}OCC Improvement: \\ (PCC-OCC) / PCC\end{tabular}} & \textbf{68.7\%} & \textbf{67.3\%} & \textbf{68.9\%} \\ \hline
+	\end{tabular}
+	\caption{OCC Performance Improvement on Parent Directory Contention}
+	\label{table:hdfsPCCOCCparentA}
 \end{table}
-\end{center}
+
+\subsection{Read-Write Mixed Workload Assessment}
+
+In this experiment, we did a test for a read-write mixed workload assessment while the parent directory is still the contention point for PCC. So we assume that OCC will still outperform PCC in this kind of workload. Similar to the experiment in Section~\ref{subsub:exp}, we have 1000, 10000 and 100000 concurrent clients' operations running under the same parent directory. But in each task, half of them will do the metadata read operation \textit{getFileStatus()}, while the other half will do the write operation \textit{mkdirs()}. 
+
+From Table~\ref{fig:rwA}, we can see that OCC still significantly outperforms PCC by 65 \% on this concurrent read-write mixed workload. 
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{Num. of Concurrent Creation}                                                 & \textbf{1000}   & \textbf{10000}  & \textbf{100000} \\ \hline
+		PCC                                                                                  & 4.92s           & 50.69s          & 352.25s         \\ \hline
+		OCC                                                                                  & 1.78s           & 15.31s          & 120.64s         \\ \hline
+		\textbf{\begin{tabular}[c]{@{}c@{}}OCC Improvement: \\ (PCC-OCC) / PCC\end{tabular}} & \textbf{63.8\%} & \textbf{69.8\%} & \textbf{65.8\%} \\ \hline
+	\end{tabular}
+	\caption{OCC Performance Improvement on Read-Write Mixed Workload}
+	\label{table:rwA}
+\end{table}
+
+\subsection{OCC Performance with Different Size of Conflicts}
+
+When OCC conflicts happen, transactions will abort, wait for random milliseconds and retry. Eventually one transaction will success, and others will get updated values after retry and return RPC callbacks. Here we have 10000 concurrent operations running under the same parent directory. Each operation creates only one sub-directory. Some of them will success and some others will fail due to conflicts. These operations will try to create same sub-directories in different numbers from 1 (all conflicts), to 10000 (no conflicts). Therefore, we have different size of conflicts.
+
+From Table~\ref{table:conflictsA}, we can calculate that the maximum performance degradation is 19.1\% when all operations conflict: $(14.53-11.75) \div 14.53 = 19.1\%$
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{Total Num. of Sub-DirectoriesCreated for 10000 Operations} & \textbf{Elapsed Time (Second)} \\ \hline
+		1 (all conflicts)                                                  & 14.53                          \\ \hline
+		10 (1000 conflicts)                                                & 14.11                          \\ \hline
+		100 (100 conflicts)                                                & 13.51                          \\ \hline
+		1000 (10 conflicts)                                                & 12.72                          \\ \hline
+		10000 (no conflicts)                                               & 11.75                          \\ \hline
+	\end{tabular}
+	\caption{OCC Performance with Different Size of Conflicts}
+	\label{table:conflictsA}
+\end{table}
 
 \section{Conclusion}
 This thesis addresses the problem by investigating the fault-tolerance mechanism of Hadoop, a popular implementation of MapReduce. It presents some results to illustrate Hadoop's behaviors under different situations. The intent was to confirm the mechanism and analyze the drawbacks of how Hadoop handles failures.
@@ -314,7 +419,23 @@ Our work suffers from some concerns regarding the usability, as well as efficien
 
 \bibitem{white2012hadoop} White, Tom. "Hadoop: The definitive guide." (2012).
 
-\bibitem{welcomepage}Apache Hadoop Welcome page, \url{http://http://hadoop.apache.org}
+\bibitem{wasif2012distributed} Wasif, Malik. "A Distributed Namespace for a Distributed File System." (2012).
+
+\bibitem{peiro2013maintaining} Peiro Sajjad, Hooman, and Mahmoud Hakimzadeh Harirbaf. "Maintaining Strong Consistency Semantics in a Horizontally Scalable and Highly Available Implementation of HDFS." (2013).
+
+\bibitem{gray1976granularity} Lorie, Raymond A., Gianfranco R. Putzolu, and Irving L. Traiger. "Granularity of locks and degrees of consistency in a shared data base." In IFIP Working Conference on Modelling in Data Base Management Systems, pp. 365-394. 1976.
+
+\bibitem{berenson1995critique} Berenson, Hal, Phil Bernstein, Jim Gray, Jim Melton, Elizabeth O'Neil, and Patrick O'Neil. "A critique of ANSI SQL isolation levels." ACM SIGMOD Record 24, no. 2 (1995): 1-10.
+
+\bibitem{X} Wasif, Malik. "A Distributed Namespace for a Distributed File System." (2012).
+
+\bibitem{X} Wasif, Malik. "A Distributed Namespace for a Distributed File System." (2012).
+
+\bibitem{X} Wasif, Malik. "A Distributed Namespace for a Distributed File System." (2012).
+
+\bibitem{X} Wasif, Malik. "A Distributed Namespace for a Distributed File System." (2012).
+
+\bibitem{X} Wasif, Malik. "A Distributed Namespace for a Distributed File System." (2012).
 
 \end{thebibliography}
 

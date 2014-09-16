@@ -108,7 +108,7 @@ The architecture of Hop-HDFS consists of multiple \textit{NameNodes}, multiple \
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.5]{HopHDFSArchitecture.pdf}
+	\includegraphics[scale=0.7]{HopHDFSArchitecture.pdf}
 	\caption{The Architecture of Hop-HDFS}
 	\label{fig:hophdfsar}
 \end{figure}
@@ -125,7 +125,7 @@ In Hop-HDFS, the namespace is stored into tables of MySQL Cluster database, so a
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.6]{hoptree.pdf}
+	\includegraphics[scale=0.7]{hoptree.pdf}
 	\caption{Filesystem Hierarchy with ID for INodes in Hop-HDFS}
 	\label{fig:hoptreeA}
 \end{figure}
@@ -399,14 +399,18 @@ From Table~\ref{table:conflictsA}, we can calculate that the maximum performance
 The correctness of our OCC implementation for \textit{mkdirs()}~\footnote{other operations are PCC} has been validated by 300+ Apache HDFS 2.0.4 Alpha unit tests passing.
 
 \section{Conclusion}
-This thesis addresses the problem by investigating the fault-tolerance mechanism of Hadoop, a popular implementation of MapReduce. It presents some results to illustrate Hadoop's behaviors under different situations. The intent was to confirm the mechanism and analyze the drawbacks of how Hadoop handles failures.
+In this thesis, we provide a solution for Hop-HDFS based on optimistic concurrency control with snapshot isolation on semantic related group to improve the operation throughput while maintaining the strong consistency semantics in HDFS.
 
-We proposed the designed of a new feature for Hadoop: the waste-free preemption function. By allowing a task to preserve its state and release the slot in a timely manner, Hadoop can have more control over resources. This in turn will help increase the performance of Hadoop under the occurrence of failure. The preemption feature was implemented not only with the intention of improving performance under failure, but also to open new possibilities for further improvement under other circumstances.
+First, we discuss the architectures HDFS and Hop-HDFS. With focus on the namespace concurrency control schemes, we analyzes the limitation of HDFS's NameNode implementation and provide an overview of Hop-HDFS illustrating how we overcome those problems in the distributed NameNode architecture.
 
-Finally, we evaluated the effectiveness of the new feature considering some basics metrics such as execution time and data locality. In this work, we compare the original Fifo scheduler with a preemptive version. Experiments show that our new feature improves the execution time of Hadoop job when failure occurs. Although the preemption mechanism imposes some overhead, if wisely used, it can greatly improve Hadoop's performance.
+MySQL Cluster is selected to be the distributed in-memory storage layer for the metadata in Hop-HDFS due to its the high operation throughput and high reliability. However, the trade off is that the cluster storage engine of MySQL cluster supports only the \textit{READ COMMITTED} transaction isolation level. \textit{Anomalies} like fuzzy read, phantom, write skew will appear because the write results in transactions will be exposed to reads in different concurrent transactions without proper implementation.
 
-\subsection*{Future work}
-Our work suffers from some concerns regarding the usability, as well as efficiency. Firstly, the Reduce Pause and Resume mechanism should be further extended to allow preemption during Reduce phase. This allows a more fine-grain control over Reduce tasks. Secondly, it would be interesting to evaluate the cost of preempting a Reduce task, in comparison with Killing. Killing instantly releases the slot, but wastes the effort, while Preemption may take sometime before the slot is released. Also, upon resuming, Reduce tasks also require some extra time to load up the data from the local storage. These two delays add up and in some cases, it is more beneficial to decide to Kill rather than Preempt a Reduce task.
+Then, based on optimistic concurrency control with snapshot isolation on semantic related group, we demonstrate how concurrency is improved and anomalies - \textit{fuzzy read, phantom, write skew} are precluded, so that the strong consistency semantics in HDFS is maintained.
+
+Finally, as a proof of concept, we implemented the OCC version for the operation \textit{mkdirs} and also give a detailed evaluation on it compared with the PCC version. Our solution outperforms previous work of Hop-HDFS up to 70 \%. Under heavy workload, the single NameNode performance of HDFS is just a slightly better than OCC. We believe that OCC can greatly outperform HDFS in Hop-HDFS multiple NameNodes architecture. The correctness of our implementation has been validated by 300+ Apache HDFS unit tests passing.
+
+\subsection{Future work}
+The result of our OCC solution is promising. Other operations in Hop-HDFS can also adopt the same algorithm to achieve better performance. Future evaluation on Hop-HDFS in multiple NameNodes architecture with OCC solution is needed to prove that it can achieve better performance than HDFS in single NameNode architecture.
 
 \bibliography{reference}
 
@@ -429,16 +433,6 @@ Our work suffers from some concerns regarding the usability, as well as efficien
 \bibitem{gray1976granularity} Lorie, Raymond A., Gianfranco R. Putzolu, and Irving L. Traiger. "Granularity of locks and degrees of consistency in a shared data base." In IFIP Working Conference on Modelling in Data Base Management Systems, pp. 365-394. 1976.
 
 \bibitem{berenson1995critique} Berenson, Hal, Phil Bernstein, Jim Gray, Jim Melton, Elizabeth O'Neil, and Patrick O'Neil. "A critique of ANSI SQL isolation levels." ACM SIGMOD Record 24, no. 2 (1995): 1-10.
-
-\bibitem{X} Wasif, Malik. "A Distributed Namespace for a Distributed File System." (2012).
-
-\bibitem{X} Wasif, Malik. "A Distributed Namespace for a Distributed File System." (2012).
-
-\bibitem{X} Wasif, Malik. "A Distributed Namespace for a Distributed File System." (2012).
-
-\bibitem{X} Wasif, Malik. "A Distributed Namespace for a Distributed File System." (2012).
-
-\bibitem{X} Wasif, Malik. "A Distributed Namespace for a Distributed File System." (2012).
 
 \end{thebibliography}
 

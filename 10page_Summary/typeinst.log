@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  16 SEP 2014 02:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  16 SEP 2014 02:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -437,9 +437,6 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4 <./hoptree.pdf>]
 
-LaTeX Warning: Reference `subsec:rpc' on page 5 undefined on input line 211.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [5]
@@ -467,10 +464,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4205 strings out of 493304
- 61757 string characters out of 6139871
+ 4204 strings out of 493304
+ 61745 string characters out of 6139871
  136887 words of memory out of 5000000
- 7592 multiletter control sequences out of 15000+600000
+ 7591 multiletter control sequences out of 15000+600000
  11572 words of font info for 44 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,13n,38p,1134b,649s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -488,7 +485,7 @@ cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on typeinst.pdf (10 pages, 430206 bytes).
+Output written on typeinst.pdf (10 pages, 430172 bytes).
 PDF statistics:
  115 PDF objects out of 1000 (max. 8388607)
  83 compressed objects within 1 object stream

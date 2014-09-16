@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  16 SEP 2014 02:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  16 SEP 2014 02:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1817,7 +1817,7 @@ fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
 o/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pf
 b>
-Output written on document.pdf (86 pages, 2870004 bytes).
+Output written on document.pdf (86 pages, 2870029 bytes).
 PDF statistics:
  1803 PDF objects out of 2073 (max. 8388607)
  1297 compressed objects within 13 object streams

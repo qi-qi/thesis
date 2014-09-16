@@ -359,7 +359,7 @@ This experiment is the same as described in Section~\ref{subsub:exp} but we expa
 
 In this experiment, we did a test for a read-write mixed workload assessment while the parent directory is still the contention point for PCC. So we assume that OCC will still outperform PCC in this kind of workload. Similar to the experiment in Section~\ref{subsub:exp}, we have 1000, 10000 and 100000 concurrent clients' operations running under the same parent directory. But in each task, half of them will do the metadata read operation \textit{getFileStatus()}, while the other half will do the write operation \textit{mkdirs()}. 
 
-From Table~\ref{fig:rwA}, we can see that OCC still significantly outperforms PCC by 65 \% on this concurrent read-write mixed workload. 
+From Table~\ref{table:rwA}, we can see that OCC still significantly outperforms PCC by 65 \% on this concurrent read-write mixed workload. 
 
 \begin{table}[ht]
 	\centering
@@ -394,6 +394,9 @@ From Table~\ref{table:conflictsA}, we can calculate that the maximum performance
 	\caption{OCC Performance with Different Size of Conflicts}
 	\label{table:conflictsA}
 \end{table}
+
+\subsection{Correctness Assessment}
+The correctness of our OCC implementation for \textit{mkdirs()}~\footnote{other operations are PCC} has been validated by 300+ Apache HDFS 2.0.4 Alpha unit tests passing.
 
 \section{Conclusion}
 This thesis addresses the problem by investigating the fault-tolerance mechanism of Hadoop, a popular implementation of MapReduce. It presents some results to illustrate Hadoop's behaviors under different situations. The intent was to confirm the mechanism and analyze the drawbacks of how Hadoop handles failures.

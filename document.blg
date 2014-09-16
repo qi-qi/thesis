@@ -1,6 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: document.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: document.aux
 The style file: chicago.bst
 Database file #1: reference.bib
 Warning--entry type for "apachehadoop" isn't style-file defined
@@ -14,29 +12,28 @@ I was expecting a `,' or a `}'---line 54 of file reference.bib
  :  howpublished = {\url{https://www.sics.se/sites/default/files/pub/jimdowlingsics-cloudday-13-hops-paas.pdf}}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--entry type for "ndblimits" isn't style-file defined
+--line 112 of file reference.bib
 Warning--entry type for "reentrantReadWriteLock" isn't style-file defined
---line 114 of file reference.bib
+--line 118 of file reference.bib
 Warning--entry type for "apachehbase" isn't style-file defined
---line 120 of file reference.bib
+--line 124 of file reference.bib
 Warning--entry type for "apachepig" isn't style-file defined
---line 126 of file reference.bib
+--line 130 of file reference.bib
 Warning--entry type for "apachemahout" isn't style-file defined
---line 132 of file reference.bib
+--line 136 of file reference.bib
 Warning--entry type for "apachespark" isn't style-file defined
---line 138 of file reference.bib
+--line 142 of file reference.bib
 Warning--entry type for "mysql48nodes" isn't style-file defined
---line 151 of file reference.bib
+--line 155 of file reference.bib
 Warning--entry type for "mysqlcluster" isn't style-file defined
---line 157 of file reference.bib
+--line 161 of file reference.bib
 Warning--entry type for "mysqlclusterng" isn't style-file defined
---line 163 of file reference.bib
-Warning--entry type for "mysqlreadcommited" isn't style-file defined
---line 179 of file reference.bib
+--line 167 of file reference.bib
 Warning--entry type for "mysqlclusterj" isn't style-file defined
---line 185 of file reference.bib
+--line 183 of file reference.bib
 Warning--entry type for "oraclemvcc" isn't style-file defined
---line 197 of file reference.bib
-Warning--I didn't find a database entry for "ndblimits"
+--line 195 of file reference.bib
 Warning--can't use both volume and number fields in berenson1995critique
 Warning--no number and no volume in borthakur2008hdfs
 Warning--page numbers missing in borthakur2008hdfs
@@ -51,7 +48,7 @@ Warning--empty year in apachemahout
 Warning--empty year in mysqlcluster
 Warning--empty year in mysql48nodes
 Warning--empty year in mysqlclusterj
-Warning--empty year in mysqlreadcommited
+Warning--empty year in ndblimits
 Warning--empty year in mysqlclusterng
 Warning--empty booktitle in mysqlclusterwhitepaper
 Warning--empty publisher in mysqlclusterwhitepaper
@@ -65,45 +62,4 @@ Warning--empty year in apachespark
 Warning--no journal in wasif2012distributed
 Warning--no number and no volume in wasif2012distributed
 Warning--page numbers missing in wasif2012distributed
-You've used 30 entries,
-            2861 wiz_defined-function locations,
-            750 strings with 8710 characters,
-and the built_in function-call counts, 16809 in all, are:
-= -- 1433
-> -- 1067
-< -- 7
-+ -- 298
-- -- 380
-* -- 1213
-:= -- 3184
-add.period$ -- 87
-call.type$ -- 30
-change.case$ -- 196
-chr.to.int$ -- 25
-cite$ -- 58
-duplicate$ -- 531
-empty$ -- 1068
-format.name$ -- 408
-if$ -- 3062
-int.to.chr$ -- 6
-int.to.str$ -- 0
-missing$ -- 15
-newline$ -- 146
-num.names$ -- 290
-pop$ -- 256
-preamble$ -- 1
-purify$ -- 367
-quote$ -- 0
-skip$ -- 461
-stack$ -- 0
-substring$ -- 768
-swap$ -- 180
-text.length$ -- 7
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 570
-warning$ -- 28
-while$ -- 291
-width$ -- 0
-write$ -- 376
 (There was 1 error message)

@@ -95,11 +95,11 @@ MySQL.
 \newblock Java and mysql cluster.
 \newblock \url{http://dev.mysql.com/doc/ndbapi/en/mccj-overview-java.html}.
 
-\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{d}]{mysqlreadcommited}
+\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{d}]{ndblimits}
 MySQL.
 \newblock Limits relating to transaction handling in mysql cluster.
 \newblock
-  \url{http://dev.mysql.com/doc/refman/5.0/en/mysql-cluster-limitations-transactions.html}.
+  \url{http://dev.mysql.com/doc/mysql-cluster-excerpt/5.1/en/mysql-cluster-limitations-transactions.html}.
 
 \bibitem[\protect\citeauthoryear{MySQL}{MySQL}{e}]{mysqlclusterng}
 MySQL.

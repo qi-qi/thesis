@@ -54,7 +54,7 @@
 \author{Qi Qi}
 \authorrunning{Optimistic Concurrency Control in a Distributed NameNode Architecture for Hadoop Distributed File System}
 % (feature abused for this document to repeat the title also on left hand pages)
-\institute{Instituto Superior T\'{e}cnico - IST (Portugal) \\ Royal Institute of Technology - KTH (Sweden)}
+\institute{Instituto Superior Técnico - IST (Portugal) \\ Royal Institute of Technology - KTH (Sweden)}
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
 
@@ -100,7 +100,7 @@ The \textit{Hadoop Distributed File System} (HDFS) is inspired by the Google Fil
 Similar to GFS, HDFS stores metadata and file data separately. The architecture of a HDFS cluster consists of a single \textit{NameNode}, multiple \textit{DataNodes}, and is accessed by multiple \textit{clients}. Files in HDFS are split into smaller blocks stored in \textit{DataNodes}. For fault tolerance, each block is replicated across multiple \textit{DataNodes}. The \textit{NameNode} is a single dedicated metadata server maintaining the namespace, access control information, and file blocks mappings to DataNodes. The entire namespace is kept in-memory, called the \textit{image}, of the \textit{NameNode}. The persistent record of \textit{image}, called the \textit{checkpoint}, is stored in the local physical file system. The modification of the namespace (\textit{image}), called the \textit{journal}, is also persisted in the local physical file system. Copies of the \textit{checkpoints} and the \textit{journals} can be stored at other servers for durability. Therefore, the \textit{NameNode} restores the namespace by loading the checkpoint and replaying the journal during its restart.
 
 \subsection{Hadoop Open Platform-as-a-service and Hop-HDFS}
-The \textit{Hadoop Open Platform-as-a-service} (Hop) is an open platform-as-a-Service (PaaS) support of the Hadoop ecosystem on existing cloud platforms including Amazon Web Service and OpenStack. The goal is to automate the installation of both HDFS and Apache YARN so that unsophisticated users can deploy the stack on the cloud easily by a few clicks from our portal website.
+The \textit{Hadoop Open Platform-as-a-service} (Hop) is an open platform-as-a-Service (PaaS) support of the Hadoop ecosystem on existing cloud platforms including Amazon Web Service and OpenStack. The goal is to automate the installation of both HDFS and Apache YARN so that unsophisticated users can deploy the stack on the cloud easily by a few clicks from our portal website. 
 
 The storage layer of Hop, called the Hop-HDFS, is a new high available model for HDFS's metadata, aiming to overcome the major limitations of HDFS NameNode architecture: (1) the scalability of the namespace - the memory size restricts the storage capacity in the system; (2) the throughput problem - the throughput of the metadata operations is bounded by the ability of the single machine (NameNode); (3) the failure recovery - it takes a long time for the NameNode to restart since it needs to load the checkpoint and replay the edit logs from the journal into the memory.
 
@@ -159,7 +159,7 @@ In the second version of Hop-HDFS~\cite{peiro2013maintaining} (also named as KTH
 
 \subsubsection{Limitations}
 
-There are two major limitations in this locking scheme:
+There are two major limitations in this locking scheme: 
 
 1) It lowers the concurrency when multiple transactions try to mutate different descendants within the same subtree. Only one writer is allowed to work on INodes under one directory due to the implicit lock (Write Lock) for the parent directory. For example, if transaction Tx1 wants to mutate INode \textit{h}, and another transaction Tx2 wants to mutate INode \textit{i} concurrently in Figure~\ref{fig:hoptreeA}, Tx1 will take a parent lock on INode \textit{f} first and then perform operations. No more transactions can work under INode \textit{f} at the moment. Tx2 will be blocked by the implicit lock until Tx1 commits. See Table~\ref{table:hoplockTableA}.
 
@@ -270,7 +270,7 @@ After resolving the semantic related group, we take a snapshot on selected rows 
 Before validation phase, the transaction will never fetch any data from database since it has all the semantic related rows in the cached snapshot. Therefore, the snapshot provides a consistent view of data for each transaction from read phase until validation phase. Hence: \textit{1. Fuzzy Read} is precluded by \textit{snapshot isolation}: Transactions read from snapshot instead of database, not affected by the value committed by others. \textit{2. Phantom Read} is also precluded by \textit{snapshot isolation on Semantic Related Group}: Transactions snapshot the semantic related group of after the operation. So if same operation peformed, it is not affected by the value committed by others since it operate from the snapshot.
 
 \subsection{ClusterJ and Lock Mode in MySQL Cluster}
-\textit{ClusterJ} is a Java connector based on object-relational mapping persistence frameworks to access data in MySQL Cluster. It doesn't depend on the MySQL Server to access data in MySQL Cluster as it communicates with data nodes directly, which means that ClusterJ can perform some operations much more quickly.
+\textit{ClusterJ} is a Java connector based on object-relational mapping persistence frameworks to access data in MySQL Cluster. It doesn't depend on the MySQL Server to access data in MySQL Cluster as it communicates with data nodes directly, which means that ClusterJ can perform some operations much more quickly. 
 
 Unlike \textit{Two-Phase Locking} (2PL), there are three lock modes in MySQL Cluster. \textbf{(1) SHARED} (Read Lock, RL): Set a shared lock on rows; \textbf{(2) EXCLUSIVE} (Write Lock, WL): Set an exclusive lock on rows; \textbf{(3) READ\_COMMITTED} (Read Committed, RC): Set no locks but read the most recent committed values. For \textit{Read\_Committed}, it is implemented for consistent nonlocking reads, which means that a fresh committed snapshot of data row is always presented to a query of database, regardless of whether Shared Lock or Exclusive Lock are taken on the current row or not.
 
@@ -315,18 +315,18 @@ See Algorithm~\ref{algo:pseudocodeA}.
 		\STATE {tx.commit()}
 		\STATE {return \textbf{SUCCESS} // Return HDFS Operation Success}
 		\ELSE
-		\STATE {tx.abort()}
+		\STATE {tx.abort()} 
 		\STATE{waitForRandomMilliseconds()}
 		\STATE{retry = \TRUE}
 		\ENDIF
-		\ELSE
+		\ELSE 
 		\STATE {tx.abort()}
 		\STATE{waitForRandomMilliseconds()}
 		\STATE{retry = \TRUE}
 		\ENDIF
 		\ENDWHILE
 		
-		\STATE {return \textbf{FAIL} // Return HDFS Operation}
+		\STATE {return \textbf{FAIL} // Return HDFS Operation} 
 	\end{algorithmic}
 \end{algorithm}
 
@@ -357,9 +357,9 @@ This experiment is the same as described in Section~\ref{subsub:exp} but we expa
 
 \subsection{Read-Write Mixed Workload Assessment}
 
-In this experiment, we did a test for a read-write mixed workload assessment while the parent directory is still the contention point for PCC. So we assume that OCC will still outperform PCC in this kind of workload. Similar to the experiment in Section~\ref{subsub:exp}, we have 1000, 10000 and 100000 concurrent clients' operations running under the same parent directory. But in each task, half of them will do the metadata read operation \textit{getFileStatus()}, while the other half will do the write operation \textit{mkdirs()}.
+In this experiment, we did a test for a read-write mixed workload assessment while the parent directory is still the contention point for PCC. So we assume that OCC will still outperform PCC in this kind of workload. Similar to the experiment in Section~\ref{subsub:exp}, we have 1000, 10000 and 100000 concurrent clients' operations running under the same parent directory. But in each task, half of them will do the metadata read operation \textit{getFileStatus()}, while the other half will do the write operation \textit{mkdirs()}. 
 
-From Table~\ref{table:rwA}, we can see that OCC still significantly outperforms PCC by 65 \% on this concurrent read-write mixed workload.
+From Table~\ref{table:rwA}, we can see that OCC still significantly outperforms PCC by 65 \% on this concurrent read-write mixed workload. 
 
 \begin{table}[ht]
 	\centering

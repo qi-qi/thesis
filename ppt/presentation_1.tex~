@@ -85,7 +85,7 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[OCC for Hops-HDFS]{Optimistic Concurrency Control in a Distributed NameNode Architecture for Hadoop Distributed File System} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[OCC for Hop-HDFS]{Optimistic Concurrency Control in a Distributed NameNode Architecture for Hadoop Distributed File System} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author{Qi Qi} % Your name
 \institute[IST/KTH/SICS] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
@@ -137,7 +137,7 @@ Swedish Institute of Computer Science - SICS (Sweden) \\% Your institution for t
 	\end{table}
 \end{block}
 
-\begin{block}{Hops-HDFS and Its Limitation}
+\begin{block}{Hop-HDFS and Its Limitation}
 	Distributed NameNode Architecture \\ Maintain HDFS Strong Consistency Semantics \\ Concurrency Restricted
 \end{block}
 \end{frame}
@@ -149,10 +149,10 @@ Swedish Institute of Computer Science - SICS (Sweden) \\% Your institution for t
 \begin{block}{HDFS}
 	System-level Lock
 \end{block}
-\begin{block}{Hops-HDFS v1}
+\begin{block}{Hop-HDFS v1}
 	System-level Lock
 \end{block}
-\begin{block}{Hops-HDFS v2}
+\begin{block}{Hop-HDFS v2}
 	Row-level Lock
 \end{block}
 \begin{block}{MySQL Cluster}
@@ -165,14 +165,14 @@ Swedish Institute of Computer Science - SICS (Sweden) \\% Your institution for t
 \begin{frame}
 \frametitle{Contribution}
 \begin{block}{Architectures and Namespace Concurrency Control}
-GFS, HDFS, Hops-HDFS and MySQL Cluster
+GFS, HDFS, Hop-HDFS and MySQL Cluster
 \end{block}
 
 \begin{block}{Performance Accessment and Limitation Analysis}
-HDFS v.s. Hops-HDFS v2 (PCC version)
+HDFS v.s. Hop-HDFS v2 (PCC version)
 \end{block}
 
-\begin{block}{Solution for Hops-HDFS}
+\begin{block}{Solution for Hop-HDFS}
 Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group
 \end{block}
 \end{frame}
@@ -245,9 +245,9 @@ Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group
 \end{figure}
 \end{frame}
 
-\subsection{Hops-HDFS}
+\subsection{Hop-HDFS}
 \begin{frame}
-	\frametitle{Hops-HDFS}
+	\frametitle{Hop-HDFS}
 		\begin{block}{Overcome Limitations in HDFS NameNode}
 			\begin{itemize}
 				\item Scalability of the Namespace  
@@ -258,7 +258,7 @@ Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group
 \end{frame}
 
 \begin{frame}
-	\frametitle{Hops-HDFS Architecture}
+	\frametitle{Hop-HDFS Architecture}
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=\linewidth]{figs/HopHDFSArchitecture.pdf}
@@ -277,7 +277,7 @@ Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group
 		\end{figure}
 \end{frame}
 
-\subsection{Hops-HDFS Namespace Concurrency Control and Limitations}
+\subsection{Hop-HDFS Namespace Concurrency Control and Limitations}
 \begin{frame}
 	\frametitle{HDFS Namespace Structure}
 	\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
@@ -311,7 +311,7 @@ Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group
 \end{frame}
 
 \begin{frame}
-	\frametitle{Limitations in Hops-HDFS Namespace Concurrency Control}
+	\frametitle{Limitations in Hop-HDFS Namespace Concurrency Control}
 		\begin{itemize}
 			\item Duplicated Round Trips
 			\item Implicit Parent Locks:

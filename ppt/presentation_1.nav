@@ -28,10 +28,10 @@
 \headcommand {\beamer@subsectionentry {0}{2}{4}{8}{MySQL Cluster}}\headcommand {\beamer@subsectionpages {7}{7}}
 \headcommand {\slideentry {2}{4}{1}{8/8}{MySQL Cluster}{0}}
 \headcommand {\beamer@framepages {8}{8}}
-\headcommand {\beamer@subsectionentry {0}{2}{5}{9}{Hop-HDFS}}\headcommand {\beamer@subsectionpages {8}{8}}
-\headcommand {\slideentry {2}{5}{1}{9/9}{Hop-HDFS}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{5}{9}{Hops-HDFS}}\headcommand {\beamer@subsectionpages {8}{8}}
+\headcommand {\slideentry {2}{5}{1}{9/9}{Hops-HDFS}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\slideentry {2}{5}{2}{10/10}{Hop-HDFS}{0}}
+\headcommand {\slideentry {2}{5}{2}{10/10}{Hops-HDFS}{0}}
 \headcommand {\beamer@framepages {10}{10}}
 \headcommand {\sectionentry {3}{Namespace Concurrency Control}{11}{Namespace Concurrency Control}{0}}
 \headcommand {\beamer@sectionpages {5}{10}}
@@ -39,10 +39,10 @@
 \headcommand {\beamer@subsectionentry {0}{3}{1}{11}{Limitations in HDFS Namespace Concurrency Control}}\headcommand {\beamer@subsectionpages {11}{10}}
 \headcommand {\slideentry {3}{1}{1}{11/11}{Limitations in HDFS Namespace Concurrency Control}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{12}{Hop-HDFS Namespace Concurrency Control and Limitations}}\headcommand {\beamer@subsectionpages {11}{11}}
-\headcommand {\slideentry {3}{2}{1}{12/12}{Hop-HDFS Namespace Concurrency Control and Limitations}{0}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{12}{Hops-HDFS Namespace Concurrency Control and Limitations}}\headcommand {\beamer@subsectionpages {11}{11}}
+\headcommand {\slideentry {3}{2}{1}{12/12}{Hops-HDFS Namespace Concurrency Control and Limitations}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\slideentry {3}{2}{2}{13/13}{Hop-HDFS Namespace Concurrency Control and Limitations}{0}}
+\headcommand {\slideentry {3}{2}{2}{13/13}{Hops-HDFS Namespace Concurrency Control and Limitations}{0}}
 \headcommand {\beamer@framepages {13}{13}}
 \headcommand {\beamer@subsectionentry {0}{3}{3}{14}{Namespace Operation Performance Assessment}}\headcommand {\beamer@subsectionpages {12}{13}}
 \headcommand {\slideentry {3}{3}{1}{14/14}{Namespace Operation Performance Assessment}{0}}

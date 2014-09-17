@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  17 SEP 2014 01:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  17 SEP 2014 02:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1021,6 +1021,10 @@ Overfull \hbox (9.81868pt too wide) in paragraph at lines 336--336
  [] 
  []
 
+
+Overfull \vbox (1.524pt too high) detected at line 336
+ []
+
 [13
 
 ] <figs/nn_100.pdf, id=1107, 361.35pt x 216.81pt>
@@ -1142,9 +1146,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 636.
  (./presentation_1.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 636.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 636.
-Package rerunfilecheck Info: File `presentation_1.out' has not changed.
-(rerunfilecheck)             Checksum: 662E14985BAFF8EF535737BFB9DF1EBA;2037.
 
+
+Package rerunfilecheck Warning: File `presentation_1.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `presentation_1.out':
+(rerunfilecheck)             Before: 662E14985BAFF8EF535737BFB9DF1EBA;2037
+(rerunfilecheck)             After:  771C94DA62FE1AA010D4FDD66B62FEC0;2039.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -1157,7 +1167,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 636.
 Here is how much of TeX's memory you used:
  16036 strings out of 493304
  296993 string characters out of 6139871
- 414174 words of memory out of 5000000
+ 414180 words of memory out of 5000000
  19001 multiletter control sequences out of 15000+600000
  10858 words of font info for 40 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1175,7 +1185,7 @@ fonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
 0.pfb>
-Output written on presentation_1.pdf (33 pages, 1521865 bytes).
+Output written on presentation_1.pdf (33 pages, 1521894 bytes).
 PDF statistics:
  2537 PDF objects out of 2984 (max. 8388607)
  2362 compressed objects within 24 object streams

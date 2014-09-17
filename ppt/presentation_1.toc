@@ -8,10 +8,10 @@
 \beamer@subsectionintoc {2}{2}{HDFS Architecture}{6}{0}{2}
 \beamer@subsectionintoc {2}{3}{Isolation Level}{7}{0}{2}
 \beamer@subsectionintoc {2}{4}{MySQL Cluster}{8}{0}{2}
-\beamer@subsectionintoc {2}{5}{Hop-HDFS}{9}{0}{2}
+\beamer@subsectionintoc {2}{5}{Hops-HDFS}{9}{0}{2}
 \beamer@sectionintoc {3}{Namespace Concurrency Control}{11}{0}{3}
 \beamer@subsectionintoc {3}{1}{Limitations in HDFS Namespace Concurrency Control}{11}{0}{3}
-\beamer@subsectionintoc {3}{2}{Hop-HDFS Namespace Concurrency Control and Limitations}{12}{0}{3}
+\beamer@subsectionintoc {3}{2}{Hops-HDFS Namespace Concurrency Control and Limitations}{12}{0}{3}
 \beamer@subsectionintoc {3}{3}{Namespace Operation Performance Assessment}{14}{0}{3}
 \beamer@sectionintoc {4}{Solution}{16}{0}{4}
 \beamer@subsectionintoc {4}{1}{Resolving the Semantic Related Group}{16}{0}{4}

@@ -426,7 +426,7 @@ HDFS v.s. Hops-HDFS v2 (PCC version)
 
 \subsection{Optimistic Concurrency Control}
 \begin{frame}
-	\frametitle{Per-Transaction Snapshot Isolation}
+	\frametitle{Optimistic Concurrency Control}
 	\begin{itemize}
 		\item Read Phase: \textit{Read\_Committed} on snapshot
 		\item Validation Phase: \textit{Shared} on related Rows, \textit{Exclusive} on modified rows / Compare versions / Abort and retry

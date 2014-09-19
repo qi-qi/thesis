@@ -147,26 +147,25 @@ Swedish Institute of Computer Science - SICS (Sweden) \\% Your institution for t
 \begin{frame}
 \frametitle{Problem Statement}
 \begin{block}{HDFS}
-	System-level Lock: Single Writer
-\end{block}
-\begin{block}{MySQL Cluster}
-	Read Committed Isolation Level: Anomalies
+	System-level Lock
 \end{block}
 \begin{block}{Hops-HDFS v1}
-	System-level Lock: Single Writer + Network Latency
+	System-level Lock
 \end{block}
-\begin{block}{Hops-HDFS v2 (Pessimistic Concurrency Control - PCC)}
-	Row-level Lock: Implicit Locking -\textgreater Single Writer + Network Latency
+\begin{block}{Hops-HDFS v2}
+	Row-level Lock
 \end{block}
-
+\begin{block}{MySQL Cluster}
+	Read Committed / Anomalies
+\end{block}
 \end{frame}
 
 %------------------------------------------------
 \subsection{Contribution}
 \begin{frame}
 \frametitle{Contribution}
-\begin{block}{Architecture and Namespace Concurrency Control Accessment}
-GFS, HDFS, Hops-HDFS
+\begin{block}{Architectures and Namespace Concurrency Control}
+GFS, HDFS, Hops-HDFS and MySQL Cluster
 \end{block}
 
 \begin{block}{Performance Accessment and Limitation Analysis}
@@ -177,7 +176,7 @@ HDFS v.s. Hops-HDFS v2 (PCC version)
 	\begin{itemize}
 		\item Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group
 		\item Performance Increase Up to 70 \%
-		\item Correctness ensured by Passing 300+ Apache HDFS Unit Tests: maintain HDFS semantics
+		\item Ensured by Passing 300+ Apache HDFS Unit Tests
 	\end{itemize}
 \end{block}
 \end{frame}
@@ -185,77 +184,74 @@ HDFS v.s. Hops-HDFS v2 (PCC version)
 %------------------------------------------------
 \section{Background}
 
-%\subsection{GFS Architecture}
-%\begin{frame}
-%\frametitle{GFS Architecture}
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[width=\linewidth]{figs/GFSArchitecture.pdf}
-%\end{figure}
-%%\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-%%
-%%\column{.45\textwidth} % Left column and width
-%%\textbf{Heading}
-%%\begin{enumerate}
-%%\item Statement
-%%\item Explanation
-%%\item Example
-%%\end{enumerate}
-%%
-%%\column{.5\textwidth} % Right column and width
-%%Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-%%
-%%\end{columns}
-%\end{frame}
+\subsection{GFS Architecture}
+\begin{frame}
+\frametitle{GFS Architecture}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{figs/GFSArchitecture.pdf}
+\end{figure}
+%\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+%
+%\column{.45\textwidth} % Left column and width
+%\textbf{Heading}
+%\begin{enumerate}
+%\item Statement
+%\item Explanation
+%\item Example
+%\end{enumerate}
+%
+%\column{.5\textwidth} % Right column and width
+%Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
+%
+%\end{columns}
+\end{frame}
 
-%\subsection{HDFS Architecture}
-%\begin{frame}
-%	\frametitle{HDFS Architecture}
-%	\begin{figure}[h]
-%		\centering
-%		\includegraphics[width=\linewidth]{figs/hdfsarchitecturev1.png}
-%	\end{figure}
-%\end{frame}
+\subsection{HDFS Architecture}
+\begin{frame}
+	\frametitle{HDFS Architecture}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=\linewidth]{figs/hdfsarchitecturev1.png}
+	\end{figure}
+\end{frame}
 
-%\subsection{Isolation Level}
-%\begin{frame}
-%	\frametitle{Isolation Level}
-%	Berenson, Hal, et al. "A Critique of ANSI SQL Isolation Levels." ACM SIGMOD Record 24.2 (1995): 1-10.
-%\begin{table}[h]
-%	\centering
-%	\begin{tabular}{|c|p{1cm}|p{1cm}|p{1.5cm}|p{1cm}|p{1cm}|p{2cm}|p{1cm}|p{1cm}|}
-%		\hline
-%		\textbf{Isolation Level} &  \textbf{Lost Update} & \textbf{Fuzzy Read} & \textbf{Phantom} & \textbf{Read Skew} & \textbf{Write Skew} \\ \hline
-%		Read Uncommitted         &  \checkmark           & \checkmark          & \checkmark       & \checkmark         & \checkmark          \\ \hline
-%		Read Committed           &  \checkmark           & \checkmark          & \checkmark       & \checkmark         & \checkmark          \\ \hline
-%		Cursor Stability         &  some- times            & some- times           & \checkmark       & \checkmark         & some- times           \\ \hline
-%		Repeatable Read          & X                    & X                   & \checkmark       & X                  & X                   \\ \hline
-%		\textbf{Snapshot}                 & X                    & X                   & sometimes        & X                  & \checkmark          \\ \hline
-%		Serializable             & X                    & X                   & X                & X                  & X                   \\ \hline
-%	\end{tabular}
-%\end{table}
-%\end{frame}
+\subsection{Isolation Level}
+\begin{frame}
+	\frametitle{Isolation Level}
+	Berenson, Hal, et al. "A Critique of ANSI SQL Isolation Levels." ACM SIGMOD Record 24.2 (1995): 1-10.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|p{1cm}|p{1cm}|p{1.5cm}|p{1cm}|p{1cm}|p{2cm}|p{1cm}|p{1cm}|}
+		\hline
+		\textbf{Isolation Level} &  \textbf{Lost Update} & \textbf{Fuzzy Read} & \textbf{Phantom} & \textbf{Read Skew} & \textbf{Write Skew} \\ \hline
+		Read Uncommitted         &  \checkmark           & \checkmark          & \checkmark       & \checkmark         & \checkmark          \\ \hline
+		Read Committed           &  \checkmark           & \checkmark          & \checkmark       & \checkmark         & \checkmark          \\ \hline
+		Cursor Stability         &  some- times            & some- times           & \checkmark       & \checkmark         & some- times           \\ \hline
+		Repeatable Read          & X                    & X                   & \checkmark       & X                  & X                   \\ \hline
+		\textbf{Snapshot}                 & X                    & X                   & sometimes        & X                  & \checkmark          \\ \hline
+		Serializable             & X                    & X                   & X                & X                  & X                   \\ \hline
+	\end{tabular}
+\end{table}
+\end{frame}
 
 \subsection{MySQL Cluster}
 \begin{frame}
 	\frametitle{MySQL Cluster}
-	\begin{block}{Distributed, In-memory, Replicated Database}
-			\begin{itemize}
-				\item Scalable
-				\item Fault-tolerance
-				\item High throughput
-				\item \textbf{BUT}: Supports only \textbf{Read Committed} Isolation Level
-			\end{itemize}
-	\end{block}
+	\begin{itemize}
+		\item Distributed, in-memory, replicated database
+		\item Supports only \textbf{Read Committed}
+		\item High throughput:
+	\end{itemize}
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.6]{figs/mysqlclusterbenchmark.pdf}
+	\includegraphics[scale=0.7]{figs/mysqlclusterbenchmark.pdf}
 \end{figure}
 \end{frame}
 
 \subsection{Hops-HDFS}
 \begin{frame}
-	\frametitle{Hops~\footnote{Hadoop Open Platform-as-a-Service}-HDFS}
+	\frametitle{Hops-HDFS}
 		\begin{block}{Overcome Limitations in HDFS NameNode}
 			\begin{itemize}
 				\item Scalability of the Namespace  
@@ -269,19 +265,19 @@ HDFS v.s. Hops-HDFS v2 (PCC version)
 	\frametitle{Hops-HDFS Architecture}
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=\linewidth]{figs/HopHDFSArchitecture2.pdf}
+		\includegraphics[width=\linewidth]{figs/HopHDFSArchitecture.pdf}
 	\end{figure}
 \end{frame}
 %------------------------------------------------
-\section{Assessment}
+\section{Namespace Concurrency Control}
 %------------------------------------------------
 
-\subsection{HDFS Namespace Concurrency Control Assessment}
+\subsection{Limitations in HDFS Namespace Concurrency Control}
 \begin{frame}
-	\frametitle{HDFS Namespace Concurrency Control Assessment}
+	\frametitle{Limitations in HDFS Namespace Concurrency Control}
 		\begin{figure}[h]
 			\centering
-			\includegraphics[scale=0.42]{figs/nnRPC.pdf}
+			\includegraphics[scale=0.4]{figs/nnRPC.pdf}
 		\end{figure}
 \end{frame}
 
@@ -319,7 +315,7 @@ HDFS v.s. Hops-HDFS v2 (PCC version)
 \end{frame}
 
 \begin{frame}
-	\frametitle{Limitations in Hops-HDFS Namespace Concurrency Control (PCC)}
+	\frametitle{Limitations in Hops-HDFS Namespace Concurrency Control}
 		\begin{itemize}
 			\item Duplicated Round Trips
 			\item Implicit Parent Locks:
@@ -345,7 +341,7 @@ HDFS v.s. Hops-HDFS v2 (PCC version)
 
 \subsection{Namespace Operation Performance Assessment}
 \begin{frame}
-	\frametitle{NameNode Throughput Benchmark - HDFS v.s. PCC}
+	\frametitle{NameNode Throughput Benchmark}
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=\linewidth]{figs/nn_100.pdf}
@@ -353,7 +349,7 @@ HDFS v.s. Hops-HDFS v2 (PCC version)
 \end{frame}
 
 \begin{frame}
-	\frametitle{Parent Directory Contention Assessment - HDFS v.s. PCC}
+	\frametitle{Parent Directory Contention Assessment}
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=\linewidth]{figs/hdfs_pcc_parentlock.pdf}
@@ -394,18 +390,18 @@ HDFS v.s. Hops-HDFS v2 (PCC version)
 	\begin{itemize}
 		\item Snapshot the whole Semantic Related Group
 		\item Transaction performs on its own snapshot
-		\item Preclude: \textbf{Fuzzy Read} \& \textbf{Phantom Read}
+		\item Preclude: \textit{Fuzzy Read} \& \textit{Phantom Read}
 	\end{itemize}
 \end{frame}
 \begin{frame}
-	\frametitle{Snapshot Isolation Precludes \textbf{Fuzzy Read}~\footnote{Fuzzy Read: A transaction rereads data it has previously read and finds that another committed transaction has modified or deleted the data.}}
+	\frametitle{Snapshot Isolation Precludes Fuzzy Read}
 	\begin{figure}[!h]
 		\centering
 		\includegraphics[width=\linewidth]{figs/snapfuzzy.pdf}
 	\end{figure}
 \end{frame}
 \begin{frame}
-	\frametitle{Snapshot Isolation with Semantic Related Group Precludes \textbf{Phantom Read}~\footnote{Phantom Read: A transaction re-executes a query returning a set of rows that satisfies a search condition and finds that another committed transaction has inserted additional rows that satisfy the condition.}}
+	\frametitle{Snapshot Isolation with Semantic Related Group Precludes Phantom Read}
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=\linewidth]{figs/snapphantom.pdf}
@@ -415,12 +411,12 @@ HDFS v.s. Hops-HDFS v2 (PCC version)
 \subsection{Lock Mode in MySQL Cluster}
 \begin{frame}
 	\frametitle{Lock Mode in MySQL Cluster}
-	\textbf{Read\_Committed}~\footnote{Read\_Committed here is the name of \textit{lock mode} used in MySQL Cluster, not referring to \textit{Isolation Level}} Lock Mode: Consistent nonlocking reads (based on MVCC)
+	\textit{Read\_Committed}: Consistent nonlocking reads (based on MVCC)
 \begin{table}[h]
 	\centering
 	\begin{tabular}{|c|c|c|c|}
 		\hline
-		\textbf{Lock Mode} & \textbf{Shared} & \textbf{Exclusive} & \textbf{Read\_Committed} \\ \hline
+		\textbf{Lock Type} & \textbf{Shared} & \textbf{Exclusive} & \textbf{Read\_Committed} \\ \hline
 		Shared             & \checkmark               & Block              & \checkmark                        \\ \hline
 		Exclusive          & Block           & Block              & \checkmark                        \\ \hline
 		Read\_Committed    & \checkmark               &            \checkmark        & \checkmark                        \\ \hline
@@ -432,26 +428,26 @@ HDFS v.s. Hops-HDFS v2 (PCC version)
 \begin{frame}
 	\frametitle{Optimistic Concurrency Control}
 	\begin{itemize}
-		\item Read Phase: \textbf{Read\_Committed} lock on snapshot
-		\item Validation Phase: \textbf{Shared} lock on related Rows, \textbf{Exclusive} lock on modified rows -\textgreater Compare versions with snapshot -\textgreater Abort \& Retry or Update
-		\item Preclude: \textbf{Write Skew}
+		\item Read Phase: \textit{Read\_Committed} on snapshot
+		\item Validation Phase: \textit{Shared} on related Rows, \textit{Exclusive} on modified rows / Compare versions / Abort and retry
+		\item Preclude: \textit{Write Skew}
 	\end{itemize}
 \end{frame}
 \begin{frame}
-	\frametitle{OCC with Snapshot Isolation on Semantic Related Group Precludes \textbf{Write Skew}~\footnote{Write Skew: Two concurrent transactions read the same data, but update different data that are related and the combination of updates leads to an inconsistency.}}
+	\frametitle{OCC with Snapshot Isolation on Semantic Related Group Precludes Write Skew}
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=\linewidth]{figs/snapwriteskew.pdf}
 	\end{figure}
 \end{frame}
 
-\subsection{Total Order Update, Abort \& Retry and Version Increase}
+\subsection{Total Order Update, Abort and Version Increase}
 \begin{frame}
 	\frametitle{Total Order Update, Abort \& Retry, and Version Increase}
 	\begin{itemize}
-		\item Total order update by \textit{ids} -\textgreater preclude lock cycles
-		\item Abort and retry transactions if "new" rows already exist
-		\item Increase versions for successful \textit{update phase}
+		\item Total order update modified rows by \textit{ids}
+		\item Abort and retry transactions if "new" rows already exists
+		\item Increase versions for successful update
 	\end{itemize}
 \end{frame}
 
@@ -459,10 +455,10 @@ HDFS v.s. Hops-HDFS v2 (PCC version)
 \begin{frame}
 	\frametitle{Four Phases in Algorithm}
 	\begin{itemize}
-		\item \textbf{Read Phase}: resolve semantic related group \& cache it as transactions snapshot copy
-		\item \textbf{Execution Phase}: transactions operate on its own snapshot
-		\item \textbf{Validation Phase}: validate snapshot versions with values in database -\textgreater abort \& retry or go to update
-		\item \textbf{Update Phase}: total order update, abort \& retry and version increase
+		\item Read Phase
+		\item Execution Phase
+		\item Validation Phase
+		\item Update Phase
 	\end{itemize}
 \end{frame}
 
@@ -484,14 +480,14 @@ HDFS v.s. Hops-HDFS v2 (PCC version)
 
 \subsection{Parent Directory Contention Assessment}
 \begin{frame}
-	\frametitle{Parent Directory Contention Assessment (1/2)}
+	\frametitle{Parent Directory Contention Assessment}
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=\linewidth]{figs/hdfs_pcc_occ_parent.pdf}
 	\end{figure}
 \end{frame}
 \begin{frame}
-	\frametitle{Parent Directory Contention Assessment (2/2)}
+	\frametitle{Parent Directory Contention Assessment}
 \begin{table}[ht]
 	\centering
 	\begin{tabular}{|c|c|c|c|}
@@ -509,14 +505,14 @@ HDFS v.s. Hops-HDFS v2 (PCC version)
 
 \subsection{Parent Directory Contention Assessment}
 \begin{frame}
-	\frametitle{Read-Write Mixed Workload (1/2)}
+	\frametitle{Read-Write Mixed Workload}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\linewidth]{figs/pcc_occ_rw.pdf}
 \end{figure}
 \end{frame}
 \begin{frame}
-	\frametitle{Read-Write Mixed Workload (2/2)}
+	\frametitle{Read-Write Mixed Workload}
 \begin{table}[ht]
 	\centering
 	\begin{tabular}{|c|c|c|c|}
@@ -531,8 +527,7 @@ HDFS v.s. Hops-HDFS v2 (PCC version)
 
 \subsection{OCC Performance with Different Size of Conflicts}
 \begin{frame}
-	\frametitle{OCC Performance with Different Size of Conflicts (1/2)}
-	\textbf{Performance Decrease} compares to \textit{0\% conflict size}
+	\frametitle{OCC Performance with Different Size of Conflicts}
 	\begin{table}[ht]
 		\centering
 		\begin{tabular}{|c|c|c|c|}
@@ -547,7 +542,7 @@ HDFS v.s. Hops-HDFS v2 (PCC version)
 	\end{table}
 \end{frame}
 \begin{frame}
-	\frametitle{OCC Performance Decrease Rate (2/2)}
+	\frametitle{OCC Performance Decrease Rate}
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=\linewidth]{figs/conRate.pdf}
@@ -567,14 +562,13 @@ HDFS v.s. Hops-HDFS v2 (PCC version)
 	\begin{block}{Conclusion}
 		\begin{itemize}
 			\item Increase Performance up to 70 \%
-			\item Bounded Performance Degradation for OCC conflict
 			\item Maintain HDFS Strong Consistency Semantics
 		\end{itemize}
 	\end{block}
 	\begin{block}{Future Work}
 				\begin{itemize}
 					\item OCC implementation on other operations
-					\item OCC evaluation on Hops-HDFS with  multiple NameNodes: prove that it outperforms HDFS with single NameNode
+					\item OCC evaluation on multiple NameNodes
 				\end{itemize}
 	\end{block}
 \end{frame}

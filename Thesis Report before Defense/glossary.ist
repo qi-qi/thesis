@@ -1,0 +1,7 @@
+keyword "\\nomenclatureentry"
+preamble "\n \\begin{thenomenclature}\n"
+postamble "\n \\end{thenomenclature}\n"
+delim_0 ""
+delim_1 ""
+delim_2 ""
+delim_n ""

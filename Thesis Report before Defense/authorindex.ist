@@ -1,0 +1,7 @@
+keyword "\\indexentry"
+preamble "\n \\begin{theauthorindex}\n"
+postamble "\n \\end{theauthorindex}\n"
+delim_0 ", "
+delim_1 ", "
+delim_2 ", "
+delim_n ", "

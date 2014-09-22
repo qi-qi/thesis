@@ -84,7 +84,7 @@ As we mentioned before, MySQL Cluster supports only the READ COMMITTED transacti
 
 \noindent In commercial database management systems, like Microsoft SQL Server, Oracle, etc, \textit{snapshot isolation} is implemented within multi version concurrency control (MVCC)~\cite{berenson1995critique} on database server side. However, we need to implement snapshot isolation on the application side since MySQL Cluster supports only the READ COMMITTED isolation level.
 
-\noindent After resolving the semantic related group, we take a snapshot on selected rows as well as all related rows of the committed values from database. This snapshot will be cached in-memory within its transaction. Each transaction will have its own copy of snapshot during the lifetime. All transaction operations will be performed on its own snapshot. Therefore, we called it Per-Transaction Snapshot Isolation.
+\noindent After resolving the semantic related group, we take a snapshot on selected rows as well as all related rows of the committed values from database. This snapshot will be cached in-memory within its transaction. Each transaction will have its own copy of snapshot during the lifetime. If a transaction reads the same data twice, it will return the same data, that was gather from a snapshot earlier. So all transaction operations will be performed on its own snapshot. Therefore, we called it Per-Transaction Snapshot Isolation.
 
 \subsection{Fuzzy Read and Phantom Read are Precluded}
 
@@ -171,15 +171,14 @@ Our algorithm is based on \textit{Optimistic Concurrency Control} (OCC) method t
 \noindent Therefore, we use optimistic concurrency control with snapshot isolation on semantic related group to improve the throughput while the strong consistency semantics in original HDFS is maintained.
 
 \section{Total Order Update, Abort and Version Increase in Update Phase}
-We have a total order update rule in update phase so that dead lock will not occur by lock cycle. If multiple rows needed to be during update phase, they will be sorted first by the \textit{id} value. Then they will be updated in ascending order according by \textit{ids}. 
+We have a total order update rule in update phase so that dead lock will not occur by lock cycle. If multiple INodes needed to be updated during update phase, they will be sorted first by the \textit{id} values. Then they will be updated in ascending order according by \textit{ids}. 
 
 \noindent Since we can not take an Exclusive lock on the "new" row which not yet exists in the database, multiple transactions may try to persist "new" rows with the same \textit{Primary Key}, and one might be overwritten by the other. Using \textit{makePersistent()} function in ClusterJ can throw exception if the instance already exists in the database.
 
 \noindent Finally, for successful updates, the versions of the modified rows will be increased by 1.
 
 \section{Pseudocode of the Complete Algorithm}
-
-See Algorithm~\ref{algo:pseudocode}.
+The complete algorithm pseudocode can be found in Algorithm~\ref{algo:pseudocode}.
 \begin{algorithm}[h]
 	\caption{Pseudocode of the Complete Algorithm \\ Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}
 	\label{algo:pseudocode}

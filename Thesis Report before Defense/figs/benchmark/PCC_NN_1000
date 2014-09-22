@@ -1,0 +1,93 @@
+18:10:39,458  INFO [main] (NNThroughputBenchmark.java:printResults(599))   - --- create inputs ---
+18:10:39,458  INFO [main] (NNThroughputBenchmark.java:printResults(600))   - nrFiles = 1000
+18:10:39,458  INFO [main] (NNThroughputBenchmark.java:printResults(601))   - nrThreads = 3
+18:10:39,458  INFO [main] (NNThroughputBenchmark.java:printResults(602))   - nrFilesPerDir = 4
+18:10:39,458  INFO [main] (NNThroughputBenchmark.java:printStats(370))   - --- create stats  ---
+18:10:39,458  INFO [main] (NNThroughputBenchmark.java:printStats(371))   - # operations: 1000
+18:10:39,458  INFO [main] (NNThroughputBenchmark.java:printStats(372))   - Elapsed Time: 10986
+18:10:39,459  INFO [main] (NNThroughputBenchmark.java:printStats(373))   -  Ops per sec: 91.02494083378846
+18:10:39,459  INFO [main] (NNThroughputBenchmark.java:printStats(374))   - Average Time: 31
+18:10:39,459  INFO [main] (NNThroughputBenchmark.java:runBenchmark(1454))   - 
+18:10:39,459  INFO [main] (NNThroughputBenchmark.java:printResults(691))   - --- mkdirs inputs ---
+18:10:39,459  INFO [main] (NNThroughputBenchmark.java:printResults(692))   - nrDirs = 1000
+18:10:39,459  INFO [main] (NNThroughputBenchmark.java:printResults(693))   - nrThreads = 3
+18:10:39,459  INFO [main] (NNThroughputBenchmark.java:printResults(694))   - nrDirsPerDir = 4
+18:10:39,459  INFO [main] (NNThroughputBenchmark.java:printStats(370))   - --- mkdirs stats  ---
+18:10:39,459  INFO [main] (NNThroughputBenchmark.java:printStats(371))   - # operations: 1000
+18:10:39,459  INFO [main] (NNThroughputBenchmark.java:printStats(372))   - Elapsed Time: 2235
+18:10:39,459  INFO [main] (NNThroughputBenchmark.java:printStats(373))   -  Ops per sec: 447.42729306487695
+18:10:39,459  INFO [main] (NNThroughputBenchmark.java:printStats(374))   - Average Time: 6
+18:10:39,460  INFO [main] (NNThroughputBenchmark.java:runBenchmark(1454))   - 
+18:10:39,460  INFO [main] (NNThroughputBenchmark.java:printResults(599))   - --- open inputs ---
+18:10:39,460  INFO [main] (NNThroughputBenchmark.java:printResults(600))   - nrFiles = 1000
+18:10:39,460  INFO [main] (NNThroughputBenchmark.java:printResults(601))   - nrThreads = 3
+18:10:39,460  INFO [main] (NNThroughputBenchmark.java:printResults(602))   - nrFilesPerDir = 4
+18:10:39,460  INFO [main] (NNThroughputBenchmark.java:printStats(370))   - --- open stats  ---
+18:10:39,460  INFO [main] (NNThroughputBenchmark.java:printStats(371))   - # operations: 1000
+18:10:39,460  INFO [main] (NNThroughputBenchmark.java:printStats(372))   - Elapsed Time: 2205
+18:10:39,460  INFO [main] (NNThroughputBenchmark.java:printStats(373))   -  Ops per sec: 453.51473922902494
+18:10:39,460  INFO [main] (NNThroughputBenchmark.java:printStats(374))   - Average Time: 6
+18:10:39,460  INFO [main] (NNThroughputBenchmark.java:runBenchmark(1454))   - 
+18:10:39,461  INFO [main] (NNThroughputBenchmark.java:printResults(599))   - --- delete inputs ---
+18:10:39,461  INFO [main] (NNThroughputBenchmark.java:printResults(600))   - nrFiles = 1000
+18:10:39,461  INFO [main] (NNThroughputBenchmark.java:printResults(601))   - nrThreads = 3
+18:10:39,461  INFO [main] (NNThroughputBenchmark.java:printResults(602))   - nrFilesPerDir = 4
+18:10:39,461  INFO [main] (NNThroughputBenchmark.java:printStats(370))   - --- delete stats  ---
+18:10:39,461  INFO [main] (NNThroughputBenchmark.java:printStats(371))   - # operations: 1000
+18:10:39,461  INFO [main] (NNThroughputBenchmark.java:printStats(372))   - Elapsed Time: 3807
+18:10:39,461  INFO [main] (NNThroughputBenchmark.java:printStats(373))   -  Ops per sec: 262.67402153926975
+18:10:39,461  INFO [main] (NNThroughputBenchmark.java:printStats(374))   - Average Time: 10
+18:10:39,461  INFO [main] (NNThroughputBenchmark.java:runBenchmark(1454))   - 
+18:10:39,461  INFO [main] (NNThroughputBenchmark.java:printResults(599))   - --- fileStatus inputs ---
+18:10:39,461  INFO [main] (NNThroughputBenchmark.java:printResults(600))   - nrFiles = 1000
+18:10:39,462  INFO [main] (NNThroughputBenchmark.java:printResults(601))   - nrThreads = 3
+18:10:39,462  INFO [main] (NNThroughputBenchmark.java:printResults(602))   - nrFilesPerDir = 4
+18:10:39,462  INFO [main] (NNThroughputBenchmark.java:printStats(370))   - --- fileStatus stats  ---
+18:10:39,462  INFO [main] (NNThroughputBenchmark.java:printStats(371))   - # operations: 1000
+18:10:39,462  INFO [main] (NNThroughputBenchmark.java:printStats(372))   - Elapsed Time: 1847
+18:10:39,462  INFO [main] (NNThroughputBenchmark.java:printStats(373))   -  Ops per sec: 541.4185165132648
+18:10:39,462  INFO [main] (NNThroughputBenchmark.java:printStats(374))   - Average Time: 5
+18:10:39,462  INFO [main] (NNThroughputBenchmark.java:runBenchmark(1454))   - 
+18:10:39,462  INFO [main] (NNThroughputBenchmark.java:printResults(599))   - --- rename inputs ---
+18:10:39,462  INFO [main] (NNThroughputBenchmark.java:printResults(600))   - nrFiles = 1000
+18:10:39,462  INFO [main] (NNThroughputBenchmark.java:printResults(601))   - nrThreads = 3
+18:10:39,462  INFO [main] (NNThroughputBenchmark.java:printResults(602))   - nrFilesPerDir = 4
+18:10:39,462  INFO [main] (NNThroughputBenchmark.java:printStats(370))   - --- rename stats  ---
+18:10:39,462  INFO [main] (NNThroughputBenchmark.java:printStats(371))   - # operations: 1000
+18:10:39,462  INFO [main] (NNThroughputBenchmark.java:printStats(372))   - Elapsed Time: 6465
+18:10:39,463  INFO [main] (NNThroughputBenchmark.java:printStats(373))   -  Ops per sec: 154.67904098994586
+18:10:39,463  INFO [main] (NNThroughputBenchmark.java:printStats(374))   - Average Time: 19
+18:10:39,463  INFO [main] (NNThroughputBenchmark.java:runBenchmark(1454))   - 
+18:10:39,463  INFO [main] (NNThroughputBenchmark.java:printResults(1200))   - --- blockReport inputs ---
+18:10:39,463  INFO [main] (NNThroughputBenchmark.java:printResults(1201))   - reports = 1000
+18:10:39,463  INFO [main] (NNThroughputBenchmark.java:printResults(1202))   - datanodes = 3 (0, 0, 0)
+18:10:39,463  INFO [main] (NNThroughputBenchmark.java:printResults(1203))   - blocksPerReport = 100
+18:10:39,463  INFO [main] (NNThroughputBenchmark.java:printResults(1204))   - blocksPerFile = 10
+18:10:39,463  INFO [main] (NNThroughputBenchmark.java:printStats(370))   - --- blockReport stats  ---
+18:10:39,463  INFO [main] (NNThroughputBenchmark.java:printStats(371))   - # operations: 1000
+18:10:39,463  INFO [main] (NNThroughputBenchmark.java:printStats(372))   - Elapsed Time: 7637
+18:10:39,463  INFO [main] (NNThroughputBenchmark.java:printStats(373))   -  Ops per sec: 130.941469163284
+18:10:39,463  INFO [main] (NNThroughputBenchmark.java:printStats(374))   - Average Time: 22
+18:10:39,463  INFO [main] (NNThroughputBenchmark.java:runBenchmark(1454))   - 
+18:10:39,463  INFO [main] (NNThroughputBenchmark.java:printResults(1356))   - --- replication inputs ---
+18:10:39,463  INFO [main] (NNThroughputBenchmark.java:printResults(1357))   - numOpsRequired = 66
+18:10:39,464  INFO [main] (NNThroughputBenchmark.java:printResults(1358))   - datanodes = 3 (0, 0, 0)
+18:10:39,464  INFO [main] (NNThroughputBenchmark.java:printResults(1359))   - decommissioned datanodes = 1
+18:10:39,464  INFO [main] (NNThroughputBenchmark.java:printResults(1360))   - datanode replication limit = 100
+18:10:39,464  INFO [main] (NNThroughputBenchmark.java:printResults(1361))   - total blocks = 100
+18:10:39,464  INFO [main] (NNThroughputBenchmark.java:printStats(370))   - --- replication stats  ---
+18:10:39,464  INFO [main] (NNThroughputBenchmark.java:printStats(371))   - # operations: 1
+18:10:39,464  INFO [main] (NNThroughputBenchmark.java:printStats(372))   - Elapsed Time: 111
+18:10:39,464  INFO [main] (NNThroughputBenchmark.java:printStats(373))   -  Ops per sec: 9.00900900900901
+18:10:39,464  INFO [main] (NNThroughputBenchmark.java:printStats(374))   - Average Time: 111
+18:10:39,464  INFO [main] (NNThroughputBenchmark.java:printResults(1363))   - decommissioned blocks = 0
+18:10:39,464  INFO [main] (NNThroughputBenchmark.java:printResults(1364))   - pending replications = 0
+18:10:39,464  INFO [main] (NNThroughputBenchmark.java:printResults(1365))   - replications per sec: 0.0
+18:10:39,464  INFO [main] (NNThroughputBenchmark.java:runBenchmark(1454))   - 
+18:10:39,464  INFO [main] (NNThroughputBenchmark.java:printResults(493))   - --- clean inputs ---
+18:10:39,464  INFO [main] (NNThroughputBenchmark.java:printResults(494))   - Remove directory /nnThroughputBenchmark
+18:10:39,464  INFO [main] (NNThroughputBenchmark.java:printStats(370))   - --- clean stats  ---
+18:10:39,465  INFO [main] (NNThroughputBenchmark.java:printStats(371))   - # operations: 1
+18:10:39,465  INFO [main] (NNThroughputBenchmark.java:printStats(372))   - Elapsed Time: 311
+18:10:39,465  INFO [main] (NNThroughputBenchmark.java:printStats(373))   -  Ops per sec: 3.215434083601286
+18:10:39,465  INFO [main] (NNThroughputBenchmark.java:printStats(374))   - Average Time: 311

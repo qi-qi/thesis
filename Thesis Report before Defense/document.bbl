@@ -1,0 +1,170 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Ansi}{Ansi}{1992}]{ansi1992x3}
+Ansi, A. (1992).
+\newblock x3. 135-1992, american national standard for information
+  systems-database language-sql.
+
+\bibitem[\protect\citeauthoryear{Berenson, Bernstein, Gray, Melton, O'Neil, \&
+  O'Neil}{Berenson et~al.}{1995}]{berenson1995critique}
+Berenson, H., P.~Bernstein, J.~Gray, J.~Melton, E.~O'Neil, \& P.~O'Neil (1995).
+\newblock A critique of ansi sql isolation levels.
+\newblock In {\em ACM SIGMOD Record}, Volume~24, pp.\  1--10. ACM.
+
+\bibitem[\protect\citeauthoryear{Bernstein \& Goodman}{Bernstein \&
+  Goodman}{1981}]{bernstein1981concurrency}
+Bernstein, P.~A. \& N.~Goodman (1981).
+\newblock Concurrency control in distributed database systems.
+\newblock {\em ACM Computing Surveys (CSUR)\/}~{\em 13\/}(2), 185--221.
+
+\bibitem[\protect\citeauthoryear{Borthakur}{Borthakur}{2008}]{borthakur2008hdfs}
+Borthakur, D. (2008).
+\newblock Hdfs architecture guide.
+\newblock {\em HADOOP APACHE PROJECT http://hadoop. apache.
+  org/common/docs/current/hdfs design. pdf\/}.
+
+\bibitem[\protect\citeauthoryear{Cloudera}{Cloudera}{}]{cloudera}
+Cloudera.
+\newblock Hadoop and big data.
+\newblock
+  \url{http://www.cloudera.com/content/cloudera/en/about/hadoop-and-big-data.html}.
+
+\bibitem[\protect\citeauthoryear{Dowling}{Dowling}{2013}]{hop}
+Dowling, J. (2013).
+\newblock Hop: Hadoop open platform-as-a-service.
+
+\bibitem[\protect\citeauthoryear{D'Souza}{D'Souza}{2013}]{d2013kthfs}
+D'Souza, J.~C. (2013).
+\newblock Kthfs--a highly available andscalable file system.
+
+\bibitem[\protect\citeauthoryear{Franklin}{Franklin}{1997}]{franklin1997concurrency}
+Franklin, M.~J. (1997).
+\newblock Concurrency control and recovery.
+
+\bibitem[\protect\citeauthoryear{Ghemawat, Gobioff, \& Leung}{Ghemawat
+  et~al.}{2003}]{ghemawat2003google}
+Ghemawat, S., H.~Gobioff, \& S.-T. Leung (2003).
+\newblock The google file system.
+\newblock In {\em ACM SIGOPS Operating Systems Review}, Volume~37, pp.\
+  29--43. ACM.
+
+\bibitem[\protect\citeauthoryear{Gray, Lorie, Putzolu, \& Traiger}{Gray
+  et~al.}{1976}]{gray1976granularity}
+Gray, J.~N., R.~A. Lorie, G.~R. Putzolu, \& I.~L. Traiger (1976).
+\newblock Granularity of locks and degrees of consistency in a shared data
+  base.
+\newblock In {\em IFIP Working Conference on Modelling in Data Base Management
+  Systems}, pp.\  365--394.
+
+\bibitem[\protect\citeauthoryear{Hadoop}{Hadoop}{}]{apachehadoop}
+Hadoop, A.
+\newblock What is apache hadoop?
+\newblock \url{http://hadoop.apache.org}.
+
+\bibitem[\protect\citeauthoryear{Hakimzadeh, Sajjad, \& Dowling}{Hakimzadeh
+  et~al.}{2014}]{hakimzadeh2014scaling}
+Hakimzadeh, K., H.~P. Sajjad, \& J.~Dowling (2014).
+\newblock Scaling hdfs with a strongly consistent relational model for
+  metadata.
+\newblock In {\em Distributed Applications and Interoperable Systems}, pp.\
+  38--51. Springer.
+
+\bibitem[\protect\citeauthoryear{HBase}{HBase}{}]{apachehbase}
+HBase, A.
+\newblock Welcome to apache hbase.
+\newblock \url{http://hbase.apache.org/}.
+
+\bibitem[\protect\citeauthoryear{Mahout}{Mahout}{}]{apachemahout}
+Mahout, A.
+\newblock What is apache mahout?
+\newblock \url{http://mahout.apache.org/}.
+
+\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{a}]{mysqlcluster}
+MySQL.
+\newblock Chapter 18 mysql cluster ndb 7.3.
+\newblock \url{http://dev.mysql.com/doc/refman/5.6/en/mysql-cluster.html}.
+
+\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{b}]{mysql48nodes}
+MySQL.
+\newblock Defining mysql cluster data nodes.
+\newblock
+  \url{http://dev.mysql.com/doc/refman/5.6/en/mysql-cluster-ndbd-definition.html}.
+
+\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{c}]{mysqlclusterj}
+MySQL.
+\newblock Java and mysql cluster.
+\newblock \url{http://dev.mysql.com/doc/ndbapi/en/mccj-overview-java.html}.
+
+\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{d}]{ndblimits}
+MySQL.
+\newblock Limits relating to transaction handling in mysql cluster.
+\newblock
+  \url{http://dev.mysql.com/doc/mysql-cluster-excerpt/5.1/en/mysql-cluster-limitations-transactions.html}.
+
+\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{e}]{mysqlclusterng}
+MySQL.
+\newblock Mysql cluster nodes, node groups, replicas, and partitions.
+\newblock
+  \url{http://dev.mysql.com/doc/refman/5.6/en/mysql-cluster-nodes-groups.html}.
+
+\bibitem[\protect\citeauthoryear{MySQL}{MySQL}{2012}]{mysqlclusterwhitepaper}
+MySQL (2012, July).
+\newblock Mysql cluster benchmarks: Oracle and intel achieve 1 billion writes
+  per minute.
+
+\bibitem[\protect\citeauthoryear{Oracle}{Oracle}{a}]{oraclemvcc}
+Oracle.
+\newblock Data concurrency and consistency.
+\newblock
+  \url{http://docs.oracle.com/cd/B28359_01/server.111/b28318/consist.htm}.
+
+\bibitem[\protect\citeauthoryear{Oracle}{Oracle}{b}]{reentrantReadWriteLock}
+Oracle.
+\newblock Java api documentation: Class reentrantreadwritelock.
+\newblock
+  \url{http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/ReentrantReadWriteLock.html}.
+
+\bibitem[\protect\citeauthoryear{Peiro~Sajjad \&
+  Hakimzadeh~Harirbaf}{Peiro~Sajjad \&
+  Hakimzadeh~Harirbaf}{2013}]{peiro2013maintaining}
+Peiro~Sajjad, H. \& M.~Hakimzadeh~Harirbaf (2013).
+\newblock Maintaining strong consistency semantics in a horizontally scalable
+  and highly available implementation of hdfs.
+
+\bibitem[\protect\citeauthoryear{Pig}{Pig}{}]{apachepig}
+Pig, A.
+\newblock Welcome to apache pig.
+\newblock \url{http://pig.apache.org/}.
+
+\bibitem[\protect\citeauthoryear{Shvachko, Kuang, Radia, \& Chansler}{Shvachko
+  et~al.}{2010}]{shvachko2010hadoop}
+Shvachko, K., H.~Kuang, S.~Radia, \& R.~Chansler (2010).
+\newblock The hadoop distributed file system.
+\newblock In {\em Mass Storage Systems and Technologies (MSST), 2010 IEEE 26th
+  Symposium on}, pp.\  1--10. IEEE.
+
+\bibitem[\protect\citeauthoryear{Shvachko}{Shvachko}{2010}]{shvachko2010hdfs}
+Shvachko, K.~V. (2010).
+\newblock Hdfs scalability: The limits to growth.
+\newblock {\em login\/}~{\em 35\/}(2), 6--16.
+
+\bibitem[\protect\citeauthoryear{Shvachko}{Shvachko}{2011}]{shvachko2011apache}
+Shvachko, K.~V. (2011).
+\newblock Apache hadoop: The scalability update.
+\newblock {\em login: The Magazine of USENIX\/}~{\em 36}, 7--13.
+
+\bibitem[\protect\citeauthoryear{Spark}{Spark}{}]{apachespark}
+Spark, A.
+\newblock Apache spark welcome page.
+\newblock \url{http://spark.apache.org/}.
+
+\bibitem[\protect\citeauthoryear{Wasif}{Wasif}{2012}]{wasif2012distributed}
+Wasif, M. (2012).
+\newblock A distributed namespace for a distributed file system.
+
+\bibitem[\protect\citeauthoryear{White}{White}{2012}]{white2012hadoop}
+White, T. (2012).
+\newblock {\em Hadoop: The definitive guide}.
+\newblock " O'Reilly Media, Inc.".
+
+\end{thebibliography}

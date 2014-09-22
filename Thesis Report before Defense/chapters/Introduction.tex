@@ -1,0 +1,132 @@
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- coding: utf-8; mode: latex -*- %%
+  %
+%%%%%                         CHAPTER
+ %%%
+  %
+
+% $Id: 1020-lorem-ipsum.tex,v 1.2 2009/06/19 15:51:46 david Exp $
+% $Log: 1020-lorem-ipsum.tex,v $
+% Revision 1.2  2009/06/19 15:51:46  david
+% *** empty log message ***
+%
+% Revision 1.1  2007/11/23 09:52:39  david
+% *** empty log message ***
+%
+%
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                           HEAD MATTER
+ %%%
+  %
+
+\chapter{Introduction}
+%\addcontentsline{lof}{chapter}{\thechapter\quad Lorem Ipsum}
+%\addcontentsline{lot}{chapter}{\thechapter\quad Lorem Ipsum}
+\label{ch:Introduction}
+
+%\begin{quotation}
+%  {\small\it Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...}
+%
+%{\small\it -- Cerico}
+%\end{quotation}
+
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                        FIRST SECTION
+ %%%
+  %
+
+\section{Motivation}
+
+\subsection{The De Facto Industrial Standard in Big Data Era}
+
+The \textit{Apache Hadoop}~\cite{apachehadoop} ecosystem has become the de facto industrial standard to store, process and analyze large data sets in the big data era~\cite{cloudera}. It is widely used as a computational platform for a variety of areas including search engines, data warehousing, behavioral analysis, natural language processing, genomic analysis, image processing, etc~\cite{shvachko2011apache}. 
+
+\noindent The \textit{Hadoop Distributed File System} (HDFS) is the storage layer for Apache Hadoop, which enables petabytes of data to be persisted on clusters of commodity hardware at relatively low cost~\cite{borthakur2008hdfs}. Inspired by the \textit{Google File System} (GFS)~\cite{ghemawat2003google}, the namespace, \textit{metadata}, is decoupled from data and stored in-memory on a single server, called the \textit{NameNode}. The file datasets are stored as sequences of blocks and replicated across potentially thousands of machines for fault tolerance.
+
+\subsection{Limits to growth in HDFS}
+
+Built upon the single namespace server (\textit{the NameNode}) architecture, one well-known shortcoming of HDFS is the limitation to growth~\cite{shvachko2010hdfs}. Since the metadata is kept in-memory for fast operation in NameNode, the number of file objects in the filesystem is limited by the amount of memory of a single machine. 
+
+\noindent Approximately, the size of the metadata for a single file object having two blocks (replicated three times by default) is 600 bytes. As a rule of thumb, for one petabyte physical storage, it requires one gigabyte metadata in memory~\cite{shvachko2010hdfs}. Table~\ref{table:memoryRequirement} gives an estimation of the memory requirement and its related physical storage capacity for different number of files.
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Number of Files} & \textbf{Memory Requirement} & \textbf{Physical Storage} \\ \hline
+		1 million       & 0.6 GB             & 0.6 PB           \\ \hline
+		100 million     & 60 GB              & 60 PB            \\ \hline
+		1 billion       & 600 GB             & 600 PB           \\ \hline
+		2 billion       & 1200 GB            & 1200 PB          \\ \hline
+	\end{tabular}
+	\caption{Memory Requirement for Related Storage Capacity in HDFS}
+	\label{table:memoryRequirement}
+\end{table}
+
+\noindent As HDFS runs in the \textit{Java Virtual Machine} (JVM), due to interactive workloads, heap sizes larger than 60 GB is not considered practical~\cite{shvachko2010hdfs}. Therefore, 100 million files will be the maximum storage capacity of HDFS.
+
+\subsection{Hop-HDFS and Its Limitation}
+
+The \textit{Hadoop Open Platform-as-a-service} (Hop) ~\cite{hop} is an open platform-as-a-Service (PaaS) support of the Hadoop ecosystem on existing cloud platforms including Amazon Web Service and OpenStack. The storage layer of Hop, called the Hop-HDFS, is a highly available implementation of HDFS, based on storing the metadata in a distributed, in-memory, replicated database, called the \textit{MySQL Cluster}. It aims to overcome the NameNode's limitation while maintaining the strong consistency semantics of HDFS so that applications written for HDFS can run on Hop-HDFS without modifications. 
+
+\noindent Precedent thesis works have contributed for a transaction model~\cite{wasif2012distributed} ~\cite{peiro2013maintaining} as well as a high availability multi-NameNode architecture~\cite{d2013kthfs} for Hop-HDFS. Hop-HDFS can store up to 4.1 billion files with 3TB MySQL Cluster support for metadata~\cite{hakimzadeh2014scaling}, a factor of 40 increase over Shvachko's estimate~\cite{shvachko2010hdfs} for HDFS from 2010.
+
+\noindent However, in HDFS, the correctness and consistency of the namespace is ensured by atomic metadata mutation~\cite{shvachko2010hadoop}. In order to maintain the same level of strong consistency semantics, system-level coarse grained locking and row-level fine grained locking are adopted in precedent projects of Hop-HDFS, but the overall performance is heavily restricted compared to the original HDFS. Therefore, investigation for better concurrency control methods to improve the performance of Hop-HDFS is the main motivation of this thesis.
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                      SECOND SECTION
+ %%%
+  %
+
+\section{Problem Statement}
+
+In HDFS, the NameNode's operations are categorized into \textit{read} or \textit{write} operations. To protect the metadata among parallel running threads, a global read/write lock (\textit{fsLock} in \textit{FSNamesystem} - \textit{ReentrantReadWriteLock} in java language) is used to maintain the atomicity of the namespace. We call it \textit{system-level lock}. Although ReentrantReadWriteLock~\cite{reentrantReadWriteLock} adopts a similar idea from \textit{two-phase locking}~\cite{berenson1995critique}, it has other locking semantics including \textit{fair mode, lock interruptions, condition support, etc,} which means that it is not totally equal to two-phase locking.
+
+\noindent The NameNode in HDFS allows concurrent threads to access shared object for read operations, but it restricts a single thread to access object for write operations. Therefore, all concurrent readers get the same view of the mutated data reflected by completed writes. We call it \textit{Strong Consistency Semantics} in HDFS. The concurrency limitation of this \textit{single-writer-multiple-readers} model is compensated by fast in-memory metadata operations.
+
+\noindent The first version of Hop-HDFS, called the KTHFS~\cite{wasif2012distributed}, adopts the system-level locking mechanism to serialize transactions. The strong consistency semantics is maintained, but due to the network latency from the external database, each operation takes a long time lock on the filesystem. The performance is heavily degraded.
+
+\noindent The second version of Hop-HDFS adopts a fine-grained row-level locking mechanism aiming to improve the throughput~\cite{hakimzadeh2014scaling}~\cite{peiro2013maintaining} while maintaining the strong consistency semantics. Based on a hierarchical concurrency model, it builds a \textit{directed acyclic graph} (DAG) for the namespace. Metadata operation that mutates the DAG either commit or abort (for partial failures) in a single transaction. \textit{Implicit locking}~\cite{gray1976granularity} is used to lock on the root of a subtree in a transaction, which implicitly acquires locks on all the descendants. However, this approach lowers the concurrency when multiple transactions try to mutate different descendants within the same subtree.
+
+\noindent Besides the concurrency issue, there are challenges implementing each HDFS operation as a single transaction. Because the storage engine, \textit{NDB}, of MySQL Cluster supports only the \textit{READ COMMITTED} transaction isolation level~\cite{ndblimits}, the write results in transactions will be exposed to reads in different concurrent transactions. Without proper implementation, anomalies like \textit{Fuzzy Read, Phantom, and Write Skew}~\cite{berenson1995critique} will produce incorrect results.
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                         ANOTHER SECTION
+ %%%
+  %
+\section{Contribution}
+
+In this thesis, we contribute to the following three ways:
+
+\begin{itemize}[noitemsep]
+	\item First, we discuss the architectures of related distributed file systems, including Google File System, HDFS and Hop-HDFS. With focus on their namespace concurrency control schemes, we analyzes the limitation of HDFS's NameNode implementation.
+	\item Second, we provide an overview of Hop-HDFS illustrating how it overcomes limitations in HDFS. With a systematic performance assessment between Hop-HDFS and HDFS, we discuss the current shortcomings in Hop-HDFS, which motivates this thesis for a better concurrency control scheme.
+	\item Third, we provide a solution for Hop-HDFS based on optimistic concurrency control with snapshot isolation on semantic related group to improve the operation throughput while maintaining the strong consistency semantics in HDFS. As a proof of concept, the evaluation shows the significant improvement of this new model. The correctness of our implementation has been validated by 300+ Apache HDFS unit tests passing.
+\end{itemize}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                          LAST SECTION
+ %%%
+  %
+
+\section{Document Structure}
+
+The thesis is organized as follows. Chapter~\ref{ch:Background} gives the architecture overview of Google File System (GFS), Hadoop Distributed File System (HDFS), MySQL Cluster, Hop-HDFS and knowledge on concurrency  control in database management systems. In Chapter~\ref{ch:Locking}, we further discuss the namespace concurrency control scheme on GFS, HDFS and Hop-HDFS, and related limitations, following by a systematic performance assessment between HDFS and Hop-HDFS. In Chapter~\ref{ch:Design}, we provide a solution based on \textit{Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group} and demonstrate how we overcome the shortcomings in Hop-HDFS and improve the operation throughput, while maintaining the strong consistency semantics in HDFS. In Chapter~\ref{ch:evaluation}, we give a detailed evaluation of our solution and shows the significant performance improvement. Finally, Chapter~\ref{ch:conclusion} gives the conclusion and future work of this thesis.
+
+  %
+ %%%
+%%%%%                        THE END
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "tese"
+%%% End: 

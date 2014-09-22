@@ -1,0 +1,62 @@
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- coding: utf-8; mode: latex -*- %%
+  %
+%%%%%                       CHAPTER
+ %%%
+  %
+
+% $Id: 7200-magna-aliqua.tex,v 1.1 2007/11/23 09:52:46 david Exp $
+% $Log: 7200-magna-aliqua.tex,v $
+% Revision 1.1  2007/11/23 09:52:46  david
+% *** empty log message ***
+%
+%
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                    HEAD MATTER
+ %%%
+  %
+
+\chapter{Conclusion and Future Work}
+%\addcontentsline{lof}{chapter}{\thechapter\quad Nihil Molestiae}
+%\addcontentsline{lot}{chapter}{\thechapter\quad Nihil Molestiae}
+\label{ch:conclusion}
+
+%\begin{quotation}
+%  {\small\it Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...}
+%
+%{\small\it -- Cerico}
+%\end{quotation}
+
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                        FIRST SECTION
+ %%%
+  %
+
+\section{Conclusion}
+
+In this thesis, we provide a solution for Hop-HDFS based on optimistic concurrency control with snapshot isolation on semantic related group to improve the operation throughput while maintaining the strong consistency semantics in HDFS.
+
+\noindent First, we discuss the architectures of related distributed file systems, including Google File System, HDFS and Hop-HDFS. With focus on their namespace concurrency control schemes, we analyzes the limitation of HDFS's NameNode implementation and provide an overview of Hop-HDFS illustrating how we overcome those problems in the distributed NameNode architecture.
+
+\noindent MySQL Cluster is selected to be the distributed in-memory storage layer for the metadata in Hop-HDFS due to its the high operation throughput and high reliability. However, the trade off is that the NDB cluster storage engine of MySQL cluster supports only the \textit{READ COMMITTED} transaction isolation level. \textit{Anomalies} like fuzzy read, phantom, write skew will appear because the write results in transactions will be exposed to reads in different concurrent transactions without proper implementation.
+
+\noindent Then, based on optimistic concurrency control with snapshot isolation on semantic related group, we demonstrate how concurrency is improved and anomalies - \textit{fuzzy read, phantom, write skew} are precluded, so that the strong consistency semantics in HDFS is maintained.
+
+\noindent Finally, as a proof of concept, we implemented the OCC version for the operation \textit{mkdirs} and also give a detailed evaluation on it compared with the PCC version. Our solution outperforms previous work of Hop-HDFS up to 70 \%. Under heavy workload, the single NameNode performance of HDFS is just a slightly better than OCC. We believe that OCC can greatly outperform HDFS in Hop-HDFS multiple NameNodes architecture. The correctness of our implementation has been validated by 300+ Apache HDFS unit tests passing.
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                      SECOND SECTION
+ %%%
+  %
+
+\section{Future Work}
+
+The result of our OCC solution is promising. Other operations in Hop-HDFS can also adopt the same algorithm to achieve better performance.
+
+\noindent Future evaluation on Hop-HDFS in multiple NameNodes architecture with OCC solution is needed to prove that it can achieve better performance than HDFS in single NameNode architecture.
+

@@ -108,7 +108,7 @@ The architecture of Hop-HDFS consists of multiple \textit{NameNodes}, multiple \
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.7]{HopHDFSArchitecture.pdf}
+	\includegraphics[scale=0.7]{HopHDFSArchitecture2.pdf}
 	\caption{The Architecture of Hop-HDFS}
 	\label{fig:hophdfsar}
 \end{figure}
@@ -283,9 +283,9 @@ In \textit{read phase}, transactions use \textit{Read\_Committed Lock Mode} to f
 \subsubsection{Write Skew is Precluded} The \textit{Write Skew} anomaly is precluded by the validation phase on the snapshot of semantic related group in OCC, because constraint violation on all related data rows will be checked before transaction committed.
 
 \subsection{Total Order Update, Abort and Version Increase in Update Phase}
-We have a total order update rule in update phase so that dead lock will not occur by lock cycle. If multiple rows needed to be during update phase, they will be sorted first by the \textit{id} value. Then they will be updated in ascending order according by \textit{ids}. Since we can not take an Exclusive lock on the "new" row which not yet exists in the database, multiple transactions may try to persist "new" rows with the same \textit{Primary Key}, and one might be overwritten by the other. Using \textit{makePersistent()} function in ClusterJ can throw exception if the instance already exists in the database. Finally, for successful updates, the versions of the modified rows will be increased by 1.
+We have a total order update rule in update phase so that dead lock will not occur by lock cycle. If multiple INodes needed to be updated during update phase, they will be sorted first by the \textit{id} values. Then they will be updated in ascending order according by \textit{ids}. Since we can not take an Exclusive lock on the "new" row which not yet exists in the database, multiple transactions may try to persist "new" rows with the same \textit{Primary Key}, and one might be overwritten by the other. Using \textit{makePersistent()} function in ClusterJ can throw exception if the instance already exists in the database. Finally, for successful updates, the versions of the modified rows will be increased by 1.
 \subsection{Pseudocode of the Complete Algorithm}
-See Algorithm~\ref{algo:pseudocodeA}.
+The complete algorithm pseudocode can be found in Algorithm~\ref{algo:pseudocodeA}.
 \begin{algorithm}[!h]
 	\caption{Pseudocode of the Complete Algorithm \\ Optimistic Concurrency Control with Snapshot Isolation on Semantic Related Group}
 	\label{algo:pseudocodeA}

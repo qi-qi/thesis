@@ -1,0 +1,70 @@
+\BOOKMARK [-1][]{part.1}{I Introduction and Background}{}% 1
+\BOOKMARK [0][]{chapter.1}{Introduction}{part.1}% 2
+\BOOKMARK [1][]{section.1.1}{Motivation}{chapter.1}% 3
+\BOOKMARK [2][]{subsection.1.1.1}{The De Facto Industrial Standard in Big Data Era}{section.1.1}% 4
+\BOOKMARK [2][]{subsection.1.1.2}{Limits to growth in HDFS}{section.1.1}% 5
+\BOOKMARK [2][]{subsection.1.1.3}{Hop-HDFS and Its Limitation}{section.1.1}% 6
+\BOOKMARK [1][]{section.1.2}{Problem Statement}{chapter.1}% 7
+\BOOKMARK [1][]{section.1.3}{Contribution}{chapter.1}% 8
+\BOOKMARK [1][]{section.1.4}{Document Structure}{chapter.1}% 9
+\BOOKMARK [0][]{chapter.2}{Background and Related Work}{part.1}% 10
+\BOOKMARK [1][]{section.2.1}{Distributed File Systems}{chapter.2}% 11
+\BOOKMARK [2][]{subsection.2.1.1}{The Google File System}{section.2.1}% 12
+\BOOKMARK [3][]{subsubsection.2.1.1.1}{Design Principle}{subsection.2.1.1}% 13
+\BOOKMARK [3][]{subsubsection.2.1.1.2}{The Architecture of GFS}{subsection.2.1.1}% 14
+\BOOKMARK [2][]{subsection.2.1.2}{The Hadoop Distributed File System}{section.2.1}% 15
+\BOOKMARK [3][]{subsubsection.2.1.2.1}{Design Principle}{subsection.2.1.2}% 16
+\BOOKMARK [3][]{subsubsection.2.1.2.2}{The Architecture of HDFS}{subsection.2.1.2}% 17
+\BOOKMARK [3][]{subsubsection.2.1.2.3}{Single-Writer, Multiple-reader Model}{subsection.2.1.2}% 18
+\BOOKMARK [1][]{section.2.2}{Concurrency Control and Isolation Level}{chapter.2}% 19
+\BOOKMARK [2][]{subsection.2.2.1}{Concurrency Control in Database Management System}{section.2.2}% 20
+\BOOKMARK [2][]{subsection.2.2.2}{Isolation Level for Concurrent Transactions}{section.2.2}% 21
+\BOOKMARK [1][]{section.2.3}{MySQL Cluster}{chapter.2}% 22
+\BOOKMARK [2][]{subsection.2.3.1}{Design Principle}{section.2.3}% 23
+\BOOKMARK [2][]{subsection.2.3.2}{The Architecture of MySQL Cluster}{section.2.3}% 24
+\BOOKMARK [2][]{subsection.2.3.3}{Fault Tolerance in MySQL Cluster}{section.2.3}% 25
+\BOOKMARK [2][]{subsection.2.3.4}{The Benchmark of MySQL Cluster}{section.2.3}% 26
+\BOOKMARK [1][]{section.2.4}{Hadoop Open Platform-as-a-service and Hop-HDFS}{chapter.2}% 27
+\BOOKMARK [2][]{subsection.2.4.1}{Hadoop Open Platform-as-a-service Design Purpose}{section.2.4}% 28
+\BOOKMARK [2][]{subsection.2.4.2}{Overcoming Limitations in HDFS NameNode Architecture}{section.2.4}% 29
+\BOOKMARK [2][]{subsection.2.4.3}{The Architecture of Hop-HDFS}{section.2.4}% 30
+\BOOKMARK [-1][]{part.2}{II Namespace Concurrency Control and Assessment}{}% 31
+\BOOKMARK [0][]{chapter.3}{Namespace Concurrency Control}{part.2}% 32
+\BOOKMARK [1][]{section.3.1}{Namespace Concurrency Control in GFS}{chapter.3}% 33
+\BOOKMARK [2][]{subsection.3.1.1}{Namespace Structure}{section.3.1}% 34
+\BOOKMARK [2][]{subsection.3.1.2}{Namespace Concurrency Control}{section.3.1}% 35
+\BOOKMARK [2][]{subsection.3.1.3}{Limitations}{section.3.1}% 36
+\BOOKMARK [1][]{section.3.2}{Namespace Concurrency Control in HDFS}{chapter.3}% 37
+\BOOKMARK [2][]{subsection.3.2.1}{Namespace Structure}{section.3.2}% 38
+\BOOKMARK [2][]{subsection.3.2.2}{Namespace Concurrency Control}{section.3.2}% 39
+\BOOKMARK [2][]{subsection.3.2.3}{Limitations}{section.3.2}% 40
+\BOOKMARK [1][]{section.3.3}{Namespace Concurrency Control in Hop-HDFS}{chapter.3}% 41
+\BOOKMARK [2][]{subsection.3.3.1}{Namespace Structure}{section.3.3}% 42
+\BOOKMARK [2][]{subsection.3.3.2}{Namespace Concurrency Control}{section.3.3}% 43
+\BOOKMARK [2][]{subsection.3.3.3}{Limitations}{section.3.3}% 44
+\BOOKMARK [0][]{chapter.4}{Namespace Operation Performance Assessment}{part.2}% 45
+\BOOKMARK [1][]{section.4.1}{NameNode Throughput Benchmark}{chapter.4}% 46
+\BOOKMARK [1][]{section.4.2}{Parent Directory Contention Assessment}{chapter.4}% 47
+\BOOKMARK [-1][]{part.3}{III Algorithmic Solution}{}% 48
+\BOOKMARK [0][]{chapter.5}{Solution}{part.3}% 49
+\BOOKMARK [1][]{section.5.1}{Resolving the Semantic Related Group}{chapter.5}% 50
+\BOOKMARK [1][]{section.5.2}{Per-Transaction Snapshot Isolation}{chapter.5}% 51
+\BOOKMARK [2][]{subsection.5.2.1}{Fuzzy Read and Phantom Read are Precluded}{section.5.2}% 52
+\BOOKMARK [1][]{section.5.3}{ClusterJ and Lock Mode in MySQL Cluster}{chapter.5}% 53
+\BOOKMARK [1][]{section.5.4}{Optimistic Concurrency Control}{chapter.5}% 54
+\BOOKMARK [2][]{subsection.5.4.1}{Write Skew is Precluded}{section.5.4}% 55
+\BOOKMARK [1][]{section.5.5}{Total Order Update, Abort and Version Increase in Update Phase}{chapter.5}% 56
+\BOOKMARK [1][]{section.5.6}{Pseudocode of the Complete Algorithm}{chapter.5}% 57
+\BOOKMARK [-1][]{part.4}{IV Evaluation and Conclusion}{}% 58
+\BOOKMARK [0][]{chapter.6}{Evaluation}{part.4}% 59
+\BOOKMARK [1][]{section.6.1}{Experimental Testbed}{chapter.6}% 60
+\BOOKMARK [1][]{section.6.2}{Parent Directory Contention Assessment}{chapter.6}% 61
+\BOOKMARK [1][]{section.6.3}{Read-Write Mixed Workload Assessment}{chapter.6}% 62
+\BOOKMARK [1][]{section.6.4}{The Size of Semantic Related Group}{chapter.6}% 63
+\BOOKMARK [1][]{section.6.5}{OCC Performance with Different Size of Conflicts}{chapter.6}% 64
+\BOOKMARK [1][]{section.6.6}{Correctness Assessment}{chapter.6}% 65
+\BOOKMARK [0][]{chapter.7}{Conclusion and Future Work}{part.4}% 66
+\BOOKMARK [1][]{section.7.1}{Conclusion}{chapter.7}% 67
+\BOOKMARK [1][]{section.7.2}{Future Work}{chapter.7}% 68
+\BOOKMARK [-1][]{part.5}{V Appendices}{}% 69
+\BOOKMARK [0][]{chapter.1}{Apache HDFS Unit Tests Passing List}{part.5}% 70

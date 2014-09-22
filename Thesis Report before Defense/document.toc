@@ -1,0 +1,71 @@
+\select@language {portuguese}
+\contentsline {part}{I\hspace {1em}Introduction and Background}{1}{part.1}
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation}{3}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}The De Facto Industrial Standard in Big Data Era}{3}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Limits to growth in HDFS}{3}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Hop-HDFS and Its Limitation}{4}{subsection.1.1.3}
+\contentsline {section}{\numberline {1.2}Problem Statement}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}Contribution}{6}{section.1.3}
+\contentsline {section}{\numberline {1.4}Document Structure}{6}{section.1.4}
+\contentsline {chapter}{\numberline {2}Background and Related Work}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Distributed File Systems}{7}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}The Google File System}{7}{subsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.1}Design Principle}{7}{subsubsection.2.1.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.2}The Architecture of GFS}{8}{subsubsection.2.1.1.2}
+\contentsline {subsection}{\numberline {2.1.2}The Hadoop Distributed File System}{8}{subsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.2.1}Design Principle}{8}{subsubsection.2.1.2.1}
+\contentsline {subsubsection}{\numberline {2.1.2.2}The Architecture of HDFS}{9}{subsubsection.2.1.2.2}
+\contentsline {subsubsection}{\numberline {2.1.2.3}Single-Writer, Multiple-reader Model}{10}{subsubsection.2.1.2.3}
+\contentsline {section}{\numberline {2.2}Concurrency Control and Isolation Level}{10}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Concurrency Control in Database Management System}{10}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Isolation Level for Concurrent Transactions}{11}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}MySQL Cluster}{11}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Design Principle}{11}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}The Architecture of MySQL Cluster}{12}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Fault Tolerance in MySQL Cluster}{12}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}The Benchmark of MySQL Cluster}{14}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}Hadoop Open Platform-as-a-service and Hop-HDFS}{15}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Hadoop Open Platform-as-a-service Design Purpose}{15}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Overcoming Limitations in HDFS NameNode Architecture}{15}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}The Architecture of Hop-HDFS}{15}{subsection.2.4.3}
+\contentsline {part}{II\hspace {1em}Namespace Concurrency Control and Assessment}{19}{part.2}
+\contentsline {chapter}{\numberline {3}Namespace Concurrency Control}{21}{chapter.3}
+\contentsline {section}{\numberline {3.1}Namespace Concurrency Control in GFS}{21}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Namespace Structure}{21}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Namespace Concurrency Control}{21}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Limitations}{22}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Namespace Concurrency Control in HDFS}{23}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Namespace Structure}{23}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Namespace Concurrency Control}{23}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Limitations}{24}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Namespace Concurrency Control in Hop-HDFS}{27}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Namespace Structure}{27}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Namespace Concurrency Control}{28}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Limitations}{29}{subsection.3.3.3}
+\contentsline {chapter}{\numberline {4}Namespace Operation Performance Assessment}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}NameNode Throughput Benchmark}{31}{section.4.1}
+\contentsline {section}{\numberline {4.2}Parent Directory Contention Assessment}{32}{section.4.2}
+\contentsline {part}{III\hspace {1em}Algorithmic Solution}{35}{part.3}
+\contentsline {chapter}{\numberline {5}Solution}{37}{chapter.5}
+\contentsline {section}{\numberline {5.1}Resolving the Semantic Related Group}{37}{section.5.1}
+\contentsline {section}{\numberline {5.2}Per-Transaction Snapshot Isolation}{39}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Fuzzy Read and Phantom Read are Precluded}{39}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.3}ClusterJ and Lock Mode in MySQL Cluster}{40}{section.5.3}
+\contentsline {section}{\numberline {5.4}Optimistic Concurrency Control}{41}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Write Skew is Precluded}{42}{subsection.5.4.1}
+\contentsline {section}{\numberline {5.5}Total Order Update, Abort and Version Increase in Update Phase}{42}{section.5.5}
+\contentsline {section}{\numberline {5.6}Pseudocode of the Complete Algorithm}{43}{section.5.6}
+\contentsline {part}{IV\hspace {1em}Evaluation and Conclusion}{45}{part.4}
+\contentsline {chapter}{\numberline {6}Evaluation}{47}{chapter.6}
+\contentsline {section}{\numberline {6.1}Experimental Testbed}{47}{section.6.1}
+\contentsline {section}{\numberline {6.2}Parent Directory Contention Assessment}{47}{section.6.2}
+\contentsline {section}{\numberline {6.3}Read-Write Mixed Workload Assessment}{48}{section.6.3}
+\contentsline {section}{\numberline {6.4}The Size of Semantic Related Group}{49}{section.6.4}
+\contentsline {section}{\numberline {6.5}OCC Performance with Different Size of Conflicts}{50}{section.6.5}
+\contentsline {section}{\numberline {6.6}Correctness Assessment}{52}{section.6.6}
+\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{55}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusion}{55}{section.7.1}
+\contentsline {section}{\numberline {7.2}Future Work}{56}{section.7.2}
+\contentsline {part}{V\hspace {1em}Appendices}{61}{part.5}
+\contentsline {chapter}{\numberline {A}Apache HDFS Unit Tests Passing List}{63}{chapter.1}

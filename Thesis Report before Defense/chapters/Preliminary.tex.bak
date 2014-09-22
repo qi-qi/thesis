@@ -1,0 +1,368 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- coding: utf-8; mode: latex -*- %%
+%
+%    NOTA IMPORTANTE: este ficheiro destina-se a ser formatado para
+%    visualização interactiva, utilizando um programa do tipo ``netscape''
+%    e foi concebido tendo em vista a seu processamento para obtenção de
+%    uma especificação HTML.
+%
+%    ESTE ERA O COMENTÁRIO ANTES DE REUTILIZAÇÃO DO FORMATO EM LaTeX2e...
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% $Id: 0000-preliminar.tex,v 1.2 2009/06/14 20:11:06 david Exp $
+% $Log: 0000-preliminar.tex,v $
+% Revision 1.2  2009/06/14 20:11:06  david
+% PDF version. Color index.
+%
+% Revision 1.1  2007/11/23 09:52:39  david
+% *** empty log message ***
+%
+%
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                  TÍTULO E DATA OFICIAL DA TESE
+ %%%
+  %
+
+\def\date{September 2014}
+\def\titulo{Optimistic Concurrency Control in a Distributed NameNode Architecture for Hadoop Distributed File System}
+
+% hypernavigation in PDF docs
+\hypersetup{colorlinks,
+   debug=false,
+   linkcolor=blue,  %%% cor do tableofcontents, \ref, \footnote, etc
+   citecolor=red,  %%% cor do \cite
+   urlcolor=blue,   %%% cor do \url e \href
+   bookmarksopen=true,
+   pdftitle={\titulo},
+   pdfauthor={Qi Qi},
+   pdfsubject={European Master in Distributed Computing},
+   pdfkeywords={Distributed File System, Concurrency Control, Hadoop}
+}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+  %%%%%                          CAPA DA TESE
+  %%%
+  %
+  
+  \thispagestyle{empty}
+  
+  \begin{singlespace}
+  	\vbox to\textheight{
+  		%--------------------------------------------------
+  		%\vskip-0.1in%---------- LOGO E NOME IST/UTL -------
+  		%--------------------------------------------------
+  		\hskip-17mm\vbox to40mm{
+  			\vfil
+  			\begin{tabular}{l}
+  				\includegraphics[width=6cm]{figs/preliminar/Logo_IST_web.pdf}
+  			\end{tabular}
+  			\vfil
+  			\vfil
+  		}%
+  		%--------------------------------------------------
+  		\vskip2mm%---------- FIGURAS DA CAPA -------------
+  		%--------------------------------------------------
+  		\vbox to25mm{\LARGE\sl
+  			\vfil
+  			%\centerline{\psfig{file=figs/preliminar/tarantula.eps,height=25mm}}
+  			\vfil
+  		}%
+  		%--------------------------------------------------
+  		%\vskip6mm%---------- TÍTULO -----------------------
+  		%--------------------------------------------------
+  		\vbox to20mm{\LARGE\bf
+  			\vfil
+  			\begin{center}
+  				\titulo
+  			\end{center}
+  			\vfil
+  		}
+  		%--------------------------------------------------
+  		%\vskip6mm%---------- NOME E GRAU ACTUAL -----------
+  		%--------------------------------------------------
+  		\vtop to20mm{\large
+  			\vfil
+  			\begin{center}
+  				{\Large\bf Qi Qi}\\   % author's name
+  			\end{center}
+  			\vfil
+  		}%
+  		%--------------------------------------------------
+  		\vskip6mm%---------- GRAU A OBTER -----------------
+  		%--------------------------------------------------
+  		\vbox to6mm{\large
+  			\vfil
+  			\centerline{Thesis to obtain the Master of Science Degree in}
+  			%\vskip6mm
+  			{\LARGE\bf \centerline{Information Systems and Computer Engineering}}
+  			\vfil
+  			%--------------------------------------------------
+  			\vskip12mm%---------- Supervisor -----------------
+  			%--------------------------------------------------
+  			\vfil
+  			\centerline{Supervisor: Prof. Luís Manuel Antunes Veiga}
+  			\centerline{Advisor: Prof. Jim Dowling}
+  			%\vskip6mm
+  			\vfil
+  			
+  			%--------------------------------------------------
+  			\vskip15mm%---------- GRAU A OBTER -----------------
+  			%--------------------------------------------------
+  		}%
+  		%--------------------------------------------------
+  		\vskip40mm%---------- ORIENTADOR -------------------
+  		%--------------------------------------------------
+  		%\vbox to8mm{\large
+  		%\vfil
+  		%\begin{center}
+  		%\begin{tabular}{p{0.2\textwidth}l}
+  		%\end{tabular}
+  		%\end{center}
+  		%\vfil
+  		%}%
+  		%%--------------------------------------------------
+  		%\vfil
+  		% %--------------------------------------------------
+  		% \vskip5mm%---------- JÚRI -------------------------
+  		% %--------------------------------------------------
+  		\vbox to7mm{\Large\bf
+  			\vfil
+  			\begin{center}
+  				{\Large\bf Examination Committee}\\
+  			\end{center}
+  			\vfil
+  		}%
+  		
+  		\vbox to28mm{\large
+  			\vfil
+  			\begin{center}
+  				\begin{tabular}{p{0.4\textwidth}l}
+  					Chairperson: & Prof. José Carlos Alves Pereira Monteiro\\
+  					Supervisor: & Prof. Luís Manuel Antunes Veiga\\
+  					Member of the Committee: & Prof. Nuno Manuel Ribeiro Preguiça \\
+  				\end{tabular}
+  			\end{center}
+  			\vfil
+  		}%
+  		%--------------------------------------------------
+  		\vskip20mm%---------- DATA -------------------------
+  		%--------------------------------------------------
+  		\vbox to4mm{\Large\bf
+  			\vfil
+  			\begin{center}
+  				\date
+  			\end{center}
+  			\vfil
+  		}%
+  		%--------------------------------------------------
+  	}%vbox
+  \end{singlespace}
+  \newpage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                             Acknowledgments
+ %%%
+  %
+
+%\chapter*{Agradecimentos}
+\chapter*{Acknowledgments}
+\thispagestyle{empty}
+
+% AGRADECER!
+
+The work presented is delivered as the final thesis report at Instituto Superior Técnico - IST (Lisbon, Portugal). It is in partial fulfillment of the European Master in Distributed Computing - EMDC program 2012-2014. Royal Institute of Technology - KTH (Stockholm, Sweden) is the coordinator for this Erasmus Mundus master program. The study track has been composed of a first two semesters at IST, 3rd semester at KTH, and for this work and 4th semester, a degree project in Computer Systems Laboratory at Swedish Institute of Computer Science - SICS (Stockholm, Sweden).
+
+\noindent Special thanks to my advisor Dr. Jim Dowling for his support throughout the project. With more than ten years' professional industry experience, Jim is always there patient to help. He's the cool guy who gives answers faster than Google and StackOverFlow.
+
+\noindent Thanks to Salman Niazi and Mahmoud Ismail for all the practical help. Without them I might have to spend quite a long time studying the code base of the precedent work. 
+
+\noindent I'm also grateful to my supervisor Prof. Luís Antunes Veiga for his continuous support and encouragement. When I was in IST, I liked staying in the classroom after his class and chatted with him for a while. Veiga was like a big brother there taking care of us.
+
+\noindent I would like to thank the good friends I met in Portugal and Sweden, who leveled me up during these two years. Without you guys, this journey wouldn't have been such a legendary in my life.
+
+\noindent I am truly thankful to my family for nursing me with all their affections and love.
+
+\noindent Last, special appreciation to this young man, Qi Qi, who always has the guts to take any adventure in his life.
+
+\vfill
+\begin{flushright}
+  \begin{minipage}{8cm}
+    \begin{center}
+      15 September 2014, Stockholm
+
+      Qi Qi
+    \end{center}
+  \end{minipage}
+\end{flushright}
+
+\cleardoublepage
+
+
+\chapter*{European Master in Distributed Computing (EMDC)}
+\thispagestyle{empty}
+The thesis is a part of the curricula of the European Master in Distributed Computing, a cooperation between KTH Royal Institute of Technology in Sweden, Instituto Superior Técnico (IST) in Portugal and Universitat Politècnica de Catalunya (UPC) in Spain. This double degree master program is supported by the Education, Audiovisual and Culture Executive Agency (EACEA) of the European Union.
+
+\noindent My study track during the master studies of the two years is as follows:
+\begin{itemize}[noitemsep]
+	\item First Year (Portugal): Instituto Superior Técnico, Universidade de Lisboa
+	\item Third Semester (Sweden): KTH Royal Institute of Technology
+	\item Fourth Semester (Sweden): Computer Systems Laboratory at Swedish Institute of Computer Science (SICS) / Instituto Superior Técnico, Universidade de Lisboa
+\end{itemize}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                            Dedication
+ %%%
+  %
+
+\chapter*{Dedication}
+\thispagestyle{empty}
+
+% DEDICAR!
+\vfill
+\mbox{}
+\vfill\Large
+\begin{flushright}
+  \begin{minipage}{8cm}
+    \begin{center}
+	\usefont{T1}{LobsterTwo-LF}{bx}{it}
+	To my father, a man of integrity, who supports all my adventurous decisions so that I can live outside of the box.
+
+    \end{center}
+  \end{minipage}
+\end{flushright}
+\normalsize\vfill
+
+\cleardoublepage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                                RESUMO
+ %%%
+  %
+
+\chapter*{Resumo}
+\thispagestyle{empty}
+
+O Hadoop Distributed File System (HDFS) é a camada de armazenamento para o ecossistema Apache Hadoop, armazenando grandes conjuntos de dados em várias máquinas. No entanto, a capacidade de armazenamento total é limitada uma vez que os metadados são armazenados na memória de um único servidor, chamado NameNode. O  tamanho de heap do NameNode restringe o volume de dados,  ficheiros e blocos endereçáveis ​​no sistema.
+
+\noindent A plataforma Hadoop Open (Hop) é uma plataforma-como-serviço (PaaS) para o ecossistema Hadoop em plataformasde nuvem existentes, incluindo Amazon Web Service e OpenStack.  A camada de armazenamento Hop, Hop-HDFS, é uma implementação de alta disponibilidade do HDFS, armazenando os metadados numa base de dados replicada em memória distribuída, MySQL Cluster. O objetivo é superar as limitações do NameNode, mantendo a semântica de consistência forte do HDFS para que as aplicações escritas para HDFS podem ser executados em Hop-HDFS sem modificações.
+
+\noindent Trabalhos anteriores têm contribuído para a adopção de um modelo transaccional para o Hop-HDFS. De granularidade lata de nível sistema até a mais fina, com trincos sobre registos, as semânticas de consistência forte foram mantidas no Hop-HDFS, mas com desempenho muito restrito comparado com o HDFS orginal.
+
+\noindent Nesta tese, analisamos primeiro as limitações na implementação actual do HDFS e fornecemos uma visão geral do Hop-HDFS ilustrando como superámos essas limitações. Em seguida, fazemos uma avaliação sistemática dos trabalhos anteriores para o Hop-HDFS comparando com o HDFS, e também analisamos as restrições ao utilizar mecanismos de sincronização pessimista para garantir consistência forte. Finalmente, a partir da investigação de deficiências atuais, demonstramos como melhorar o desempenho através da concepção de um novo modelo baseado no controle de concorrência optimista com snapshot isolation como prova de conceito. A avaliação mostra melhoria significativa do desempenho com novo modelo. A nossa implementação foi validada por mais de 300 testes de unidade ao Apache HDFS.
+
+\newpage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                            ABSTRACT
+ %%%
+  %
+
+\chapter*{Abstract}
+\thispagestyle{empty}
+
+The \textit{Hadoop Distributed File System} (HDFS) is the storage layer for Apache Hadoop ecosystem, persisting large data sets across multiple machines. However, the overall storage capacity is limited since the metadata is stored in-memory on a single server, called the \textit{NameNode}. The heap size of the NameNode restricts the number of data files and addressable blocks persisted in the file system.
+
+\noindent The \textit{Hadoop Open Platform-as-a-service} (Hop) is an open platform-as-a-Service (PaaS) support of the Hadoop ecosystem on existing cloud platforms including Amazon Web Service and OpenStack. The storage layer of Hop, called the Hop-HDFS, is a highly available implementation of HDFS, based on storing the metadata in a distributed, in-memory, replicated database, called the \textit{MySQL Cluster}. It aims to overcome the NameNode's limitation while maintaining the strong consistency semantics of HDFS so that applications written for HDFS can run on Hop-HDFS without 
+modifications.
+
+\noindent Precedent thesis works have contributed for a transaction model for Hop-HDFS. From system-level coarse grained locking to row-level fine grained locking, the strong consistency semantics have been ensured in Hop-HDFS, but the overall performance is restricted compared to the original HDFS.
+
+\noindent In this thesis, we first analyze the limitation in HDFS NameNode implementation and provide an overview of Hop-HDFS illustrating how we overcome those problems. Then we give a systematic assessment on precedent works for Hop-HDFS comparing to HDFS, and also analyze the restriction when using pessimistic locking mechanisms to ensure the strong consistency semantics. Finally, based on the investigation of current shortcomings, we provide a solution for Hop-HDFS based on optimistic concurrency control with snapshot isolation on semantic related group to improve the operation throughput while maintaining the strong consistency semantics in HDFS. The evaluation shows the significant improvement of this new model. The correctness of our implementation has been validated by 300+ Apache HDFS unit tests passing.
+
+\newpage
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                 FICHA BIBLIOGRAFICA -- PALAVRAS CHAVE
+ %%%
+  %
+
+\chapter*{Palavras Chave \\ Keywords}
+\thispagestyle{empty}
+
+\section*{Palavras Chave}
+{\large % EM PORTUGUÊS
+
+\noindent HDFS
+
+\noindent Cluster MySQL
+
+\noindent Controlo de Concorrência
+
+\noindent Snapshot Isolation
+
+\noindent Débito
+
+}
+
+\section*{Keywords}
+
+{\large % EM INGLÊS
+
+\noindent HDFS
+
+\noindent MySQL Cluster
+
+\noindent Concurrency Control
+
+\noindent Snapshot Isolation
+
+\noindent Throughput
+
+}
+
+\vfill
+%LATEX2HTML}
+
+\cleardoublepage
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                         MUDANÇA DE NUMERAÇÃO
+ %%%
+  %
+
+\pagestyle{plain}
+\pagenumbering{roman}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                             INDICES
+ %%%
+  %
+
+% ``Table of contents'' (índice).
+
+%\def\contentsname{Índice}
+\def\contentsname{Index}
+\tableofcontents
+\newpage
+
+% Lista de figuras.
+\listoffigures
+\newpage
+
+% Lista de tabelas.
+\listoftables
+
+% Does it always work? I expect so...
+\cleardoublepage
+
+  %
+ %%%
+%%%%%                          F          I          M      
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Local Variables: 
+% mode: latex
+% TeX-master: "tese"
+% End: 

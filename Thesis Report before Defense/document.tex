@@ -1,0 +1,189 @@
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -*- coding: utf-8; mode: latex -*- %%
+  %
+%%%%%    ESTE FICHEIRO ESTÁ FORMATADO PARA LaTeX2e, NÃO PODENDO, POR ISSO,
+ %%%                SER PROCESSADO UTILIZANDO LaTeX 2.09.
+  %
+
+% $Id: tese.tex,v 1.1 2007/11/23 09:53:19 david Exp $
+% $Log: tese.tex,v $
+% Revision 1.1  2007/11/23 09:53:19  david
+% *** empty log message ***
+%
+%
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%
+ %%%
+  %
+
+\NeedsTeXFormat{LaTeX2e}
+
+\documentclass[a4paper,11pt,twoside,onecolumn,final,openright]{book}
+
+\usepackage[doublespace,final]{thesis}
+%\usepackage[singlespace,final]{thesis}
+%\usepackage[singlespace,draft]{thesis}
+
+%\textheight=18.5cm
+%\textwidth=11.5cm
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{subfigure}
+\usepackage{enumitem}
+\usepackage{pifont}
+\usepackage{caption}
+
+
+% japanese
+%\usepackage[encapsulated]{CJK}
+%\usepackage[overlap, CJK]{ruby}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%              M A T E R I A L     I N T R O D U T Ó R I O
+ %%%
+  %
+
+\begin{document}
+%\initfloatingfigs
+
+\input{chapters/Preliminary}       % Páginas iniciais exigidas no formato da tese.
+
+\pagenumbering{arabic}
+\pagestyle{headings}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                          CHAPTERS
+ %%%
+  %
+
+% produces nomenclature appendix: possibly broken
+%\input{0100-terms}                          % index terms and glossary
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                  P A R T   I  --  Introduction and Background
+ %%%
+  %
+
+\part{Introduction and Background}
+\thispagestyle{empty}
+%\vbox to\textheight{
+%\vfil
+%\chapter*{Minim Veniam}
+\thispagestyle{empty}
+
+\newpage
+\thispagestyle{empty}
+
+\input{chapters/Introduction}
+\input{chapters/Background}     
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                P A R T   I I  -- Assessment in Hop-HDFS
+ %%%
+  %
+
+\part{Namespace Concurrency Control and Assessment}
+\thispagestyle{empty}
+%\vbox to\textheight{
+%\vfil
+%\chapter*{Ratione Voluptatem}
+\thispagestyle{empty}
+
+\newpage
+\thispagestyle{empty}
+
+\input{chapters/Locking}
+\input{chapters/Assessment}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%               P A R T   I I I  --  Solution
+ %%%
+  %
+
+\part{Algorithmic Solution}
+\thispagestyle{empty}
+%\vbox to\textheight{
+%\vfil
+%\chapter*{Laborum et Dolorum}
+\thispagestyle{empty}
+
+\newpage
+\thispagestyle{empty}
+
+\input{chapters/Solution}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                 P A R T E   I V  --  Evaluation and Conclusion
+ %%%
+  %
+
+\part{Evaluation and Conclusion}
+\thispagestyle{empty}
+%\vbox to\textheight{
+%\vfil
+%\chapter*{Omnis voluptas}
+\thispagestyle{empty}
+
+\newpage
+\thispagestyle{empty}
+
+\input{chapters/Evaluation}                 
+\input{chapters/Conclusion}            
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                        SPECIAL
+ %%%
+  %
+%\bibliographystyle{authordate3}             % Bibliography
+%\bibliographystyle{apacitex}
+\bibliographystyle{chicago}
+\bibliography{reference}
+%---------------------------------------------------------------------------
+%\begin{singlespace}
+%\printindex[autx]\cleardoublepage            % Author index (apacitex)
+%\end{singlespace}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                         APPENDIX
+ %%%
+  %
+
+\part{Appendices}
+\appendix
+%
+\input{chapters/Testing}         % commodo consequat
+
+%\begin{singlespace}
+%\printnomenclature\cleardoublepage               % Glossary
+%\end{singlespace}
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+%%%%%                         SPECIAL
+ %%%
+  %
+\begin{singlespace}
+
+\def\indexname{Index}             % Index
+\printindex\cleardoublepage
+
+\end{singlespace}
+
+\end{document}
+
+  %
+ %%%
+%%%%%                          THE END
+  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

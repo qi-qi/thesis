@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  16 SEP 2014 20:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.26)  22 SEP 2014 11:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -407,12 +407,12 @@ a shorter form with \authorrunning prior to \maketitle
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<HopHDFSArchitecture.pdf, id=12, 566.19568pt x 319.48157pt>
-File: HopHDFSArchitecture.pdf Graphic file (type pdf)
+<HopHDFSArchitecture2.pdf, id=12, 566.9485pt x 320.23439pt>
+File: HopHDFSArchitecture2.pdf Graphic file (type pdf)
 
-<use HopHDFSArchitecture.pdf>
-Package pdftex.def Info: HopHDFSArchitecture.pdf used on input line 111.
-(pdftex.def)             Requested size: 396.33427pt x 223.63557pt.
+<use HopHDFSArchitecture2.pdf>
+Package pdftex.def Info: HopHDFSArchitecture2.pdf used on input line 111.
+(pdftex.def)             Requested size: 396.86124pt x 224.16254pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -426,7 +426,7 @@ Package pdftex.def Info: hoptree.pdf used on input line 128.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3 <./HopHDFSArchitecture.pdf>]
+[3 <./HopHDFSArchitecture2.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -460,7 +460,7 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  4205 strings out of 493304
- 61753 string characters out of 6139871
+ 61758 string characters out of 6139871
  136887 words of memory out of 5000000
  7592 multiletter control sequences out of 15000+600000
  11572 words of font info for 44 fonts, out of 8000000 for 9000
@@ -480,7 +480,7 @@ cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on typeinst.pdf (10 pages, 431100 bytes).
+Output written on typeinst.pdf (10 pages, 431235 bytes).
 PDF statistics:
  115 PDF objects out of 1000 (max. 8388607)
  83 compressed objects within 1 object stream

@@ -78,10 +78,10 @@
 \headcommand {\beamer@framepages {23}{23}}
 \headcommand {\slideentry {5}{2}{2}{24/24}{Parent Directory Contention Assessment}{0}}
 \headcommand {\beamer@framepages {24}{24}}
-\headcommand {\beamer@subsectionentry {0}{5}{3}{25}{Parent Directory Contention Assessment}}\headcommand {\beamer@subsectionpages {23}{24}}
-\headcommand {\slideentry {5}{3}{1}{25/25}{Parent Directory Contention Assessment}{0}}
+\headcommand {\beamer@subsectionentry {0}{5}{3}{25}{Read-Write Mixed Workload}}\headcommand {\beamer@subsectionpages {23}{24}}
+\headcommand {\slideentry {5}{3}{1}{25/25}{Read-Write Mixed Workload}{0}}
 \headcommand {\beamer@framepages {25}{25}}
-\headcommand {\slideentry {5}{3}{2}{26/26}{Parent Directory Contention Assessment}{0}}
+\headcommand {\slideentry {5}{3}{2}{26/26}{Read-Write Mixed Workload}{0}}
 \headcommand {\beamer@framepages {26}{26}}
 \headcommand {\beamer@subsectionentry {0}{5}{4}{27}{OCC Performance with Different Size of Conflicts}}\headcommand {\beamer@subsectionpages {25}{26}}
 \headcommand {\slideentry {5}{4}{1}{27/27}{OCC Performance with Different Size of Conflicts}{0}}
@@ -113,11 +113,17 @@
 \headcommand {\beamer@framepages {34}{34}}
 \headcommand {\slideentry {7}{2}{3}{35/35}{GFS Namespace Concurrency Control}{0}}
 \headcommand {\beamer@framepages {35}{35}}
-\headcommand {\beamer@subsectionentry {0}{7}{3}{36}{The Size of Semantic Related Group}}\headcommand {\beamer@subsectionpages {33}{35}}
-\headcommand {\slideentry {7}{3}{1}{36/36}{The Size of Semantic Related Group}{0}}
+\headcommand {\beamer@subsectionentry {0}{7}{3}{36}{Workload of Parent Directory Contention Assessment}}\headcommand {\beamer@subsectionpages {33}{35}}
+\headcommand {\slideentry {7}{3}{1}{36/36}{Workload of Parent Directory Contention Assessment}{0}}
 \headcommand {\beamer@framepages {36}{36}}
-\headcommand {\beamer@partpages {1}{36}}
-\headcommand {\beamer@subsectionpages {36}{36}}
-\headcommand {\beamer@sectionpages {32}{36}}
-\headcommand {\beamer@documentpages {36}}
-\headcommand {\def \inserttotalframenumber {36}}
+\headcommand {\beamer@subsectionentry {0}{7}{4}{37}{Read-Write Mixed Workload}}\headcommand {\beamer@subsectionpages {36}{36}}
+\headcommand {\slideentry {7}{4}{1}{37/37}{Read-Write Mixed Workload}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\beamer@subsectionentry {0}{7}{5}{38}{The Size of Semantic Related Group}}\headcommand {\beamer@subsectionpages {37}{37}}
+\headcommand {\slideentry {7}{5}{1}{38/38}{The Size of Semantic Related Group}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\beamer@partpages {1}{38}}
+\headcommand {\beamer@subsectionpages {38}{38}}
+\headcommand {\beamer@sectionpages {32}{38}}
+\headcommand {\beamer@documentpages {38}}
+\headcommand {\def \inserttotalframenumber {38}}

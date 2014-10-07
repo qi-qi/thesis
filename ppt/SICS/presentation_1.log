@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  7 OCT 2014 23:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.11)  7 OCT 2014 23:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -903,7 +903,7 @@ LaTeX Font Warning: Font shape `OML/cmss/m/n' undefined
 
 ] [4
 
-] <figs/mysqlclusterbenchmark.pdf, id=505, 361.35pt x 216.81pt>
+] <figs/mysqlclusterbenchmark.pdf, id=525, 361.35pt x 216.81pt>
 File: figs/mysqlclusterbenchmark.pdf Graphic file (type pdf)
 
 <use figs/mysqlclusterbenchmark.pdf>
@@ -919,7 +919,7 @@ Overfull \vbox (7.30777pt too high) detected at line 254
  <./figs/mysqlclusterbenchmark.pdf>] [6
 
 ]
-<figs/HopHDFSArchitecture2.pdf, id=648, 566.9485pt x 320.23439pt>
+<figs/HopHDFSArchitecture2.pdf, id=672, 566.9485pt x 320.23439pt>
 File: figs/HopHDFSArchitecture2.pdf Graphic file (type pdf)
 
 <use figs/HopHDFSArchitecture2.pdf>
@@ -928,7 +928,7 @@ Package pdftex.def Info: figs/HopHDFSArchitecture2.pdf used on input line 274.
  [7
 
  <./figs/HopHDFSArchitecture2.pdf>]
-<figs/nnRPC.pdf, id=725, 513.16719pt x 507.92761pt>
+<figs/nnRPC.pdf, id=751, 513.16719pt x 507.92761pt>
 File: figs/nnRPC.pdf Graphic file (type pdf)
  <use figs/nnRPC.pdf>
 Package pdftex.def Info: figs/nnRPC.pdf used on input line 286.
@@ -936,7 +936,7 @@ Package pdftex.def Info: figs/nnRPC.pdf used on input line 286.
 
 [8
 
- <./figs/nnRPC.pdf>] <figs/hoptree.pdf, id=805, 284.97264pt x 288.41954pt>
+ <./figs/nnRPC.pdf>] <figs/hoptree.pdf, id=833, 284.97264pt x 288.41954pt>
 File: figs/hoptree.pdf Graphic file (type pdf)
 
 <use figs/hoptree.pdf>
@@ -960,7 +960,7 @@ Overfull \vbox (1.524pt too high) detected at line 344
 
 [10
 
-] <figs/nn_100.pdf, id=949, 361.35pt x 216.81pt>
+] <figs/nn_100.pdf, id=981, 361.35pt x 216.81pt>
 File: figs/nn_100.pdf Graphic file (type pdf)
  <use figs/nn_100.pdf>
 Package pdftex.def Info: figs/nn_100.pdf used on input line 353.
@@ -969,7 +969,7 @@ Package pdftex.def Info: figs/nn_100.pdf used on input line 353.
 [11
 
  <./figs/nn_100.pdf>]
-<figs/hdfs_pcc_parentlock.pdf, id=1025, 361.35pt x 216.81pt>
+<figs/hdfs_pcc_parentlock.pdf, id=1059, 361.35pt x 216.81pt>
 File: figs/hdfs_pcc_parentlock.pdf Graphic file (type pdf)
 
 <use figs/hdfs_pcc_parentlock.pdf>
@@ -991,7 +991,7 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 
 ] [14
 
-] <figs/snapfuzzy.pdf, id=1237, 683.58034pt x 264.65776pt>
+] <figs/snapfuzzy.pdf, id=1277, 683.58034pt x 264.65776pt>
 File: figs/snapfuzzy.pdf Graphic file (type pdf)
 
 <use figs/snapfuzzy.pdf>
@@ -1000,7 +1000,7 @@ Package pdftex.def Info: figs/snapfuzzy.pdf used on input line 406.
  [15
 
  <./figs/snapfuzzy.pdf>]
-<figs/snapphantom.pdf, id=1321, 783.19751pt x 275.9921pt>
+<figs/snapphantom.pdf, id=1363, 783.19751pt x 275.9921pt>
 File: figs/snapphantom.pdf Graphic file (type pdf)
 
 <use figs/snapphantom.pdf>
@@ -1013,7 +1013,7 @@ Package pdftex.def Info: figs/snapphantom.pdf used on input line 413.
 ] [18
 
 ]
-<figs/snapwriteskew.pdf, id=1539, 1091.31702pt x 533.50214pt>
+<figs/snapwriteskew.pdf, id=1587, 1091.31702pt x 533.50214pt>
 File: figs/snapwriteskew.pdf Graphic file (type pdf)
 
 <use figs/snapwriteskew.pdf>
@@ -1028,7 +1028,7 @@ Package pdftex.def Info: figs/snapwriteskew.pdf used on input line 446.
 ] [22
 
 ]
-<figs/hdfs_pcc_occ_parent.pdf, id=1833, 361.35pt x 216.81pt>
+<figs/hdfs_pcc_occ_parent.pdf, id=1889, 361.35pt x 216.81pt>
 File: figs/hdfs_pcc_occ_parent.pdf Graphic file (type pdf)
 
 <use figs/hdfs_pcc_occ_parent.pdf>
@@ -1039,7 +1039,7 @@ Package pdftex.def Info: figs/hdfs_pcc_occ_parent.pdf used on input line 492.
  <./figs/hdfs_pcc_occ_parent.pdf>]
 [24
 
-] <figs/pcc_occ_rw.pdf, id=1975, 361.35pt x 216.81pt>
+] <figs/pcc_occ_rw.pdf, id=2036, 361.35pt x 216.81pt>
 File: figs/pcc_occ_rw.pdf Graphic file (type pdf)
 
 <use figs/pcc_occ_rw.pdf>
@@ -1052,7 +1052,7 @@ Package pdftex.def Info: figs/pcc_occ_rw.pdf used on input line 517.
 ] [27
 
 ]
-<figs/conRate.pdf, id=2185, 361.35pt x 216.81pt>
+<figs/conRate.pdf, id=2252, 361.35pt x 216.81pt>
 File: figs/conRate.pdf Graphic file (type pdf)
  <use figs/conRate.pdf>
 Package pdftex.def Info: figs/conRate.pdf used on input line 555.
@@ -1123,7 +1123,7 @@ Overfull \hbox (9.68248pt too wide) in paragraph at lines 669--669
 
 [32
 
-] <figs/gfstree.pdf, id=2537, 518.06837pt x 323.75955pt>
+] <figs/gfstree.pdf, id=2613, 518.06837pt x 323.75955pt>
 File: figs/gfstree.pdf Graphic file (type pdf)
 
 <use figs/gfstree.pdf>
@@ -1154,13 +1154,30 @@ Overfull \hbox (3.34628pt too wide) in paragraph at lines 719--719
 
 [35
 
-] <figs/srgSize.pdf, id=2746, 361.35pt x 216.81pt>
-File: figs/srgSize.pdf Graphic file (type pdf)
- <use figs/srgSize.pdf>
-Package pdftex.def Info: figs/srgSize.pdf used on input line 730.
-(pdftex.def)             Requested size: 307.28987pt x 184.37538pt.
+] <figs/ww.pdf, id=2829, 516.34207pt x 295.29422pt>
+File: figs/ww.pdf Graphic file (type pdf)
+ <use figs/ww.pdf>
+Package pdftex.def Info: figs/ww.pdf used on input line 728.
+(pdftex.def)             Requested size: 307.28987pt x 175.74504pt.
 
 [36
+
+ <./figs/ww.pdf>] <figs/rw.pdf, id=2906, 666.72488pt x 396.79343pt>
+File: figs/rw.pdf Graphic file (type pdf)
+
+<use figs/rw.pdf>
+Package pdftex.def Info: figs/rw.pdf used on input line 737.
+(pdftex.def)             Requested size: 307.28987pt x 182.87834pt.
+ [37
+
+ <./figs/rw.pdf>]
+<figs/srgSize.pdf, id=2985, 361.35pt x 216.81pt>
+File: figs/srgSize.pdf Graphic file (type pdf)
+ <use figs/srgSize.pdf>
+Package pdftex.def Info: figs/srgSize.pdf used on input line 748.
+(pdftex.def)             Requested size: 307.28987pt x 184.37538pt.
+
+[38
 
  <./figs/srgSize.pdf>]
 \tf@nav=\write6
@@ -1172,13 +1189,13 @@ Package pdftex.def Info: figs/srgSize.pdf used on input line 730.
 \tf@snm=\write8
 \openout8 = `presentation_1.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 733.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 733.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 751.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 751.
  (./presentation_1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 733.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 733.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 751.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 751.
 Package rerunfilecheck Info: File `presentation_1.out' has not changed.
-(rerunfilecheck)             Checksum: 9318027924EDBFE74CF763BFF6485884;2244.
+(rerunfilecheck)             Checksum: 0F566C361CBF295A205F9EB0806D1240;2408.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1187,13 +1204,13 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 733.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 751.
  ) 
 Here is how much of TeX's memory you used:
- 16151 strings out of 493304
- 298801 string characters out of 6139871
- 417498 words of memory out of 5000000
- 19097 multiletter control sequences out of 15000+600000
+ 16177 strings out of 493304
+ 299113 string characters out of 6139871
+ 419961 words of memory out of 5000000
+ 19115 multiletter control sequences out of 15000+600000
  18029 words of font info for 67 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  49i,20n,57p,403b,743s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1209,10 +1226,10 @@ blic/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmssi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msam10.pfb>
-Output written on presentation_1.pdf (36 pages, 1552703 bytes).
+Output written on presentation_1.pdf (38 pages, 1734948 bytes).
 PDF statistics:
- 2886 PDF objects out of 2984 (max. 8388607)
- 2705 compressed objects within 28 object streams
- 104 named destinations out of 1000 (max. 500000)
- 415 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3131 PDF objects out of 3580 (max. 8388607)
+ 2940 compressed objects within 30 object streams
+ 110 named destinations out of 1000 (max. 500000)
+ 441 words of extra memory for PDF output out of 10000 (max. 10000000)
 

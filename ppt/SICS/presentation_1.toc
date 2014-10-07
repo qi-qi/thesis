@@ -20,7 +20,7 @@
 \beamer@sectionintoc {5}{Evaluation}{22}{0}{5}
 \beamer@subsectionintoc {5}{1}{Experimental Testbed}{22}{0}{5}
 \beamer@subsectionintoc {5}{2}{Parent Directory Contention Assessment}{23}{0}{5}
-\beamer@subsectionintoc {5}{3}{Parent Directory Contention Assessment}{25}{0}{5}
+\beamer@subsectionintoc {5}{3}{Read-Write Mixed Workload}{25}{0}{5}
 \beamer@subsectionintoc {5}{4}{OCC Performance with Different Size of Conflicts}{27}{0}{5}
 \beamer@subsectionintoc {5}{5}{Implementation Correctness Assessment}{29}{0}{5}
 \beamer@sectionintoc {6}{Conclusion \& Future Work}{30}{0}{6}
@@ -29,4 +29,6 @@
 \beamer@sectionintoc {7}{SICS}{32}{0}{7}
 \beamer@subsectionintoc {7}{1}{Isolation Level}{32}{0}{7}
 \beamer@subsectionintoc {7}{2}{GFS Namespace Concurrency Control}{33}{0}{7}
-\beamer@subsectionintoc {7}{3}{The Size of Semantic Related Group}{36}{0}{7}
+\beamer@subsectionintoc {7}{3}{Workload of Parent Directory Contention Assessment}{36}{0}{7}
+\beamer@subsectionintoc {7}{4}{Read-Write Mixed Workload}{37}{0}{7}
+\beamer@subsectionintoc {7}{5}{The Size of Semantic Related Group}{38}{0}{7}

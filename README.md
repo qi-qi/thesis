@@ -1,4 +1,4 @@
-#MSc Thesis Project
+#Master Thesis Project
 
 Optimistic Concurrency Control in a Distributed NameNode Architecture for Hadoop Distributed File System
 

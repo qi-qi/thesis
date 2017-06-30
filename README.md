@@ -38,6 +38,6 @@ Thesis Report Download Link
 ------
 [https://github.com/qi-qi/thesis/raw/master/Final%20Submission/msc-qiqi-thesis.pdf](https://github.com/qi-qi/thesis/raw/master/Final%20Submission/msc-qiqi-thesis.pdf)
 
-Link for Hadoop Open Platform-as-a-service (Hops)
+Hadoop Open Platform-as-a-service (Hops)
 ------
 http://www.hops.io

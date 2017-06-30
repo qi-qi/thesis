@@ -1,9 +1,7 @@
 Master Thesis Project
 ======
 
-**Optimistic Concurrency Control in a Distributed NameNode Architecture for Hadoop Distributed File System**
-
-Thesis Report Download Link: [https://github.com/qi-qi/thesis/raw/master/Final%20Submission/msc-qiqi-thesis.pdf](https://github.com/qi-qi/thesis/raw/master/Final%20Submission/msc-qiqi-thesis.pdf)
+Optimistic Concurrency Control in a Distributed NameNode Architecture for Hadoop Distributed File System
 
 Author
 ------
@@ -33,8 +31,12 @@ Summary Link: [https://github.com/qi-qi/thesis/raw/master/Final%20Submission/msc
 ![ ](https://raw.githubusercontent.com/qi-qi/thesis/master/github_image_preview/summary.png)
 
 Report Acknowledgments
------- 
+------
 ![](https://raw.githubusercontent.com/qi-qi/thesis/master/github_image_preview/acknowledgments.png) 
+
+Thesis Report Download Link
+------
+[https://github.com/qi-qi/thesis/raw/master/Final%20Submission/msc-qiqi-thesis.pdf](https://github.com/qi-qi/thesis/raw/master/Final%20Submission/msc-qiqi-thesis.pdf)
 
 Link for Hadoop Open Platform-as-a-service (Hops)
 ------

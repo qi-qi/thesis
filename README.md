@@ -28,7 +28,7 @@ Presentation Link: [https://github.com/qi-qi/thesis/raw/master/ppt/SICS/presenta
 ------
 Summary Link: [https://github.com/qi-qi/thesis/raw/master/Final%20Submission/msc-qiqi-summary.pdf](https://github.com/qi-qi/thesis/raw/master/Final%20Submission/msc-qiqi-summary.pdf) 
 
-![ ](https://raw.githubusercontent.com/qi-qi/thesis/master/github_image_preview/summary.png)
+![](https://raw.githubusercontent.com/qi-qi/thesis/master/github_image_preview/summary.png)
 
 Report Acknowledgments
 ------
@@ -37,6 +37,7 @@ Report Acknowledgments
 Thesis Report Download Link
 ------
 [https://github.com/qi-qi/thesis/raw/master/Final%20Submission/msc-qiqi-thesis.pdf](https://github.com/qi-qi/thesis/raw/master/Final%20Submission/msc-qiqi-thesis.pdf)
+![](https://raw.githubusercontent.com/qi-qi/thesis/master/github_image_preview/thesis-report.png)
 
 Hadoop Open Platform-as-a-service (Hops)
 ------
